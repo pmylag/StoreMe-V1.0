@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.13, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: storeme
 -- ------------------------------------------------------
--- Server version	5.7.21-log
+-- Server version	8.0.13
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+ SET NAMES utf8 ;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -16,39 +16,36 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `atm`
+-- Table structure for table `checklist`
 --
 
-DROP TABLE IF EXISTS `atm`;
+DROP TABLE IF EXISTS `checklist`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `atm` (
-  `idatm` int(11) NOT NULL AUTO_INCREMENT,
-  `atmquantity` int(11) DEFAULT NULL,
-  `atmremarks` varchar(45) DEFAULT NULL,
-  `boltingscrewsetquantity` int(11) DEFAULT NULL,
-  `boltingscrewsetremarks` varchar(45) DEFAULT NULL,
-  `cashcassettekeysquantity` int(11) DEFAULT NULL,
-  `cashcassettekeysremarks` varchar(45) DEFAULT NULL,
-  `claddingquantity` int(11) DEFAULT NULL,
-  `claddingremarks` varchar(45) DEFAULT NULL,
-  `collarquantity` int(11) DEFAULT NULL,
-  `collarremarks` varchar(45) DEFAULT NULL,
-  `decalequantity` int(11) DEFAULT NULL,
-  `decaleremarks` varchar(45) DEFAULT NULL,
-  `fasciawindowframequantity` int(11) DEFAULT NULL,
-  `fasciawindowframeremarks` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idatm`)
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `checklist` (
+  `idchecklist` int(11) NOT NULL AUTO_INCREMENT,
+  `checker` varchar(45) DEFAULT NULL,
+  `bank` varchar(45) DEFAULT NULL,
+  `driver` varchar(45) DEFAULT NULL,
+  `warehouse_asst` varchar(45) DEFAULT NULL,
+  `consignee` varchar(45) DEFAULT NULL,
+  `plateno` varchar(45) DEFAULT NULL,
+  `cassete1` int(11) DEFAULT NULL,
+  `cassete2` int(11) DEFAULT NULL,
+  `cassete3` int(11) DEFAULT NULL,
+  `cassete4` int(11) DEFAULT NULL,
+  `idatm` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idchecklist`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `atm`
+-- Dumping data for table `checklist`
 --
 
-LOCK TABLES `atm` WRITE;
-/*!40000 ALTER TABLE `atm` DISABLE KEYS */;
-/*!40000 ALTER TABLE `atm` ENABLE KEYS */;
+LOCK TABLES `checklist` WRITE;
+/*!40000 ALTER TABLE `checklist` DISABLE KEYS */;
+/*!40000 ALTER TABLE `checklist` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -60,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-24  0:21:25
+-- Dump completed on 2019-01-27 19:30:08
