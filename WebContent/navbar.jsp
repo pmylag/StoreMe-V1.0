@@ -27,6 +27,6 @@
       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span></a></li>
     </ul>
   </div>
-
+</nav>
 	</body>
 </html>
