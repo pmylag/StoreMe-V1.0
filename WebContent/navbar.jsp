@@ -12,21 +12,21 @@
 	</head>
 	<body>
 	
-<nav class="navbar navbar-default">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#">StoreMe</a>
-		</div>
-		
-	<ul class="nav navbar-nav">
-		<li class="active"><a href="#">Home</a></li>
-		<li><a href="#">Welcome, User</a></li>
-	</ul>
-	<ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span></a></li>
-    </ul>
-  </div>
-</nav>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">StoreMe</a>
+				</div>
+				
+			<ul class="nav navbar-nav">
+				<li><a href="HomePage.jsp">Home</a></li>
+				<li><a>Welcome, User</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+		      <li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
+		      <li><a href="WelcomePage.jsp"><span class="glyphicon glyphicon-log-in" style="padding-right:5em"></span></a></li>
+		    </ul>
+		  </div>
+		</nav>
 	</body>
 </html>
