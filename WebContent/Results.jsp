@@ -98,7 +98,7 @@
 			  	  <td> ATM Canopy </td>
 			  	  <td>
 			  	  	  <a href="#" class="btn btn-primary a-btn-slide-text">
-				        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>           
+				        <span class="glyphicon glyphicon-edit" aria-hidden="true" data-toggle="modal" data-target="#myModal"></span>           
 				      </a>
 				  </td>
 				  <td><a href="#" class="btn btn-danger a-btn-slide-text">
@@ -109,6 +109,47 @@
 			  
 			  </tbody>
 			 </table>
+			 
+		<!--<div id="myModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		
+		    <!-- Modal content
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Edit   83-PNB-SS23</h4>
+		      </div>
+		      <div class="modal-body">
+		      	<div class="form-group">
+				      <div class="col-sm-4">
+				      	<div class="dropdown">
+						  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						   	Section
+						  </button>
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						    <a class="dropdown-item" href="#">A</a>
+						    <a class="dropdown-item" href="#">B</a>
+						  </div>
+						</div>
+				      	<div class="input-group date" data-provide="datepicker">
+						    <input type="text" class="form-control">
+						    <div class="input-group-addon">
+						        <span class="glyphicon glyphicon-th"></span>
+						    </div>
+						</div>
+						
+				      </div>
+				      
+				      </div>
+		      </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>-->
+		
+		  </div>
+		</div>
 		
 		</div>
 	 	</div>
