@@ -11,35 +11,26 @@
 		<title>StoreMe</title>
 </head>
 <body>
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">StoreMe</a>
-			</div>
-		
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#">Welcome, User</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-		      <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
-		      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span></a></li>
-		    </ul>
- 		 </div>
-	</nav>
+	<%@include file="navbar.jsp" %>
 	
 	<div class="container">
 		<div class="jumbotron" style="background-color:white;">
 			<div class="col-sm-4">
-				<img href="#" src="atm.png" style="height:300px; width:300px">
+				<a>
+					<img href="#" src="atm.png" style="height:300px; width:300px">
+				</a>
 				<h2 class="text-center">New ATM Information</h2>
 			</div>
 			<div class="col-sm-4">
-				<img href="#" src="computer.png" style="height:300px; width:300px">
+				<a>
+					<img href="#" src="computer.png" style="height:300px; width:300px">
+				</a>
 				<h2 class="text-center">Find Me</h2>
 			</div>
 			<div class="col-sm-4">
-				<img href="#" src="howtouse.jpg" style="height:300px; width:400px">
+			<a href="HowToUse.jsp">
+				<img src="howtouse.jpg" style="height:300px; width:400px">
+			</a>
 				<h2 class="text-center"> &nbsp &nbsp &nbsp &nbsp How to Use</h2>
 			</div>
   		</div>      
