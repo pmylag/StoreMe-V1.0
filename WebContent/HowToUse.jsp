@@ -62,7 +62,7 @@
 						Hitachi - TBA					
 					</p>
 					<button class="btn btn-primary" style="float: right">
-						<a href="HomePage.jsp" style="color: white">BACK TO HOME</a>
+						<a href="HomePage.jsp" style="color: white">Back To Home</a>
 					</button>
 				</div>
 			</div>

@@ -55,33 +55,45 @@
 	<%@include file="navbar.jsp" %>
 	
 	<div class="container">
+		<div class="col-md-6">
+			<h2>ATM Checklist</h2>
+		</div>
+		
+		<div class="col-md-6" style="padding-top:1em">
+			<div class="col-sm-2">
+				<div class="circle-active">
+					<h5 class="text-center" style="padding-top:0.25em">1</h5>
+				</div>
+			</div>	
+			<div class="col-sm-2">
+				<div class="circle">
+					<h5 class="text-center" style="padding-top:0.25em">2</h5>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="circle">
+					<h5 class="text-center" style="padding-top:0.25em">3</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
 		<div class="col-sm-4">
 			<img src="ATM.jpg">
 			<div style="padding-left: 5em; padding-top: 5em">
-				<button class="btn" href="HomePage.jsp">Cancel</button>
-				<button class="btn btn-primary" type="submit">Save Changes</button>
+			
+			<button class="btn btn-lg">
+				<a href="HomePage.jsp" style="color: black">Back</a>
+			</button>
+				
+			<button class="btn btn-primary btn-lg" type="submit">
+				<a href="AddATM2.jsp" style="color: white">Save Changes</a>
+			</button>
 			</div>
 		</div>
+		
 		<div class="col-sm-8">
-			
-			<div style="padding-left: 10em;">
-				<div class="col-sm-2">
-					<div class="circle-active">
-						<h5 class="text-center" style="padding-top:0.25em">1</h5>
-					</div>
-				</div>	
-				<div class="col-sm-2">
-					<div class="circle">
-						<h5 class="text-center" style="padding-top:0.25em">2</h5>
-					</div>
-				</div>
-				<div class="col-sm-2">
-					<div class="circle">
-						<h5 class="text-center" style="padding-top:0.25em">3</h5>
-					</div>
-				</div>
-			</div>
-			
 			
 			<div class="container" style="padding-top: 5em">
 				<div class="row">
@@ -154,27 +166,24 @@
 					
 					<!-- Modal -->
 					<div class="modal fade" id="myModal" role="dialog">
-					  <div class="modal-dialog modal-lg">
-					  
-					    <!-- Modal content-->
-					      <div class="modal-content">
-					        <div class="modal-header">
-					          <button type="button" class="close" data-dismiss="modal">&times;</button>
-					          <h4 class="modal-title">Floor Plan</h4>
-					        </div>
-					        <div class="modal-body">
-					        <div clas="panel">
-					        	<img class="center" src="FloorPlan.jpg" width="1000px" height="400px "></img>
-					        </div>
-					        </div>
-					        <div class="modal-footer">
-					          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					        </div>
-					      </div>
-					      
-					    </div>
-					  </div>
-					  
+						<div class="modal-dialog modal-lg">
+						    <!-- Modal content-->
+						      <div class="modal-content">
+						     	<div class="modal-header">
+						       	<button type="button" class="close" data-dismiss="modal">&times;</button>
+						       	<h4 class="modal-title">Floor Plan</h4>
+						       </div>
+						       <div class="modal-body">
+						        <div clas="panel">
+						        	<img class="center" src="FloorPlan.jpg" width="1000px" height="400px "></img>
+						        </div>
+						       </div>
+						        <div class="modal-footer">
+						        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						        </div>
+						   	</div>
+						</div>
+					</div>
 				</div>
 		    	
 			</div>
