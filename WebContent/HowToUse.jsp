@@ -27,11 +27,11 @@
 				<div class="panel-heading">NEW ATM INFORMATION</div>
 				<div class="panel-body">
 					<ul>
-						<li>After clicking new ATM information, ATM placement will be displayed.</li>
-						<li>From the same page, choose what section of the ATM brand is designated. Make sure that the section has still available space for new ATM units. If it has available space, it will redirect to the ATM details.</li>
-						<li>From the ATM details, kindly put the necessary information in order for you to proceed to the next page.</li>
+						<li>When clicking the 'New ATM Information' hyperlink, the 'ATM placement' page will be displayed.</li>
+						<li>On the 'ATM placement' page, choose what section will you place the ATM depending on its brand. Make sure that there is a vacant space in the desired section. If the section selection is successful, you will be redirected to the 'ATM Details' page.</li>
+						<li>On the 'ATM Details' input the necessary information to proceed to the next step/page.</li>
 						<li>Repeat previous step to proceed to the next page.</li>
-						<li>After completing all stemps, new information will be added into the database. Also, it will be automatically displayed and filtered on the tracker center by the date it is added.</li>
+						<li>After successfully completing the steps mentioned above, new information will be added to the database. It will be displayed on the tracker center and can be filtered by the date it is added.</li>
 					</ul>
 				</div>
 			</div>
@@ -42,10 +42,8 @@
 				<div class="panel-heading">TRACKER CENTER</div>
 				<div class="panel-body">
 					<ul>
-						<li>After clicking the Tracker Center button, it will trace previous units.</li>
-						<li>From that page, the serial code is clickable. After clicking it, the summary details of the unitt will show. </li>
-						<li>Beside the remarks column, there is an Update and Delete function. For the Update, it is where you can update the status and other details of the ATM. This will Require a password to access it. The same process goes with the Delete function.</li>
-						
+						<li>When clicking the 'Tracker Center' button, you may be able to trace previous units.</li>
+						<li>On this page, the serial code is clickable. When clicked, the summary of details of the unit will be displayed.</li>						
 					</ul>
 				</div>
 			</div>
