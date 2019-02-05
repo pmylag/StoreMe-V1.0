@@ -37,7 +37,7 @@
 					</div>
 					<div>
 						<label for="mobile">Mobile Number:</label>
-	  					<input type="number" class="form-control" id="addr" placeholder="Ex. Espana, Manila">
+	  					<input type="number" class="form-control" id="addr" placeholder="Ex. 09177777777">
 					</div>
 					<div>
 						<div class="col-sm-3">
