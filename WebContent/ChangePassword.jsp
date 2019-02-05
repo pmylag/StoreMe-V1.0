@@ -45,7 +45,7 @@
 						</div>
 						<div class="col-sm-3">
 							<div style = "padding-top: 1em">
-								<button class="btn btn-primary" type="submit">Save Changes</button>
+								<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#ModalSave">Save Changes</button>
 							</div>
 						</div>
 					</div>
@@ -56,5 +56,29 @@
 			</div>
 		</form>
 	</div>
+	
+	<div class="modal fade" id="ModalSave" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+									      
+									      	<center>
+									      		<h4>Password Change Successful</h4>
+									      	</center>				
+									      
+
+				      </div>
+				      <div class="modal-footer">
+				        <button onClick="No20()" type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 </body>
 </html>
