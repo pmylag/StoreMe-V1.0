@@ -186,6 +186,110 @@
 							</div>
 				        </td>
 			      	</tr>
+			      	<tr>
+				        <td>Modem</td>
+				         <td>
+				        	<div class="form-group">
+								<input type="number" class="form-control" id="mdm-qty">
+							</div>
+				        </td>
+				        <td>
+				        	<div class="form-group">
+								<input type="text" class="form-control" id="mdm-rmk">
+							</div>
+				        </td>
+			      	</tr>
+			      	<tr>
+				        <td>Panel Door Key</td>
+				         <td>
+				        	<div class="form-group">
+								<input type="number" class="form-control" id="pdk-qty">
+							</div>
+				        </td>
+				        <td>
+				        	<div class="form-group">
+								<input type="text" class="form-control" id="pdk-rmk">
+							</div>
+				        </td>
+			      	</tr>
+			      	<tr>
+				        <td>Pedestal</td>
+				         <td>
+				        	<div class="form-group">
+								<input type="number" class="form-control" id="pdl-qty">
+							</div>
+				        </td>
+				        <td>
+				        	<div class="form-group">
+								<input type="text" class="form-control" id="pdl-rmk">
+							</div>
+				        </td>
+			      	</tr>
+			      	<tr>
+				        <td>Power Cord</td>
+				         <td>
+				        	<div class="form-group">
+								<input type="number" class="form-control" id="pc-qty">
+							</div>
+				        </td>
+				        <td>
+				        	<div class="form-group">
+								<input type="text" class="form-control" id="pc-rmk">
+							</div>
+				        </td>
+			      	</tr>
+			      	<tr>
+				        <td>Router</td>
+				         <td>
+				        	<div class="form-group">
+								<input type="number" class="form-control" id="rtr-qty">
+							</div>
+				        </td>
+				        <td>
+				        	<div class="form-group">
+								<input type="text" class="form-control" id="rtr-rmk">
+							</div>
+				        </td>
+			      	</tr>
+			      	<tr>
+				        <td>Topper</td>
+				         <td>
+				        	<div class="form-group">
+								<input type="number" class="form-control" id="tpr-qty">
+							</div>
+				        </td>
+				        <td>
+				        	<div class="form-group">
+								<input type="text" class="form-control" id="tpr-rmk">
+							</div>
+				        </td>
+			      	</tr>
+			      	<tr>
+				        <td>UPS</td>
+				         <td>
+				        	<div class="form-group">
+								<input type="number" class="form-control" id="ups-qty">
+							</div>
+				        </td>
+				        <td>
+				        	<div class="form-group">
+								<input type="text" class="form-control" id="ups-rmk">
+							</div>
+				        </td>
+			      	</tr>
+			      	<tr>
+				        <td>Vault Door Key</td>
+				         <td>
+				        	<div class="form-group">
+								<input type="number" class="form-control" id="vdk-qty">
+							</div>
+				        </td>
+				        <td>
+				        	<div class="form-group">
+								<input type="text" class="form-control" id="vdk-rmk">
+							</div>
+				        </td>
+			      	</tr>
 			    </tbody>
 			</table>
 			<button type="button" class="btn btn-lg" data-target="#myModal">Cancel</button>
