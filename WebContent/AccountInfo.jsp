@@ -42,7 +42,9 @@
 					<div>
 						<div class="col-sm-3">
 							<div style = "padding-top: 1em; padding-right:5em">
-								<button class="btn" href="#">Back</button>
+								<button class="btn">
+									<a href="HomePage.jsp">Back</a>
+								</button>
 							</div>
 						</div>
 						<div class="col-sm-3">

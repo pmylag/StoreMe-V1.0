@@ -61,7 +61,9 @@
 						NCR -  first 2 numbers
 						Hitachi - TBA					
 					</p>
-					<button href="HomePage.jsp" class="btn btn-primary" style="float: right">BACK TO HOME</button>
+					<button class="btn btn-primary" style="float: right">
+						<a href="HomePage.jsp" style="color: white">BACK TO HOME</a>
+					</button>
 				</div>
 			</div>
 		</div>
