@@ -57,13 +57,26 @@
 			    <li><a href="#">SKU</a></li>
 			    <li><a href="#">Section</a></li>
 			    <li><a href="#">Consignee</a></li>
+			    <li><a href="#">Site & Location</a></li>
+			    <li><a href="#">Date Received</a></li>
+			    <li><a href="#">Date Shipped</a></li>
+			    <li><a href="#">Waybill Number</a></li>
+			    <li><a href="#">Status</a></li>
+			    <li><a href="#">Received By</a></li>
+			    <li><a href="#">Activity</a></li>
+			    <li><a href="#">Edit</a></li>
+			    <li><a href="#">Delete</a></li>
+			    
 			    
 			  </ul>
 			</div>
 			
 		</div>
-		<div class = "col-md-1">
+		<div class = "col-md-2">
 			<input type="text" placeholder="Search.">
+		</div>
+		<div class = "col-md-1">
+			<button type="button" class="btn btn-light">Search</button>
 		</div>
 		</div>
 		<div class = "row">
@@ -244,7 +257,7 @@
 				      </div>
 				      <div class="modal-footer">
 				        <button type="button" class="btn submit" data-dismiss="modal">Close</button>
-				        <button onClick="No20()" type="button" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+				        <button onClick="No20()" type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
 		      </div>
 		    </div>
 		  </div>

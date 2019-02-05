@@ -49,7 +49,7 @@
 						</div>
 						<div class="col-sm-3">
 							<div style = "padding-top: 1em">
-								<button class="btn btn-primary" type="submit">Save Changes</button>
+								<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#Modals">Save Changes</button>
 							</div>
 						</div>
 					</div>
@@ -78,5 +78,50 @@
 		</form>
 	</div>
 
+	<div class="modal fade" id="Modals" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLabel">StoreMe Message</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        <div class="form-group">
+											<center>
+									      		<h4>Do you want to save this new information?</h4>
+									      	</center>					
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+			        <button onClick="No2()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal2">Save</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLabel">StoreMe Message</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        <div class="form-group">
+											<center>
+									      		<h4>Successfuly saved information</h4>
+									      	</center>					
+			      </div>
+			      <div class="modal-footer">
+			        <button onClick="No2()" type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
 </body>
 </html>
