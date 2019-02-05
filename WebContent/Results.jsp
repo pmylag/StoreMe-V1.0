@@ -100,7 +100,7 @@
 			  	  <td> 0019580 </td>
 			  	  <td> In-Progress </td>
 			  	  <td> Mr. Lacson </td>
-			  	  <td> ATM Canopy </td>
+			  	  <td><a href="#" data-toggle="modal" data-target="#Modalss"> ATM Canopy</a> </td>
 			  	  <td>
 			  	  	  <a href="#" class="btn btn-primary a-btn-slide-text">
 				        <span class="glyphicon glyphicon-edit" aria-hidden="true" data-toggle="modal" data-target="#EditModals"></span>           
@@ -114,6 +114,46 @@
 			  
 			  </tbody>
 			 </table>
+			 
+		<div class="modal fade" id="Modalss" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLabel">Activity</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				        <div class="panel panel-default">
+						<div class="panel panel-default">
+							
+						<div class="panel-heading">  
+					 		<h4 class = "text-center"><font color="black">83-PNB-SS23
+					</font></h4>
+					 	</div>
+					 	
+					 <font color="gray">	
+					 	
+					 	<div class="panel-body bg-default">
+						<div class="form-group">
+									      <div class="col-sm-12">
+									      	<center>
+									      		<h4>ATM Canopy installation, with light installation.</h4>
+									      	</center>				
+									      </div>
+									      
+								  </div>
+								  </div>
+							      </div>
+							  </div>
+				      </div>
+				      <div class="modal-footer">
+				        <button onClick="No20()" type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 		<div class="modal fade" id="ModalYo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				  <div class="modal-dialog" role="document">
 				    <div class="modal-content">
