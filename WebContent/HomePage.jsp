@@ -16,14 +16,14 @@
 	<div class="container">
 		<div class="jumbotron" style="background-color:white;">
 			<div class="col-sm-4">
-				<a>
-					<img href="#" src="atm.png" style="height:300px; width:300px">
+				<a href="AddATM1.jsp">
+					<img src="atm.png" style="height:300px; width:300px">
 				</a>
 				<h2 class="text-center">New ATM Information</h2>
 			</div>
 			<div class="col-sm-4">
-				<a>
-					<img href="#" src="computer.png" style="height:300px; width:300px">
+				<a href="Results.jsp">
+					<img src="computer.png" style="height:300px; width:300px">
 				</a>
 				<h2 class="text-center"><a href="Results.jsp">Find Me</a></h2>
 			</div>

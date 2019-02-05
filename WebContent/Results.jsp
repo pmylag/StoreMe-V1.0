@@ -27,30 +27,29 @@
 	
 </head>
 <body>
-	<div class="row">
-		<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="#">StoreMe</a>
 				</div>
 				
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="HomePage.jsp">Home</a></li>
-				<li><a href="#">Welcome, User</a></li>
+				<li><a href="HomePage.jsp">Home</a></li>
+				<li><a>Welcome, User</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-		      <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
-		      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span></a></li>
+		      <li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
+		      <li><a href="WelcomePage.jsp"><span class="glyphicon glyphicon-log-in" style="padding-right:5em"></span></a></li>
 		    </ul>
 		  </div>
 		</nav>
-	</div>
+	
 	<div class = "container">
 		<div class = "row">
-		<div class = "col-md-1 col-sm-1 col-xs-1 ">
+		<div class = "col-md-1">
 			SEARCH BY : 
 		</div>
-		<div class = "col-md-1 col-sm-1 col-xs-1 ">
+		<div class = "col-md-1">
 			<div class="dropdown">
 			  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Type
 			  <span class="caret"></span></button>
@@ -63,7 +62,7 @@
 			</div>
 			
 		</div>
-		<div class = "col-md-1 col-sm-1 col-xs-1 ">
+		<div class = "col-md-1">
 			<input type="text" placeholder="Search.">
 		</div>
 		</div>
@@ -331,8 +330,8 @@
 		      </div>
 		      </div>
 		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		      </div>
+					          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			  </div>
 		    </div>
 		
 		  </div>
