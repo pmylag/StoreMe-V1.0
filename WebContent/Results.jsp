@@ -14,6 +14,11 @@
     background-color: #5079D8;
 	}
 	
+	li.borderless { border-top: 0 none;
+					border-bottom: 0 none;
+					border-left:0 none;
+					border-right: 0 none; }
+	
 </style>
 <html>
 <head>
@@ -86,7 +91,7 @@
 			  <tbody>
 			  	<tr>
 			  	  <th scope="row">1</th>
-			  	  <td> 83-PNB-SS23 </td>
+			  	  <td><a href="#" data-toggle="modal" data-target="#ModalYo"> 83-PNB-SS23 </a> </td>
 			  	  <td> A </td>
 			  	  <td> NCR </td>
 			  	  <td> Metro Manila </td>
@@ -98,7 +103,7 @@
 			  	  <td> ATM Canopy </td>
 			  	  <td>
 			  	  	  <a href="#" class="btn btn-primary a-btn-slide-text">
-				        <span class="glyphicon glyphicon-edit" aria-hidden="true" data-toggle="modal" data-target="#EditModalss"></span>           
+				        <span class="glyphicon glyphicon-edit" aria-hidden="true" data-toggle="modal" data-target="#EditModals"></span>           
 				      </a>
 				  </td>
 				  <td><a href="#" class="btn btn-danger a-btn-slide-text">
@@ -109,8 +114,104 @@
 			  
 			  </tbody>
 			 </table>
+		<div class="modal fade" id="ModalYo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLabel">Checklist</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				        <div class="panel panel-default">
+						<div class="panel panel-default">
+							
+						<div class="panel-heading">  
+					 		<h4 class = "text-center"><font color="black">83-PNB-SS23
+					</font></h4>
+					 	</div>
+					 	
+					 <font color="gray">	
+					 	
+					 	<div class="panel-body bg-default">
+						<div class="form-group">
+									      <div class="col-sm-4">
+									      	<ul class="list-group">
+											  <li class="list-group-item borderless"><b>Checker: </b><u>Jose P. De Leon</u></li>
+											  <li class="list-group-item borderless"><b>Warehouse Assistant: </b><u>Jasmin A. Cruz</u></li>
+											  <li class="list-group-item borderless"><b>Bank: </b><u>PNB</u> </li>
+											  <li class="list-group-item borderless"><b>Consignee: </b><u>NCR</u> </li>
+											  <li class="list-group-item borderless"><b>Driver: </b><u>Pepito Santos</u> </li>
+											  <li class="list-group-item borderless"><b>Plate No: </b><u>PPM-902</u> </li>
+											  <li class="list-group-item borderless"><b>Cassette: </b><u>1.2.4< </li>
+											  
+											</ul>					
+									      </div>
+									      
+									      <div class ="col-sm-8">
+											<table class="table table-borderless">
+											  <thead>
+											    <tr>
+											      <th scope="col">Description</th>
+											      <th scope="col">Quantity</th>
+											      <th scope="col">Remarks</th>
+											    </tr>
+											  </thead>
+											  <tbody>
+											    <tr>
+											      <td>1. Atm</td>
+											      <td>1</td>
+											      <td></td>
+											    </tr>
+											    <tr>
+											      <td>2. Bolting Screws Set</td>
+											      <td>2</td>
+											      <td></td>
+											    </tr>
+											    <tr>
+											      <td>3. Cash Cassette Keys</th>
+											      <td>1</td>
+											      <td></td>
+											    </tr>
+											    <tr>
+											      <td>4. Cladding</th>
+											      <td>1</td>
+											      <td></td>
+											    </tr>
+											    <tr>
+											      <td>5. Collar</th>
+											      <td>4</td>
+											      <td></td>
+											    </tr>
+											    <tr>
+											      <td>6. Decals</th>
+											      <td>2</td>
+											      <td></td>
+											    </tr>
+											    <tr>
+											      <td>7. Fascia/Window Frames</th>
+											      <td>1</td>
+											      <td></td>
+											    </tr>
+											  </tbody>
+											</table>
+									      </div>
+									      
+								  </div>
+								  </div>
+							      </div>
+							  </div>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn submit" data-dismiss="modal">Close</button>
+				        <button onClick="No20()" type="button" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 			 
-		<div id="EditModalss" class="modal fade" role="dialog">
+		<div id="EditModals" class="modal fade" role="dialog">
 		  <div class="modal-dialog">
 		
 		    <!-- Modal content-->

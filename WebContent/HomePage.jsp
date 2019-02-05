@@ -25,7 +25,7 @@
 				<a>
 					<img href="#" src="computer.png" style="height:300px; width:300px">
 				</a>
-				<h2 class="text-center">Find Me</h2>
+				<h2 class="text-center"><a href="Results.jsp">Find Me</a></h2>
 			</div>
 			<div class="col-sm-4">
 			<a href="HowToUse.jsp">
