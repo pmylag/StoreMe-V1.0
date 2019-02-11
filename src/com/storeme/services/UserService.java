@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class UserService {
 
-	static String url ="jdbc:mysql://aa1hgjsge0u107w.c4ffploofhfk.ap-southeast-1.rds.amazonaws.com:3306/alarp";
+	static String url ="localhost:3306/StoreMe_V1.0";
 	static String username ="root";
 	static String passwords = "password";
 

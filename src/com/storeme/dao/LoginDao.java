@@ -1,14 +1,9 @@
 package com.storeme.dao;
 
-import java.security.SecureRandom;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.security.*;
 import java.util.Base64;
 import java.util.Base64.Encoder;
-
 import com.storeme.javabean.SessionBean;
 import com.storeme.javabean.UserBean;
 
@@ -78,7 +73,7 @@ public class LoginDao {
 	
 public boolean check(String uname, String pass) throws SQLException {
 		
-		String sql = "select * from storeme.user where username=? and password=?";
+		String sql = "select * from alarp.user where username=? and password=?";
 		
 		
 		try {
@@ -103,7 +98,7 @@ public boolean check(String uname, String pass) throws SQLException {
 		return false;
 	}
 
-	public  String checkadmin(String uname) {
+	public  int checkadmin(String uname) {
 		
 		String sql = "select privilege from user where username =?";
 		UserBean u = new UserBean();
@@ -114,10 +109,10 @@ public boolean check(String uname, String pass) throws SQLException {
 			st.setString(1, uname);
 			ResultSet rs = st.executeQuery();
 			while(rs.next()) {
-				u.setPrivilege(rs.getString(UserBean.PRIVILEGE));
+				u.setPrivilege(rs.getInt(UserBean.PRIVILEGE));
 			}
 			
-			if(u.getPrivilege() != "admin") {
+			if(u.getPrivilege() != 4) {
 				return u.getPrivilege();
 			}
 			
@@ -126,7 +121,7 @@ public boolean check(String uname, String pass) throws SQLException {
 			e.printStackTrace();
 		}
 		
-		return "Admin";
+		return 1;
 	}
 		
 	public int checktimer(int id) {

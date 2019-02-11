@@ -79,7 +79,7 @@ public class Login extends HttpServlet {
 		            message.setHttpOnly(true);
 		          
 		            response.addCookie(message);
-				if(dao.checkadmin(uname)== "Admin") {
+				if(dao.checkadmin(uname)== 1) {
 					session.setAttribute("csrfToken", dao.generateCSRFToken());
 					session.setAttribute("isadmin", uname);
 					session.setAttribute("username", uname);
@@ -87,14 +87,14 @@ public class Login extends HttpServlet {
 					System.out.println("futa: "+dao.getiduser(uname));
 					response.sendRedirect("userManager.jsp");
 					action = uname + " ID: " + dao.getiduser(uname) + " logged in at " + LocalDateTime.now();
-				}else if(dao.checkadmin(uname)== "Admin2") {
+				}else if(dao.checkadmin(uname)== 2) {
 					session.setAttribute("isproductmanager", uname);
 					session.setAttribute("username", uname);
 					session.setAttribute("iduser", dao.getiduser(uname));
 					System.out.println("futa: "+dao.getiduser(uname));
 					response.sendRedirect("ProductManagement");
 					action = uname + " ID: " + dao.getiduser(uname) + " logged in at " + LocalDateTime.now();
-				}else if(dao.checkadmin(uname)=="Admin3") {
+				}else if(dao.checkadmin(uname)==3) {
 					session.setAttribute("isaccountingmanager", uname);
 					session.setAttribute("username", uname);
 					session.setAttribute("iduser", dao.getiduser(uname));

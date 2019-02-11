@@ -29,28 +29,30 @@
 				<a href="AddATM1.jsp">
 					<img src="STOREME.png" style="height:200px; width:200px">
 				</a>
-				<h4 class="text-center">An Online ATM Warehouse Inventory Tracking Management System for CJL Freight Forwarding</h4>
+				<h4 class="text-center">Warehouse Inventory Monitoring System</h4>
 			</center>
 			<div class = "col-sm-4">
 			</div>
 			<div class="col-sm-5">
-				<div class="form-group">
-				    <label for="exampleInputEmail1">Username: </label>
-				    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-				</div>
-				
-				<div class="form-group">
-				    <label for="exampleInputEmail1">Password: </label>
-				    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-				</div>
-				<div class ="row">
-				<div class="col-sm-2">
-				<button type="submit" class="btn btn-primary" ><a href = "HomePage.jsp" style="color: white">Login</a></button>
-				</div>
-				<div class="col-sm-2">
-					<a href="#" data-toggle="modal" data-target="#Modal3">Change Password</a>
-				</div>
-				</div>
+				<form id="signin" class="navbar-form navbar-right" role="form" action="Login" method="post">	
+					<div class="form-group">
+					    <label for="exampleInputEmail1">Username: </label>
+					    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" >
+					</div>
+					
+					<div class="form-group">
+					    <label for="exampleInputEmail1">Password: </label>
+					    <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="password" >
+					</div>
+					<div class ="row">
+					<div class="col-sm-2">
+					<button type="submit" class="btn btn-primary" style="color: white" >Login</button>
+					</div>
+					<div class="col-sm-2">
+						<a href="#" data-toggle="modal" data-target="#Modal3">Change Password</a>
+					</div>
+					</div>
+				</form>
 			</div>
 			</div>
   		</div>      
