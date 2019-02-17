@@ -107,7 +107,7 @@ public class Login extends HttpServlet {
 					session.setAttribute("username", uname);
 					session.setAttribute("iduser", dao.getiduser(uname));
 					System.out.println("username: "+uname);
-					response.sendRedirect("GetAllEvalServlet");
+					response.sendRedirect("HomePage.jsp");
 					action = uname + " ID: " + dao.getiduser(uname) + " logged in at " + LocalDateTime.now();
 				}
 				}
