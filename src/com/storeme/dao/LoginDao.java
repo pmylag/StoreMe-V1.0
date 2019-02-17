@@ -73,7 +73,7 @@ public class LoginDao {
 	
 public boolean check(String uname, String pass) throws SQLException {
 		
-		String sql = "select * from alarp.user where username=? and password=?";
+		String sql = "select * from storeme.user where username=? and password=?";
 		
 		
 		try {
