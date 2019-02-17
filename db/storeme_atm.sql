@@ -24,8 +24,8 @@ DROP TABLE IF EXISTS `atm`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `atm` (
   `idatm` int(11) NOT NULL AUTO_INCREMENT,
-  `quantity` int(11) DEFAULT NULL,
-  `remarks` varchar(45) DEFAULT NULL,
+  `cassete1` int(11) DEFAULT NULL,
+  `checker` varchar(45) DEFAULT NULL,
   `bolt_screw_set_qty` int(11) DEFAULT NULL,
   `bolt_screw_set_rmk` varchar(45) DEFAULT NULL,
   `cash_casst_key_qty` int(11) DEFAULT NULL,
@@ -38,6 +38,15 @@ CREATE TABLE `atm` (
   `decale_rmk` varchar(45) DEFAULT NULL,
   `fsc_wndw_frame_qty` int(11) DEFAULT NULL,
   `fsc_wndw_frame_remk` varchar(45) DEFAULT NULL,
+  `bank` varchar(45) DEFAULT NULL,
+  `driver` varchar(45) DEFAULT NULL,
+  `atmcol` varchar(45) DEFAULT NULL,
+  `warehouse_asst` varchar(45) DEFAULT NULL,
+  `consignee` varchar(45) DEFAULT NULL,
+  `plateno` varchar(45) DEFAULT NULL,
+  `cassete2` int(11) DEFAULT NULL,
+  `cassete3` int(11) DEFAULT NULL,
+  `cassete4` int(11) DEFAULT NULL,
   PRIMARY KEY (`idatm`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -60,4 +69,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-02-17 21:52:00
+-- Dump completed on 2019-02-17 23:13:39
