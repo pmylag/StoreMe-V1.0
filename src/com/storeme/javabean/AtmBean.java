@@ -123,7 +123,7 @@ public class AtmBean {
 	private String decale_rmk;
 	private int fsc_wndw_frame_qty;
 	private String fsc_wndw_frame_remk;
-
+	private String checker;
 	
 	
 	
