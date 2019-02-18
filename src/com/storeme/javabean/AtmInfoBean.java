@@ -83,6 +83,20 @@ public class AtmInfoBean {
 	private String activtiy;
 	private String status;
 	private int idatm;
+	public String getSite() {
+		return site;
+	} 
+	public void setSite(String site) {
+		this.site = site;
+	}
+	public String getDate_shipped() {
+		return date_shipped;
+	}
+	public void setDate_shipped(String date_shipped) {
+		this.date_shipped = date_shipped;
+	}
+	private String site;
+	private String date_shipped;
 	
 
 }

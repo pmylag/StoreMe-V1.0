@@ -26,9 +26,12 @@ public class AtmInfoService {
 			while(rs.next()) {
 				AtmInfoBean ai = new AtmInfoBean();
 				
+				ai.setIdatminfo(rs.getInt(AtmInfoBean.IDATMINFO));
 				ai.setActivtiy(rs.getString(AtmInfoBean.ACTIVITY));
 				ai.setAtmplacement(rs.getString(AtmInfoBean.ATMPLACEMENT));
 				ai.setConsignee(rs.getString(AtmInfoBean.CONSIGNEE));
+				ai.setSite(rs.getString("site"));
+				ai.setDate_shipped(rs.getString("date_shipped "));
 				ai.setDate(rs.getString(AtmInfoBean.DATE));
 				ai.setIdatm(rs.getInt(AtmInfoBean.IDATM));
 				ai.setSku(rs.getString(AtmInfoBean.SKU));

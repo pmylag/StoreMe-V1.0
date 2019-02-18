@@ -38,8 +38,7 @@ public class AtmService {
 				a.setDecale_rmk(rs.getString(AtmBean.DECALE_RMK));
 				a.setFsc_wndw_frame_qty(rs.getInt(AtmBean.FSC_WNDW_FRAME_QTY));
 				a.setFsc_wndw_frame_remk(rs.getString(AtmBean.FSC_WNDW_FRAME_REMK));
-				a.setQuantity(rs.getInt(AtmBean.QUANTITY));
-				a.setRemarks(rs.getString(AtmBean.REMARKS));
+				
 				
 				atmLists.add(a);
 				

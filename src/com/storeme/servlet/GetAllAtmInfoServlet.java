@@ -35,6 +35,7 @@ public class GetAllAtmInfoServlet extends HttpServlet {
 		AtmInfoService AtmInfosService = new AtmInfoService();
 		ArrayList<AtmInfoBean> AtmInfo = AtmInfosService.getAllAtmInfo();
 		request.setAttribute("atminfolists", AtmInfo);
+		System.out.print("wwaaaw gumana");
 		request.getRequestDispatcher("Results.jsp").forward(request, response);
 		
 		response.getWriter().append("Served at: ").append(request.getContextPath());

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>   
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <link rel="stylesheet" href="Style/bootstrap-4.0.0-dist/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="Style/styles.css">
@@ -101,29 +102,30 @@
 			    </tr>
 			  </thead>
 			  <tbody>
-			  	<tr>
-			  	  <th scope="row">1</th>
-			  	  <td><a href="#" data-toggle="modal" data-target="#ModalYo"> 83-PNB-SS23 </a> </td>
-			  	  <td> A </td>
-			  	  <td> NCR </td>
-			  	  <td> Metro Manila </td>
-			  	  <td> 10/04/2018 </td>
-			  	  <td> 10/05/2018 </td>
-			  	  <td> 0019580 </td>
-			  	  <td> In-Progress </td>
-			  	  <td> Mr. Lacson </td>
-			  	  <td><a href="#" data-toggle="modal" data-target="#Modalss"> ATM Canopy</a> </td>
-			  	  <td>
-			  	  	  <a href="#" class="btn btn-primary a-btn-slide-text">
-				        <span class="glyphicon glyphicon-edit" aria-hidden="true" data-toggle="modal" data-target="#EditModals"></span>           
-				      </a>
-				  </td>
-				  <td><a href="#" class="btn btn-danger a-btn-slide-text">
-				        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>	                 
-				      </a>
-				  </td>
-			  	</tr>
-			  
+			  	<c:forEach items="${atminfolists}"  var= "a">
+				  	<tr>
+				  	  <th scope="row"> ${a.idatminfo }</th>
+				  	  <td><a href="#" data-toggle="modal" data-target="#ModalYo">${a.sku }</a> </td>
+				  	  <td> ${a.atmplacement }</td>
+				  	  <td> ${a.consignee } </td>
+				  	  <td> ${a.site } </td>
+				  	  <td> ${a.date } </td>
+				  	  <td> ${a.date_shipped } </td>
+				  	  <td> ${a.waybill_no } </td>
+				  	  <td> ${a.status } </td>
+				  	  <td> Mr. Lacson </td>
+				  	  <td><a href="#" data-toggle="modal" data-target="#Modalss"> ${a.activtiy }</a> </td>
+				  	  <td>
+				  	  	  <a href="#" class="btn btn-primary a-btn-slide-text">
+					        <span class="glyphicon glyphicon-edit" aria-hidden="true" data-toggle="modal" data-target="#EditModals"></span>           
+					      </a>
+					  </td>
+					  <td><a href="#" class="btn btn-danger a-btn-slide-text">
+					        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>	                 
+					      </a>
+					  </td>
+				  	</tr>
+				  </c:forEach>
 			  </tbody>
 			 </table>
 			 
