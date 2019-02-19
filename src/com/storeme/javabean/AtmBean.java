@@ -24,18 +24,6 @@ public class AtmBean {
 	public void setIdatm(int idatm) {
 		this.idatm = idatm;
 	}
-	public int getQuantity() {
-		return quantity;
-	}
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-	public String getRemarks() {
-		return remarks;
-	}
-	public void setRemarks(String remarks) {
-		this.remarks = remarks;
-	}
 	public int getBolt_screw_set_qty() {
 		return bolt_screw_set_qty;
 	}
@@ -109,8 +97,6 @@ public class AtmBean {
 		this.fsc_wndw_frame_remk = fsc_wndw_frame_remk;
 	}
 	private int idatm;
-	private int quantity;
-	private String remarks;
 	private int bolt_screw_set_qty;
 	private String bolt_screw_set_rmk;
 	private int cash_casst_key_qty;
@@ -123,7 +109,80 @@ public class AtmBean {
 	private String decale_rmk;
 	private int fsc_wndw_frame_qty;
 	private String fsc_wndw_frame_remk;
+	public String getChecker() {
+		return checker;
+	}
+	public void setChecker(String checker) {
+		this.checker = checker;
+	}
+	public String getBank() {
+		return bank;
+	}
+	public void setBank(String bank) {
+		this.bank = bank;
+	}
+	public String getDriver() {
+		return driver;
+	}
+	public void setDriver(String driver) {
+		this.driver = driver;
+	}
+	public String getWarehouse_asst() {
+		return warehouse_asst;
+	}
+	public void setWarehouse_asst(String warehouse_asst) {
+		this.warehouse_asst = warehouse_asst;
+	}
+	public String getConsignee() {
+		return consignee;
+	}
+	public void setConsignee(String consignee) {
+		this.consignee = consignee;
+	}
+	public String getPlateno() {
+		return plateno;
+	}
+	public void setPlateno(String plateno) {
+		this.plateno = plateno;
+	}
+	public int getCassete1() {
+		return cassete1;
+	}
+	public void setCassete1(int cassete1) {
+		this.cassete1 = cassete1;
+	}
+	public int getCassete2() {
+		return cassete2;
+	}
+	public void setCassete2(int cassete2) {
+		this.cassete2 = cassete2;
+	}
+	public int getCassete3() {
+		return cassete3;
+	}
+	public void setCassete3(int cassete3) {
+		this.cassete3 = cassete3;
+	}
+	public int getCassete4() {
+		return cassete4;
+	}
+	public void setCassete4(int cassete4) {
+		this.cassete4 = cassete4;
+	}
 	private String checker;
+	private String bank;
+	private String driver;
+	private String warehouse_asst;
+	private String consignee;
+	private String plateno;
+	private int cassete1;
+	private int cassete2;
+	private int cassete3;
+	private int cassete4;
+	
+	
+	
+	
 	
 	
 	
