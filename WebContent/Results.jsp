@@ -120,7 +120,7 @@
 					        <span class="glyphicon glyphicon-edit" aria-hidden="true" data-toggle="modal" data-target="#EditModals"></span>           
 					      </a>
 					  </td>
-					  <td><a href="#" class="btn btn-danger a-btn-slide-text">
+					  <td><a href="DeleteAtmServlet?id=${a.idatminfo }" class="btn btn-danger a-btn-slide-text">
 					        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>	                 
 					      </a>
 					  </td>

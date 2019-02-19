@@ -13,6 +13,21 @@ public class AtmService {
 	static String username ="root";
 	static String password = "password";
 	
+	public void deleteAtmInfo(int id) {
+		
+		String sql = "DELETE FROM atm where idatm = " + id;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			st.executeUpdate();	
+			con.close();
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public ArrayList getAllAtm() {
 		ArrayList<AtmBean> atmLists = new ArrayList<>();
 		
