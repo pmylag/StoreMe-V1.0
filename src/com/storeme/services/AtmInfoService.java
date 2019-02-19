@@ -13,6 +13,47 @@ public class AtmInfoService {
 	static String username ="root";
 	static String password = "password";
 	
+	
+	public void deleteAtmInfo(int id){
+		ArrayList<AtmInfoBean> atm = new ArrayList<>();
+		
+		String sql = "DELETE FROM atmninfo where idatminfo = " + id;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			st.executeUpdate();	
+			con.close();
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public int getMaxIdAtmInfo() {
+		int MaxId = 0;
+		
+		String sql1 = "select MAX(idatminfo) from atmninfo";
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql1);
+			ResultSet rs = st.executeQuery();
+			
+			while(rs.next()) {
+				MaxId = rs.getInt("MAX(idatminfo)");
+				
+			}
+	
+		}catch (ClassNotFoundException | SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+		}
+		
+		return MaxId;
+	}
+	
 	public ArrayList getAllAtmInfo() {
 		ArrayList<AtmInfoBean> atminfoLists = new ArrayList();
 		
@@ -31,7 +72,7 @@ public class AtmInfoService {
 				ai.setAtmplacement(rs.getString(AtmInfoBean.ATMPLACEMENT));
 				ai.setConsignee(rs.getString(AtmInfoBean.CONSIGNEE));
 				ai.setSite(rs.getString("site"));
-				ai.setDate_shipped(rs.getString("date_shipped "));
+				ai.setDate_shipped(rs.getString("date_shipped"));
 				ai.setDate(rs.getString(AtmInfoBean.DATE));
 				ai.setIdatm(rs.getInt(AtmInfoBean.IDATM));
 				ai.setSku(rs.getString(AtmInfoBean.SKU));

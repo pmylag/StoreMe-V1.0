@@ -13,6 +13,21 @@ public class AtmService {
 	static String username ="root";
 	static String password = "password";
 	
+	public void deleteAtmInfo(int id) {
+		
+		String sql = "DELETE FROM atm where idatm = " + id;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			st.executeUpdate();	
+			con.close();
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public ArrayList getAllAtm() {
 		ArrayList<AtmBean> atmLists = new ArrayList<>();
 		
@@ -38,7 +53,17 @@ public class AtmService {
 				a.setDecale_rmk(rs.getString(AtmBean.DECALE_RMK));
 				a.setFsc_wndw_frame_qty(rs.getInt(AtmBean.FSC_WNDW_FRAME_QTY));
 				a.setFsc_wndw_frame_remk(rs.getString(AtmBean.FSC_WNDW_FRAME_REMK));
-				
+				a.setIdatm(rs.getInt(AtmBean.IDATM));
+				a.setChecker(rs.getString("checker"));
+				a.setBank(rs.getString("bank"));
+				a.setDriver(rs.getString("driver"));
+				a.setWarehouse_asst(rs.getString("warehouse_asst"));
+				a.setConsignee(rs.getString("consignee"));
+				a.setPlateno(rs.getString("plateno"));
+				a.setCassete1(rs.getInt("cassete1"));
+				a.setCassete2(rs.getInt("cassete2"));
+				a.setCassete3(rs.getInt("cassete3"));
+				a.setCassete4(rs.getInt("cassete4"));
 				
 				atmLists.add(a);
 				

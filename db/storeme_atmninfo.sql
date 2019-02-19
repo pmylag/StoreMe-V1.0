@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 8.0.13, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: storeme
 -- ------------------------------------------------------
--- Server version	8.0.13
+-- Server version	5.7.21-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
- SET NAMES utf8 ;
+/*!40101 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,13 +21,15 @@
 
 DROP TABLE IF EXISTS `atmninfo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `atmninfo` (
   `idatminfo` int(11) NOT NULL AUTO_INCREMENT,
   `atmplacement` char(1) DEFAULT NULL,
+  `site` varchar(45) DEFAULT NULL,
   `sku` varchar(45) DEFAULT NULL,
   `consignee` varchar(45) DEFAULT NULL,
   `date` varchar(45) DEFAULT NULL,
+  `date_shipped` varchar(45) DEFAULT NULL,
   `time` varchar(45) DEFAULT NULL,
   `waybill_no` varchar(45) DEFAULT NULL,
   `activtiy` varchar(45) DEFAULT NULL,
@@ -43,7 +45,7 @@ CREATE TABLE `atmninfo` (
 
 LOCK TABLES `atmninfo` WRITE;
 /*!40000 ALTER TABLE `atmninfo` DISABLE KEYS */;
-INSERT INTO `atmninfo` VALUES (1,'A','12-BPI-AA12','Bruce','01/01/2018','12:00:00','12345','Stored','Clear',1),(2,'B','34-BDO-BB34','Bruce','01/01/2018','12:00:00','12562','Stored','Clear',2),(3,'C','09-BPI-CC45','Bruce','01/01/2018','12:00:00','52342','Pending','Clear',3);
+INSERT INTO `atmninfo` VALUES (1,'A','Metri Manila','12-BPI-AA12','Bruce','01/01/2018','01/02/2018','12:00:00','12345','Stored','Clear',1),(2,'B','Metro Manila','34-BDO-BB34','Bruce','01/01/2018','01/02/2018','12:00:00','12562','Stored','Clear',2),(3,'C','Metro Manila','09-BPI-CC45','Bruce','01/01/2018','01/02/2018','12:00:00','52342','Pending','Clear',3);
 /*!40000 ALTER TABLE `atmninfo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-02-18  0:07:44
+-- Dump completed on 2019-02-19 22:33:15
