@@ -10,14 +10,133 @@
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%int i = 0;%>
-		  <%if (i < 50){ %>
+		  <%int i1 = 0;%>
+		  <%if (i1 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i >= 60 && i <= 90){%>
+		  <%}else if (i1 >= 60 && i1 <= 90){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
-		  <%}else if(i == 100)%>		
+		  <%}else if(i1 == 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
 		}
+		
+		.rectangle2 {
+		  height: 100px;
+		  width: 90px;
+		  border-style: solid;
+		  border-width: 3px;
+		  <% int i2 = 50; %>
+		  <%if (i2 < 50){ %>
+		  	background-color: #00FF7F;	<!-- Green Fill -->
+		  <%}else if (i2 >= 60 && i2 <= 90){%>
+		  	background-color: #FFA500;	<!-- Orange Fill -->
+		  <%}else if(i2 == 100)%>		
+		  	background-color: #FF0000;	<!-- Red Fill -->
+		}
+		.rectangle3 {
+		  height: 100px;
+		  width: 90px;
+		  border-style: solid;
+		  border-width: 3px;
+		  <%int i3 = 0;%>
+		  <%if (i3 < 50){ %>
+		  	background-color: #00FF7F;	<!-- Green Fill -->
+		  <%}else if (i3 >= 60 && i3 <= 90){%>
+		  	background-color: #FFA500;	<!-- Orange Fill -->
+		  <%}else if(i3 == 100)%>		
+		  	background-color: #FF0000;	<!-- Red Fill -->
+		}
+		.rectangle4 {
+		  height: 100px;
+		  width: 90px;
+		  border-style: solid;
+		  border-width: 3px;
+		  <%int i4 = 0;%>
+		  <%if (i4 < 50){ %>
+		  	background-color: #00FF7F;	<!-- Green Fill -->
+		  <%}else if (i4 >= 60 && i4 <= 90){%>
+		  	background-color: #FFA500;	<!-- Orange Fill -->
+		  <%}else if(i4 == 100)%>		
+		  	background-color: #FF0000;	<!-- Red Fill -->
+		}
+		.rectangle5 {
+		  height: 100px;
+		  width: 90px;
+		  border-style: solid;
+		  border-width: 3px;
+		  <%int i5 = 0;%>
+		  <%if (i5 < 50){ %>
+		  	background-color: #00FF7F;	<!-- Green Fill -->
+		  <%}else if (i5 >= 60 && i5 <= 90){%>
+		  	background-color: #FFA500;	<!-- Orange Fill -->
+		  <%}else if(i5 == 100)%>		
+		  	background-color: #FF0000;	<!-- Red Fill -->
+		}
+		.rectangle6 {
+		  height: 100px;
+		  width: 90px;
+		  border-style: solid;
+		  border-width: 3px;
+		  <%int i6 = 0;%>
+		  <%if (i6 < 50){ %>
+		  	background-color: #00FF7F;	<!-- Green Fill -->
+		  <%}else if (i6 >= 60 && i6 <= 90){%>
+		  	background-color: #FFA500;	<!-- Orange Fill -->
+		  <%}else if(i6 == 100)%>		
+		  	background-color: #FF0000;	<!-- Red Fill -->
+		}
+		.rectangle7 {
+		  height: 100px;
+		  width: 90px;
+		  border-style: solid;
+		  border-width: 3px;
+		  <%int i7 = 99;%>
+		  <%if (i7 < 50){ %>
+		  	background-color: #00FF7F;	<!-- Green Fill -->
+		  <%}else if (i7 >= 60 && i7 <= 90){%>
+		  	background-color: #FFA500;	<!-- Orange Fill -->
+		  <%}else if(i7 == 100)%>		
+		  	background-color: #FF0000;	<!-- Red Fill -->
+		}
+		.rectangle8 {
+		  height: 100px;
+		  width: 90px;
+		  border-style: solid;
+		  border-width: 3px;
+		  <%int i8 = 99;%>
+		  <%if (i8 < 50){ %>
+		  	background-color: #00FF7F;	<!-- Green Fill -->
+		  <%}else if (i8 >= 60 && i8 <= 90){%>
+		  	background-color: #FFA500;	<!-- Orange Fill -->
+		  <%}else if(i8 == 100)%>		
+		  	background-color: #FF0000;	<!-- Red Fill -->
+		}
+		.rectangle9 {
+		  height: 100px;
+		  width: 90px;
+		  border-style: solid;
+		  border-width: 3px;
+		  <%int i9 = 99;%>
+		  <%if (i9 < 50){ %>
+		  	background-color: #00FF7F;	<!-- Green Fill -->
+		  <%}else if (i9 >= 60 && i9 <= 90){%>
+		  	background-color: #FFA500;	<!-- Orange Fill -->
+		  <%}else if(i9 == 100)%>		
+		  	background-color: #FF0000;	<!-- Red Fill -->
+		}
+		.rectangle10 {
+		  height: 100px;
+		  width: 90px;
+		  border-style: solid;
+		  border-width: 3px;
+		  <%int i10 = 99;%>
+		  <%if (i10 < 50){ %>
+		  	background-color: #00FF7F;	<!-- Green Fill -->
+		  <%}else if (i10 >= 60 && i10 <= 90){%>
+		  	background-color: #FFA500;	<!-- Orange Fill -->
+		  <%}else if(i10 == 100)%>		
+		  	background-color: #FF0000;	<!-- Red Fill -->
+		}
+		
 		.circle {
 			height: 50px;
 			width: 50px;
@@ -52,6 +171,14 @@
 	<title>Add ATM: Step 1</title>
 </head>
 <body>
+<%!				
+    int i1;
+%>
+<script>
+function setVar() {
+}
+</script>
+
 	<%@include file="navbar.jsp" %>
 	
 	<div class="container">
@@ -100,17 +227,19 @@
 			    	<div class="col">
 			    		<div class="col-sm-1" style="padding-left:5em">
 							<div class="rectangle1">
-								<h4><p class="text-center">SECTION 1<br> 0/100</p></h4>
+								<button style="background: transparent; border: none !important;">
+									<h4><p>SECTION 1<br> <%out.print(i1); %>/100</p></h4>
+								</button>
 							</div>
 						</div>
 					    <div class="col-sm-1" style="padding-left:7em">
-							<div class="rectangle1">
-								<h4><p class="text-center">SECTION 2<br> 0/100</p></h4>
+							<div class="rectangle2">
+								<h4><p class="text-center">SECTION 2<br> <%out.print(i2); %>/100</p></h4>
 							</div>
 						</div>
 						<div class="col-sm-1" style="padding-left:7em">
-							<div class="rectangle1">
-								<h4><p class="text-center">SECTION 3<br> 0/100</p></h4>
+							<div class="rectangle3">
+								<h4><p class="text-center">SECTION 3<br> <%out.print(i3); %>/100</p></h4>
 							</div>
 						</div>
 				    </div>
@@ -118,23 +247,23 @@
 		    	<div class="row">
 		    		<div class="col">
 			    		<div class="col-sm-1" style="padding-left:5em; padding-top:2em">
-							<div class="rectangle1">
-								<h4><p class="text-center">SECTION 4<br> 0/100</p></h4>
+							<div class="rectangle4">
+								<h4><p class="text-center">SECTION 4<br> <%out.print(i4); %>/100</p></h4>
 							</div>
 						</div>
 					    <div class="col-sm-1" style="padding-left:7em; padding-top:2em">
-							<div class="rectangle1">
-								<h4><p class="text-center">SECTION 5<br> 0/100</p></h4>
+							<div class="rectangle5">
+								<h4><p class="text-center">SECTION 5<br> <%out.print(i5); %>/100</p></h4>
 							</div>
 						</div>
 						<div class="col-sm-1" style="padding-left:7em; padding-top:2em">
-							<div class="rectangle1">
-								<h4><p class="text-center">SECTION 6<br> 0/100</p></h4>
+							<div class="rectangle6">
+								<h4><p class="text-center">SECTION 6<br> <%out.print(i6); %>/100</p></h4>
 							</div>
 						</div>
 						<div class="col-sm-1" style="padding-left:7em; padding-top:2em">
-							<div class="rectangle1">
-								<h4><p class="text-center">SECTION 7<br> 0/100</p></h4>
+							<div class="rectangle7">
+								<h4><p class="text-center">SECTION 7<br> <%out.print(i7); %>/100</p></h4>
 							</div>
 						</div>
 				    </div>

@@ -25,7 +25,7 @@
 				<a href="Results.jsp">
 					<img src="computer.png" style="height:300px; width:300px">
 				</a>
-				<h2 class="text-center"><a href="Results.jsp">FindMe</a></h2>
+				<h2 class="text-center"><a href="GetAllAtmInfoServlet">FindMe</a></h2>
 			</div>
 			<div class="col-sm-4">
 			<a href="HowToUse.jsp">
