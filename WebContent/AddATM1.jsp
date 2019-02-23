@@ -171,14 +171,6 @@
 	<title>Add ATM: Step 1</title>
 </head>
 <body>
-<%!				
-    int i1;
-%>
-<script>
-function setVar() {
-}
-</script>
-
 	<%@include file="navbar.jsp" %>
 	
 	<div class="container">
@@ -272,17 +264,17 @@ function setVar() {
 		    		<div class="col">
 			    		<div class="col-sm-1" style="padding-left:5em; padding-top:2em">
 							<div class="rectangle1">
-								<h4><p class="text-center">SECTION 8<br> 0/100</p></h4>
+								<h4><p class="text-center">SECTION 8<br> <%out.print(i8); %>/100</p></h4>
 							</div>
 						</div>
 					    <div class="col-sm-1" style="padding-left:7em; padding-top:2em">
 							<div class="rectangle1">
-								<h4><p class="text-center">SECTION 9<br> 0/100</p></h4>
+								<h4><p class="text-center">SECTION 9<br> <%out.print(i9); %>/100</p></h4>
 							</div>
 						</div>
 						<div class="col-sm-1" style="padding-left:7em; padding-top:2em">
 							<div class="rectangle1">
-								<h4><p class="text-center">SECTION 10<br> 0/100</p></h4>
+								<h4><p class="text-center">SECTION 10<br> <%out.print(i10); %>/100</p></h4>
 							</div>
 						</div>
 				    </div>
