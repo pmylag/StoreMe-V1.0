@@ -13,9 +13,9 @@
 		  <%!int i1 = 0;%>
 		  <%if (i1 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i1 >= 60 && i1 <= 90){%>
+		  <%}else if (i1 >= 51 && i1 <= 90){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
-		  <%}else if(i1 == 100)%>		
+		  <%}else if(i1 >= 91 && i1 <= 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
 		}
 		
@@ -27,9 +27,9 @@
 		  <%! int i2 = 50; %>
 		  <%if (i2 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i2 >= 60 && i2 <= 90){%>
+		  <%}else if (i2 >= 51 && i2 <= 90){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
-		  <%}else if(i2 == 100)%>		
+		  <%}else if(i2 >= 91 && i2 <= 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
 		}
 		.rectangle3 {
@@ -40,9 +40,9 @@
 		  <%!int i3 = 0;%>
 		  <%if (i3 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i3 >= 60 && i3 <= 90){%>
+		  <%}else if (i3 >= 51 && i3 <= 90){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
-		  <%}else if(i3 == 100)%>		
+		  <%}else if(i3 >= 91 && i3 <= 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
 		}
 		.rectangle4 {
@@ -53,9 +53,9 @@
 		  <%!int i4 = 0;%>
 		  <%if (i4 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i4 >= 60 && i4 <= 90){%>
+		  <%}else if (i4 >= 51 && i4 <= 90){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
-		  <%}else if(i4 == 100)%>		
+		  <%}else if(i4 >= 91 && i4 <= 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
 		}
 		.rectangle5 {
@@ -66,9 +66,9 @@
 		  <%!int i5 = 0;%>
 		  <%if (i5 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i5 >= 60 && i5 <= 90){%>
+		  <%}else if (i5 >= 51 && i5 <= 90){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
-		  <%}else if(i5 == 100)%>		
+		  <%}else if(i5 >= 91 && i5 <= 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
 		}
 		.rectangle6 {
@@ -79,9 +79,9 @@
 		  <%!int i6 = 0;%>
 		  <%if (i6 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i6 >= 60 && i6 <= 90){%>
+		  <%}else if (i6 >= 51 && i6 <= 90){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
-		  <%}else if(i6 == 100)%>		
+		  <%}else if(i6 >= 91 && i6 <= 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
 		}
 		.rectangle7 {
@@ -92,9 +92,9 @@
 		  <%!int i7 = 99;%>
 		  <%if (i7 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i7 >= 60 && i7 <= 90){%>
+		  <%}else if (i7 >= 51 && i7 <= 90){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
-		  <%}else if(i7 == 100)%>		
+		  <%}else if(i7 >= 91 && i7 <= 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
 		}
 		.rectangle8 {
@@ -105,9 +105,9 @@
 		  <%!int i8 = 99;%>
 		  <%if (i8 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i8 >= 60 && i8 <= 90){%>
+		  <%}else if (i8 >= 51 && i8 <= 90){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
-		  <%}else if(i8 == 100)%>		
+		  <%}else if(i8 >= 91 && i8 <= 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
 		}
 		.rectangle9 {
@@ -118,9 +118,9 @@
 		  <%!int i9 = 99;%>
 		  <%if (i9 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i9 >= 60 && i9 <= 90){%>
+		  <%}else if (i9 >= 51 && i9 <= 90){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
-		  <%}else if(i9 == 100)%>		
+		  <%}else if(i9 >= 91 && i9 <= 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
 		}
 		.rectangle10 {
@@ -131,9 +131,9 @@
 		  <%!int i10 = 99;%>
 		  <%if (i10 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i10 >= 60 && i10 <= 90){%>
+		  <%}else if (i10 >= 51 && i10 <= 90){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
-		  <%}else if(i10 == 100)%>		
+		  <%}else if(i10 >= 91 && i10 <= 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
 		}
 		
@@ -166,7 +166,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	
 	<title>Add ATM: Step 1</title>
@@ -233,13 +234,39 @@
 					<a href="HomePage.jsp" style="color: black">Back</a>
 				</button>
 				
-				<input class="btn btn-primary btn-lg" type="submit" value="Submit">
-					<a href="AddATM2.jsp" style="color: white">Save Changes</a>
-				</input>
+				<input class="btn btn-primary btn-lg" type="submit" value="Submit"></input>
 			</form>
+			<div class="container">		    		
+					<h2>Floor Plan</h2>
+					<!-- Trigger the modal with a button -->
+					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Open</button>
+					
+				
+					<!-- Modal -->
+					<div class="modal fade" id="myModal" role="dialog">
+						<div class="modal-dialog modal-lg">
+					    	<!-- Modal content-->
+			      			<div class="modal-content">
+					     		<div class="modal-header">
+					       			<button type="button" class="close" data-dismiss="modal">&times;</button>
+					       			<h4 class="modal-title">Floor Plan</h4>
+						       </div>
+						       <div class="modal-body">
+						        	<div clas="panel">
+						        		<img class="center" src="FloorPlan.jpg" width="1000px" height="400px "></img>
+						        	</div>
+						       </div>
+						       <div class="modal-footer">
+						        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						       </div>
+						   	</div>
+						</div>
+					</div>
+					
+				</div>
 			</div>
+			
 		</div>
-		
 		
 		<div class="col-sm-8">
 			
@@ -248,9 +275,7 @@
 			    	<div class="col">
 			    		<div class="col-sm-1" style="padding-left:5em">
 							<div class="rectangle1">
-								<button style="background: transparent; border: none !important;">
-									<h4><p>SECTION 1<br> <%out.print(i1); %>/100</p></h4>
-								</button>
+								<h4><p class="text-center">SECTION 1<br> <%out.print(i1); %>/100</p></h4>
 							</div>
 						</div>
 					    <div class="col-sm-1" style="padding-left:7em">
@@ -308,36 +333,24 @@
 						</div>
 				    </div>
 		    	</div>
-		    	
-		    	<div class="container">		    		
-					<h2>Floor Plan</h2>
-					<!-- Trigger the modal with a button -->
-					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Open</button>
-					
-					<!-- Modal -->
-					<div class="modal fade" id="myModal" role="dialog">
-						<div class="modal-dialog modal-lg">
-						    <!-- Modal content-->
-						      <div class="modal-content">
-						     	<div class="modal-header">
-						       	<button type="button" class="close" data-dismiss="modal">&times;</button>
-						       	<h4 class="modal-title">Floor Plan</h4>
-						       </div>
-						       <div class="modal-body">
-						        <div clas="panel">
-						        	<img class="center" src="FloorPlan.jpg" width="1000px" height="400px "></img>
-						        </div>
-						       </div>
-						        <div class="modal-footer">
-						        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						        </div>
-						   	</div>
+		    	<br>	
+		    	<div class="container">
+			    	<div class="col-sm-4">
+			    		<div class="panel panel-default">
+						  <div class="panel-heading">Legend</div>
+						  <div class="panel-body">
+						  	<div class="list-group">
+							  <a href="#" class="list-group-item" style="background-color: #00FF7F">0 - 50 </a>
+							  <a href="#" class="list-group-item" style="background-color: #FFA500">60 - 90</a>
+							  <a href="#" class="list-group-item" style="background-color: #FF0000">91 - 100</a>
+							</div>
+						  </div>
 						</div>
-					</div>
-				</div>
+			    	</div>
+		    	</div>
 			</div>
 		</div>
-			
-		</div>
+		
+	</div>
 </body>
 </html>
