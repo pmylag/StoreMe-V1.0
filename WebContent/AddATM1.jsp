@@ -10,7 +10,7 @@
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%int i1 = 0;%>
+		  <%!int i1 = 0;%>
 		  <%if (i1 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i1 >= 60 && i1 <= 90){%>
@@ -24,7 +24,7 @@
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <% int i2 = 50; %>
+		  <%! int i2 = 50; %>
 		  <%if (i2 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i2 >= 60 && i2 <= 90){%>
@@ -37,7 +37,7 @@
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%int i3 = 0;%>
+		  <%!int i3 = 0;%>
 		  <%if (i3 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i3 >= 60 && i3 <= 90){%>
@@ -50,7 +50,7 @@
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%int i4 = 0;%>
+		  <%!int i4 = 0;%>
 		  <%if (i4 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i4 >= 60 && i4 <= 90){%>
@@ -63,7 +63,7 @@
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%int i5 = 0;%>
+		  <%!int i5 = 0;%>
 		  <%if (i5 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i5 >= 60 && i5 <= 90){%>
@@ -76,7 +76,7 @@
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%int i6 = 0;%>
+		  <%!int i6 = 0;%>
 		  <%if (i6 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i6 >= 60 && i6 <= 90){%>
@@ -89,7 +89,7 @@
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%int i7 = 99;%>
+		  <%!int i7 = 99;%>
 		  <%if (i7 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i7 >= 60 && i7 <= 90){%>
@@ -102,7 +102,7 @@
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%int i8 = 99;%>
+		  <%!int i8 = 99;%>
 		  <%if (i8 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i8 >= 60 && i8 <= 90){%>
@@ -115,7 +115,7 @@
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%int i9 = 99;%>
+		  <%!int i9 = 99;%>
 		  <%if (i9 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i9 >= 60 && i9 <= 90){%>
@@ -128,7 +128,7 @@
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%int i10 = 99;%>
+		  <%!int i10 = 99;%>
 		  <%if (i10 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i10 >= 60 && i10 <= 90){%>
@@ -165,13 +165,29 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	
 	<title>Add ATM: Step 1</title>
 </head>
 <body>
-	<%@include file="navbar.jsp" %>
+	<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">StoreMe</a>
+				</div>
+				
+			<ul class="nav navbar-nav">
+				<li><a href="HomePage.jsp">Home</a></li>
+				<li><a>Welcome, User</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+		      <li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
+		      <li><a href="WelcomePage.jsp"><span class="glyphicon glyphicon-log-in" style="padding-right:5em"></span></a></li>
+		    </ul>
+		  </div>
+		</nav>
 	
 	<div class="container">
 		<div class="col-md-6">
@@ -201,16 +217,29 @@
 		<div class="col-sm-4">
 			<img src="ATM.jpg">
 			<div style="padding-left: 5em; padding-top: 5em">
+			<form>
+				<div>
+				    <div class="form-group">
+				      	<label for="sel1">Choose Section: </label>
+				     	 <select class="form-control" id="sel1">
+				     	 	<% for(int z = 1; z<= 10; z++) {%>
+				      	  	<option value="Section<%out.print(z);%>">Section <%out.print(z); %></option>
+				      	  	<%} %>
+				     	 </select>
+					</div>
+			    </div>
 			
-			<button class="btn btn-lg">
-				<a href="HomePage.jsp" style="color: black">Back</a>
-			</button>
+				<button class="btn btn-lg">
+					<a href="HomePage.jsp" style="color: black">Back</a>
+				</button>
 				
-			<button class="btn btn-primary btn-lg" type="submit">
-				<a href="AddATM2.jsp" style="color: white">Save Changes</a>
-			</button>
+				<input class="btn btn-primary btn-lg" type="submit" value="Submit">
+					<a href="AddATM2.jsp" style="color: white">Save Changes</a>
+				</input>
+			</form>
 			</div>
 		</div>
+		
 		
 		<div class="col-sm-8">
 			
@@ -280,7 +309,7 @@
 				    </div>
 		    	</div>
 		    	
-		    	<div class="container">
+		    	<div class="container">		    		
 					<h2>Floor Plan</h2>
 					<!-- Trigger the modal with a button -->
 					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Open</button>
@@ -306,7 +335,6 @@
 						</div>
 					</div>
 				</div>
-		    	
 			</div>
 		</div>
 			
