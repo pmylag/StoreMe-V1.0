@@ -7,7 +7,7 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Account Information</title>
+	<title>Create New Account</title>
 </head>
 <body>
 	<%@include file="navbar.jsp" %>
@@ -27,7 +27,7 @@
 		
 		
 	<div class="container">
-		<h1>Account Information</h1>
+		<h1>Create New Account</h1>
 		<form>
 			<div class="form-group">
 				<div class="col-sm-4">
@@ -40,8 +40,12 @@
 	  					<input type="text" class="form-control" id="addr" placeholder="Ex. Espana, Manila">
 					</div>
 					<div>
-						<label for="mobile">Mobile Number:</label>
-	  					<input type="number" class="form-control" id="addr" placeholder="Ex. 09177777777">
+						<label for="usrname">Username:</label>
+	  					<input type="text" class="form-control" id="usrname" placeholder="jDelaCruz">
+  					</div>
+					<div>
+						<label for="password">Password:</label>
+  						<input type="password" class="form-control" id="password" placeholder="************">
 					</div>
 					<div>
 						<div class="col-sm-3">
@@ -69,16 +73,18 @@
 						<label for="email">Email Address:</label>
   						<input type="email" class="form-control" id="email" placeholder="Ex. juandelacruz@domain.com">
 					</div>
-					
+					<div>
+						<label for="mobile">Mobile Number:</label>
+	  					<input type="number" class="form-control" id="addr" placeholder="Ex. 09177777777">
+					</div>
+					<div>
+						<label for="confPassword">Confirm Password:</label>
+  						<input type="password" class="form-control" id="confPassword" placeholder="************">
+					</div>
 				</div>
 				<div class="col-sm-4">
 					<img src="avatar.png">
 				</div>
-				
-				
-			</div>
-			
-			
 		</form>
 	</div>
 
@@ -93,9 +99,9 @@
 			      </div>
 			      <div class="modal-body">
 			        <div class="form-group">
-						<center>
-				      		<h4>Do you want to save this new information?</h4>
-				      	</center>					
+											<center>
+									      		<h4>Do you want to save this new information?</h4>
+									      	</center>					
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>

@@ -10,12 +10,16 @@
 	<%@include file="navbar.jsp" %>
 	<nav class="navbar navbar-default navbar-custom">
 		<div class="container-fluid">
-				
-			<ul class="nav navbar-header navbar-nav">
-		      <li><a href="AccountInfo.jsp">Account Information</span></a></li>
-		      <li><a href="ChangePassword.jsp">Change Password</span></a></li>
-		    </ul>
-	    </div>
+			
+		<ul class="nav navbar-header navbar-nav">
+	      <li><a href="AccountInfo.jsp">Account Information</span></a></li>
+	      <li><a href="ChangePassword.jsp">Change Password</span></a></li>
+	      <%!int priv = 1; %> <%-- Checks the privilege of user --%>
+	      <%if (priv == 1){ %> <%-- Only admin which has privilege of 1 can add an account --%>
+	      	<li><a href="AddAccount.jsp">Add Account</span></a></li>
+	      <%} %>
+	    </ul>
+	  </div>
 	</nav>
 	
 	<div class="container">
