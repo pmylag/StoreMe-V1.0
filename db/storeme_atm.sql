@@ -46,6 +46,8 @@ CREATE TABLE `atm` (
   `cassete2` int(1) DEFAULT NULL,
   `cassete3` int(1) DEFAULT NULL,
   `cassete4` int(1) DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL,
+  `remarks` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idatm`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -56,7 +58,7 @@ CREATE TABLE `atm` (
 
 LOCK TABLES `atm` WRITE;
 /*!40000 ALTER TABLE `atm` DISABLE KEYS */;
-INSERT INTO `atm` VALUES (1,1,'John',5,'-',2,'-',5,'-',10,'Missing one',5,'fading color',1,'-','BPI','Steve','Natasha','Bruce','ABC123',1,0,0),(2,1,'John',2,'screw #1 faulty',2,'-',5,'-',11,'-',5,'-',1,'-','BDO','Tony','Pepper','Bruce','DEF123',1,1,1),(3,1,'Kevin',4,'-',2,'-',5,'-',11,'-',5,'-',1,'-','BPI','Steve','Natasha','Bruce','ABC123',1,0,1);
+INSERT INTO `atm` VALUES (1,1,'John',5,'-',2,'-',5,'-',10,'Missing one',5,'fading color',1,'-','BPI','Steve','Natasha','Bruce','ABC123',1,0,0,2,NULL),(2,1,'John',2,'screw #1 faulty',2,'-',5,'-',11,'-',5,'-',1,'-','BDO','Tony','Pepper','Bruce','DEF123',1,1,1,3,NULL),(3,1,'Kevin',4,'-',2,'-',5,'-',11,'-',5,'-',1,'-','BPI','Steve','Natasha','Bruce','ABC123',1,0,1,1,NULL);
 /*!40000 ALTER TABLE `atm` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -69,4 +71,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-02-19 22:33:15
+-- Dump completed on 2019-02-25 12:24:04

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>   
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,71 +25,73 @@
 				<div class="panel panel-default">	
 					<div class="panel-heading">  
 				 		<h4 class = "text-center">
-				 			<font color="black">83-PNB-SS23</font>
+				 			<font color="black">${sku }</font>
 				 		</h4>
 				 	</div>
 				 	<font color="gray">	
 				 	<div class="panel-body bg-default">
-						<div class="form-group">
-							<div class="col-sm-4">
-								<ul class="list-group">
-									<li class="list-group-item borderless"><b>Checker: </b><u>Jose P. De Leon</u></li>
-									<li class="list-group-item borderless"><b>Warehouse Assistant: </b><u>Jasmin A. Cruz</u></li>
-									<li class="list-group-item borderless"><b>Bank: </b><u>PNB</u> </li>
-								  	<li class="list-group-item borderless"><b>Consignee: </b><u>NCR</u> </li>
-								  	<li class="list-group-item borderless"><b>Driver: </b><u>Pepito Santos</u> </li>
-								  	<li class="list-group-item borderless"><b>Plate No: </b><u>PPM-902</u> </li>
-								  	<li class="list-group-item borderless"><b>Cassette: </b><u>1.2.4< </li>
-								</ul>					
-							</div>
-							<div class ="col-sm-8">
-								<table class="table table-borderless">
-									<thead>
-										<tr>
-											<th scope="col">Description</th>
-										    <th scope="col">Quantity</th>
-										    <th scope="col">Remarks</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1. Atm</td>
-										    <td>1</td>
-										    <td></td>
-										</tr>
-										<tr>
-											<td>2. Bolting Screws Set</td>
-										    <td>2</td>
-										    <td></td>
-										</tr>
-										<tr>
-											<td>3. Cash Cassette Keys</th>
-										    <td>1</td>
-										    <td></td>
-										</tr>
-										<tr>
-											<td>4. Cladding</th>
-											<td>1</td>
-										    <td></td>
-										</tr>
-										<tr>
-											<td>5. Collar</th>
-										    <td>4</td>
-										    <td></td>
-										</tr>
-										<tr>
-											<td>6. Decals</th>
-										    <td>2</td>
-										    <td></td>
-										</tr>
-										<tr>
-											<td>7. Fascia/Window Frames</th>
-										    <td>1</td>
-										    <td></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>	      
+				 		<c:forEach items="${atm}" var = "a">
+							<div class="form-group">
+								<div class="col-sm-4">
+									<ul class="list-group">
+										<li class="list-group-item borderless"><b>Checker: </b><u>${a.checker }</u></li>
+										<li class="list-group-item borderless"><b>Warehouse Assistant: </b><u>${a.warehouse_asst }</u></li>
+										<li class="list-group-item borderless"><b>Bank: </b><u>${a.bank }</u> </li>
+									  	<li class="list-group-item borderless"><b>Consignee: </b><u>${a.consignee }</u> </li>
+									  	<li class="list-group-item borderless"><b>Driver: </b><u>${a.driver}</u> </li>
+									  	<li class="list-group-item borderless"><b>Plate No: </b><u>${a.plateno }</u> </li>
+									  	<li class="list-group-item borderless"><b>Cassette: </b><u>${a.cassete2 }</u> </li>
+									</ul>					
+								</div>
+								<div class ="col-sm-8">
+									<table class="table table-borderless">
+										<thead>
+											<tr>
+												<th scope="col">Description</th>
+											    <th scope="col">Quantity</th>
+											    <th scope="col">Remarks</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1. Atm</td>
+											    <td>${a.quantity }</td>
+											    <td>${a.remarks }</td>
+											</tr>
+											<tr>
+												<td>2. Bolting Screws Set</td>
+											    <td>${a.bolt_screw_set_qty }</td>
+											    <td>${a.bolt_screw_set_rmk }</td>
+											</tr>
+											<tr>
+												<td>3. Cash Cassette Keys</th>
+											    <td>${a.cash_casst_key_qty }</td>
+											    <td>${a.cash_casst_key_rmk }</td>
+											</tr>
+											<tr>
+												<td>4. Cladding</th>
+												<td>${a.clad_qty }</td>
+											    <td>${a.clad_rmk }</td>
+											</tr>
+											<tr>
+												<td>5. Collar</th>
+											    <td>${a.collar_qty }</td>
+											    <td>${a.collar_rmk }</td>
+											</tr>
+											<tr>
+												<td>6. Decals</th>
+											    <td>${a.decale_qty }</td>
+											    <td>${a.decale_rmk }</td>
+											</tr>
+											<tr>
+												<td>7. Fascia/Window Frames</th>
+											    <td>${a.fsc_wndw_frame_qty }</td>
+											    <td>${a.fsc_wndw_frame_remk }</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</c:forEach>	      
 						</div>
 					</div>
 				</div>

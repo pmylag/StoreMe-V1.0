@@ -180,6 +180,20 @@ public class AtmBean {
 	private int cassete3;
 	private int cassete4;
 	
+	private int quantity;
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	public String getRemarks() {
+		return remarks;
+	}
+	public void setRemarks(String remarks) {
+		this.remarks = remarks;
+	}
+	private String remarks;
 	
 	
 	

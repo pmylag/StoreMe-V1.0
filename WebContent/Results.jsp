@@ -105,7 +105,7 @@
 			  	<c:forEach items="${atminfolists}"  var= "a">
 				  	<tr>
 				  	  <th scope="row"> ${a.idatminfo }</th>
-				  	  <td><a href="#" data-toggle="modal" data-target="#ModalYo">${a.sku }</a> </td>
+				  	  <td><a href="GetSelectedServlet?id=${a.idatminfo}">${a.sku }</a> </td>
 				  	  <td> ${a.atmplacement }</td>
 				  	  <td> ${a.consignee } </td>
 				  	  <td> ${a.site } </td>

@@ -34,9 +34,10 @@ CREATE TABLE `atmninfo` (
   `waybill_no` varchar(45) DEFAULT NULL,
   `activtiy` varchar(45) DEFAULT NULL,
   `status` varchar(45) DEFAULT NULL,
+  `received_by` varchar(45) DEFAULT NULL,
   `idatm` int(11) DEFAULT NULL,
   PRIMARY KEY (`idatminfo`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,7 +46,7 @@ CREATE TABLE `atmninfo` (
 
 LOCK TABLES `atmninfo` WRITE;
 /*!40000 ALTER TABLE `atmninfo` DISABLE KEYS */;
-INSERT INTO `atmninfo` VALUES (1,'A','Metri Manila','12-BPI-AA12','Bruce','01/01/2018','01/02/2018','12:00:00','12345','Stored','Clear',1),(2,'B','Metro Manila','34-BDO-BB34','Bruce','01/01/2018','01/02/2018','12:00:00','12562','Stored','Clear',2),(3,'C','Metro Manila','09-BPI-CC45','Bruce','01/01/2018','01/02/2018','12:00:00','52342','Pending','Clear',3);
+INSERT INTO `atmninfo` VALUES (1,'1','Metri Manila','12-BPI-AA12','Bruce','01/01/2018','01/02/2018','12:00:00','12345','Stored','Clear',NULL,1),(2,'2','Metro Manila','34-BDO-BB34','Bruce','01/01/2018','01/02/2018','12:00:00','12562','Stored','Clear',NULL,2),(3,'3','Metro Manila','09-BPI-CC45','Bruce','01/01/2018','01/02/2018','12:00:00','52342','Pending','Clear',NULL,3),(4,'4',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `atmninfo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-02-19 22:33:15
+-- Dump completed on 2019-02-25 12:24:04
