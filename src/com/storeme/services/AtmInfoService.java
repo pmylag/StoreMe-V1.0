@@ -13,6 +13,194 @@ public class AtmInfoService {
 	static String username ="root";
 	static String password = "password";
 	
+	public int getcountSection1() {
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 1";
+		int count = 0;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while(rs.next())
+				count = rs.getInt("COUNT(*)");
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return count;
+	}
+	
+	public int getcountSection2() {
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 2";
+		int count = 0;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while(rs.next())
+				count = rs.getInt("COUNT(*)");
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return count;
+	}
+	public int getcountSection3() {
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 3";
+		int count = 0;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while(rs.next())
+				count = rs.getInt("COUNT(*)");
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return count;
+	}
+	public int getcountSection4() {
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 4";
+		int count = 0;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while(rs.next())
+				count = rs.getInt("COUNT(*)");
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return count;
+	}
+	
+	public int getcountSection5() {
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 5";
+		int count = 0;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while(rs.next())
+				count = rs.getInt("COUNT(*)");
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return count;
+	}
+	
+	public int getcountSection6() {
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 6";
+		int count = 0;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while(rs.next())
+				count = rs.getInt("COUNT(*)");
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return count;
+	}
+	
+	public int getcountSection7() {
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 7";
+		int count = 0;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while(rs.next())
+				count = rs.getInt("COUNT(*)");
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return count;
+	}
+	
+	public int getcountSection8() {
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 8";
+		int count = 0;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while(rs.next())
+				count = rs.getInt("COUNT(*)");
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return count;
+	}
+	
+	public int getcountSection9() {
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 9";
+		int count = 0;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while(rs.next())
+				count = rs.getInt("COUNT(*)");
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return count;
+	}
+	
+	
+	public int getcountSection10() {
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 10";
+		int count = 0;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while(rs.next())
+				count = rs.getInt("COUNT(*)");
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return count;
+	}
 
 
 	public ArrayList getSearchedAtmInfo(String type, String search) {

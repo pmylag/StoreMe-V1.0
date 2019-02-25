@@ -32,6 +32,30 @@ public class AddAtmSectionServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		int section1, section2, section3, section4, section5, section6, section7, section8, section9, section10;
+		AtmInfoService atminfosServices = new AtmInfoService();
+		section1 = atminfosServices.getcountSection1();
+		section2 = atminfosServices.getcountSection2();
+		section3 = atminfosServices.getcountSection3();
+		section4 = atminfosServices.getcountSection4();
+		section5 = atminfosServices.getcountSection5();
+		section6 = atminfosServices.getcountSection6();
+		section7 = atminfosServices.getcountSection7();
+		section8 = atminfosServices.getcountSection8();
+		section9 = atminfosServices.getcountSection9();
+		section10 = atminfosServices.getcountSection10();
+		
+		request.setAttribute("in1", section1);
+		request.setAttribute("in2", section2);
+		request.setAttribute("in3", section3);
+		request.setAttribute("in4", section4);
+		request.setAttribute("in5", section5);
+		request.setAttribute("in6", section6);
+		request.setAttribute("in7", section7);
+		request.setAttribute("in8", section8);
+		request.setAttribute("in9", section9);
+		request.setAttribute("in10", section10);
+		request.getRequestDispatcher("AddATM1.jsp").forward(request, response);
 	}
 
 	/**

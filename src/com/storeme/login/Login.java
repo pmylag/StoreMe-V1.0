@@ -85,7 +85,7 @@ public class Login extends HttpServlet {
 					session.setAttribute("username", uname);
 					session.setAttribute("iduser", dao.getiduser(uname));
 					System.out.println("futa: "+dao.getiduser(uname));
-					response.sendRedirect("userManager.jsp");
+					response.sendRedirect("HomePage.jsp");
 					action = uname + " ID: " + dao.getiduser(uname) + " logged in at " + LocalDateTime.now();
 				}else if(dao.checkadmin(uname)== 2) {
 					session.setAttribute("isproductmanager", uname);

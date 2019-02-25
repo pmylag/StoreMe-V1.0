@@ -40,7 +40,7 @@
 									  	<li class="list-group-item borderless"><b>Consignee: </b><u>${a.consignee }</u> </li>
 									  	<li class="list-group-item borderless"><b>Driver: </b><u>${a.driver}</u> </li>
 									  	<li class="list-group-item borderless"><b>Plate No: </b><u>${a.plateno }</u> </li>
-									  	<li class="list-group-item borderless"><b>Cassette: </b><u>${a.cassete2 }</u> </li>
+									  	<li class="list-group-item borderless"><b>Cassette: </b><u>${cassette}</u> </li>
 									</ul>					
 								</div>
 								<div class ="col-sm-8">

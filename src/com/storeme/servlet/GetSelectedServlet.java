@@ -39,9 +39,27 @@ public class GetSelectedServlet extends HttpServlet {
 		AtmService AtmsService = new AtmService();
 		ArrayList<AtmBean> atm = AtmsService.getSelectAtm(id);
 		
+		String cassette = null; 
+		if (atm.get(0).getCassete1() == 1)
+			cassette = "" + atm.get(0).getCassete1();
+		
+		if (atm.get(0).getCassete2() == 1)
+			cassette = cassette + ",  2";
+		
+		if (atm.get(0).getCassete3() == 1)
+			cassette = cassette + ", 3 ";
+		
+		if (atm.get(0).getCassete4() == 1)
+			cassette = cassette + ", 4" ;
+		
+		
+		System.out.print(cassette);
+		
+		
 		AtmInfoService atmInfosService = new AtmInfoService();
 		
 		String action = atmInfosService.getSKUint(Integer.parseInt(request.getParameter("id")));
+		request.setAttribute("cassette", cassette);
 		request.setAttribute("sku", action);
 		request.setAttribute("atm", atm);
 		request.getRequestDispatcher("result1.jsp").forward(request, response);

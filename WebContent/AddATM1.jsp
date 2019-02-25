@@ -1,8 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>   
 <!DOCTYPE html>
 <html>
 <head>
+
+${in1 }
 
 	<style>
 		.rectangle1 {
@@ -10,7 +13,7 @@
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%!int i1 = 0;%>
+		  <%int i1 = 0;%>
 		  <%if (i1 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i1 >= 51 && i1 <= 90){%>
@@ -213,6 +216,7 @@
 			</div>
 		</div>
 	</div>
+
 	
 	<div class="container">
 		<div class="col-sm-4">
