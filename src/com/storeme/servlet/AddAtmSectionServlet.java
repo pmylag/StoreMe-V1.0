@@ -65,11 +65,12 @@ public class AddAtmSectionServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		AtmInfoBean ai = new AtmInfoBean();
+		System.out.println("Eto naaa boiii " + request.getParameter("atmplacement"));
 		ai.setAtmplacement(request.getParameter("atmplacement"));
 		
 		AtmInfoService atminfosService = new AtmInfoService();
 		atminfosService.addAtmSection(ai);
-		doGet(request, response);
+		request.getRequestDispatcher("AddATM2.jsp").forward(request, response);
 	}
 
 }

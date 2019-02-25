@@ -240,12 +240,12 @@ public class AtmInfoService {
 			st.setString(4, ai.getDate());
 			st.setString(5, ai.getDate_shipped());
 			st.setString(6, ai.getTime());
-			st.setString(7, ai.getTime());
-			st.setString(8, ai.getWaybill_no());
-			st.setString(9, ai.getActivtiy());
-			st.setString(10, ai.getStatus());
+			st.setString(7, ai.getWaybill_no());
+			st.setString(8, ai.getActivtiy());
+			st.setString(9, ai.getStatus());
+			st.setInt(10, id);
 			st.setInt(11, id);
-			System.out.println(st);
+			System.out.println("wkwkwkw  " + st);
 			st.executeUpdate();
 		}catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block

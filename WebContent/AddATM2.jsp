@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+
 <!DOCTYPE html>
 <html>
 <style>
@@ -55,59 +57,60 @@
 	</div>
 	
 	<div class="container">
-		<div class="col-sm-6">
-			<div class ="col-sm-6">
-				<div class="form-group">
-					<label for="sku">SKU:</label>
-					<input type="text" class="form-control" id="sku">
-				</div>
-				<div class="form-group">
-					<label for="csn">Consignee:</label>
-					<input type="text" class="form-control" id="csn">
-				</div>
-				<div class="form-group">
-					<label for="dt">Date:</label>
-					<input type="date" class="form-control" id="dt">
-				</div>
-				<div class="form-group">
-					<label for="tm">Time:</label>
-					<input type="time" class="form-control" id="tm">
-				</div>
-				<div class="form-group">
-					<label for="wn">Waybill Number:</label>
-					<input type="Number" class="form-control" id="wn">
-				</div>
-				
-			
-				<button class="btn btn-lg">
-					<a href="HomePage.jsp" style="color: black">Back</a>
-				</button>
-				
-				<button class="btn btn-primary btn-lg" type="submit">
-					<a href="AddATM3.jsp" style="color: white">Next</a>
-				</button>
-			</div>
+		<form action = "AddAtmInfoServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);"> 
 			<div class="col-sm-6">
-				<div class="form-group">
-					<label for="sl">Site Location:</label>
-					<input type="text" class="form-control" id="sl">
-				</div>
-				<div class="form-group">
-					<label for="sel1">Status:</label>
-					<select class="form-control" id="sel1">
-						<option value="Returned">Returned</option>
-						<option value="Completed">Completed</option>
-					</select>
-				</div>
-				<div class="form-group">
+				<div class ="col-sm-6">
 					<div class="form-group">
-						<label for="act">Activity:</label>
-						<textarea class="form-control" rows="5" id="act"></textarea>
+						<label for="sku">SKU:</label>
+						<input type="text" class="form-control" id="sku" name = "sku">
+					</div>
+					<div class="form-group">
+						<label for="csn">Consignee:</label>
+						<input type="text" class="form-control" id="csn" name = "consignee">
+					</div>
+					<div class="form-group">
+						<label for="dt">Date:</label>
+						<input type="date" class="form-control" id="dt" name =  "date">
+					</div>
+					<div class="form-group">
+						<label for="tm">Time:</label>
+						<input type="time" class="form-control" id="tm" name = "time">
+					</div>
+					<div class="form-group">
+						<label for="wn">Waybill Number:</label>
+						<input type="Number" class="form-control" id="wn" name = "waybill_no">
+					</div>
+					
+				
+					<button class="btn btn-lg">
+						<a href="HomePage.jsp" style="color: black">Back</a>
+					</button>
+					
+					<button class="btn btn-primary btn-lg" type="submit">
+						<a href="AddATM3.jsp" style="color: white" type = "submit">Next</a>
+					</button>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label for="sl">Site Location:</label>
+						<input type="text" class="form-control" id="sl" name = "site">
+					</div>
+					<div class="form-group">
+						<label for="sel1">Status:</label>
+						<select class="form-control" id="sel1" name = "status">
+							<option value="Returned">Returned</option>
+							<option value="Completed">Completed</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<div class="form-group">
+							<label for="act">Activity:</label>
+							<textarea class="form-control" rows="5" id="act" name = "activity"></textarea>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		
+		</form>
 		<div class="col-sm-4">
 			<img src="atmWithPerson.jpg" height="150%" width="150%">
 		</div>

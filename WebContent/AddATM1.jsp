@@ -13,7 +13,7 @@ ${in1 }
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%int i1 = 0;%>
+		  <%int i1 = (int)request.getAttribute("in1");%>
 		  <%if (i1 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i1 >= 51 && i1 <= 90){%>
@@ -27,7 +27,8 @@ ${in1 }
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%! int i2 = 50; %>
+		  <%! int i2 = 0;%>
+		  <% i2 = (int)request.getAttribute("in2");%>
 		  <%if (i2 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i2 >= 51 && i2 <= 90){%>
@@ -40,7 +41,8 @@ ${in1 }
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%!int i3 = 0;%>
+		  <%! int i3 = 0;%>		  
+		  <%i3 = (int)request.getAttribute("in3");%>
 		  <%if (i3 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i3 >= 51 && i3 <= 90){%>
@@ -53,7 +55,8 @@ ${in1 }
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%!int i4 = 0;%>
+		  <%! int i4 = 0;%>
+		  <%i4 = (int)request.getAttribute("in4");%>
 		  <%if (i4 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i4 >= 51 && i4 <= 90){%>
@@ -66,7 +69,8 @@ ${in1 }
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%!int i5 = 0;%>
+		  <%! int i5 = 0;%>		  
+		  <%i5 = (int)request.getAttribute("in5");%>
 		  <%if (i5 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i5 >= 51 && i5 <= 90){%>
@@ -80,6 +84,7 @@ ${in1 }
 		  border-style: solid;
 		  border-width: 3px;
 		  <%!int i6 = 0;%>
+		  <%i6 = (int)request.getAttribute("in6");%>
 		  <%if (i6 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i6 >= 51 && i6 <= 90){%>
@@ -92,7 +97,8 @@ ${in1 }
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%!int i7 = 99;%>
+		  <%! int i7 = 0;%>
+		  <%i7 = (int)request.getAttribute("in7");%>
 		  <%if (i7 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i7 >= 51 && i7 <= 90){%>
@@ -105,7 +111,8 @@ ${in1 }
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%!int i8 = 99;%>
+		  <%! int i8 = 0;%>		  
+		  <%i8 = (int)request.getAttribute("in8");%>
 		  <%if (i8 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i8 >= 51 && i8 <= 90){%>
@@ -118,7 +125,8 @@ ${in1 }
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%!int i9 = 99;%>
+		  <%! int i9 = 0;%>		  
+		  <%i9 = (int)request.getAttribute("in9");%>
 		  <%if (i9 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i9 >= 51 && i9 <= 90){%>
@@ -131,7 +139,8 @@ ${in1 }
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%!int i10 = 99;%>
+		  <%! int i10 = 0;%>		  
+		  <%i10 = (int)request.getAttribute("in10");%>
 		  <%if (i10 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i10 >= 51 && i10 <= 90){%>
@@ -222,14 +231,22 @@ ${in1 }
 		<div class="col-sm-4">
 			<img src="ATM.jpg">
 			<div style="padding-left: 5em; padding-top: 5em">
-			<form>
+			<form action = "AddAtmSectionServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);">
 				<div>
 				    <div class="form-group">
 				      	<label for="sel1">Choose Section: </label>
-				     	 <select class="form-control" id="sel1">
-				     	 	<% for(int z = 1; z<= 10; z++) {%>
-				      	  	<option value="Section<%out.print(z);%>">Section <%out.print(z); %></option>
-				      	  	<%} %>
+				     	 <select class="form-control" id="sel1" name = "atmplacement">
+				     	 <option value="1" name = "atmplacement">1</option>
+				     	 <option value="2" name = "atmplacement">2</option>
+				     	 <option value="3" name = "atmplacement">3</option>
+				     	 <option value="4" name = "atmplacement">4</option>
+				     	 <option value="5" name = "atmplacement">5</option>
+				     	 <option value="6" name = "atmplacement">6</option>
+				     	 <option value="7" name = "atmplacement">7</option>
+				     	 <option value="8" name = "atmplacement">8</option>
+				     	 <option value="9" name = "atmplacement">9</option>
+				     	 <option value="10" name = "atmplacement">10</option>
+				
 				     	 </select>
 					</div>
 			    </div>
@@ -238,7 +255,7 @@ ${in1 }
 					<a href="HomePage.jsp" style="color: black">Back</a>
 				</button>
 				
-				<input class="btn btn-primary btn-lg" type="submit" value="Submit"></input>
+				<input class="btn btn-primary btn-lg" type="submit"></input>
 			</form>
 			<div class="container">		    		
 					<h2>Floor Plan</h2>

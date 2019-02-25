@@ -16,16 +16,16 @@
 	<div class="container">
 		<div class="jumbotron" style="background-color:white;">
 			<div class="col-sm-4">
-				<a href="AddATM1.jsp">
+				<a href="AddAtmSectionServlet">
 					<img src="atm.png" style="height:300px; width:300px">
 				</a>
 				<h2 class="text-center">New ATM Information</h2>
 			</div>
 			<div class="col-sm-4">
-				<a href="Results.jsp">
+				<a href="GetAllAtmInfoServlet">
 					<img src="computer.png" style="height:300px; width:300px">
 				</a>
-				<h2 class="text-center"><a href="GetAllAtmInfoServlet">FindMe</a></h2>
+				<h2 class="text-center"><a href="">FindMe</a></h2>
 			</div>
 			<div class="col-sm-4">
 			<a href="HowToUse.jsp">

@@ -75,7 +75,9 @@ public class AtmService {
 		
 		return atmLists;
 	}
-	
+	public void addAtm(int id) {
+		
+	}
 	public ArrayList getAllAtm() {
 		ArrayList<AtmBean> atmLists = new ArrayList<>();
 		

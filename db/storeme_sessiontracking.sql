@@ -16,30 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `user`
+-- Table structure for table `sessiontracking`
 --
 
-DROP TABLE IF EXISTS `user`;
+DROP TABLE IF EXISTS `sessiontracking`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user` (
-  `iduser` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(45) DEFAULT NULL,
-  `password` varchar(45) DEFAULT NULL,
-  `privilege` int(11) DEFAULT NULL,
-  `locked` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`iduser`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+CREATE TABLE `sessiontracking` (
+  `ipaddress` varchar(45) NOT NULL,
+  `attempts` int(11) DEFAULT NULL,
+  `logged` datetime DEFAULT NULL,
+  `userid` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`ipaddress`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `sessiontracking`
 --
 
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'administrator','P@ssw0rd',1,NULL),(2,'invent.supp','P@ssw0rd',2,NULL),(3,'ware.asst','P@ssw0rd',3,NULL),(4,'team.lead','P@ssw0rd',4,NULL);
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+LOCK TABLES `sessiontracking` WRITE;
+/*!40000 ALTER TABLE `sessiontracking` DISABLE KEYS */;
+INSERT INTO `sessiontracking` VALUES ('192',2,'2019-02-25 12:48:09','1');
+/*!40000 ALTER TABLE `sessiontracking` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
