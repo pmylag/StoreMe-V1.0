@@ -32,7 +32,15 @@
 <body>
 	<%@include file="navbar.jsp" %>
 	
+	
+	
 	<div class="container">
+		<%! int error = 0; %>
+		<%if(error == 1) {%>
+			<div class="alert alert-danger">
+				<strong>Error!</strong> Invalid format for SKU. Must be in format of 12-BPI-DD31
+			</div>
+		<%} %>
 		<div class="col-md-6">
 			<h2>ATM Checklist</h2>
 		</div>
@@ -60,25 +68,33 @@
 		<form action = "AddAtmInfoServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);"> 
 			<div class="col-sm-6">
 				<div class ="col-sm-6">
+					
+					<%if(error == 1) {%>
+					<div class="form-group has-error has-feedback">
+					<%} else {%>
 					<div class="form-group">
+					<%} %>
 						<label for="sku">SKU:</label>
-						<input type="text" class="form-control" id="sku" name = "sku">
+						<input type="text" class="form-control" id="sku" name = "sku" placeholder="Ex: 34-BDO-BB34"required>
+						<%if(error == 1) {%>
+							<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+						<%} %>
 					</div>
 					<div class="form-group">
 						<label for="csn">Consignee:</label>
-						<input type="text" class="form-control" id="csn" name = "consignee">
+						<input type="text" class="form-control" id="csn" name = "consignee" required>
 					</div>
 					<div class="form-group">
 						<label for="dt">Date:</label>
-						<input type="date" class="form-control" id="dt" name =  "date">
+						<input type="date" class="form-control" id="dt" name =  "date" required>
 					</div>
 					<div class="form-group">
 						<label for="tm">Time:</label>
-						<input type="time" class="form-control" id="tm" name = "time">
+						<input type="time" class="form-control" id="tm" name = "time" required>
 					</div>
 					<div class="form-group">
 						<label for="wn">Waybill Number:</label>
-						<input type="Number" class="form-control" id="wn" name = "waybill_no">
+						<input type="Number" class="form-control" id="wn" name = "waybill_no" required>
 					</div>
 					
 				
@@ -86,9 +102,7 @@
 						<a href="HomePage.jsp" style="color: black">Back</a>
 					</button>
 					
-					<button class="btn btn-primary btn-lg" type="submit">
-						<a href="AddATM3.jsp" style="color: white" type = "submit">Next</a>
-					</button>
+					<input type="submit" class="btn btn-lg btn-info" value="Next">
 				</div>
 				<div class="col-sm-6">
 					<div class="form-group">

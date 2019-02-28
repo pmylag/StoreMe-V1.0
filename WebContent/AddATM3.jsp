@@ -56,33 +56,33 @@
 			<div class="col-sm-4">
 				<div class="form-group">
 					<label for="chck">Checker:</label>
-					<input type="text" class="form-control" id="chck">
+					<input type="text" class="form-control" id="chck" required>
 				</div>
 				<div class="form-group">
 					<label for="wh">Warehouse Assistant:</label>
-					<input type="text" class="form-control" id="wh">
+					<input type="text" class="form-control" id="wh" required>
 				</div>
 			</div>
 			
 			<div class="col-sm-4">
 				<div class="form-group">
 					<label for="bk">Bank:</label>
-					<input type="text" class="form-control" id="bk">
+					<input type="text" class="form-control" id="bk" required>
 				</div>
 				<div class="form-group">
 					<label for="csn">Consignee:</label>
-					<input type="text" class="form-control" id="csn">
+					<input type="text" class="form-control" id="csn" required>
 				</div>
 			</div>
 			
 			<div class="col-sm-4">
 				<div class="form-group">
 					<label for="dv">Driver:</label>
-					<input type="text" class="form-control" id="dv">
+					<input type="text" class="form-control" id="dv" required>
 				</div>
 				<div class="form-group">
 					<label for="pn">Plate Number:</label>
-					<input type="text" class="form-control" id="pn">
+					<input type="text" class="form-control" id="pn" required>
 				</div>
 			</div>
 			
@@ -293,7 +293,7 @@
 			    </tbody>
 			</table>
 			<button type="button" class="btn btn-lg" data-target="#myModal">Cancel</button>
-			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Save Changes</button>
+			<input type="submit" class="btn btn-lg btn-info" value="Save Changes" data-toggle="modal" data-target="#myModal">
 		</div>
 		<div class="col-md-4">
 			<div class="checkbox">

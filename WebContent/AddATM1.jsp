@@ -4,16 +4,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-${in1 }
-
 	<style>
 		.rectangle1 {
 		  height: 100px;
 		  width: 90px;
 		  border-style: solid;
 		  border-width: 3px;
-		  <%int i1 = (int)request.getAttribute("in1");%>
+		  
+		  <%! int i1 = 0; %>
+		  <%i1 = (int)request.getAttribute("in1");%>
 		  <%if (i1 < 50){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
 		  <%}else if (i1 >= 51 && i1 <= 90){%>
@@ -193,7 +192,6 @@ ${in1 }
 				
 			<ul class="nav navbar-nav">
 				<li><a href="HomePage.jsp">Home</a></li>
-				<li><a>Welcome, User</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 		      <li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
@@ -235,17 +233,17 @@ ${in1 }
 				<div>
 				    <div class="form-group">
 				      	<label for="sel1">Choose Section: </label>
-				     	 <select class="form-control" id="sel1" name = "atmplacement">
-				     	 <option value="1" name = "atmplacement">1</option>
-				     	 <option value="2" name = "atmplacement">2</option>
-				     	 <option value="3" name = "atmplacement">3</option>
-				     	 <option value="4" name = "atmplacement">4</option>
-				     	 <option value="5" name = "atmplacement">5</option>
-				     	 <option value="6" name = "atmplacement">6</option>
-				     	 <option value="7" name = "atmplacement">7</option>
-				     	 <option value="8" name = "atmplacement">8</option>
-				     	 <option value="9" name = "atmplacement">9</option>
-				     	 <option value="10" name = "atmplacement">10</option>
+				     	 <select class="form-control" id="sel1" name = "atmplacement" required>
+				     	 <option value="1" name = "atmplacement">A</option>
+				     	 <option value="2" name = "atmplacement">B</option>
+				     	 <option value="3" name = "atmplacement">C</option>
+				     	 <option value="4" name = "atmplacement">D</option>
+				     	 <option value="5" name = "atmplacement">E</option>
+				     	 <option value="6" name = "atmplacement">F</option>
+				     	 <option value="7" name = "atmplacement">G</option>
+				     	 <option value="8" name = "atmplacement">H</option>
+				     	 <option value="9" name = "atmplacement">I</option>
+				     	 <option value="10" name = "atmplacement">J</option>
 				
 				     	 </select>
 					</div>
@@ -255,7 +253,7 @@ ${in1 }
 					<a href="HomePage.jsp" style="color: black">Back</a>
 				</button>
 				
-				<input class="btn btn-primary btn-lg" type="submit"></input>
+				<input type="submit" class="btn btn-lg btn-info" value="Next">
 			</form>
 			<div class="container">		    		
 					<h2>Floor Plan</h2>
@@ -296,17 +294,17 @@ ${in1 }
 			    	<div class="col">
 			    		<div class="col-sm-1" style="padding-left:5em">
 							<div class="rectangle1">
-								<h4><p class="text-center">SECTION 1<br> <%out.print(i1); %>/100</p></h4>
+								<h4><p class="text-center">SECTION A<br> <%out.print(i1); %>/100</p></h4>
 							</div>
 						</div>
 					    <div class="col-sm-1" style="padding-left:7em">
 							<div class="rectangle2">
-								<h4><p class="text-center">SECTION 2<br> <%out.print(i2); %>/100</p></h4>
+								<h4><p class="text-center">SECTION B<br> <%out.print(i2); %>/100</p></h4>
 							</div>
 						</div>
 						<div class="col-sm-1" style="padding-left:7em">
 							<div class="rectangle3">
-								<h4><p class="text-center">SECTION 3<br> <%out.print(i3); %>/100</p></h4>
+								<h4><p class="text-center">SECTION C<br> <%out.print(i3); %>/100</p></h4>
 							</div>
 						</div>
 				    </div>
@@ -315,22 +313,22 @@ ${in1 }
 		    		<div class="col">
 			    		<div class="col-sm-1" style="padding-left:5em; padding-top:2em">
 							<div class="rectangle4">
-								<h4><p class="text-center">SECTION 4<br> <%out.print(i4); %>/100</p></h4>
+								<h4><p class="text-center">SECTION D<br> <%out.print(i4); %>/100</p></h4>
 							</div>
 						</div>
 					    <div class="col-sm-1" style="padding-left:7em; padding-top:2em">
 							<div class="rectangle5">
-								<h4><p class="text-center">SECTION 5<br> <%out.print(i5); %>/100</p></h4>
+								<h4><p class="text-center">SECTION E<br> <%out.print(i5); %>/100</p></h4>
 							</div>
 						</div>
 						<div class="col-sm-1" style="padding-left:7em; padding-top:2em">
 							<div class="rectangle6">
-								<h4><p class="text-center">SECTION 6<br> <%out.print(i6); %>/100</p></h4>
+								<h4><p class="text-center">SECTION F<br> <%out.print(i6); %>/100</p></h4>
 							</div>
 						</div>
 						<div class="col-sm-1" style="padding-left:7em; padding-top:2em">
 							<div class="rectangle7">
-								<h4><p class="text-center">SECTION 7<br> <%out.print(i7); %>/100</p></h4>
+								<h4><p class="text-center">SECTION G<br> <%out.print(i7); %>/100</p></h4>
 							</div>
 						</div>
 				    </div>
@@ -339,17 +337,17 @@ ${in1 }
 		    		<div class="col">
 			    		<div class="col-sm-1" style="padding-left:5em; padding-top:2em">
 							<div class="rectangle1">
-								<h4><p class="text-center">SECTION 8<br> <%out.print(i8); %>/100</p></h4>
+								<h4><p class="text-center">SECTION H<br> <%out.print(i8); %>/100</p></h4>
 							</div>
 						</div>
 					    <div class="col-sm-1" style="padding-left:7em; padding-top:2em">
 							<div class="rectangle1">
-								<h4><p class="text-center">SECTION 9<br> <%out.print(i9); %>/100</p></h4>
+								<h4><p class="text-center">SECTION I<br> <%out.print(i9); %>/100</p></h4>
 							</div>
 						</div>
 						<div class="col-sm-1" style="padding-left:7em; padding-top:2em">
 							<div class="rectangle1">
-								<h4><p class="text-center">SECTION 10<br> <%out.print(i10); %>/100</p></h4>
+								<h4><p class="text-center">SECTION J<br> <%out.print(i10); %>/100</p></h4>
 							</div>
 						</div>
 				    </div>
