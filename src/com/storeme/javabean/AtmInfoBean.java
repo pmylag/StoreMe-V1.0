@@ -98,5 +98,14 @@ public class AtmInfoBean {
 	private String site;
 	private String date_shipped;
 	
+	private String received_by;
+
+	public String getReceived_by() {
+		return received_by;
+	}
+	public void setReceived_by(String received_by) {
+		this.received_by = received_by;
+	}
+	
 
 }

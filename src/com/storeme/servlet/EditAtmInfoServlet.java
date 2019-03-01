@@ -12,17 +12,17 @@ import com.storeme.javabean.AtmInfoBean;
 import com.storeme.services.AtmInfoService;
 
 /**
- * Servlet implementation class AddAtmInfoServlet
+ * Servlet implementation class EditAtmInfoServlet
  */
-@WebServlet("/AddAtmInfoServlet")
+@WebServlet("/EditAtmInfoServlet")
 @MultipartConfig
-public class AddAtmInfoServlet extends HttpServlet {
+public class EditAtmInfoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddAtmInfoServlet() {
+    public EditAtmInfoServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,6 +32,16 @@ public class AddAtmInfoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+		AtmInfoService atmInfosService = new AtmInfoService();
+
+		int idatm = Integer.parseInt(request.getParameter("id"));
+		String action = atmInfosService.getSKUint(Integer.parseInt(request.getParameter("id")));
+		request.setAttribute("sku", action);
+		request.setAttribute("id", idatm);
+		request.getRequestDispatcher("result2.jsp").forward(request, response);
+
 	}
 
 	/**
@@ -43,17 +53,15 @@ public class AddAtmInfoServlet extends HttpServlet {
 		int ids;
 		AtmInfoBean ai = new AtmInfoBean();
 		ai.setActivtiy(request.getParameter("activity"));
-		ai.setConsignee(request.getParameter("consignee"));
-		ai.setDate(request.getParameter("date"));
-		ai.setTime(request.getParameter("time"));
-		ai.setWaybill_no(request.getParameter("waybill_no"));
-		ai.setSite(request.getParameter("site"));
-		ai.setSku(request.getParameter("sku"));
+		ai.setDate_shipped(request.getParameter("date_shipped"));
 		ai.setStatus(request.getParameter("status"));
-		ids = atmInfosService.getMaxIdAtmInfo();
-		System.out.println("Eto na   " + ids);
-		atmInfosService.addAtmInfo(ids, ai);
-		request.getRequestDispatcher("AddATM3.jsp").forward(request, response);
+		ai.setIdatminfo(Integer.parseInt(request.getParameter("id")));
+		ai.setAtmplacement(request.getParameter("atmplacement"));
+		ai.setReceived_by(request.getParameter("received_by"));
+		System.out.print("This is the id  " + ai.getIdatm() );
+		atmInfosService.editAtmInfo(ai);
+		request.getRequestDispatcher("GetAllAtmInfoServlet").forward(request, response);
+
 	}
 
 }

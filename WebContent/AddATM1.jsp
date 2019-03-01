@@ -234,16 +234,16 @@
 				    <div class="form-group">
 				      	<label for="sel1">Choose Section: </label>
 				     	 <select class="form-control" id="sel1" name = "atmplacement" required>
-				     	 <option value="1" name = "atmplacement">A</option>
-				     	 <option value="2" name = "atmplacement">B</option>
-				     	 <option value="3" name = "atmplacement">C</option>
-				     	 <option value="4" name = "atmplacement">D</option>
-				     	 <option value="5" name = "atmplacement">E</option>
-				     	 <option value="6" name = "atmplacement">F</option>
-				     	 <option value="7" name = "atmplacement">G</option>
-				     	 <option value="8" name = "atmplacement">H</option>
-				     	 <option value="9" name = "atmplacement">I</option>
-				     	 <option value="10" name = "atmplacement">J</option>
+				     	 <option value="A" name = "atmplacement">A</option>
+				     	 <option value="B" name = "atmplacement">B</option>
+				     	 <option value="C" name = "atmplacement">C</option>
+				     	 <option value="D" name = "atmplacement">D</option>
+				     	 <option value="E" name = "atmplacement">E</option>
+				     	 <option value="F" name = "atmplacement">F</option>
+				     	 <option value="G" name = "atmplacement">G</option>
+				     	 <option value="H" name = "atmplacement">H</option>
+				     	 <option value="I" name = "atmplacement">I</option>
+				     	 <option value="J" name = "atmplacement">J</option>
 				
 				     	 </select>
 					</div>

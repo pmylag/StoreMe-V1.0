@@ -113,11 +113,11 @@
 				  	  <td> ${a.date_shipped } </td>
 				  	  <td> ${a.waybill_no } </td>
 				  	  <td> ${a.status } </td>
-				  	  <td> Mr. Lacson </td>
+				  	  <td> ${a.received_by } </td>
 				  	  <td><a href="#" data-toggle="modal" data-target="#Modalss"> ${a.activtiy }</a> </td>
 				  	  <td>
-				  	  	  <a href="#" class="btn btn-primary a-btn-slide-text">
-					        <span class="glyphicon glyphicon-edit" aria-hidden="true" data-toggle="modal" data-target="#EditModals"></span>           
+				  	  	  <a href="EditAtmInfoServlet?id=${a.idatminfo }" class="btn btn-primary a-btn-slide-text">
+					        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>           
 					      </a>
 					  </td>
 					  <td><a href="DeleteAtmServlet?id=${a.idatminfo }" class="btn btn-danger a-btn-slide-text">

@@ -14,7 +14,7 @@ public class AtmInfoService {
 	static String password = "password";
 	
 	public int getcountSection1() {
-		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 1";
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 'A'";
 		int count = 0;
 		
 		try {
@@ -33,7 +33,7 @@ public class AtmInfoService {
 	}
 	
 	public int getcountSection2() {
-		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 2";
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 'B' ";
 		int count = 0;
 		
 		try {
@@ -51,7 +51,7 @@ public class AtmInfoService {
 		return count;
 	}
 	public int getcountSection3() {
-		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 3";
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 'C'";
 		int count = 0;
 		
 		try {
@@ -69,7 +69,7 @@ public class AtmInfoService {
 		return count;
 	}
 	public int getcountSection4() {
-		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 4";
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 'D'";
 		int count = 0;
 		
 		try {
@@ -88,7 +88,7 @@ public class AtmInfoService {
 	}
 	
 	public int getcountSection5() {
-		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 5";
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 'E' ";
 		int count = 0;
 		
 		try {
@@ -107,7 +107,7 @@ public class AtmInfoService {
 	}
 	
 	public int getcountSection6() {
-		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 6";
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 'F' ";
 		int count = 0;
 		
 		try {
@@ -126,7 +126,7 @@ public class AtmInfoService {
 	}
 	
 	public int getcountSection7() {
-		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 7";
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 'G' ";
 		int count = 0;
 		
 		try {
@@ -145,7 +145,7 @@ public class AtmInfoService {
 	}
 	
 	public int getcountSection8() {
-		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 8";
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 'H ";
 		int count = 0;
 		
 		try {
@@ -164,7 +164,7 @@ public class AtmInfoService {
 	}
 	
 	public int getcountSection9() {
-		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 9";
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 'I' ";
 		int count = 0;
 		
 		try {
@@ -184,7 +184,7 @@ public class AtmInfoService {
 	
 	
 	public int getcountSection10() {
-		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 10";
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 'J' ";
 		int count = 0;
 		
 		try {
@@ -224,6 +224,26 @@ public class AtmInfoService {
 		return atmInfoBeanlists;
 	}
 	
+	public void editAtmInfo( AtmInfoBean ai) {
+		String sql = "Update atmninfo SET atmplacement = ?, date_shipped = ?, status = ?, received_by = ?, "
+				+ "activtiy = ? WHERE idatminfo = ?";
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, ai.getAtmplacement());
+			st.setString(2, ai.getDate_shipped());
+			st.setString(3, ai.getStatus());
+			st.setString(4, ai.getReceived_by());
+			st.setString(5, ai.getActivtiy());
+			st.setInt(6, ai.getIdatminfo());
+			st.executeUpdate();
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 	public void addAtmInfo(int id, AtmInfoBean ai) {
 		String sql = "Update atmninfo SET site = ? , sku = ? , consignee = ?, date = ?, date_shipped = ?, time = ? ,waybill_no = ?,  activtiy = ?, "
@@ -360,6 +380,7 @@ public class AtmInfoService {
 				ai.setStatus(rs.getString(AtmInfoBean.STATUS));
 				ai.setTime(rs.getString(AtmInfoBean.TIME));
 				ai.setWaybill_no(rs.getString(AtmInfoBean.WAYBILL_NO));
+				ai.setReceived_by(rs.getString("received_by"));
 				
 				atminfoLists.add(ai);
 			}

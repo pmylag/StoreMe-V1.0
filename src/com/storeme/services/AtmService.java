@@ -75,9 +75,52 @@ public class AtmService {
 		
 		return atmLists;
 	}
-	public void addAtm(int id) {
+	public void addAtm(AtmBean ab) {
+		String sql = "INSERT INTO atm (idatm, cassete1, checker, bolt_screw_set_qty, bolt_screw_set_rmk, cash_casst_key_qty, cash_casst_key_rmk, clad_qty, clad_rmk, "
+				+ "collar_qty, collar_rmk, decale_qty, decale_rmk, fsc_wndw_frame_qty, fsc_wndw_frame_remk, bank, driver, warehouse_asst, consignee, plateno, "
+				+ "cassete2, cassete3, cassete4, quantity, remarks)"
+				+ "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)" ;
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setInt(1, ab.getIdatm());
+			st.setInt(2, ab.getCassete1());
+			st.setString(3, ab.getChecker());
+			st.setInt(4, ab.getBolt_screw_set_qty());
+			st.setString(5, ab.getBolt_screw_set_rmk());
+			st.setInt(6, ab.getCash_casst_key_qty());
+			st.setString(7, ab.getCash_casst_key_rmk());
+			st.setInt(8, ab.getClad_qty());
+			st.setString(9, ab.getClad_rmk());
+			st.setInt(10, ab.getCollar_qty());
+			st.setString(11, ab.getCollar_rmk());
+			st.setInt(12, ab.getDecale_qty());
+			st.setString(13, ab.getDecale_rmk());
+			st.setInt(14, ab.getFsc_wndw_frame_qty());
+			st.setString(15, ab.getFsc_wndw_frame_remk());
+			st.setString(16, ab.getBank());
+			st.setString(17, ab.getDriver());
+			st.setString(18, ab.getWarehouse_asst());
+			st.setString(19, ab.getConsignee());
+			st.setString(20, ab.getPlateno());
+			st.setInt(21, ab.getCassete2());
+			st.setInt(22, ab.getCassete3());
+			st.setInt(23, ab.getCassete4());
+			st.setInt(24, ab.getQuantity());
+			st.setString(25, ab.getRemarks());
+			System.out.println("wkwkwkw  " + st);
+			st.executeUpdate();
+			con.close();
+		}catch (ClassNotFoundException | SQLException b) {
+			// TODO Auto-generated catch block
+			b.printStackTrace();
+		}
+		
 		
 	}
+	
+	
 	public ArrayList getAllAtm() {
 		ArrayList<AtmBean> atmLists = new ArrayList<>();
 		
