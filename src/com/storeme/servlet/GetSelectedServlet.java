@@ -43,6 +43,10 @@ public class GetSelectedServlet extends HttpServlet {
 		if (atm.get(0).getCassete1() == 1)
 			cassette = "" + atm.get(0).getCassete1();
 		
+		else
+			cassette = "  ";
+		
+		
 		if (atm.get(0).getCassete2() == 1)
 			cassette = cassette + ",  2";
 		

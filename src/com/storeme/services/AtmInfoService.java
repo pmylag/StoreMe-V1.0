@@ -145,7 +145,7 @@ public class AtmInfoService {
 	}
 	
 	public int getcountSection8() {
-		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 'H ";
+		String sql = "SELECT COUNT(*) FROM storeme.atmninfo WHERE atmplacement = 'H' ";
 		int count = 0;
 		
 		try {
@@ -202,7 +202,27 @@ public class AtmInfoService {
 		return count;
 	}
 
-
+	public String getSelectedAtmInfoConsignee(int id) {
+		ArrayList<AtmInfoBean> atmInfoBeanlists = new ArrayList<>();
+		String sql = "SELECT consignee FROM  atmninfo WHERE idatminfo = " + id;
+		String Like = null;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while(rs.next()) {
+				Like = rs.getString("consignee");
+			} 
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return Like;
+	}
 	public ArrayList getSearchedAtmInfo(String type, String search) {
 		ArrayList<AtmInfoBean> atmInfoBeanlists = new ArrayList<>();
 		String sql = "SELECT * FROM  atmninfo WHERE ? LIKE ?";

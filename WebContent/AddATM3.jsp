@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>   
 <!DOCTYPE html>
 <html>
 <style>
@@ -71,7 +72,7 @@
 						</div>
 						<div class="form-group">
 							<label for="csn">Consignee:</label>
-							<input type="text" class="form-control" id="csn" name = "consignee" required>
+							<input type="text" class="form-control" id="csn" name = "consignee"  required>
 						</div>
 					</div>
 					
@@ -99,7 +100,7 @@
 						        <td>ATM</td>
 						        <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="atm-qty" name = "quantity">
+										<input type="number" class="form-control" id="atm-qty" name = "quantity" required>
 									</div>
 						        </td>
 						        <td>
@@ -112,7 +113,7 @@
 						        <td>Bolting Screw Set</td>
 						        <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="bss-qty" name = "bolt_screw_set_qty">
+										<input type="number" class="form-control" id="bss-qty" name = "bolt_screw_set_qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -125,7 +126,7 @@
 						        <td>Cash Cassette Keys</td>
 						        <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="css-qty" name ="cash_casst_key_qty">
+										<input type="number" class="form-control" id="css-qty" name ="cash_casst_key_qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -138,7 +139,7 @@
 						        <td>Cladding</td>
 						        <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="clad-qty" name ="clad_qty">
+										<input type="number" class="form-control" id="clad-qty" name ="clad_qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -151,7 +152,7 @@
 						        <td>Collar</td>
 						        <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="clr-qty" name = "collar_qty">
+										<input type="number" class="form-control" id="clr-qty" name = "collar_qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -164,7 +165,7 @@
 						        <td>Decale</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="dcl-qty" name = "decale_qty">
+										<input type="number" class="form-control" id="dcl-qty" name = "decale_qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -177,7 +178,7 @@
 						        <td>Fascial/Window Frame</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="fwf-qty" name = "fsc_wndw_frame_qty">
+										<input type="number" class="form-control" id="fwf-qty" name = "fsc_wndw_frame_qty" required>
 									</div>
 						        </td>
 						        <td>

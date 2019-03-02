@@ -11,6 +11,11 @@ public class UserService {
 	static String url ="localhost:3306/StoreMe_V1.0";
 	static String username ="root";
 	static String passwords = "password";
+	
+	public void adduser() {
+		String sql = "INSERT INTO user ";
+		
+	}
 
 	public boolean checksame(int a, String password) {	
 		String checker;

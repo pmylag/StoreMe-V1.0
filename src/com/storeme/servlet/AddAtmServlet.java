@@ -33,6 +33,13 @@ public class AddAtmServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		AtmInfoService atminfosServices = new AtmInfoService();
+		String Consignee = atminfosServices.getSelectedAtmInfoConsignee(atminfosServices.getMaxIdAtmInfo());
+		System.out.print("eto yun  " + Consignee);
+		request.setAttribute("consignee", Consignee);
+		request.getRequestDispatcher("AddATM3.jsp").forward(request, response);
+
+		
 	}
 
 	/**
@@ -65,10 +72,37 @@ public class AddAtmServlet extends HttpServlet {
 		ab.setPlateno(request.getParameter("plateno"));
 		ab.setQuantity(Integer.parseInt(request.getParameter("quantity")));
 		ab.setRemarks(request.getParameter("remarks"));
-		ab.setCassete1(Integer.parseInt(request.getParameter("cassete1")));
-		ab.setCassete2(Integer.parseInt(request.getParameter("cassete2")));
-		ab.setCassete3(Integer.parseInt(request.getParameter("cassete3")));
-		ab.setCassete4(Integer.parseInt(request.getParameter("cassete4")));
+		
+		if (request.getParameter("cassete1") == null) {
+			System.out.println("null to boi ");
+			ab.setCassete1(0);
+		}
+		
+		else
+			ab.setCassete1(Integer.parseInt(request.getParameter("cassete1")));
+		if (request.getParameter("cassete2") == null) {
+			System.out.println("null to boi ");
+			ab.setCassete2(0);
+		}
+		
+		else
+			ab.setCassete2(Integer.parseInt(request.getParameter("cassete2")));
+		
+		if (request.getParameter("cassete3") == null) {
+			System.out.println("null to boi ");
+			ab.setCassete3(0);
+		}
+		
+		else
+			ab.setCassete3(Integer.parseInt(request.getParameter("cassete3")));
+		
+		if (request.getParameter("cassete4") == null) {
+			System.out.println("null to boi ");
+			ab.setCassete4(0);
+		}
+		
+		else
+			ab.setCassete4(Integer.parseInt(request.getParameter("cassete4")));
 		
 		AS.addAtm(ab);
 		request.getRequestDispatcher("HomePage.jsp").forward(request, response);
