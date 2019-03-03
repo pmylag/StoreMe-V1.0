@@ -24,7 +24,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Store Me</title>
+	<title>All Users</title>
 	
 </head>
 <body>
@@ -47,33 +47,13 @@
 	
 	<div class = "container">
 		<div class = "row">
-		<div class = "col-md-1">
+		<div class = "col-sm-2">
 			SEARCH BY : 
 		</div>
-		<div class = "col-md-1">
-			<div class="dropdown">
-			  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Type
-			  <span class="caret"></span></button>
-			  <ul class="dropdown-menu">
-			    <li><a href="#">SKU</a></li>
-			    <li><a href="#">Section</a></li>
-			    <li><a href="#">Consignee</a></li>
-			    <li><a href="#">Site & Location</a></li>
-			    <li><a href="#">Date Received</a></li>
-			    <li><a href="#">Date Shipped</a></li>
-			    <li><a href="#">Waybill Number</a></li>
-			    <li><a href="#">Status</a></li>
-			    <li><a href="#">Received By</a></li>
-			    <li><a href="#">Activity</a></li>
-			    
-			  </ul>
-			</div>
-			
+		<div class = "col-sm-2">
+			<input type="text" placeholder="Search">
 		</div>
-		<div class = "col-md-2">
-			<input type="text" placeholder="Search.">
-		</div>
-		<div class = "col-md-1">
+		<div class = "col-sm-1">
 			<button type="button" class="btn btn-light">Search</button>
 		</div>
 		</div>
@@ -82,42 +62,28 @@
 			<table class="table table-bordered">
 			  <thead class = "bg-company-blue">
 			    <tr>
-			      <th scope="col"> <font color="white"> No.</font></th>
-			      <th scope="col"> <font color="white"> SKU</font></th>
-			      <th scope="col"> <font color="white"> Section </font> </th>
-			      <th scope="col"> <font color="white"> Consignee </font> </th>
-			      <th scope="col"> <font color="white"> Site & Location </font> </th>
-			      <th scope="col"> <font color="white"> Date Received </font> </th>
-			      <th scope="col"> <font color="white"> Date Shipped </font> </th>
-			      <th scope="col"> <font color="white"> Waybill Number </font> </th>
-			      <th scope="col"> <font color="white"> Status </font> </th>
-			      <th scope="col"> <font color="white"> Received By </font> </th>
-			      <th scope="col"> <font color="white"> Activity </font> </th>
-			      <th scope="col"> <font color="white"> View </font> </th>
-				  <th scope="col"> <font color="white"> Edit </font> </th>
-				  <th scope="col"> <font color="white"> Delete </font> </th>
+			      <th scope="col"> <font color="white"> First Name</font></th>
+			      <th scope="col"> <font color="white"> Last Name</font></th>
+			      <th scope="col"> <font color="white"> Username </font> </th>
+			      <th scope="col"> <font color="white"> Privilege </font> </th>
+			      <th scope="col"> <font color="white"> Address </font> </th>
+			      <th scope="col"> <font color="white"> Email Address </font> </th>
+			      <th scope="col"> <font color="white"> Mobile Number </font> </th>
+			      <th scope="col"> <font color="white"> Edit </font> </th>
+			      <th scope="col"> <font color="white"> Delete </font> </th>
 				  
 			    </tr>
 			  </thead>
 			  <tbody>
 			  	<c:forEach items="${atminfolists}"  var= "a">
 				  	<tr>
-				  	  <th scope="row"> ${a.idatminfo }</th>
-				  	  <td><a href="GetSelectedServlet?id=${a.idatminfo}">${a.sku }</a> </td>
-				  	  <td> ${a.atmplacement }</td>
-				  	  <td> ${a.consignee } </td>
-				  	  <td> ${a.site } </td>
-				  	  <td> ${a.date } </td>
-				  	  <td> ${a.date_shipped } </td>
-				  	  <td> ${a.waybill_no } </td>
-				  	  <td> ${a.status } </td>
-				  	  <td> ${a.received_by } </td>
-				  	  <td><a href="#" data-toggle="modal" data-target="#Modalss"> ${a.activity }</a> </td>
-				  	  <td>
-				  	  	  <a href="#" class="btn btn-primary a-btn-slide-text">
-					        <span class="glyphicon glyphicon-open" aria-hidden="true"></span>           
-					      </a>
-					  </td>
+				  	  <td> </td>
+				  	  <td> </td>
+				  	  <td> </td>
+				  	  <td> </td>
+				  	  <td> </td>
+				  	  <td> </td>
+				  	  <td> </td>
 				  	  <td>
 				  	  	  <a href="EditAtmInfoServlet?id=${a.idatminfo }" class="btn btn-primary a-btn-slide-text">
 					        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>           

@@ -256,7 +256,7 @@ public class AtmInfoService {
 			st.setString(2, ai.getDate_shipped());
 			st.setString(3, ai.getStatus());
 			st.setString(4, ai.getReceived_by());
-			st.setString(5, ai.getActivtiy());
+			st.setString(5, ai.getActivity());
 			st.setInt(6, ai.getIdatminfo());
 			st.executeUpdate();
 		}catch (ClassNotFoundException | SQLException e) {
@@ -281,7 +281,7 @@ public class AtmInfoService {
 			st.setString(5, ai.getDate_shipped());
 			st.setString(6, ai.getTime());
 			st.setString(7, ai.getWaybill_no());
-			st.setString(8, ai.getActivtiy());
+			st.setString(8, ai.getActivity());
 			st.setString(9, ai.getStatus());
 			st.setInt(10, id);
 			st.setInt(11, id);
@@ -389,7 +389,7 @@ public class AtmInfoService {
 				AtmInfoBean ai = new AtmInfoBean();
 				
 				ai.setIdatminfo(rs.getInt(AtmInfoBean.IDATMINFO));
-				ai.setActivtiy(rs.getString(AtmInfoBean.ACTIVITY));
+				ai.setActivity(rs.getString(AtmInfoBean.ACTIVITY));
 				ai.setAtmplacement(rs.getString(AtmInfoBean.ATMPLACEMENT));
 				ai.setConsignee(rs.getString(AtmInfoBean.CONSIGNEE));
 				ai.setSite(rs.getString("site"));

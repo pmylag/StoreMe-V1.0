@@ -42,7 +42,7 @@ public class AddAtmInfoServlet extends HttpServlet {
 		AtmInfoService atmInfosService = new AtmInfoService();
 		int ids;
 		AtmInfoBean ai = new AtmInfoBean();
-		ai.setActivtiy(request.getParameter("activity"));
+		ai.setActivity(request.getParameter("activity"));
 		ai.setConsignee(request.getParameter("consignee"));
 		ai.setDate(request.getParameter("date"));
 		ai.setTime(request.getParameter("time"));

@@ -41,6 +41,14 @@
 									  	<li class="list-group-item borderless"><b>Driver: </b><u>${a.driver}</u> </li>
 									  	<li class="list-group-item borderless"><b>Plate No: </b><u>${a.plateno }</u> </li>
 									  	<li class="list-group-item borderless"><b>Cassette: </b><u>${cassette}</u> </li>
+									  	<li class="list-group-item borderless"><b>Modem: </b><u></u> </li>
+									  	<li class="list-group-item borderless"><b>Panel Door Key: </b><u></u> </li>
+									  	<li class="list-group-item borderless"><b>Pedestal: </b><u></u> </li>
+									  	<li class="list-group-item borderless"><b>Power Cord: </b><u></u> </li>
+									  	<li class="list-group-item borderless"><b>Router: </b><u></u> </li>
+									  	<li class="list-group-item borderless"><b>Topper: </b><u></u> </li>
+									  	<li class="list-group-item borderless"><b>UPS: </b><u></u> </li>
+									  	<li class="list-group-item borderless"><b>Vault Door Key: </b><u></u> </li>
 									</ul>					
 								</div>
 								<div class ="col-sm-8">
@@ -87,6 +95,47 @@
 												<td>7. Fascia/Window Frames</th>
 											    <td>${a.fsc_wndw_frame_qty }</td>
 											    <td>${a.fsc_wndw_frame_remk }</td>
+											</tr>
+											<tr>
+												<td>8. Modem</th>
+											    <td></td>
+											    <td></td>
+											</tr>
+											<tr>
+												<td>9. Panel Door Key</th>
+											    <td></td>
+											    <td></td>
+											</tr>											
+											<tr>
+												<td>10. Pedestal</th>
+											    <td></td>
+											    <td></td>
+											</tr>											
+											<tr>
+												<td>11. Power Cord</th>
+											    <td></td>
+											    <td></td>
+											</tr>											
+											<tr>
+												<td>12. Router</th>
+											    <td></td>
+											    <td></td>
+											</tr>
+																						
+											<tr>
+												<td>13. Topper</th>
+											    <td></td>
+											    <td></td>
+											</tr>											
+											<tr>
+												<td>14. UPS</th>
+											    <td></td>
+											    <td></td>
+											</tr>											
+											<tr>
+												<td>15. Vault Door Key</th>
+											    <td></td>
+											    <td></td>
 											</tr>
 										</tbody>
 									</table>
