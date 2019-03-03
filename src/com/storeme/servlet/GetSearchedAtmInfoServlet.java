@@ -32,7 +32,10 @@ public class GetSearchedAtmInfoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doPost(request, response);
+		String action = "";
+		AtmInfoService atminfosService = new AtmInfoService();
+		ArrayList <AtmInfoBean> AtmInfos = atminfosService.getSearchedAtmInfo(request.getParameter("type"), request.getParameter("like"));
+		request.setAttribute("atminfolists", AtmInfos);
 	}
 
 	/**
