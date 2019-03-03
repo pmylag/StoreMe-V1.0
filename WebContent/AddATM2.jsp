@@ -107,11 +107,11 @@
 				<div class="col-sm-6">
 					<div class="form-group">
 						<label for="sl">Site Location:</label>
-						<input type="text" class="form-control" id="sl" name = "site">
+						<input type="text" class="form-control" id="sl" name = "site" required>
 					</div>
 					<div class="form-group">
 						<label for="sel1">Status:</label>
-						<select class="form-control" id="sel1" name = "status">
+						<select class="form-control" id="sel1" name = "status" required>
 							<option value="Returned">Returned</option>
 							<option value="Completed">Completed</option>
 						</select>
@@ -119,7 +119,7 @@
 					<div class="form-group">
 						<div class="form-group">
 							<label for="act">Activity:</label>
-							<textarea class="form-control" rows="5" id="act" name = "activity"></textarea>
+							<textarea class="form-control" rows="5" id="act" name = "activity" required></textarea>
 						</div>
 					</div>
 				</div>

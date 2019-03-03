@@ -191,7 +191,7 @@
 						        <td>Modem</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="mdm-qty">
+										<input type="number" class="form-control" id="mdm-qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -204,7 +204,7 @@
 						        <td>Panel Door Key</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="pdk-qty">
+										<input type="number" class="form-control" id="pdk-qty" requried>
 									</div>
 						        </td>
 						        <td>
@@ -217,7 +217,7 @@
 						        <td>Pedestal</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="pdl-qty">
+										<input type="number" class="form-control" id="pdl-qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -230,7 +230,7 @@
 						        <td>Power Cord</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="pc-qty">
+										<input type="number" class="form-control" id="pc-qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -243,7 +243,7 @@
 						        <td>Router</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="rtr-qty">
+										<input type="number" class="form-control" id="rtr-qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -256,7 +256,7 @@
 						        <td>Topper</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="tpr-qty">
+										<input type="number" class="form-control" id="tpr-qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -269,7 +269,7 @@
 						        <td>UPS</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="ups-qty">
+										<input type="number" class="form-control" id="ups-qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -282,7 +282,7 @@
 						        <td>Vault Door Key</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="vdk-qty">
+										<input type="number" class="form-control" id="vdk-qty" required>
 									</div>
 						        </td>
 						        <td>
