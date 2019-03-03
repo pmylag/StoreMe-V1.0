@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.15, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: storeme
 -- ------------------------------------------------------
--- Server version	5.7.21-log
+-- Server version	8.0.15
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+ SET NAMES utf8 ;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,7 +21,7 @@
 
 DROP TABLE IF EXISTS `atm`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `atm` (
   `idatm` int(11) NOT NULL AUTO_INCREMENT,
   `cassete1` int(11) DEFAULT NULL,
@@ -48,6 +48,22 @@ CREATE TABLE `atm` (
   `cassete4` int(1) DEFAULT NULL,
   `quantity` int(11) DEFAULT NULL,
   `remarks` varchar(45) DEFAULT NULL,
+  `modem_qty` int(11) DEFAULT NULL,
+  `modem_rmk` varchar(45) DEFAULT NULL,
+  `pnl_door_key_qty` int(11) DEFAULT NULL,
+  `pnl_door_key_rmk` varchar(45) DEFAULT NULL,
+  `pedestal_qty` int(11) DEFAULT NULL,
+  `pedestaL_rmk` varchar(45) DEFAULT NULL,
+  `power_crd_qty` int(11) DEFAULT NULL,
+  `power_cord_rmk` varchar(45) DEFAULT NULL,
+  `router_qtry` int(11) DEFAULT NULL,
+  `router_rmk` varchar(45) DEFAULT NULL,
+  `topper_qty` int(11) DEFAULT NULL,
+  `topper_rmk` varchar(45) DEFAULT NULL,
+  `ups_qty` int(11) DEFAULT NULL,
+  `ups_rmk` varchar(45) DEFAULT NULL,
+  `vault_door_key_qty` int(11) DEFAULT NULL,
+  `vault_door_key` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idatm`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -58,7 +74,7 @@ CREATE TABLE `atm` (
 
 LOCK TABLES `atm` WRITE;
 /*!40000 ALTER TABLE `atm` DISABLE KEYS */;
-INSERT INTO `atm` VALUES (1,1,'John',5,'-',2,'-',5,'-',10,'Missing one',5,'fading color',1,'-','BPI','Steve','Natasha','Bruce','ABC123',1,0,0,2,NULL),(2,1,'John',2,'screw #1 faulty',2,'-',5,'-',11,'-',5,'-',1,'-','BDO','Tony','Pepper','Bruce','DEF123',1,1,1,3,NULL),(3,1,'Kevin',4,'-',2,'-',5,'-',11,'-',5,'-',1,'-','BPI','Steve','Natasha','Bruce','ABC123',1,0,1,1,NULL);
+INSERT INTO `atm` VALUES (1,1,'John',5,'-',2,'-',5,'-',10,'Missing one',5,'fading color',1,'-','BPI','Steve','Natasha','Bruce','ABC123',1,0,0,2,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,1,'John',2,'screw #1 faulty',2,'-',5,'-',11,'-',5,'-',1,'-','BDO','Tony','Pepper','Bruce','DEF123',1,1,1,3,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,1,'Kevin',4,'-',2,'-',5,'-',11,'-',5,'-',1,'-','BPI','Steve','Natasha','Bruce','ABC123',1,0,1,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `atm` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -71,4 +87,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-02-25 21:33:46
+-- Dump completed on 2019-03-03 21:12:45
