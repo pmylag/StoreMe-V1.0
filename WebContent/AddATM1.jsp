@@ -176,8 +176,8 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="//netdna.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	
@@ -360,8 +360,8 @@
 						  <div class="panel-body">
 						  	<div class="list-group">
 							  <a href="#" class="list-group-item" style="background-color: #00FF7F">0 - 50 </a>
-							  <a href="#" class="list-group-item" style="background-color: #FFA500">60 - 90</a>
-							  <a href="#" class="list-group-item" style="background-color: #FF0000">91 - 100</a>
+							  <a href="#" class="list-group-item" style="background-color: #FFA500">50 - 99</a>
+							  <a href="#" class="list-group-item" style="background-color: #FF0000">100</a>
 							</div>
 						  </div>
 						</div>
