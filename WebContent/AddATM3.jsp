@@ -204,7 +204,7 @@
 						        <td>Panel Door Key</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="pdk-qty" requried>
+										<input type="number" class="form-control" id="pdk-qty" required>
 									</div>
 						        </td>
 						        <td>
