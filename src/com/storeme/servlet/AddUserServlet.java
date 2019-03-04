@@ -1,28 +1,28 @@
 package com.storeme.servlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
-
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.storeme.javabean.AtmInfoBean;
-import com.storeme.services.AtmInfoService;
+import com.storeme.javabean.UserBean;
+import com.storeme.services.UserService;
 
 /**
- * Servlet implementation class GetSearchedAtmInfoServlet
+ * Servlet implementation class AddUserServlet
  */
-@WebServlet("/GetSearchedAtmInfoServlet")
-public class GetSearchedAtmInfoServlet extends HttpServlet {
+@WebServlet("/AddUserServlet")
+@MultipartConfig
+public class AddUserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public GetSearchedAtmInfoServlet() {
+    public AddUserServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,14 +32,6 @@ public class GetSearchedAtmInfoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String action = "";
-		AtmInfoService atminfosService = new AtmInfoService();
-		ArrayList <AtmInfoBean> AtmInfos = atminfosService.getSearchedAtmInfo(request.getParameter("type"), request.getParameter("like"));
-		request.setAttribute("atminfolists", AtmInfos);
-		
-		request.getRequestDispatcher("Results.jsp").forward(request, response);
-		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -47,7 +39,19 @@ public class GetSearchedAtmInfoServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		UserService US = new UserService();
+		UserBean UB = new UserBean();
+		UB.setUsername(request.getParameter("username"));
+		UB.setPassword(request.getParameter("password"));
+		UB.setEmailaddress(request.getParameter("emailaddress"));
+		UB.setFirstname(request.getParameter("firstname"));
+		UB.setLastname(request.getParameter("lastname"));
+		UB.setMobilenumber(request.getParameter("mobilenumber"));
+		UB.setPrivilege(Integer.parseInt(request.getParameter("privilege")));
+		UB.setAddress(request.getParameter("address"));
+		US.adduser(UB);
+		request.getRequestDispatcher("HomePage.jsp").forward(request, response);
+		
 	}
 
 }

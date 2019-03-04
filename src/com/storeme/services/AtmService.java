@@ -65,6 +65,22 @@ public class AtmService {
 				a.setCassete4(rs.getInt("cassete4"));
 				a.setQuantity(rs.getInt("quantity"));
 				a.setRemarks(rs.getString("remarks"));
+				a.setModem_qty(rs.getInt("modem_qty"));
+				a.setModem_rmk(rs.getString("modem_rmk"));
+				a.setPnl_door_key_qty(rs.getInt("pnl_door_key_qty"));
+				a.setPnl_door_key_rmk(rs.getString("pnl_door_key_rmk"));
+				a.setPedestal_qty(rs.getInt("pedestal_qty"));
+				a.setPedestaL_rmk(rs.getString("pedestaL_rmk"));
+				a.setPower_crd_qty(rs.getInt("power_crd_qty"));
+				a.setPower_cord_rmk(rs.getString("power_cord_rmk"));
+				a.setRouter_qtry(rs.getInt("router_qtry"));
+				a.setRouter_rmk(rs.getString("router_rmk"));
+				a.setTopper_qty(rs.getInt("topper_qty"));
+				a.setTopper_rmk(rs.getString("topper_rmk"));
+				a.setUps_qty(rs.getInt("ups_qty"));
+				a.setUps_rmk(rs.getString("ups_rmk"));
+				a.setVault_door_key_qty(rs.getInt("vault_door_key_qty"));
+				a.setVault_door_key(rs.getString("vault_door_key"));
 				atmLists.add(a);
 			}
 		}catch (ClassNotFoundException | SQLException e) {
@@ -78,8 +94,10 @@ public class AtmService {
 	public void addAtm(AtmBean ab) {
 		String sql = "INSERT INTO atm (idatm, cassete1, checker, bolt_screw_set_qty, bolt_screw_set_rmk, cash_casst_key_qty, cash_casst_key_rmk, clad_qty, clad_rmk, "
 				+ "collar_qty, collar_rmk, decale_qty, decale_rmk, fsc_wndw_frame_qty, fsc_wndw_frame_remk, bank, driver, warehouse_asst, consignee, plateno, "
-				+ "cassete2, cassete3, cassete4, quantity, remarks)"
-				+ "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)" ;
+				+ "cassete2, cassete3, cassete4, quantity, remarks,"
+				+ "modem_qty, modem_rmk, pnl_door_key_qty, pnl_door_key_rmk, pedestal_qty, pedestaL_rmk, "
+				+ "power_crd_qty, power_cord_rmk, router_qtry, router_rmk, topper_qty, topper_rmk, ups_qty, ups_rmk, vault_door_key_qty, vault_door_key)"
+				+ "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)" ;
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url,username,password);
@@ -109,6 +127,22 @@ public class AtmService {
 			st.setInt(23, ab.getCassete4());
 			st.setInt(24, ab.getQuantity());
 			st.setString(25, ab.getRemarks());
+			st.setInt(26, ab.getModem_qty());
+			st.setString(27, ab.getModem_rmk());
+			st.setInt(28, ab.getPnl_door_key_qty());
+			st.setString(29, ab.getPnl_door_key_rmk());
+			st.setInt(30, ab.getPedestal_qty());
+			st.setString(31, ab.getPedestaL_rmk());
+			st.setInt(32, ab.getPower_crd_qty());
+			st.setString(33, ab.getPower_cord_rmk());
+			st.setInt(34, ab.getRouter_qtry());
+			st.setString(35, ab.getRouter_rmk());
+			st.setInt(36, ab.getTopper_qty());
+			st.setString(37, ab.getTopper_rmk());
+			st.setInt(38, ab.getUps_qty());
+			st.setString(39, ab.getUps_rmk());
+			st.setInt(40, ab.getVault_door_key_qty());
+			st.setString(41, ab.getVault_door_key());
 			System.out.println("wkwkwkw  " + st);
 			st.executeUpdate();
 			con.close();
@@ -157,7 +191,22 @@ public class AtmService {
 				a.setCassete2(rs.getInt("cassete2"));
 				a.setCassete3(rs.getInt("cassete3"));
 				a.setCassete4(rs.getInt("cassete4"));
-				
+				a.setModem_qty(rs.getInt("modem_qty"));
+				a.setModem_rmk(rs.getString("modem_rmk"));
+				a.setPnl_door_key_qty(rs.getInt("pnl_door_key_qty"));
+				a.setPnl_door_key_rmk(rs.getString("pnl_door_key_rmk"));
+				a.setPedestal_qty(rs.getInt("pedestal_qty"));
+				a.setPedestaL_rmk(rs.getString("pedestaL_rmk"));
+				a.setPower_crd_qty(rs.getInt("power_crd_qty"));
+				a.setPower_cord_rmk(rs.getString("power_cord_rmk"));
+				a.setRouter_qtry(rs.getInt("router_qtry"));
+				a.setRouter_rmk(rs.getString("router_rmk"));
+				a.setTopper_qty(rs.getInt("topper_qty"));
+				a.setTopper_rmk(rs.getString("topper_rmk"));
+				a.setUps_qty(rs.getInt("ups_qty"));
+				a.setUps_rmk(rs.getString("ups_rmk"));
+				a.setVault_door_key_qty(rs.getInt("vault_door_key_qty"));
+				a.setVault_door_key(rs.getString("vault_door_key"));
 				atmLists.add(a);
 				
 			}

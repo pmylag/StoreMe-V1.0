@@ -21,6 +21,7 @@
 	      <%if (priv == 1){ %> <%-- Only admin which has privilege of 1 can add an account --%>
 	      	<li><a href="AddAccount.jsp">Add Account</span></a></li>
 	      <%} %>
+	      <li><a href = "ViewAllUsersServlet">View Users</a>
 	    </ul>
 	  </div>
 	</nav>
@@ -70,6 +71,10 @@
   						<input type="email" class="form-control" id="email" placeholder="Ex. juandelacruz@domain.com">
 					</div>
 					
+					<div>
+						<label for="privilege">Privilege:</label>
+  						<input type="text" class="form-control" id="privilege" placeholder="1">
+					</div>
 				</div>
 				<div class="col-sm-4">
 					<img src="avatar.png">
@@ -99,7 +104,7 @@
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
-			        <button onClick="No2()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal2">Save</button>
+			        <input type="submit" class="btn btn-lg btn-primary" value="Save">
 	      </div>
 	    </div>
 	  </div>

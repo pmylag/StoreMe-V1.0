@@ -196,6 +196,120 @@ public class AtmBean {
 	private String remarks;
 	
 	
+
+	
+	private int modem_qty;
+	public int getModem_qty() {
+		return modem_qty;
+	}
+	public void setModem_qty(int modem_qty) {
+		this.modem_qty = modem_qty;
+	}
+	public String getModem_rmk() {
+		return modem_rmk;
+	}
+	public void setModem_rmk(String modem_rmk) {
+		this.modem_rmk = modem_rmk;
+	}
+	public int getPnl_door_key_qty() {
+		return pnl_door_key_qty;
+	}
+	public void setPnl_door_key_qty(int pnl_door_key_qty) {
+		this.pnl_door_key_qty = pnl_door_key_qty;
+	}
+	public String getPnl_door_key_rmk() {
+		return pnl_door_key_rmk;
+	}
+	public void setPnl_door_key_rmk(String pnl_door_key_rmk) {
+		this.pnl_door_key_rmk = pnl_door_key_rmk;
+	}
+	public int getPedestal_qty() {
+		return pedestal_qty;
+	}
+	public void setPedestal_qty(int pedestal_qty) {
+		this.pedestal_qty = pedestal_qty;
+	}
+	public String getPedestaL_rmk() {
+		return pedestaL_rmk;
+	}
+	public void setPedestaL_rmk(String pedestaL_rmk) {
+		this.pedestaL_rmk = pedestaL_rmk;
+	}
+	public int getPower_crd_qty() {
+		return power_crd_qty;
+	}
+	public void setPower_crd_qty(int power_crd_qty) {
+		this.power_crd_qty = power_crd_qty;
+	}
+	public String getPower_cord_rmk() {
+		return power_cord_rmk;
+	}
+	public void setPower_cord_rmk(String power_cord_rmk) {
+		this.power_cord_rmk = power_cord_rmk;
+	}
+	public int getRouter_qtry() {
+		return router_qtry;
+	}
+	public void setRouter_qtry(int router_qtry) {
+		this.router_qtry = router_qtry;
+	}
+	public String getRouter_rmk() {
+		return router_rmk;
+	}
+	public void setRouter_rmk(String router_rmk) {
+		this.router_rmk = router_rmk;
+	}
+	public int getTopper_qty() {
+		return topper_qty;
+	}
+	public void setTopper_qty(int topper_qty) {
+		this.topper_qty = topper_qty;
+	}
+	public String getTopper_rmk() {
+		return topper_rmk;
+	}
+	public void setTopper_rmk(String topper_rmk) {
+		this.topper_rmk = topper_rmk;
+	}
+	public int getUps_qty() {
+		return ups_qty;
+	}
+	public void setUps_qty(int ups_qty) {
+		this.ups_qty = ups_qty;
+	}
+	public String getUps_rmk() {
+		return ups_rmk;
+	}
+	public void setUps_rmk(String ups_rmk) {
+		this.ups_rmk = ups_rmk;
+	}
+	public int getVault_door_key_qty() {
+		return vault_door_key_qty;
+	}
+	public void setVault_door_key_qty(int vault_door_key_qty) {
+		this.vault_door_key_qty = vault_door_key_qty;
+	}
+	public String getVault_door_key() {
+		return vault_door_key;
+	}
+	public void setVault_door_key(String vault_door_key) {
+		this.vault_door_key = vault_door_key;
+	}
+	private String modem_rmk;
+	private int pnl_door_key_qty;
+	private String pnl_door_key_rmk;
+	private int pedestal_qty;
+	private String pedestaL_rmk;
+	private int power_crd_qty;
+	private String power_cord_rmk;
+	private int router_qtry;
+	private String router_rmk;
+	private int topper_qty;
+	private String topper_rmk;
+	private int ups_qty;
+	private String ups_rmk;
+	private int vault_door_key_qty;
+	private String vault_door_key;
 	
 	
 	

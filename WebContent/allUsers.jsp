@@ -42,8 +42,24 @@
 		      <li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
 		      <li><a href="WelcomePage.jsp"><span class="glyphicon glyphicon-log-in" style="padding-right:5em"></span></a></li>
 		    </ul>
+		    
 		  </div>
-		</nav>
+	</nav>
+	<nav class="navbar navbar-default navbar-custom">
+		<div class="container-fluid">
+			
+		<ul class="nav navbar-header navbar-nav">
+	      <li><a href="AccountInfo.jsp">Account Information</span></a></li>
+	      <li><a href="ChangePassword.jsp">Change Password</span></a></li>
+	      <%!int priv = 1; %> <%-- Checks the privilege of user --%>
+	      <%if (priv == 1){ %> <%-- Only admin which has privilege of 1 can add an account --%>
+	      	<li><a href="AddAccount.jsp">Add Account</span></a></li>
+	      <%} %>
+	      <li><a href = "ViewAllUsersServlet">View Users</a>
+	      
+	    </ul>
+	  </div>
+	</nav>
 	
 	<div class = "container">
 		<div class = "row">
@@ -75,15 +91,15 @@
 			    </tr>
 			  </thead>
 			  <tbody>
-			  	<c:forEach items="${atminfolists}"  var= "a">
+			  	<c:forEach items="${userlist}"  var= "u">
 				  	<tr>
-				  	  <td> </td>
-				  	  <td> </td>
-				  	  <td> </td>
-				  	  <td> </td>
-				  	  <td> </td>
-				  	  <td> </td>
-				  	  <td> </td>
+				  	  <td>${u.firstname } </td>
+				  	  <td>${u.lastname } </td>
+				  	  <td>${u.username } </td>
+				  	  <td>${u.privilege } </td>
+				  	  <td>${u.address } </td>
+				  	  <td>${u.emailaddress } </td>
+				  	  <td>${u.mobilenumber } </td>
 				  	  <td>
 				  	  	  <a href="EditAtmInfoServlet?id=${a.idatminfo }" class="btn btn-primary a-btn-slide-text">
 					        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>           
