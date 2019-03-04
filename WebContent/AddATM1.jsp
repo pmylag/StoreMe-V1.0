@@ -336,17 +336,17 @@
 		    	<div class="row">
 		    		<div class="col">
 			    		<div class="col-sm-1" style="padding-left:5em; padding-top:2em">
-							<div class="rectangle1">
+							<div class="rectangle8">
 								<h4><p class="text-center">SECTION H<br> <%out.print(i8); %>/100</p></h4>
 							</div>
 						</div>
 					    <div class="col-sm-1" style="padding-left:7em; padding-top:2em">
-							<div class="rectangle1">
+							<div class="rectangle9">
 								<h4><p class="text-center">SECTION I<br> <%out.print(i9); %>/100</p></h4>
 							</div>
 						</div>
 						<div class="col-sm-1" style="padding-left:7em; padding-top:2em">
-							<div class="rectangle1">
+							<div class="rectangle10">
 								<h4><p class="text-center">SECTION J<br> <%out.print(i10); %>/100</p></h4>
 							</div>
 						</div>

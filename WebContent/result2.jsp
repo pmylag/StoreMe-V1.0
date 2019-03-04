@@ -61,9 +61,9 @@
 									    	</div>
 											<div class="form-group">
 												<label for="sel1">Status:</label>
-												<select class="form-control" id="sel1" name = "status">
-													<option value="Complete">Complete</option>
-													<option value="Incomplete">Incomplete</option>
+												<select class="form-control" id="sel1" name = "status" required>
+													<option value="InProgress">In Progress</option>
+													<option value="Returned">Returned</option>
 												</select>
 											</div>
 											<div class="Row" style = "padding-top: 1em">
