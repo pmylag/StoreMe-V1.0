@@ -29,21 +29,21 @@
 </head>
 <body>
 	<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#">StoreMe</a>
-				</div>
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">StoreMe</a>
+			</div>
 				
 			<ul class="nav navbar-nav">
 				<li><a href="HomePage.jsp">Home</a></li>
 				<li><a>Welcome, User</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-		      <li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
-		      <li><a href="WelcomePage.jsp"><span class="glyphicon glyphicon-log-in" style="padding-right:5em"></span></a></li>
-		    </ul>
-		  </div>
-		</nav>
+	      		<li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
+	      		<li><a href="WelcomePage.jsp"><span class="glyphicon glyphicon-log-in" style="padding-right:5em"></span></a></li>
+	    	</ul>
+		</div>
+	</nav>
 	
 	<div class = "container">
 		<div class = "row">
@@ -114,8 +114,8 @@
 				  	  <td> ${a.received_by } </td>
 				  	  <td><a href="#" data-toggle="modal" data-target="#Modalss"> ${a.activity }</a> </td>
 				  	  <td>
-				  	  	  <a href="#" class="btn btn-primary a-btn-slide-text">
-					        <span class="glyphicon glyphicon-open" aria-hidden="true"></span>           
+				  	  	  <a href="ViewRecord.jsp" class="btn btn-info a-btn-slide-text">
+					        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>           
 					      </a>
 					  </td>
 				  	  <td>
