@@ -51,7 +51,7 @@
 									    	</div>
 									    	<div class="input-group time" style = "padding-top: 1em">
 									   			<label for="uses1">Time Shipped: </label>
-									    		<input type="time" class="form-control" id="Uses1" name = "time_shipped">
+									    		<input type="time" class="form-control" id="Uses1" name = "time">
 									    	</div>
 											<div class="form-group">
 												<label for="sel1">Status:</label>

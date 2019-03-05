@@ -1,30 +1,25 @@
 package com.storeme.servlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
-
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.storeme.javabean.AtmInfoBean;
 import com.storeme.services.AtmInfoService;
 
 /**
- * Servlet implementation class GetSearchedAtmInfoServlet
+ * Servlet implementation class ATM2Servlet
  */
-@WebServlet("/GetSearchedAtmInfoServlet")
-@MultipartConfig
-public class GetSearchedAtmInfoServlet extends HttpServlet {
+@WebServlet("/ATM2Servlet")
+public class ATM2Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public GetSearchedAtmInfoServlet() {
+    public ATM2Servlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,13 +29,11 @@ public class GetSearchedAtmInfoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String action = "";
-		AtmInfoService atminfosService = new AtmInfoService();
-		ArrayList <AtmInfoBean> AtmInfos = atminfosService.getSearchedAtmInfo(request.getParameter("type"), request.getParameter("like"));
-		request.setAttribute("atminfolists", AtmInfos);
-		
-		request.getRequestDispatcher("Results.jsp").forward(request, response);
-		
+		AtmInfoService atmInfosService = new AtmInfoService();
+		int id = atmInfosService.getMaxIdAtmInfo();
+		String consign = atmInfosService.getSelectedAtmInfoConsignee(id);
+		request.setAttribute("consignee", consign);
+		request.getRequestDispatcher("AddATM3.jsp").forward(request, response);
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 

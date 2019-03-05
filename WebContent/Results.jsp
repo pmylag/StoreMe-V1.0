@@ -49,37 +49,35 @@
 	  	</div>
   	</div>
 	<div class = "container-fluid">
-		<div class = "row">
+		<form action = "GetSearchedAtmInfoServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);"> 		
+			<div class = "row">
+				<div class = "col-md-1">
+					SEARCH BY
+				</div>
 			<div class = "col-md-1">
-				SEARCH BY : 
+				<div class="form-group">
+						<label for="sel1">Type:</label>
+						<select class="form-control" id="sel1" name = "type" required>
+							<option value="sku">SKU</option>
+							<option value="atmplacement">Section</option>
+							<option value="consignee">Consignee</option>
+							<option value="site">Site & Location</option>
+							<option value="date">Date Recieved</option>
+							<option value="date_shipped">Date Shipped</option>
+							<option value="waybill_no">Waybill Number</option>
+							<option value="status">Status</option>
+							<option value="received_by">Received By</option>
+							<option value="activity">Activity</option>
+						</select>
+				</div>
 			</div>
-		<div class = "col-md-1">
-			<div class="dropdown">
-			  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Type
-			  <span class="caret"></span></button>
-			  <ul class="dropdown-menu">
-			    <li><a href="#">SKU</a></li>
-			    <li><a href="#">Section</a></li>
-			    <li><a href="#">Consignee</a></li>
-			    <li><a href="#">Site & Location</a></li>
-			    <li><a href="#">Date Received</a></li>
-			    <li><a href="#">Date Shipped</a></li>
-			    <li><a href="#">Waybill Number</a></li>
-			    <li><a href="#">Status</a></li>
-			    <li><a href="#">Received By</a></li>
-			    <li><a href="#">Activity</a></li>
-			    
-			  </ul>
+			<div class = "col-md-2">
+				<input type="text" placeholder="Search." name = "like">
 			</div>
-			
-		</div>
-		<div class = "col-md-2">
-			<input type="text" placeholder="Search.">
-		</div>
-		<div class = "col-md-1">
-			<button type="button" class="btn btn-light">Search</button>
-		</div>
-		</div>
+			<div class = "col-md-1">
+				<input type="submit" class="btn btn-light" value = "Search">
+			</div>
+			</div>
 		<div class = "row">
 		<div class="container-fluid">
 			<table class="table table-bordered">
@@ -98,7 +96,6 @@
 			      <th scope="col"> <font color="white"> Status </font> </th>
 			      <th scope="col"> <font color="white"> Received By </font> </th>
 			      <th scope="col"> <font color="white"> Activity </font> </th>
-			      <th scope="col"> <font color="white"> View </font> </th>
 				  <th scope="col"> <font color="white"> Edit </font> </th>
 				  <th scope="col"> <font color="white"> Delete </font> </th>
 				  
@@ -113,15 +110,14 @@
 				  	  <td> ${a.consignee } </td>
 				  	  <td> ${a.site } </td>
 				  	  <td> ${a.date } </td>
-				  	  <td> *Time Received* </td>
+				  	  <td> ${a.time } </td>
 				  	  <td> ${a.date_shipped } </td>
-				  	  <td> *Time Shipped* </td>
+				  	  <td> ${a.time_received } </td>
 				  	  <td> ${a.waybill_no } </td>
 				  	  <td> ${a.status } </td>
 				  	  <td> ${a.received_by } </td>
-				  	  <td><a href="#" data-toggle="modal" data-target="#Modalss"> ${a.activity }</a> </td>
 				  	  <td>
-				  	  	  <a href="ViewRecord.jsp" class="btn btn-info a-btn-slide-text">
+				  	  	  <a href="GetSelectedActivityServlet?id=${a.idatminfo }" class="btn btn-info a-btn-slide-text">
 					        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>           
 					      </a>
 					  </td>

@@ -202,6 +202,25 @@ public class AtmInfoService {
 		return count;
 	}
 
+	public String getSelectedActivity(int id) {
+		ArrayList<AtmInfoBean> atmInfoBeanlists = new ArrayList<>();
+		String sql = "SELECT activity FROM storeme.atmninfo where idatminfo = " + id;
+		String act = null;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while(rs.next()) {
+				act = rs.getString("activity");
+			} 
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return act;
+	}
 	public String getSelectedAtmInfoConsignee(int id) {
 		ArrayList<AtmInfoBean> atmInfoBeanlists = new ArrayList<>();
 		String sql = "SELECT consignee FROM  atmninfo WHERE idatminfo = " + id;
@@ -225,7 +244,7 @@ public class AtmInfoService {
 	}
 	public ArrayList getSearchedAtmInfo(String type, String search) {
 		ArrayList<AtmInfoBean> atmInfoBeanlists = new ArrayList<>();
-		String sql = "SELECT * FROM  atmninfo WHERE ? LIKE ?";
+		String sql = "SELECT * FROM  storeme.atmninfo WHERE " + type + " LIKE ?";
 		String Like;
 		
 		try {
@@ -233,8 +252,28 @@ public class AtmInfoService {
 			Connection con = DriverManager.getConnection(url,username,password);
 			Like = "%" + search + "%";
 			PreparedStatement st = con.prepareStatement(sql);
-			st.setString(1, type);
-			st.setString(2, Like);
+			st.setString(1, Like);
+			System.out.print("Eto na po!!  " + st);
+			ResultSet rs = st.executeQuery();
+			while(rs.next()) {
+				AtmInfoBean ai = new AtmInfoBean();
+				
+				ai.setIdatminfo(rs.getInt(AtmInfoBean.IDATMINFO));
+				ai.setActivity(rs.getString(AtmInfoBean.ACTIVITY));
+				ai.setAtmplacement(rs.getString(AtmInfoBean.ATMPLACEMENT));
+				ai.setConsignee(rs.getString(AtmInfoBean.CONSIGNEE));
+				ai.setSite(rs.getString("site"));
+				ai.setDate_shipped(rs.getString("date_shipped"));
+				ai.setDate(rs.getString(AtmInfoBean.DATE));
+				ai.setIdatm(rs.getInt(AtmInfoBean.IDATM));
+				ai.setSku(rs.getString(AtmInfoBean.SKU));
+				ai.setStatus(rs.getString(AtmInfoBean.STATUS));
+				ai.setTime(rs.getString(AtmInfoBean.TIME));
+				ai.setWaybill_no(rs.getString(AtmInfoBean.WAYBILL_NO));
+				ai.setReceived_by(rs.getString("received_by"));
+				
+				atmInfoBeanlists.add(ai);
+			}
 			
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
@@ -245,8 +284,8 @@ public class AtmInfoService {
 	}
 	
 	public void editAtmInfo( AtmInfoBean ai) {
-		String sql = "Update atmninfo SET atmplacement = ?, date_shipped = ?, status = ?, received_by = ?, "
-				+ "activtiy = ? WHERE idatminfo = ?";
+		String sql = "Update storeme.atmninfo SET atmplacement = ?, date_shipped = ?, status = ?, received_by = ?, "
+				+ "activity = ?, time_received = ? WHERE idatminfo = ?";
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -257,7 +296,9 @@ public class AtmInfoService {
 			st.setString(3, ai.getStatus());
 			st.setString(4, ai.getReceived_by());
 			st.setString(5, ai.getActivity());
-			st.setInt(6, ai.getIdatminfo());
+			st.setString(6, ai.getTime_received());
+			st.setInt(7, ai.getIdatminfo());
+			System.out.println("Eto na po!!  " + st);			
 			st.executeUpdate();
 		}catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
@@ -399,6 +440,7 @@ public class AtmInfoService {
 				ai.setSku(rs.getString(AtmInfoBean.SKU));
 				ai.setStatus(rs.getString(AtmInfoBean.STATUS));
 				ai.setTime(rs.getString(AtmInfoBean.TIME));
+				ai.setTime_received(rs.getString("time_received"));;
 				ai.setWaybill_no(rs.getString(AtmInfoBean.WAYBILL_NO));
 				ai.setReceived_by(rs.getString("received_by"));
 				

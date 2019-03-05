@@ -72,7 +72,7 @@
 						</div>
 						<div class="form-group">
 							<label for="csn">Consignee:</label>
-							<input type="text" class="form-control" id="csn" name = "consignee" value="John" readonly>
+							<input type="text" class="form-control" id="csn" name = "consignee" value="${consignee }" readonly>
 						</div>
 					</div>
 					

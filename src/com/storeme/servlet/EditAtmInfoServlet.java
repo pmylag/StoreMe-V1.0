@@ -58,6 +58,7 @@ public class EditAtmInfoServlet extends HttpServlet {
 		ai.setIdatminfo(Integer.parseInt(request.getParameter("id")));
 		ai.setAtmplacement(request.getParameter("atmplacement"));
 		ai.setReceived_by(request.getParameter("received_by"));
+		ai.setTime_received(request.getParameter("time"));
 		System.out.print("This is the id  " + ai.getIdatm() );
 		atmInfosService.editAtmInfo(ai);
 		request.getRequestDispatcher("GetAllAtmInfoServlet").forward(request, response);

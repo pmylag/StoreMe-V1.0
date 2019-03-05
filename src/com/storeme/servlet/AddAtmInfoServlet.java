@@ -32,6 +32,12 @@ public class AddAtmInfoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		AtmInfoService atmInfosService = new AtmInfoService();
+		int id = atmInfosService.getMaxIdAtmInfo();
+		String consign = atmInfosService.getSelectedAtmInfoConsignee(id);
+		request.setAttribute("consignee", consign);
+		request.getRequestDispatcher("AddATM3.jsp").forward(request, response);
+
 	}
 
 	/**
@@ -53,7 +59,7 @@ public class AddAtmInfoServlet extends HttpServlet {
 		ids = atmInfosService.getMaxIdAtmInfo();
 		System.out.println("Eto na   " + ids);
 		atmInfosService.addAtmInfo(ids, ai);
-		request.getRequestDispatcher("AddATM3.jsp").forward(request, response);
+		request.getRequestDispatcher("ATM2Servlet").forward(request, response);
 	}
 
 }

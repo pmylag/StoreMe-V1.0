@@ -106,5 +106,12 @@ public class AtmInfoBean {
 		this.received_by = received_by;
 	}
 	
+	public String getTime_received() {
+		return time_received;
+	}
+	public void setTime_received(String time_received) {
+		this.time_received = time_received;
+	}
 
+	private String time_received;	
 }

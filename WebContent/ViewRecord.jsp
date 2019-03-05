@@ -41,8 +41,8 @@
 	
 	<div class="container">
 		<div class="panel panel-default">
-  			<div class="panel-heading">83-PNB-SS23</div>
-  				<div class="panel-body"><p class="text-center">ATM Canopy installation, with light installation.</p></div>
+  			<div class="panel-heading">${SKU }</div>
+  				<div class="panel-body"><p class="text-center">${activity  } </p></div>
 		</div>
 		<div class="pull-right">
 			<button class="btn btn-primary btn-lg ">
