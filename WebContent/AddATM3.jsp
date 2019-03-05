@@ -32,7 +32,7 @@
 		<form action = "AddAtmServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);"> 
 			<div class="container">
 				<div class="col-md-6">
-					<h2>ATM Checklist</h2>
+					<h2>ATM Details</h2>
 				</div>
 				
 				<div class="col-md-6" style="padding-top:1em">
@@ -72,7 +72,7 @@
 						</div>
 						<div class="form-group">
 							<label for="csn">Consignee:</label>
-							<input type="text" class="form-control" id="csn" name = "consignee"  required>
+							<input type="text" class="form-control" id="csn" name = "consignee" value="John" readonly>
 						</div>
 					</div>
 					
@@ -162,7 +162,7 @@
 						        </td>
 					      	</tr>
 					      	<tr>
-						        <td>Decale</td>
+						        <td>Decals</td>
 						         <td>
 						        	<div class="form-group">
 										<input type="number" class="form-control" id="dcl-qty" name = "decale_qty" required>
@@ -175,7 +175,7 @@
 						        </td>
 					      	</tr>
 					      	<tr>
-						        <td>Fascial/Window Frame</td>
+						        <td>Fascia/Window Frames</td>
 						         <td>
 						        	<div class="form-group">
 										<input type="number" class="form-control" id="fwf-qty" name = "fsc_wndw_frame_qty" required>
@@ -191,7 +191,7 @@
 						        <td>Modem</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="mdm-qty">
+										<input type="number" class="form-control" id="mdm-qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -204,7 +204,7 @@
 						        <td>Panel Door Key</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="pdk-qty">
+										<input type="number" class="form-control" id="pdk-qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -217,7 +217,7 @@
 						        <td>Pedestal</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="pdl-qty">
+										<input type="number" class="form-control" id="pdl-qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -230,7 +230,7 @@
 						        <td>Power Cord</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="pc-qty">
+										<input type="number" class="form-control" id="pc-qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -243,7 +243,7 @@
 						        <td>Router</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="rtr-qty">
+										<input type="number" class="form-control" id="rtr-qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -256,7 +256,7 @@
 						        <td>Topper</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="tpr-qty">
+										<input type="number" class="form-control" id="tpr-qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -269,7 +269,7 @@
 						        <td>UPS</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="ups-qty">
+										<input type="number" class="form-control" id="ups-qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -282,7 +282,7 @@
 						        <td>Vault Door Key</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="vdk-qty">
+										<input type="number" class="form-control" id="vdk-qty" required>
 									</div>
 						        </td>
 						        <td>

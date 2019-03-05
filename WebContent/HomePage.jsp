@@ -11,7 +11,22 @@
 		<title>StoreMe</title>
 </head>
 <body>
-	<%@include file="navbar.jsp" %>
+	<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">StoreMe</a>
+				</div>
+				
+			<ul class="nav navbar-nav">
+				<li><a href="HomePage.jsp">Home</a></li>
+				<li><a>Welcome, User</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+		      <li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
+		      <li><a href="WelcomePage.jsp"><span class="glyphicon glyphicon-log-in" style="padding-right:5em"></span></a></li>
+		    </ul>
+		  </div>
+		</nav>
 	
 	<div class="container">
 		<div class="jumbotron" style="background-color:white;">

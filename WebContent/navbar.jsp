@@ -20,7 +20,6 @@
 				
 			<ul class="nav navbar-nav">
 				<li><a href="HomePage.jsp">Home</a></li>
-				<li><a>Welcome, User</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 		      <li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>

@@ -18,7 +18,7 @@
 				<div class="panel-heading">HOME</div>
 				<div class="panel-body">
 					<ul>
-						<li>From the homepage, choose from one of the four functinos provided (new ATM information, tracker center, generate reports, and how to use)</li>
+						<li>Choose from one of the three functions displayed. (New ATM Information, Find Me, How to Use)</li>
 					</ul>
 				</div>
 			</div>
@@ -26,13 +26,18 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">NEW ATM INFORMATION</div>
 				<div class="panel-body">
-					<ul>
-						<li>When clicking the 'New ATM Information' hyperlink, the 'ATM placement' page will be displayed.</li>
-						<li>On the 'ATM placement' page, choose what section will you place the ATM depending on its brand. Make sure that there is a vacant space in the desired section. If the section selection is successful, you will be redirected to the 'ATM Details' page.</li>
-						<li>On the 'ATM Details' input the necessary information to proceed to the next step/page.</li>
-						<li>Repeat previous step to proceed to the next page.</li>
-						<li>After successfully completing the steps mentioned above, new information will be added to the database. It will be displayed on the tracker center and can be filtered by the date it is added.</li>
-					</ul>
+					<ol type="1">
+						<li>Choose what section will you place the ATM depending on its brand. .</li>
+						<ul>
+							<li>If the section selection is successful, you will be redirected to the "ATM Details" page</li>
+						</ul>
+						
+						<li>Input the necessary information to proceed to the next step/page.</li>
+						<ul>
+							<li>New information will be added to the database. </li>
+							<li>It will be displayed on the tracker center and can be filtered by the date it is added. </li>
+						</ul>
+					</ol>
 				</div>
 			</div>
 		</div>
@@ -42,9 +47,13 @@
 				<div class="panel-heading">TRACKER CENTER</div>
 				<div class="panel-body">
 					<ul>
-						<li>When clicking the 'Tracker Center' button, you may be able to trace previous units.</li>
-						<li>On this page, the serial code is clickable. When clicked, the summary of details of the unit will be displayed.</li>						
+							<li>In here, you may be able to trace previous units.</li>
 					</ul>
+					<ol type="1">
+						<li>Click update to edit unit's details.</li>
+						<li>Click delete to remove the entry and its corresponding details.</li>
+						<li>Click the serial code to view the summary of unit's details. </li>						
+					</ol>
 				</div>
 			</div>
 			

@@ -15,22 +15,13 @@
 </head>
 <body>
 	<%@include file="navbar.jsp" %>
-	<div class="modal-content">
-		<div class="modal-header">
-		  <button type="button" class="close" data-dismiss="modal">&times;</button>
-		  <h4 class="modal-title">Edit Entry ${id }</h4>
-		</div>
-		<div class="modal-body">
-			<div class="panel panel-default">
-				<div class="panel panel-default">
-					<div class="panel-heading">  
- 						<h4 class = "text-center">
- 							<font color="black">${sku }</font>
- 						</h4>
- 					</div>
- 	
- 					<font color="gray">	
- 							<form action = "EditAtmInfoServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);"> 
+	
+	<div class="container">
+  		<h2>Edit Entry ${id }</h2>
+  		<div class="panel panel-default">
+    		<div class="panel-heading">${sku }</div>
+   			<div class="panel-body">
+   				<form action = "EditAtmInfoServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);"> 
  							
 		 						<div class="panel-body bg-default">
 									<div class="form-group">
@@ -40,17 +31,16 @@
 												    <div class="form-group">
 												      	<label for="sel1">Choose Section: </label>
 												     	 <select class="form-control" id="sel1" name = "atmplacement" required>
-												     	 <option value="A" name = "atmplacement">A</option>
-												     	 <option value="B" name = "atmplacement">B</option>
-												     	 <option value="C" name = "atmplacement">C</option>
-												     	 <option value="D" name = "atmplacement">D</option>
-												     	 <option value="E" name = "atmplacement">E</option>
-												     	 <option value="F" name = "atmplacement">F</option>
-												     	 <option value="G" name = "atmplacement">G</option>
-												     	 <option value="H" name = "atmplacement">H</option>
-												     	 <option value="I" name = "atmplacement">I</option>
-												     	 <option value="J" name = "atmplacement">J</option>
-												
+													     	 <option value="A" name = "atmplacement">A</option>
+													     	 <option value="B" name = "atmplacement">B</option>
+													     	 <option value="C" name = "atmplacement">C</option>
+													     	 <option value="D" name = "atmplacement">D</option>
+													     	 <option value="E" name = "atmplacement">E</option>
+													     	 <option value="F" name = "atmplacement">F</option>
+													     	 <option value="G" name = "atmplacement">G</option>
+													     	 <option value="H" name = "atmplacement">H</option>
+													     	 <option value="I" name = "atmplacement">I</option>
+													     	 <option value="J" name = "atmplacement">J</option>
 												     	 </select>
 													</div>
 											   </div>
@@ -59,11 +49,15 @@
 									   			<label for="uses">Date Shipped: </label>
 									    		<input type="date" class="form-control" id="Uses" name = "date_shipped">
 									    	</div>
+									    	<div class="input-group time" style = "padding-top: 1em">
+									   			<label for="uses1">Time Shipped: </label>
+									    		<input type="time" class="form-control" id="Uses1" name = "time_shipped">
+									    	</div>
 											<div class="form-group">
 												<label for="sel1">Status:</label>
-												<select class="form-control" id="sel1" name = "status">
-													<option value="Complete">Complete</option>
-													<option value="Incomplete">Incomplete</option>
+												<select class="form-control" id="sel1" name = "status" required>
+													<option value="Completed">Completed</option>
+													<option value="Returned">Returned</option>
 												</select>
 											</div>
 											<div class="Row" style = "padding-top: 1em">
@@ -88,10 +82,9 @@
 					  		</div>
 					  		
 					 	 </form>
-					 </font>
-		      	</div>
-		  	</div>
-		</div>
+   			</div>
+  		</div>
 	</div>
+
 </body>
 </html>

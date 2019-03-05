@@ -52,7 +52,7 @@ public class EditAtmInfoServlet extends HttpServlet {
 		AtmInfoService atmInfosService = new AtmInfoService();
 		int ids;
 		AtmInfoBean ai = new AtmInfoBean();
-		ai.setActivtiy(request.getParameter("activity"));
+		ai.setActivity(request.getParameter("activity"));
 		ai.setDate_shipped(request.getParameter("date_shipped"));
 		ai.setStatus(request.getParameter("status"));
 		ai.setIdatminfo(Integer.parseInt(request.getParameter("id")));
