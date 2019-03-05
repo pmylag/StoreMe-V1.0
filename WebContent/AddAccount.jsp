@@ -21,6 +21,8 @@
 	      <%if (priv == 1){ %> <%-- Only admin which has privilege of 1 can add an account --%>
 	      	<li><a href="AddAccount.jsp">Add Account</span></a></li>
 	      <%} %>
+	      <li><a href = "ViewAllUsersServlet">View Users</a>
+	      
 	    </ul>
 	  </div>
 	</nav>
@@ -28,24 +30,24 @@
 		
 	<div class="container">
 		<h1>Create New Account</h1>
-		<form>
+		<form action = "AddUserServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);">
 			<div class="form-group">
 				<div class="col-sm-4">
 					<div>
 						<label for="usr">First Name:</label>
-	  					<input type="text" class="form-control" id="usr" placeholder="Ex. Juan">
+	  					<input type="text" class="form-control" id="usr" placeholder="Ex. Juan" name = "firstname">
   					</div>
   					<div>
 						<label for="addr">Address:</label>
-	  					<input type="text" class="form-control" id="addr" placeholder="Ex. Espana, Manila">
+	  					<input type="text" class="form-control" id="addr" placeholder="Ex. Espana, Manila" name = "address">
 					</div>
 					<div>
 						<label for="usrname">Username:</label>
-	  					<input type="text" class="form-control" id="usrname" placeholder="jDelaCruz">
+	  					<input type="text" class="form-control" id="usrname" placeholder="jDelaCruz" name = "username">
   					</div>
 					<div>
 						<label for="password">Password:</label>
-  						<input type="password" class="form-control" id="password" placeholder="************">
+  						<input type="password" class="form-control" id="password" placeholder="************" name = "password">
 					</div>
 					<div>
 						<div class="col-sm-3">
@@ -57,7 +59,7 @@
 						</div>
 						<div class="col-sm-3">
 							<div style = "padding-top: 1em">
-								<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#Modals">Save Changes</button>
+								<input type="submit" class="btn btn-lg btn-primary" value="Save">
 							</div>
 						</div>
 					</div>
@@ -67,19 +69,23 @@
 				<div class="col-sm-4">
 					<div>
 						<label for="usr1">Last Name:</label>
-  						<input type="text" class="form-control" id="usr1" placeholder="Ex. De la Cruz">
+  						<input type="text" class="form-control" id="usr1" placeholder="Ex. De la Cruz" name = "lastname">
 					</div>
 					<div>
 						<label for="email">Email Address:</label>
-  						<input type="email" class="form-control" id="email" placeholder="Ex. juandelacruz@domain.com">
+  						<input type="email" class="form-control" id="email" placeholder="Ex. juandelacruz@domain.com" name = "emailaddress">
 					</div>
 					<div>
 						<label for="mobile">Mobile Number:</label>
-	  					<input type="number" class="form-control" id="addr" placeholder="Ex. 09177777777">
+	  					<input type="number" class="form-control" id="addr" placeholder="Ex. 09177777777" name = "mobilenumber">
 					</div>
 					<div>
 						<label for="confPassword">Confirm Password:</label>
-  						<input type="password" class="form-control" id="confPassword" placeholder="************">
+  						<input type="password" class="form-control" id="confPassword" placeholder="************" name = "password2">
+					</div>
+					<div>
+						<label for="privilege">Privilege:</label>
+  						<input type="text" class="form-control" id="privilege" placeholder="1" name = "privilege">
 					</div>
 				</div>
 				<div class="col-sm-4">
@@ -105,7 +111,7 @@
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
-			        <button onClick="No2()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal2">Save</button>
+			        <input type="submit" class="btn btn-lg btn-primary" value="Save">
 	      </div>
 	    </div>
 	  </div>

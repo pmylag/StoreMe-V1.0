@@ -18,6 +18,8 @@
 	      <%if (priv == 1){ %> <%-- Only admin which has privilege of 1 can add an account --%>
 	      	<li><a href="AddAccount.jsp">Add Account</span></a></li>
 	      <%} %>
+	      <li><a href = "ViewAllUsersServlet">View Users</a>
+	      
 	    </ul>
 	  </div>
 	</nav>

@@ -32,6 +32,43 @@ public class UserBean {
 	public void setPrivilege(int privilege) {
 		this.privilege = privilege;
 	}
+	
+	public String getFirstname() {
+		return firstname;
+	}
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+	public String getLastname() {
+		return lastname;
+	}
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getEmailaddress() {
+		return emailaddress;
+	}
+	public void setEmailaddress(String emailaddress) {
+		this.emailaddress = emailaddress;
+	}
+	public String getMobilenumber() {
+		return mobilenumber;
+	}
+	public void setMobilenumber(String mobilenumber) {
+		this.mobilenumber = mobilenumber;
+	}
+
+	private String firstname;
+	private String lastname;
+	private String address;
+	private String emailaddress;
+	private String mobilenumber;
 	private int iduser;
 	private  String username;
 	private String password;

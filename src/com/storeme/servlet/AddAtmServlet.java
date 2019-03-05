@@ -103,7 +103,22 @@ public class AddAtmServlet extends HttpServlet {
 		
 		else
 			ab.setCassete4(Integer.parseInt(request.getParameter("cassete4")));
-		
+		ab.setModem_qty(Integer.parseInt(request.getParameter("modem_qty")));
+		ab.setModem_rmk(request.getParameter("modem_rmk"));
+		ab.setPnl_door_key_qty(Integer.parseInt(request.getParameter("pnl_door_key_qty")));
+		ab.setPnl_door_key_rmk(request.getParameter("pnl_door_key_rmk"));
+		ab.setPedestal_qty(Integer.parseInt(request.getParameter("pedestal_qty")));
+		ab.setPedestaL_rmk(request.getParameter("pedestaL_rmk"));
+		ab.setPower_crd_qty(Integer.parseInt(request.getParameter("power_crd_qty")));
+		ab.setPower_cord_rmk(request.getParameter("power_cord_rmk"));
+		ab.setRouter_qtry(Integer.parseInt(request.getParameter("router_qtry")));
+		ab.setRouter_rmk(request.getParameter("router_rmk"));
+		ab.setTopper_qty(Integer.parseInt(request.getParameter("topper_qty")));
+		ab.setTopper_rmk(request.getParameter("topper_rmk"));
+		ab.setUps_qty(Integer.parseInt(request.getParameter("ups_qty")));
+		ab.setUps_rmk(request.getParameter("ups_rmk"));
+		ab.setVault_door_key_qty(Integer.parseInt(request.getParameter("vault_door_key_qty")));
+		ab.setVault_door_key(request.getParameter("vault_door_key"));
 		AS.addAtm(ab);
 		request.getRequestDispatcher("HomePage.jsp").forward(request, response);
 

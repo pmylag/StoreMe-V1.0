@@ -9,20 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.storeme.javabean.AtmInfoBean;
-import com.storeme.services.AtmInfoService;
+import com.storeme.javabean.UserBean;
+import com.storeme.services.UserService;
 
 /**
- * Servlet implementation class GetSearchedAtmInfoServlet
+ * Servlet implementation class ViewAllUsersServlet
  */
-@WebServlet("/GetSearchedAtmInfoServlet")
-public class GetSearchedAtmInfoServlet extends HttpServlet {
+@WebServlet("/ViewAllUsersServlet")
+public class ViewAllUsersServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public GetSearchedAtmInfoServlet() {
+    public ViewAllUsersServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,13 +32,11 @@ public class GetSearchedAtmInfoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String action = "";
-		AtmInfoService atminfosService = new AtmInfoService();
-		ArrayList <AtmInfoBean> AtmInfos = atminfosService.getSearchedAtmInfo(request.getParameter("type"), request.getParameter("like"));
-		request.setAttribute("atminfolists", AtmInfos);
+		UserService US = new UserService();
+		ArrayList<UserBean> UB = US.viewallUsers();
 		
-		request.getRequestDispatcher("Results.jsp").forward(request, response);
-		
+		request.setAttribute("userlist", UB);
+		request.getRequestDispatcher("allUsers.jsp").forward(request, response);
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 

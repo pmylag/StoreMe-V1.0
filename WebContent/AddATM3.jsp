@@ -191,12 +191,12 @@
 						        <td>Modem</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="mdm-qty" required>
+										<input type="number" class="form-control" id="mdm-qty" name  = "modem_qty" required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="mdm-rmk">
+										<input type="text" class="form-control" id="mdm-rmk" name = "modem_rmk">
 									</div>
 						        </td>
 					      	</tr>
@@ -204,12 +204,12 @@
 						        <td>Panel Door Key</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="pdk-qty" required>
+										<input type="number" class="form-control" id="pdk-qty" name = "pnl_door_key_qty" required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="pdk-rmk">
+										<input type="text" class="form-control" id="pdk-rmk" name = "pnl_door_key_rmk">
 									</div>
 						        </td>
 					      	</tr>
@@ -217,12 +217,12 @@
 						        <td>Pedestal</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="pdl-qty" required>
+										<input type="number" class="form-control" id="pdl-qty" name = "pedestal_qty" required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="pdl-rmk">
+										<input type="text" class="form-control" id="pdl-rmk" name = "pedestaL_rmk">
 									</div>
 						        </td>
 					      	</tr>
@@ -230,12 +230,12 @@
 						        <td>Power Cord</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="pc-qty" required>
+										<input type="number" class="form-control" id="pc-qty" name  = "power_crd_qty"required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="pc-rmk">
+										<input type="text" class="form-control" id="pc-rmk" name = "power_cord_rmk">
 									</div>
 						        </td>
 					      	</tr>
@@ -243,12 +243,12 @@
 						        <td>Router</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="rtr-qty" required>
+										<input type="number" class="form-control" id="rtr-qty" name = "router_qtry"required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="rtr-rmk">
+										<input type="text" class="form-control" id="rtr-rmk" name = "router_rmk">
 									</div>
 						        </td>
 					      	</tr>
@@ -256,12 +256,12 @@
 						        <td>Topper</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="tpr-qty" required>
+										<input type="number" class="form-control" id="tpr-qty"  name = "topper_qty"required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="tpr-rmk">
+										<input type="text" class="form-control" id="tpr-rmk" name = "topper_rmk">
 									</div>
 						        </td>
 					      	</tr>
@@ -269,12 +269,12 @@
 						        <td>UPS</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="ups-qty" required>
+										<input type="number" class="form-control" id="ups-qty" name = "ups_qty"required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="ups-rmk">
+										<input type="text" class="form-control" id="ups-rmk" name = "ups_rmk">
 									</div>
 						        </td>
 					      	</tr>
@@ -282,12 +282,12 @@
 						        <td>Vault Door Key</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="vdk-qty" required>
+										<input type="number" class="form-control" id="vdk-qty" name = "vault_door_key_qty" required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="vdk-rmk">
+										<input type="text" class="form-control" id="vdk-rmk" name = "vault_door_key">
 									</div>
 						        </td>
 					      	</tr>

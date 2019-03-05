@@ -266,7 +266,7 @@ public class AtmInfoService {
 	}
 	
 	public void addAtmInfo(int id, AtmInfoBean ai) {
-		String sql = "Update atmninfo SET site = ? , sku = ? , consignee = ?, date = ?, date_shipped = ?, time = ? ,waybill_no = ?,  activtiy = ?, "
+		String sql = "Update atmninfo SET site = ? , sku = ? , consignee = ?, date = ?, date_shipped = ?, time = ? ,waybill_no = ?,  activity = ?, "
 				      + "   status = ?, idatm = ? WHERE idatminfo = ? ";
 
 		
