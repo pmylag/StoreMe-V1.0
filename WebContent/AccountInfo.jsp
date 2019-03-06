@@ -29,20 +29,20 @@
 		
 	<div class="container">
 		<h1>Account Information</h1>
-		<form>
+		<form action = "EditUsersServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);">
 			<div class="form-group">
 				<div class="col-sm-4">
 					<div>
 						<label for="usr">First Name:</label>
-	  					<input type="text" class="form-control" id="usr" placeholder="Ex. Juan">
+	  					<input type="text" class="form-control" id="usr" placeholder="Ex. Juan" name = "firstname">
   					</div>
   					<div>
 						<label for="addr">Address:</label>
-	  					<input type="text" class="form-control" id="addr" placeholder="Ex. Espana, Manila">
+	  					<input type="text" class="form-control" id="addr" placeholder="Ex. Espana, Manila" name = "address">
 					</div>
 					<div>
 						<label for="mobile">Mobile Number:</label>
-	  					<input type="number" class="form-control" id="addr" placeholder="Ex. 09177777777">
+	  					<input type="number" class="form-control" id="addr" placeholder="Ex. 09177777777" name = "mobile">
 					</div>
 					<div>
 						<div class="col-sm-3">
@@ -54,7 +54,7 @@
 						</div>
 						<div class="col-sm-3">
 							<div style = "padding-top: 1em">
-								<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#Modals">Save Changes</button>
+								<input type="submit" class="btn btn-lg btn-primary" value="Save">
 							</div>
 						</div>
 					</div>
@@ -64,16 +64,15 @@
 				<div class="col-sm-4">
 					<div>
 						<label for="usr1">Last Name:</label>
-  						<input type="text" class="form-control" id="usr1" placeholder="Ex. De la Cruz">
+  						<input type="text" class="form-control" id="usr1" placeholder="Ex. De la Cruz" name = "lastname">
 					</div>
 					<div>
 						<label for="email">Email Address:</label>
-  						<input type="email" class="form-control" id="email" placeholder="Ex. juandelacruz@domain.com">
+  						<input type="email" class="form-control" id="email" placeholder="Ex. juandelacruz@domain.com" name = "emailaddress">
 					</div>
-					
 					<div>
-						<label for="privilege">Privilege:</label>
-  						<input type="text" class="form-control" id="privilege" placeholder="1">
+						<label for="id">id:</label>
+  						<input type="text" class="form-control" id="id" placeholder="Ex. juandelacruz@domain.com" name = "id" value = "${id }" readonly >
 					</div>
 				</div>
 				<div class="col-sm-4">

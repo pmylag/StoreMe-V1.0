@@ -100,11 +100,11 @@
 				  	  <td>${u.emailaddress } </td>
 				  	  <td>${u.mobilenumber } </td>
 				  	  <td>
-				  	  	  <a href="EditAtmInfoServlet?id=${a.idatminfo }" class="btn btn-primary a-btn-slide-text">
+				  	  	  <a href="EditUsersServlet?id=${u.iduser }" class="btn btn-primary a-btn-slide-text">
 					        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>           
 					      </a>
 					  </td>
-					  <td><a href="DeleteAtmServlet?id=${a.idatminfo }" class="btn btn-danger a-btn-slide-text">
+					  <td><a href="DeleteUsersServlet?id=${u.iduser }" class="btn btn-danger a-btn-slide-text">
 					        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>	                 
 					      </a>
 					  </td>

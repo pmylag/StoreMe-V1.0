@@ -14,6 +14,29 @@ public class UserService {
 	static String url =("jdbc:mysql://localhost:3306/storeme");
 	static String username ="root";
 	static String passwords = "password";
+	
+	public void editUsers(int id, UserBean UB) {
+		String sql = "UPDATE user SET firstname = ?, lastname = ?, address = ?, "
+				+ "emailaddress = ?, mobilenumber = ? WHERE iduser = ?";
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,passwords);
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, UB.getFirstname());
+			st.setString(2, UB.getLastname());
+			st.setString(3, UB.getAddress());
+			st.setString(4, UB.getEmailaddress());
+			st.setString(5, UB.getMobilenumber());
+			st.setInt(6, id);
+			System.out.println("wkwkwkw  " + st);
+			st.executeUpdate();
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public ArrayList viewallUsers() {
 		ArrayList<UserBean> alluserlists = new ArrayList();
 		
