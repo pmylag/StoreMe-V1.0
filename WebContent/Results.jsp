@@ -97,7 +97,10 @@
 			      <th scope="col"> <font color="white"> Received By </font> </th>
 			      <th scope="col"> <font color="white"> Activity </font> </th>
 				  <th scope="col"> <font color="white"> Edit </font> </th>
-				  <th scope="col"> <font color="white"> Delete </font> </th>
+				  <%! int priv = 1; %>
+				  <%if (priv == 1 || priv == 2 || priv == 3) {%>
+				  	<th scope="col"> <font color="white"> Delete </font> </th>
+				  <%} %>
 				  
 			    </tr>
 			  </thead>
@@ -117,19 +120,22 @@
 				  	  <td> ${a.status } </td>
 				  	  <td> ${a.received_by } </td>
 				  	  <td>
-				  	  	  <a href="GetSelectedActivityServlet?id=${a.idatminfo }" class="btn btn-info a-btn-slide-text">
-					        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>           
-					      </a>
+			  	  	  	<a href="GetSelectedActivityServlet?id=${a.idatminfo }" class="btn btn-info a-btn-slide-text">
+				        	<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>           
+				      	</a>
 					  </td>
 				  	  <td>
-				  	  	  <a href="EditAtmInfoServlet?id=${a.idatminfo }" class="btn btn-primary a-btn-slide-text">
-					        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>           
-					      </a>
+			  	  	  	<a href="EditAtmInfoServlet?id=${a.idatminfo }" class="btn btn-primary a-btn-slide-text">
+				        	<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>           
+				      	</a>
 					  </td>
-					  <td><a href="DeleteAtmServlet?id=${a.idatminfo }" class="btn btn-danger a-btn-slide-text">
-					        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>	                 
-					      </a>
+					  <%if (priv == 1 || priv == 2 || priv == 3) {%>
+					  <td>
+					  	<a href="DeleteAtmServlet?id=${a.idatminfo }" class="btn btn-danger a-btn-slide-text">
+			        		<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>	                 
+				      	</a>
 					  </td>
+					  <%} %>
 				  	</tr>
 				  </c:forEach>
 			  </tbody>

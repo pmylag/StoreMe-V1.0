@@ -19,7 +19,16 @@
 				
 			<ul class="nav navbar-nav">
 				<li><a href="HomePage.jsp">Home</a></li>
-				<li><a>Welcome, User</a></li>
+				<%! int priv = 3; %>
+				<%if (priv == 1) { %>
+					<li><a>Welcome, Administrator</a></li>
+				<%} if (priv == 2) { %>
+					<li><a>Welcome, Inventory Supervisor</a></li>
+				<%}  if (priv == 3) {%>
+					<li><a>Welcome, Warehouse Assistant</a></li>
+				<%} if (priv == 4) {%>
+					<li><a>Welcome, Team Leader</a></li>
+				<%} %>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 		      <li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
@@ -31,9 +40,13 @@
 	<div class="container">
 		<div class="jumbotron" style="background-color:white;">
 			<div class="col-sm-4">
-				<a href="AddAtmSectionServlet">
+				<%if(priv == 1 || priv == 2 || priv == 4) {%>
+					<a href="AddAtmSectionServlet">
+						<img src="atm.png" style="height:300px; width:300px">
+					</a>
+				<%} else if(priv == 3) {%>
 					<img src="atm.png" style="height:300px; width:300px">
-				</a>
+				<%} %>
 				<h2 class="text-center">New ATM Information</h2>
 			</div>
 			<div class="col-sm-4">
