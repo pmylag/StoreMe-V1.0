@@ -89,7 +89,7 @@ public class UserService {
 				ub.setLastname(rs.getString("lastname"));
 				ub.setMobilenumber(rs.getString("mobilenumber"));
 				ub.setPassword(rs.getString("password"));
-				ub.setPrivilege(rs.getInt("privilege"));
+				ub.setPrivilege(rs.getString("privilege"));
 				ub.setUsername(rs.getString("username"));
 				
 				alluserlists.add(ub);
@@ -110,7 +110,7 @@ public class UserService {
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, U.getUsername());
 			st.setString(2, U.getPassword());
-			st.setInt(3, U.getPrivilege());
+			st.setString(3, U.getPrivilege());
 			st.setString(4, U.getFirstname());
 			st.setString(5, U.getLastname());
 			st.setString(7, U.getEmailaddress());
