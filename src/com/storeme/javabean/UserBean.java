@@ -26,12 +26,6 @@ public class UserBean {
 		this.password = password;
 	}
 	
-	public int getPrivilege() {
-		return privilege;
-	}
-	public void setPrivilege(int privilege) {
-		this.privilege = privilege;
-	}
 	
 	public String getFirstname() {
 		return firstname;
@@ -72,7 +66,14 @@ public class UserBean {
 	private int iduser;
 	private  String username;
 	private String password;
-	private int privilege;
+	public String getPrivilege() {
+		return privilege;
+	}
+	public void setPrivilege(String privilege) {
+		this.privilege = privilege;
+	}
+
+	private String privilege;
 	
 	
 }
