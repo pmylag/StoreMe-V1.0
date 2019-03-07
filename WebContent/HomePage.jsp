@@ -11,6 +11,14 @@
 		<title>StoreMe</title>
 </head>
 <body>
+<%	
+
+  if(session.getAttribute("username")==null){
+	  	response.sendRedirect("error.jsp");
+	}
+
+  
+%>
 	<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -20,15 +28,15 @@
 			<ul class="nav navbar-nav">
 				<li><a href="HomePage.jsp">Home</a></li>
 				<%! int priv = 3; %>
-				<%if (priv == 1) { %>
+				<%if (session.getAttribute("privilege1") != null) {%>
 					<li><a>Welcome, Administrator</a></li>
-				<%} if (priv == 2) { %>
+				<%}else if (session.getAttribute("privilege2") != null) { %>
 					<li><a>Welcome, Inventory Supervisor</a></li>
-				<%}  if (priv == 3) {%>
+				<% } else if (session.getAttribute("privilege3") != null) {%>
 					<li><a>Welcome, Warehouse Assistant</a></li>
-				<%} if (priv == 4) {%>
+				<% }else if (session.getAttribute("privilege4") != null) {%>
 					<li><a>Welcome, Team Leader</a></li>
-				<%} %>
+				<% }%>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 		      <li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
@@ -40,11 +48,11 @@
 	<div class="container">
 		<div class="jumbotron" style="background-color:white;">
 			<div class="col-sm-4">
-				<%if(priv == 1 || priv == 2 || priv == 4) {%>
+				<%if(session.getAttribute("privilege1") != null || session.getAttribute("privilege2") != null || session.getAttribute("privilege4") != null) {%>
 					<a href="AddAtmSectionServlet">
 						<img src="atm.png" style="height:300px; width:300px">
 					</a>
-				<%} else if(priv == 3) {%>
+				<%} else if(session.getAttribute("privilege3") != null) {%>
 					<img src="atm.png" style="height:300px; width:300px">
 				<%} %>
 				<h2 class="text-center">New ATM Information</h2>

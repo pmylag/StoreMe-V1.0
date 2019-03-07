@@ -71,8 +71,8 @@
   						<input type="email" class="form-control" id="email" placeholder="Ex. juandelacruz@domain.com" name = "emailaddress">
 					</div>
 					<div>
-						<label for="id">id:</label>
-  						<input type="text" class="form-control" id="id" placeholder="Ex. juandelacruz@domain.com" name = "id" value = "${id }" readonly >
+						
+  						<input type="hidden" class="form-control" id="id" placeholder="Ex. juandelacruz@domain.com" name = "id" value = "${id }" readonly hidden>
 					</div>
 				</div>
 				<div class="col-sm-4">

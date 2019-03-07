@@ -98,7 +98,7 @@
 			      <th scope="col"> <font color="white"> Activity </font> </th>
 				  <th scope="col"> <font color="white"> Edit </font> </th>
 				  <%! int priv = 1; %>
-				  <%if (priv == 1 || priv == 2 || priv == 3) {%>
+				  <%if (session.getAttribute("privilege1") != null || priv == 2 || priv == 3) {%>
 				  	<th scope="col"> <font color="white"> Delete </font> </th>
 				  <%} %>
 				  
@@ -129,7 +129,7 @@
 				        	<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>           
 				      	</a>
 					  </td>
-					  <%if (priv == 1 || priv == 2 || priv == 3) {%>
+					  <%if (session.getAttribute("privilege1") != null || priv == 2 || priv == 3) {%>
 					  <td>
 					  	<a href="DeleteAtmServlet?id=${a.idatminfo }" class="btn btn-danger a-btn-slide-text">
 			        		<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>	                 

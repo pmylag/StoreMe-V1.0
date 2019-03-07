@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>   
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,20 +27,20 @@
 	
 	<div class="container">
 		<h1>Change Password</h1>
-		<form>
+		<form action = "EditUsersServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);">
 			<div class="form-group">
 				<div class="col-sm-4">
 					<div>
 						<label for="currPword">Current Password:</label>
-	  					<input type="passsword" class="form-control" id="currPword" placeholder="*******">
+	  					<input type="passsword" class="form-control" id="currPword" placeholder="*******" name = "ogpass">
   					</div>
   					<div>
 						<label for="newPword">New Password:</label>
-	  					<input type="passsword" class="form-control" id="newPword" placeholder="*******">
+	  					<input type="passsword" class="form-control" id="newPword" placeholder="*******" name = "newpass">
   					</div>
 					<div>
 						<label for="repPword">Repeat Password:</label>
-	  					<input type="passsword" class="form-control" id="repPword" placeholder="*******">
+	  					<input type="passsword" class="form-control" id="repPword" placeholder="*******" name = "checkpass">
   					</div>
 					<div>
 						<div class="col-sm-3">
@@ -51,9 +52,13 @@
 						</div>
 						<div class="col-sm-3">
 							<div style = "padding-top: 1em">
-								<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#ModalSave">Save Changes</button>
+								<input type="submit" class="btn btn-lg btn-primary" value="Save">
 							</div>
 						</div>
+					</div>
+					<div>
+						
+  						<input type="hidden" class="form-control" id="id" placeholder="Ex. juandelacruz@domain.com" name = "id" value = "${id }" readonly hidden>
 					</div>
 				</div>
 				<div class="col-sm-4">

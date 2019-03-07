@@ -81,7 +81,7 @@ public class Login extends HttpServlet {
 		            response.addCookie(message);
 				if(dao.checkadmin(uname)== 1) {
 					session.setAttribute("csrfToken", dao.generateCSRFToken());
-					session.setAttribute("isadmin", uname);
+					session.setAttribute("privilege1", dao.checkadmin(uname));
 					session.setAttribute("username", uname);
 					session.setAttribute("iduser", dao.getiduser(uname));
 					System.out.println("futa: "+dao.getiduser(uname));
@@ -91,21 +91,24 @@ public class Login extends HttpServlet {
 					session.setAttribute("isproductmanager", uname);
 					session.setAttribute("username", uname);
 					session.setAttribute("iduser", dao.getiduser(uname));
-					System.out.println("futa: "+dao.getiduser(uname));
-					response.sendRedirect("ProductManagement");
+					session.setAttribute("privilege2", dao.checkadmin(uname));
+					System.out.println("futa 2: "+dao.getiduser(uname) );
+					response.sendRedirect("HomePage.jsp");
 					action = uname + " ID: " + dao.getiduser(uname) + " logged in at " + LocalDateTime.now();
 				}else if(dao.checkadmin(uname)==3) {
 					session.setAttribute("isaccountingmanager", uname);
 					session.setAttribute("username", uname);
 					session.setAttribute("iduser", dao.getiduser(uname));
-					System.out.println("futa: "+dao.getiduser(uname));
-					response.sendRedirect("acctingmanager.jsp");
+					session.setAttribute("privilege3", dao.checkadmin(uname));
+					System.out.println("futa 3: "+dao.getiduser(uname));
+					response.sendRedirect("HomePage.jsp");
 					action = uname + " ID: " + dao.getiduser(uname) + " logged in at " + LocalDateTime.now();
 				}else if(dao.check(uname, pass)){
 					session.setAttribute("normuser", uname);
 					session.setAttribute("csrfToken", dao.generateCSRFToken());
 					session.setAttribute("username", uname);
 					session.setAttribute("iduser", dao.getiduser(uname));
+					session.setAttribute("privilege4", dao.checkadmin(uname));					
 					System.out.println("username: "+uname);
 					response.sendRedirect("HomePage.jsp");
 					action = uname + " ID: " + dao.getiduser(uname) + " logged in at " + LocalDateTime.now();
