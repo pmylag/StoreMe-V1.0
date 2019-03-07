@@ -26,7 +26,7 @@ CREATE TABLE `user` (
   `iduser` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(45) DEFAULT NULL,
   `password` varchar(45) DEFAULT NULL,
-  `privilege` int(11) DEFAULT NULL,
+  `privilege` varchar(1) DEFAULT NULL,
   `locked` varchar(45) DEFAULT NULL,
   `firstname` varchar(45) DEFAULT NULL,
   `lastname` varchar(45) DEFAULT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'administrator','P@ssw0rd',1,NULL,NULL,NULL,NULL,NULL,NULL),(2,'invent.supp','P@ssw0rd',2,NULL,NULL,NULL,NULL,NULL,NULL),(3,'ware.asst','P@ssw0rd',3,NULL,NULL,NULL,NULL,NULL,NULL),(4,'team.lead','P@ssw0rd',4,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `user` VALUES (1,'administrator','P@ssw0rd','1',NULL,NULL,NULL,NULL,NULL,NULL),(2,'invent.supp','P@ssw0rd','2',NULL,NULL,NULL,NULL,NULL,NULL),(3,'ware.asst','P@ssw0rd','3',NULL,NULL,NULL,NULL,NULL,NULL),(4,'team.lead','P@ssw0rd','4',NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-06  0:13:17
+-- Dump completed on 2019-03-07 21:29:52
