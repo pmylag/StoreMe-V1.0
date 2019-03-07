@@ -15,6 +15,39 @@ public class UserService {
 	static String username ="root";
 	static String passwords = "password";
 	
+	public String getPassword(int id) {
+		String sql = "SELECT password FROM storeme.user where iduser =" + id;
+		String pass = "";
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,passwords);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while(rs.next()) {
+				pass = rs.getString("consignee");
+			} 
+			
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return pass;
+	}
+	
+	public void editPassword(int id, String passs) {
+		String sql = "storeme.user SET password = ? WHERE iduser = " + id;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,passwords);
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, passs);
+			st.executeUpdate();
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public void editUsers(int id, UserBean UB) {
 		String sql = "UPDATE user SET firstname = ?, lastname = ?, address = ?, "
 				+ "emailaddress = ?, mobilenumber = ? WHERE iduser = ?";
