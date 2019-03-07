@@ -84,6 +84,7 @@
 			      <th scope="col"> <font color="white"> Address </font> </th>
 			      <th scope="col"> <font color="white"> Email Address </font> </th>
 			      <th scope="col"> <font color="white"> Mobile Number </font> </th>
+			      <th scope="col"> <font color="white"> Change PW </font> </th>
 			      <th scope="col"> <font color="white"> Edit </font> </th>
 			      <th scope="col"> <font color="white"> Delete </font> </th>
 				  
@@ -101,6 +102,11 @@
 				  	  <td>${u.mobilenumber } </td>
 				  	  <td>
 				  	  	  <a href="EditUsersServlet?id=${u.iduser }" class="btn btn-primary a-btn-slide-text">
+					        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>           
+					      </a>
+					  </td>
+					   <td>
+				  	  	  <a href="EditUsersServlet?id="" class="btn btn-info a-btn-slide-text">
 					        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>           
 					      </a>
 					  </td>
