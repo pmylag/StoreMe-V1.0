@@ -84,8 +84,13 @@
   						<input type="password" class="form-control" id="confPassword" placeholder="************" name = "password2">
 					</div>
 					<div>
-						<label for="privilege">Privilege:</label>
-  						<input type="text" class="form-control" id="privilege" placeholder="1" name = "privilege">
+						<label for="privilege">Privilege: </label>
+				     	<select class="form-control" id="privilege" name = "Privilege" required>
+			     	 		<option value="1" name = "Privilege">Administrator</option>
+			     	 		<option value="2" name = "Privilege">Inventory Supervisor</option>
+			     	 		<option value="3" name = "Privilege">Warehouse Assistant</option>
+			     	 		<option value="4" name = "Privilege">Team Leader</option>
+				     	 </select>
 					</div>
 				</div>
 				<div class="col-sm-4">
@@ -105,9 +110,9 @@
 			      </div>
 			      <div class="modal-body">
 			        <div class="form-group">
-											<center>
-									      		<h4>Do you want to save this new information?</h4>
-									      	</center>					
+						<center>
+				      		<h4>Do you want to save this new information?</h4>
+				      	</center>					
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
@@ -128,9 +133,9 @@
 			      </div>
 			      <div class="modal-body">
 			        <div class="form-group">
-											<center>
-									      		<h4>Successfuly saved information</h4>
-									      	</center>					
+						<center>
+				      		<h4>Successfuly saved information</h4>
+				      	</center>					
 			      </div>
 			      <div class="modal-footer">
 			        <button onClick="No2()" type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
