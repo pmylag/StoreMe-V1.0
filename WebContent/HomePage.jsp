@@ -40,8 +40,15 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 		      <li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
-		      <li><a href="WelcomePage.jsp"><span class="glyphicon glyphicon-log-in" style="padding-right:5em"></span></a></li>
-		    </ul>
+		      <form action="Logout" class="navbar-form navbar-right">
+      				<input type="submit" class="btn btn-info" value="Logout" onclick = "myFunction2()">
+      				<script>
+						function myFunction2() {
+    					alert("Successfully Logged Out.");
+						}
+					</script>
+      		</form>
+     		 </ul>
 		  </div>
 		</nav>
 	

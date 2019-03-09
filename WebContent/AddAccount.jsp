@@ -85,11 +85,11 @@
 					</div>
 					<div>
 						<label for="privilege">Privilege: </label>
-				     	<select class="form-control" id="privilege" name = "Privilege" required>
-			     	 		<option value="1" name = "Privilege">Administrator</option>
-			     	 		<option value="2" name = "Privilege">Inventory Supervisor</option>
-			     	 		<option value="3" name = "Privilege">Warehouse Assistant</option>
-			     	 		<option value="4" name = "Privilege">Team Leader</option>
+				     	<select class="form-control" id="privilege" name = "privilege" required>
+			     	 		<option value="1" name = "privilege">Administrator</option>
+			     	 		<option value="2" name = "privilege">Inventory Supervisor</option>
+			     	 		<option value="3" name = "privilege">Warehouse Assistant</option>
+			     	 		<option value="4" name = "privilege">Team Leader</option>
 				     	 </select>
 					</div>
 				</div>

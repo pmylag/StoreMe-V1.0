@@ -109,11 +109,11 @@ public boolean check(String uname, String pass) throws SQLException {
 			st.setString(1, uname);
 			ResultSet rs = st.executeQuery();
 			while(rs.next()) {
-				u.setPrivilege(rs.getInt(UserBean.PRIVILEGE));
+				u.setPrivilege(rs.getString(UserBean.PRIVILEGE));
 			}
 			
-			if(u.getPrivilege() != 4) {
-				return u.getPrivilege();
+			if(u.getPrivilege() != "4") {
+				return Integer.parseInt(u.getPrivilege());
 			}
 			
 		} catch (ClassNotFoundException | SQLException e) {
