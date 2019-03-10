@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="Style/styles.css">
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<meta charset="ISO-8859-1">
 <title>Results</title>
 </head>
@@ -124,10 +125,30 @@
 					</c:forEach>
     		</div>
   			<div class="panel-footer">
-  				<button type="button" class="btn submit" data-dismiss="modal">Print</button>
+  				<button type="button" class="btn submit" data-dismiss="modal" data-toggle="modal" data-target="#printModal">Print</button>
 	        	<button onClick="No20()" type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
   			</div>
   		</div>
 	</div>
+
+	<!-- Modal -->
+  	<div class="modal fade" id="printModal" role="dialog">
+    	<div class="modal-dialog">
+    
+	      	<!-- Modal content-->
+	      	<div class="modal-content">
+	        	<div class="modal-header">
+	          		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	          		<h4 class="modal-title">Print Confirmation</h4>
+	        	</div>
+	        	<div class="modal-body">
+	          		<p>Successfully Printed!</p>
+	    		</div>
+	    		<div class="modal-footer">
+	          		<button type="button" class="btn btn-default" data-dismiss="modal">Done</button>
+	        	</div>
+	      	</div> 
+		</div>
+  	</div>
 </body>
 </html>
