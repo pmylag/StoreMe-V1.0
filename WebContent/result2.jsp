@@ -60,16 +60,14 @@
 													<option value="Returned">Returned</option>
 												</select>
 											</div>
-											<div class="Row" style = "padding-top: 1em">
-												<div class="form-group">
-												  <label for="usr">Received by: </label>
-												  <input type="text" class="form-control" id="usr" name = "received_by">
-												</div>
-												<div class="form-group">
-												  <label for="usr">Id: </label>
-												  <input type="text" class="form-control" id="usr" name = "id" value = ${id } readonly>
-												</div>
-											</div> 
+											<div class="form-group">
+											  <label for="usr">Received by: </label>
+											  <input type="text" class="form-control" id="usr" name = "received_by">
+											</div>
+											<div class="form-group">
+											  <label for="usr">ID: </label>
+											  <input type="text" class="form-control" id="usr" name = "id" value = ${id } readonly>
+											</div>
 										<input type="submit" class="btn btn-lg btn-info" value="Submit">						
 						      		</div>
 									<div class ="col-sm-8">

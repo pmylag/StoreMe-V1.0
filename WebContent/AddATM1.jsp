@@ -13,9 +13,9 @@
 		  
 		  <%! int i1 = 0; %>
 		  <%i1 = (int)request.getAttribute("in1");%>
-		  <%if (i1 < 50){ %>
+		  <%if (i1 < 90){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i1 >= 51 && i1 <= 99){%>
+		  <%}else if (i1 >= 91 && i1 <= 99){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
 		  <%}else if(i1 == 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
@@ -28,9 +28,9 @@
 		  border-width: 3px;
 		  <%! int i2 = 0;%>
 		  <% i2 = (int)request.getAttribute("in2");%>
-		  <%if (i2 < 50){ %>
+		  <%if (i2 < 90){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i2 >= 51 && i2 <= 99){%>
+		  <%}else if (i2 >= 91 && i2 <= 99){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
 		  <%}else if(i2 == 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
@@ -42,9 +42,9 @@
 		  border-width: 3px;
 		  <%! int i3 = 0;%>		  
 		  <%i3 = (int)request.getAttribute("in3");%>
-		  <%if (i3 < 50){ %>
+		  <%if (i3 < 90){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i3 >= 51 && i3 <= 99){%>
+		  <%}else if (i3 >= 91 && i3 <= 99){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
 		  <%}else if(i3 == 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
@@ -56,9 +56,9 @@
 		  border-width: 3px;
 		  <%! int i4 = 0;%>
 		  <%i4 = (int)request.getAttribute("in4");%>
-		  <%if (i4 < 50){ %>
+		  <%if (i4 < 90){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i4 >= 51 && i4 <= 99){%>
+		  <%}else if (i4 >= 91 && i4 <= 99){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
 		  <%}else if(i4 == 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
@@ -70,9 +70,9 @@
 		  border-width: 3px;
 		  <%! int i5 = 0;%>		  
 		  <%i5 = (int)request.getAttribute("in5");%>
-		  <%if (i5 < 50){ %>
+		  <%if (i5 < 90){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i5 >= 51 && i5 <= 99){%>
+		  <%}else if (i5 >= 91 && i5 <= 99){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
 		  <%}else if(i5 == 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
@@ -84,9 +84,9 @@
 		  border-width: 3px;
 		  <%!int i6 = 0;%>
 		  <%i6 = (int)request.getAttribute("in6");%>
-		  <%if (i6 < 50){ %>
+		  <%if (i6 < 90){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i6 >= 51 && i6 <= 99){%>
+		  <%}else if (i6 >= 91 && i6 <= 99){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
 		  <%}else if(i6 == 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
@@ -98,9 +98,9 @@
 		  border-width: 3px;
 		  <%! int i7 = 0;%>
 		  <%i7 = (int)request.getAttribute("in7");%>
-		  <%if (i7 < 50){ %>
+		  <%if (i7 < 90){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i7 >= 51 && i7 <= 99){%>
+		  <%}else if (i7 >= 91 && i7 <= 99){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
 		  <%}else if(i7 == 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
@@ -112,9 +112,9 @@
 		  border-width: 3px;
 		  <%! int i8 = 0;%>		  
 		  <%i8 = (int)request.getAttribute("in8");%>
-		  <%if (i8 < 50){ %>
+		  <%if (i8 < 90){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i8 >= 51 && i8 <= 99){%>
+		  <%}else if (i8 >= 91 && i8 <= 99){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
 		  <%}else if(i8 == 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
@@ -126,9 +126,9 @@
 		  border-width: 3px;
 		  <%! int i9 = 0;%>		  
 		  <%i9 = (int)request.getAttribute("in9");%>
-		  <%if (i9 < 50){ %>
+		  <%if (i9 < 90){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i9 >= 51 && i9 <= 99){%>
+		  <%}else if (i9 >= 91 && i9 <= 99){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
 		  <%}else if(i9 == 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
@@ -140,9 +140,9 @@
 		  border-width: 3px;
 		  <%! int i10 = 0;%>		  
 		  <%i10 = (int)request.getAttribute("in10");%>
-		  <%if (i10 < 50){ %>
+		  <%if (i10 < 90){ %>
 		  	background-color: #00FF7F;	<!-- Green Fill -->
-		  <%}else if (i10 >= 51 && i10 <= 99){%>
+		  <%}else if (i10 >= 91 && i10 <= 99){%>
 		  	background-color: #FFA500;	<!-- Orange Fill -->
 		  <%}else if(i10 == 100)%>		
 		  	background-color: #FF0000;	<!-- Red Fill -->
@@ -370,8 +370,8 @@
 						  <div class="panel-heading">Legend</div>
 						  <div class="panel-body">
 						  	<div class="list-group">
-							  <a href="#" class="list-group-item" style="background-color: #00FF7F">0 	- 50 AVAILABLE</a>
-							  <a href="#" class="list-group-item" style="background-color: #FFA500">50  - 99 ALMOST FULL</a>
+							  <a href="#" class="list-group-item" style="background-color: #00FF7F">0 	- 90 AVAILABLE</a>
+							  <a href="#" class="list-group-item" style="background-color: #FFA500">91  - 99 ALMOST FULL</a>
 							  <a href="#" class="list-group-item" style="background-color: #FF0000">100 - FULL</a>
 							</div>
 						  </div>
