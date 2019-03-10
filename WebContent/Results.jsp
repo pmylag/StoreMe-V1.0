@@ -139,8 +139,14 @@
 					  <%if (session.getAttribute("privilege1") != null || priv == 2 || priv == 3) {%>
 					  <td>
 					  	<a href="DeleteAtmServlet?id=${a.idatminfo }" class="btn btn-danger a-btn-slide-text">
-			        		<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>	                 
+			        		<span class="glyphicon glyphicon-trash" aria-hidden="true" onclick = "myFunction3()"></span>	                 
+				      	
 				      	</a>
+				      	<script>
+						function myFunction3() {
+    					alert("Successfully deleted");
+						}
+						</script>
 					  </td>
 					  <%} %>
 				  	</tr>

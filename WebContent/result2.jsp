@@ -30,7 +30,7 @@
 								  				<div>
 												    <div class="form-group">
 												      	<label for="sel1">Choose Section: </label>
-												     	 <select class="form-control" id="sel1" name = "atmplacement" required>
+												     	 <select class="form-control" id="sel1" name = "atmplacement" value = "${atm.atmplacement }" required>
 													     	 <option value="A" name = "atmplacement">A</option>
 													     	 <option value="B" name = "atmplacement">B</option>
 													     	 <option value="C" name = "atmplacement">C</option>
@@ -47,15 +47,15 @@
 											
 											<div class="input-group date" style = "padding-top: 1em" data-provide="datepicker">
 									   			<label for="uses">Date Shipped: </label>
-									    		<input type="date" class="form-control" id="Uses" name = "date_shipped">
+									    		<input type="date" class="form-control" id="Uses" name = "date_shipped" value = "${date } " >
 									    	</div>
 									    	<div class="input-group time" style = "padding-top: 1em">
 									   			<label for="uses1">Time Shipped: </label>
-									    		<input type="time" class="form-control" id="Uses1" name = "time">
+									    		<input type="time" class="form-control" id="Uses1" name = "time" value = "${time }">
 									    	</div>
 											<div class="form-group">
 												<label for="sel1">Status:</label>
-												<select class="form-control" id="sel1" name = "status" required>
+												<select class="form-control" id="sel1" name = "status" value = "${atm.status}" required>
 													<option value="Completed">Completed</option>
 													<option value="Returned">Returned</option>
 												</select>
@@ -63,19 +63,24 @@
 											<div class="Row" style = "padding-top: 1em">
 												<div class="form-group">
 												  <label for="usr">Received by: </label>
-												  <input type="text" class="form-control" id="usr" name = "received_by">
+												  <input type="text" class="form-control" id="usr" name = "received_by" value = "${received }">
 												</div>
 												<div class="form-group">
 												  <label for="usr">Id: </label>
 												  <input type="text" class="form-control" id="usr" name = "id" value = ${id } readonly>
 												</div>
 											</div> 
-										<input type="submit" class="btn btn-lg btn-info" value="Submit">						
+										<input type="submit" class="btn btn-lg btn-info" value="Submit" onclick = "myFunction3()">
+										<script>
+										function myFunction3() {
+				    					alert("Successfully edited");
+										}
+										</script>						
 						      		</div>
 									<div class ="col-sm-8">
 								    	<div class="form-group">
 											<label for="comment">Activity: </label>
-											<textarea class="form-control" rows="7" id="comment" name = "activity"></textarea>
+											<textarea class="form-control" rows="7" id="comment" name = "activity" value = "${activity }"></textarea>
 										</div>
 									</div>
 						  		</div>

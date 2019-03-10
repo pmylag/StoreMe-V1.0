@@ -46,7 +46,7 @@
 		</div>
 		<div class="pull-right">
 			<button class="btn btn-primary btn-lg ">
-				<a href="#" style="color: white">Done</a>
+				<a href="GetAllAtmInfoServlet" style="color: white">Done</a>
 			</button>
 			
 		</div>

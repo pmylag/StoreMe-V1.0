@@ -221,6 +221,45 @@ public class AtmInfoService {
 		}
 		return act;
 	}
+	
+	public ArrayList getRestofinfo(int id) {
+		ArrayList<AtmInfoBean> atmInfoBeanlists = new ArrayList<>();
+		String sql = "SELECT * FROM  atmninfo WHERE idatminfo = " + id;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			System.out.print("Eto na po!!  " + st);
+			ResultSet rs = st.executeQuery();
+			while(rs.next()) {
+				AtmInfoBean ai = new AtmInfoBean();
+				
+				ai.setIdatminfo(rs.getInt(AtmInfoBean.IDATMINFO));
+				ai.setActivity(rs.getString(AtmInfoBean.ACTIVITY));
+				ai.setAtmplacement(rs.getString(AtmInfoBean.ATMPLACEMENT));
+				ai.setConsignee(rs.getString(AtmInfoBean.CONSIGNEE));
+				ai.setSite(rs.getString("site"));
+				ai.setDate_shipped(rs.getString("date_shipped"));
+				ai.setDate(rs.getString(AtmInfoBean.DATE));
+				ai.setIdatm(rs.getInt(AtmInfoBean.IDATM));
+				ai.setSku(rs.getString(AtmInfoBean.SKU));
+				ai.setStatus(rs.getString(AtmInfoBean.STATUS));
+				ai.setTime(rs.getString(AtmInfoBean.TIME));
+				ai.setWaybill_no(rs.getString(AtmInfoBean.WAYBILL_NO));
+				ai.setReceived_by(rs.getString("received_by"));
+				
+				atmInfoBeanlists.add(ai);
+			}
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return atmInfoBeanlists;
+	}
+	
 	public String getSelectedAtmInfoConsignee(int id) {
 		ArrayList<AtmInfoBean> atmInfoBeanlists = new ArrayList<>();
 		String sql = "SELECT consignee FROM  atmninfo WHERE idatminfo = " + id;

@@ -74,7 +74,7 @@
 					<%} else {%>
 					<div class="form-group">
 					<%} %>
-						<label for="sku">SKU:</label>
+						<label for="sku">*SKU:</label>
 						<input type="text" class="form-control" id="sku" name = "sku" placeholder="Ex: 34-BDO-BB34"required>
 						<%if(error == 1) {%>
 							<span class="glyphicon glyphicon-remove form-control-feedback"></span>
@@ -99,7 +99,7 @@
 					
 				
 					<button class="btn btn-lg">
-						<a href="HomePage.jsp" style="color: black">Back</a>
+						<a href="BackServlet" style="color: black">Back</a>
 					</button>
 					
 					<input type="submit" class="btn btn-lg btn-info" value="Next">
