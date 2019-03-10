@@ -101,12 +101,12 @@
 				  	  <td>${u.emailaddress } </td>
 				  	  <td>${u.mobilenumber } </td>
 				  	  <td>
-				  	  	  <a href="EditUsersServlet?id=${u.iduser }" class="btn btn-primary a-btn-slide-text">
+				  	  	  <a href="ChangePasswordServlet?id=${u.iduser }" class="btn btn-primary a-btn-slide-text">
 					        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>           
 					      </a>
 					  </td>
 					   <td>
-				  	  	  <a href="EditUsersServlet?id="" class="btn btn-info a-btn-slide-text">
+				  	  	  <a href="EditUsersServlet?id=${u.iduser }" class="btn btn-info a-btn-slide-text">
 					        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>           
 					      </a>
 					  </td>

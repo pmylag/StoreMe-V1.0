@@ -47,7 +47,7 @@
     					alert("Successfully Logged Out.");
 						}
 					</script>
-      		</form>
+      		 </form>
      		 </ul>
 		  </div>
 		</nav>
