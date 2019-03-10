@@ -81,19 +81,19 @@
 						<%} %>
 					</div>
 					<div class="form-group">
-						<label for="csn">Consignee:</label>
+						<label for="csn">*Consignee:</label>
 						<input type="text" class="form-control" id="csn" name = "consignee" required>
 					</div>
 					<div class="form-group">
-						<label for="dt">Date:</label>
+						<label for="dt">*Date:</label>
 						<input type="date" class="form-control" id="dt" name =  "date" required>
 					</div>
 					<div class="form-group">
-						<label for="tm">Time:</label>
+						<label for="tm">*Time:</label>
 						<input type="time" class="form-control" id="tm" name = "time" required>
 					</div>
 					<div class="form-group">
-						<label for="wn">Waybill Number:</label>
+						<label for="wn">*Waybill Number:</label>
 						<input type="Number" class="form-control" id="wn" name = "waybill_no" required>
 					</div>
 					
@@ -106,11 +106,11 @@
 				</div>
 				<div class="col-sm-6">
 					<div class="form-group">
-						<label for="sl">Site Location:</label>
+						<label for="sl">*Site Location:</label>
 						<input type="text" class="form-control" id="sl" name = "site" required>
 					</div>
 					<div class="form-group">
-						<label for="sel1">Status:</label>
+						<label for="sel1">*Status:</label>
 						<select class="form-control" id="sel1" name = "status" required>
 							<option value="InProgress">In Progress</option>
 							<option value="Returned">Returned</option>
@@ -118,7 +118,7 @@
 					</div>
 					<div class="form-group">
 						<div class="form-group">
-							<label for="act">Activity:</label>
+							<label for="act">*Activity:</label>
 							<textarea class="form-control" rows="5" id="act" name = "activity" required></textarea>
 						</div>
 					</div>

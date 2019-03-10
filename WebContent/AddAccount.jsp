@@ -100,49 +100,49 @@
 	</div>
 
 	<div class="modal fade" id="Modals" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			  <div class="modal-dialog" role="document">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLabel">StoreMe Message</h5>
+  		<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+		        	<h5 class="modal-title" id="exampleModalLabel">StoreMe Message</h5>
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			          <span aria-hidden="true">&times;</span>
 			        </button>
-			      </div>
-			      <div class="modal-body">
-			        <div class="form-group">
+			    </div>
+			    <div class="modal-body">
+		        	<div class="form-group">
 						<center>
 				      		<h4>Do you want to save this new information?</h4>
 				      	</center>					
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
-			        <input type="submit" class="btn btn-lg btn-primary" value="Save">
-	      </div>
-	    </div>
-	  </div>
-	</div>
+			      	</div>
+			      	<div class="modal-footer">
+			        	<button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+			        	<input type="submit" class="btn btn-lg btn-primary" value="Save">
+	      			</div>
+    			</div>
+	  		</div>
+		</div>
 	
 	<div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			  <div class="modal-dialog" role="document">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLabel">StoreMe Message</h5>
+  		<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+		      	<div class="modal-header">
+		        	<h5 class="modal-title" id="exampleModalLabel">StoreMe Message</h5>
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			          <span aria-hidden="true">&times;</span>
+			          	<span aria-hidden="true">&times;</span>
 			        </button>
-			      </div>
-			      <div class="modal-body">
-			        <div class="form-group">
+		      	</div>
+		      	<div class="modal-body">
+	        		<div class="form-group">
 						<center>
 				      		<h4>Successfuly saved information</h4>
 				      	</center>					
-			      </div>
-			      <div class="modal-footer">
-			        <button onClick="No2()" type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+			      	</div>
+		      		<div class="modal-footer">
+			        	<button onClick="No2()" type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+	      			</div>
+    			</div>
+	  		</div>
+		</div>
 	
 </body>
 </html>

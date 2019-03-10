@@ -32,7 +32,7 @@
 		<form action = "AddAtmServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);"> 
 			<div class="container">
 				<div class="col-md-6">
-					<h2>ATM Details</h2>
+					<h2>ATM Checklist</h2>
 				</div>
 				
 				<div class="col-md-6" style="padding-top:1em">
@@ -56,18 +56,18 @@
 				<div class="col-sm-8">
 					<div class="col-sm-4">
 						<div class="form-group">
-							<label for="chck">Checker:</label>
+							<label for="chck">*Checker:</label>
 							<input type="text" class="form-control" name = "checker"id="chck" required>
 						</div>
 						<div class="form-group">
-							<label for="wh">Warehouse Assistant:</label>
+							<label for="wh">*Warehouse Assistant:</label>
 							<input type="text" class="form-control" id="wh" name = "bank" required>
 						</div>
 					</div>
 					
 					<div class="col-sm-4">
 						<div class="form-group">
-							<label for="bk">Bank:</label>
+							<label for="bk">*Bank:</label>
 							<input type="text" class="form-control" id="bk" name = "bank"required>
 						</div>
 						<div class="form-group">
@@ -78,12 +78,12 @@
 					
 					<div class="col-sm-4">
 						<div class="form-group">
-							<label for="dv">Driver:</label>
-							<input type="text" class="form-control" id="dv" name = "driver"required>
+							<label for="dv">*Driver:</label>
+							<input type="text" class="form-control" id="dv" name = "driver" required>
 						</div>
 						<div class="form-group">
-							<label for="pn">Plate Number:</label>
-							<input type="text" class="form-control" id="pn" name = "plateno"required>
+							<label for="pn">*Plate Number:</label>
+							<input type="text" class="form-control" id="pn" name = "plateno" required>
 						</div>
 					</div>
 					
@@ -97,7 +97,7 @@
 					    </thead>
 					    <tbody>
 					    	<tr>
-						        <td>ATM</td>
+						        <td>*ATM:</td>
 						        <td>
 						        	<div class="form-group">
 										<input type="number" class="form-control" id="atm-qty" name = "quantity" required>
@@ -110,7 +110,7 @@
 						        </td>
 					     	</tr>
 					      	<tr>
-						        <td>Bolting Screw Set</td>
+						        <td>*Bolting Screw Set:</td>
 						        <td>
 						        	<div class="form-group">
 										<input type="number" class="form-control" id="bss-qty" name = "bolt_screw_set_qty" required>
@@ -123,7 +123,7 @@
 						        </td>
 					      	</tr>
 					      	<tr>
-						        <td>Cash Cassette Keys</td>
+						        <td>*Cash Cassette Keys:</td>
 						        <td>
 						        	<div class="form-group">
 										<input type="number" class="form-control" id="css-qty" name ="cash_casst_key_qty" required>
@@ -136,7 +136,7 @@
 						        </td>
 					      	</tr>
 					      	<tr>
-						        <td>Cladding</td>
+						        <td>*Cladding:</td>
 						        <td>
 						        	<div class="form-group">
 										<input type="number" class="form-control" id="clad-qty" name ="clad_qty" required>
@@ -149,7 +149,7 @@
 						        </td>
 					      	</tr>
 					      	<tr>
-						        <td>Collar</td>
+						        <td>*Collar:</td>
 						        <td>
 						        	<div class="form-group">
 										<input type="number" class="form-control" id="clr-qty" name = "collar_qty" required>
@@ -162,7 +162,7 @@
 						        </td>
 					      	</tr>
 					      	<tr>
-						        <td>Decals</td>
+						        <td>*Decals:</td>
 						         <td>
 						        	<div class="form-group">
 										<input type="number" class="form-control" id="dcl-qty" name = "decale_qty" required>
@@ -175,7 +175,7 @@
 						        </td>
 					      	</tr>
 					      	<tr>
-						        <td>Fascia/Window Frames</td>
+						        <td>*Fascia/Window Frames:</td>
 						         <td>
 						        	<div class="form-group">
 										<input type="number" class="form-control" id="fwf-qty" name = "fsc_wndw_frame_qty" required>
@@ -188,7 +188,7 @@
 						        </td>
 					      	</tr>
 					      	<tr>
-						        <td>Modem</td>
+						        <td>*Modem:</td>
 						         <td>
 						        	<div class="form-group">
 										<input type="number" class="form-control" id="mdm-qty" name  = "modem_qty" required>
@@ -201,7 +201,7 @@
 						        </td>
 					      	</tr>
 					      	<tr>
-						        <td>Panel Door Key</td>
+						        <td>*Panel Door Key:</td>
 						         <td>
 						        	<div class="form-group">
 										<input type="number" class="form-control" id="pdk-qty" name = "pnl_door_key_qty" required>
@@ -214,7 +214,7 @@
 						        </td>
 					      	</tr>
 					      	<tr>
-						        <td>Pedestal</td>
+						        <td>*Pedestal:</td>
 						         <td>
 						        	<div class="form-group">
 										<input type="number" class="form-control" id="pdl-qty" name = "pedestal_qty" required>
@@ -227,10 +227,10 @@
 						        </td>
 					      	</tr>
 					      	<tr>
-						        <td>Power Cord</td>
+						        <td>*Power Cord:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" id="pc-qty" name  = "power_crd_qty"required>
+										<input type="number" class="form-control" id="pc-qty" name  = "power_crd_qty" required>
 									</div>
 						        </td>
 						        <td>
@@ -240,7 +240,7 @@
 						        </td>
 					      	</tr>
 					      	<tr>
-						        <td>Router</td>
+						        <td>*Router:</td>
 						         <td>
 						        	<div class="form-group">
 										<input type="number" class="form-control" id="rtr-qty" name = "router_qtry"required>
@@ -253,7 +253,7 @@
 						        </td>
 					      	</tr>
 					      	<tr>
-						        <td>Topper</td>
+						        <td>*Topper:</td>
 						         <td>
 						        	<div class="form-group">
 										<input type="number" class="form-control" id="tpr-qty"  name = "topper_qty"required>
@@ -266,7 +266,7 @@
 						        </td>
 					      	</tr>
 					      	<tr>
-						        <td>UPS</td>
+						        <td>*UPS:</td>
 						         <td>
 						        	<div class="form-group">
 										<input type="number" class="form-control" id="ups-qty" name = "ups_qty"required>
@@ -279,7 +279,7 @@
 						        </td>
 					      	</tr>
 					      	<tr>
-						        <td>Vault Door Key</td>
+						        <td>*Vault Door Key:</td>
 						         <td>
 						        	<div class="form-group">
 										<input type="number" class="form-control" id="vdk-qty" name = "vault_door_key_qty" required>
@@ -293,7 +293,7 @@
 					      	</tr>
 					    </tbody>
 					</table>
-					<button type="button" class="btn btn-lg" data-target="#myModal">Cancel</button>
+					<button type="button" class="btn btn-lg" data-target="#myModal">Back</button>
 					<input type="submit" class="btn btn-lg btn-info" value="Save Changes">
 				</div>
 				<div class="col-md-4">

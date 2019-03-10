@@ -45,12 +45,9 @@
 					    <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="password" >
 					</div>
 					<div class ="row">
-					<div class="col-sm-2">
-					<button type="submit" class="btn btn-primary" style="color: white" >Login</button>
-					</div>
-					<div class="col-sm-2">
-						<a href="#" data-toggle="modal" data-target="#Modal3">Change Password</a>
-					</div>
+						<div class="col-sm-2">
+							<button type="submit" class="btn btn-primary" style="color: white" >Login</button>
+						</div>
 					</div>
 				</form>
 			</div>
