@@ -94,7 +94,7 @@
 					</div>
 					<div class="form-group">
 						<label for="wn">*Waybill Number:</label>
-						<input type="Number" class="form-control" id="wn" name = "waybill_no" required>
+						<input type="Number" class="form-control" min="1" id="wn" name = "waybill_no" required>
 					</div>
 					
 				
