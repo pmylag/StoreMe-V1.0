@@ -1,6 +1,8 @@
 package com.storeme.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -48,6 +50,11 @@ public class DeleteAtmServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+		PrintWriter outd = response.getWriter();
+		outd.println("<script type=\"text/javascript\">");
+		outd.println("alert('Account succesfully unlocked. Login again to continue.');");
+		outd.println("location='HomePage.jsp';");
+		outd.println("</script>");
 	}
 
 }

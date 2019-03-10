@@ -306,7 +306,7 @@
 						<input class="form-check-input" type="checkbox" value="1" id="c2" name = "cassete2">Cassette 2 - 500</input>
 					</div>
 					<div class="checkbox">
-						<label for="c3"></label> q
+						<label for="c3"></label>
 						<input class="form-check-input" type="checkbox" value="1" id="c3" name = "cassete3">Cassette 3 - 500</input>
 					</div>
 					<div class="checkbox">
