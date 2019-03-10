@@ -61,7 +61,7 @@
 						</div>
 						<div class="form-group">
 							<label for="wh">*Warehouse Assistant:</label>
-							<input type="text" class="form-control" id="wh" name = "bank" required>
+							<input type="text" class="form-control" id="wh" name = "warehouse_asst" required>
 						</div>
 					</div>
 					

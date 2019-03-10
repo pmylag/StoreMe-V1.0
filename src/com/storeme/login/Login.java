@@ -58,13 +58,13 @@ public class Login extends HttpServlet {
 					dao.unlockaccounnt(dao.getiduser(uname));
 					outd.println("<script type=\"text/javascript\">");
 					outd.println("alert('Account succesfully unlocked. Login again to continue.');");
-					outd.println("location='Home.jsp';");
+					outd.println("location='HomePage.jsp';");
 					outd.println("</script>");
 					}
 					else {
 					outc.println("<script type=\"text/javascript\">");
 					outc.println("alert('Account locked for 1 minute.');");
-					outc.println("location='Home.jsp';");
+					outc.println("location='WelcomePage.jsp';");
 					outc.println("</script>");
 					}
 				}else {
@@ -125,20 +125,20 @@ public class Login extends HttpServlet {
 						dao.lockaccounnt(dao.getiduser(uname));
 						outa.println("<script type=\"text/javascript\">");
 						outa.println("alert('Account locked for 1 minute.');");
-						outa.println("location='Home.jsp';");
+						outa.println("location='WelcomePage.jsp';");
 						outa.println("</script>");
 				}else{
 					if(dao.checkifexists(dao.getiduser(uname))) {
 						dao.addattempts(dao.getiduser(uname));
 						outb.println("<script type=\"text/javascript\">");
 						outb.println("alert('Username/Password is Incorrect');");
-						outb.println("location='Home.jsp';");
+						outb.println("location='WelcomePage.jsp';");
 						outb.println("</script>");
 					}else {
 						dao.addnewentry(dao.getiduser(uname));
 						outb.println("<script type=\"text/javascript\">");
 						outb.println("alert('Username/Password is Incorrect');");
-						outb.println("location='Home.jsp';");
+						outb.println("location='WelcomePage.jsp';");
 						outb.println("</script>");
 					}
 					
@@ -147,7 +147,7 @@ public class Login extends HttpServlet {
 			}else {
 				outb.println("<script type=\"text/javascript\">");
 				outb.println("alert('Username/Password is Incorrect');");
-				outb.println("location='Home.jsp';");
+				outb.println("location='WelcomePage.jsp';");
 				outb.println("</script>");
 			}
 			/*

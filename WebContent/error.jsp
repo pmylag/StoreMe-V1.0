@@ -86,7 +86,7 @@ html{
         If you are the owner of the account and are regularly seeing this error, please read more about it in our knowledgebase.
         If you have any questions, please contact our Technical Support department.
         </p>
-       <button type="submit" class="btn btn-lg btn-info signup-btn"> <a href="WelcomeReview.jsp">Back to Home</a></button>
+       <button type="submit" class="btn btn-lg btn-info signup-btn"> <a href="WelcomePage.jsp">Back to Login</a></button>
         </div>
     </div>
 </body>
