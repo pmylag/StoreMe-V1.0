@@ -36,6 +36,7 @@ public class GetSearchedAtmInfoServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String action = "";
 		AtmInfoService atminfosService = new AtmInfoService();
+		request.getParameter("type");
 		ArrayList <AtmInfoBean> AtmInfos = atminfosService.getSearchedAtmInfo(request.getParameter("type"), request.getParameter("like"));
 		request.setAttribute("atminfolists", AtmInfos);
 		

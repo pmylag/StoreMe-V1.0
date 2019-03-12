@@ -1,8 +1,6 @@
 package com.storeme.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,16 +11,16 @@ import com.storeme.services.AtmInfoService;
 import com.storeme.services.AtmService;
 
 /**
- * Servlet implementation class DeleteAtmServlet
+ * Servlet implementation class BackServlet
  */
-@WebServlet("/DeleteAtmServlet")
-public class DeleteAtmServlet extends HttpServlet {
+@WebServlet("/BackServlet")
+public class BackServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public DeleteAtmServlet() {
+    public BackServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,16 +30,14 @@ public class DeleteAtmServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		int id =Integer.parseInt(request.getParameter("id"));
-		AtmInfoService AtmInfosService = new AtmInfoService();
-		AtmService AtmsService = new AtmService();
-		AtmInfosService.deleteAtmInfo(id);
-		AtmsService.deleteAtmInfo(id);
-		System.out.println("This is the id nowatimsayin  " + id);
-
-		request.getRequestDispatcher("GetAllAtmInfoServlet").forward(request, response);
-
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		AtmInfoService AtmInfosService = new AtmInfoService();
+		AtmInfosService.deleteAtmInfo(AtmInfosService.getMaxIdAtmInfo());
+		request.getRequestDispatcher("AddAtmSectionServlet").forward(request, response);
+
+		
+	
 	}
 
 	/**
@@ -50,11 +46,7 @@ public class DeleteAtmServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-		PrintWriter outd = response.getWriter();
-		outd.println("<script type=\"text/javascript\">");
-		outd.println("alert('Account succesfully unlocked. Login again to continue.');");
-		outd.println("location='HomePage.jsp';");
-		outd.println("</script>");
+		
 	}
 
 }
