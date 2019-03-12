@@ -37,12 +37,12 @@
 				<form id="signin" class="navbar-form navbar-right" role="form" action="Login" method="post">	
 					<div class="form-group">
 					    <label for="exampleInputEmail1">Username: </label>
-					    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" >
+					    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" required>
 					</div>
 					
 					<div class="form-group">
 					    <label for="exampleInputEmail1">Password: </label>
-					    <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="password" >
+					    <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="password" required>
 					</div>
 					<div class ="row">
 						<div class="col-sm-2">

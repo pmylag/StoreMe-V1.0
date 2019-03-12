@@ -35,19 +35,19 @@
 				<div class="col-sm-4">
 					<div>
 						<label for="usr">First Name:</label>
-	  					<input type="text" class="form-control" id="usr" placeholder="Ex. Juan" name = "firstname">
+	  					<input type="text" class="form-control" id="usr" placeholder="Ex. Juan" name = "firstname" required>
   					</div>
   					<div>
 						<label for="addr">Address:</label>
-	  					<input type="text" class="form-control" id="addr" placeholder="Ex. Espana, Manila" name = "address">
+	  					<input type="text" class="form-control" id="addr" placeholder="Ex. Espana, Manila" name = "address" required>
 					</div>
 					<div>
 						<label for="usrname">Username:</label>
-	  					<input type="text" class="form-control" id="usrname" placeholder="jDelaCruz" name = "username">
+	  					<input type="text" class="form-control" id="usrname" placeholder="jDelaCruz" name = "username" required>
   					</div>
 					<div>
 						<label for="password">Password:</label>
-  						<input type="password" class="form-control" id="password" placeholder="************" name = "password">
+  						<input type="password" class="form-control" id="password" placeholder="************" name = "password" required>
 					</div>
 					<div>
 						<div class="col-sm-3">
@@ -69,19 +69,19 @@
 				<div class="col-sm-4">
 					<div>
 						<label for="usr1">Last Name:</label>
-  						<input type="text" class="form-control" id="usr1" placeholder="Ex. De la Cruz" name = "lastname">
+  						<input type="text" class="form-control" id="usr1" placeholder="Ex. De la Cruz" name = "lastname" required>
 					</div>
 					<div>
 						<label for="email">Email Address:</label>
-  						<input type="email" class="form-control" id="email" placeholder="Ex. juandelacruz@domain.com" name = "emailaddress">
+  						<input type="email" class="form-control" id="email" placeholder="Ex. juandelacruz@domain.com" name = "emailaddress" required>
 					</div>
 					<div>
 						<label for="mobile">Mobile Number:</label>
-	  					<input type="number" class="form-control" id="addr" placeholder="Ex. 09177777777" name = "mobilenumber">
+	  					<input type="number" class="form-control" id="addr" placeholder="Ex. 09177777777" min="1" name = "mobilenumber" required>
 					</div>
 					<div>
 						<label for="confPassword">Confirm Password:</label>
-  						<input type="password" class="form-control" id="confPassword" placeholder="************" name = "password2">
+  						<input type="password" class="form-control" id="confPassword" placeholder="************" name = "password2" required>
 					</div>
 					<div>
 						<label for="privilege">Privilege: </label>
@@ -89,7 +89,6 @@
 			     	 		<option value="1" name = "privilege">Administrator</option>
 			     	 		<option value="2" name = "privilege">Inventory Supervisor</option>
 			     	 		<option value="3" name = "privilege">Warehouse Assistant</option>
-			     	 		<option value="4" name = "privilege">Team Leader</option>
 				     	 </select>
 					</div>
 				</div>

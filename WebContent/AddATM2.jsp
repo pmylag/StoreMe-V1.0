@@ -85,12 +85,12 @@
 						<input type="text" class="form-control" id="csn" name = "consignee" required>
 					</div>
 					<div class="form-group">
-						<label for="dt">*Date:</label>
-						<input type="date" class="form-control" id="dt" name =  "date" required>
+						<label for="dt">*Date Received:</label>
+						<input type="date" class="form-control" id="dt" name = "date" min="2019-01-01" required>
 					</div>
 					<div class="form-group">
-						<label for="tm">*Time:</label>
-						<input type="time" class="form-control" id="tm" name = "time" required>
+						<label for="tm">*Time Received:</label>
+						<input type="time" class="form-control" id="tm" name = "time" min="08:00:00" max="18:00:00" required>
 					</div>
 					<div class="form-group">
 						<label for="wn">*Waybill Number:</label>
@@ -112,8 +112,10 @@
 					<div class="form-group">
 						<label for="sel1">*Status:</label>
 						<select class="form-control" id="sel1" name = "status" required>
-							<option value="InProgress">In Progress</option>
-							<option value="Returned">Returned</option>
+							<option value="InOrder">In Order</option>
+							<option value="Scheduled">Scheduled</option>
+							<option value="Waiting">Waiting</option>
+							<option value="On Hold">On Hold</option>
 						</select>
 					</div>
 					<div class="form-group">

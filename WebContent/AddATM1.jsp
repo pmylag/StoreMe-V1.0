@@ -370,9 +370,9 @@
 						  <div class="panel-heading">Legend</div>
 						  <div class="panel-body">
 						  	<div class="list-group">
-							  <a href="#" class="list-group-item" style="background-color: #00FF7F">0 	- 90 AVAILABLE</a>
-							  <a href="#" class="list-group-item" style="background-color: #FFA500">91  - 99 ALMOST FULL</a>
-							  <a href="#" class="list-group-item" style="background-color: #FF0000">100 - FULL</a>
+							  <a href="#" class="list-group-item" style="background-color: #00FF7F">0 	- 90</a>
+							  <a href="#" class="list-group-item" style="background-color: #FFA500">91  - 99</a>
+							  <a href="#" class="list-group-item" style="background-color: #FF0000">100</a>
 							</div>
 						  </div>
 						</div>

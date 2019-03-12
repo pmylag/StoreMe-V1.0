@@ -69,8 +69,10 @@
 							<option value="atmplacement">Section</option>
 							<option value="consignee">Consignee</option>
 							<option value="site">Site & Location</option>
-							<option value="date">Date Recieved</option>
+							<option value="date">Date Received</option>
+							<option value="time_received">Time Received</option>
 							<option value="date_shipped">Date Shipped</option>
+							<option value="time_shipped">Time Shipped</option>
 							<option value="waybill_no">Waybill Number</option>
 							<option value="status">Status</option>
 							<option value="received_by">Received By</option>
@@ -131,12 +133,13 @@
 				        	<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>           
 				      	</a>
 					  </td>
+					   <%if (session.getAttribute("privilege1") != null) {%>
 				  	  <td>
 			  	  	  	<a href="EditAtmInfoServlet?id=${a.idatminfo }" class="btn btn-primary a-btn-slide-text">
 				        	<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>           
 				      	</a>
 					  </td>
-					  <%if (session.getAttribute("privilege1") != null || priv == 2 || priv == 3) {%>
+					  <%} if (session.getAttribute("privilege1") != null) {%>
 					  <td>
 					  	<a href="DeleteAtmServlet?id=${a.idatminfo }" class="btn btn-danger a-btn-slide-text">
 			        		<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>	                 

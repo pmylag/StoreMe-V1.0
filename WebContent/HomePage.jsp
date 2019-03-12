@@ -55,7 +55,7 @@
 	<div class="container">
 		<div class="jumbotron" style="background-color:white;">
 			<div class="col-sm-4">
-				<%if(session.getAttribute("privilege1") != null || session.getAttribute("privilege2") != null || session.getAttribute("privilege4") != null) {%>
+				<%if(session.getAttribute("privilege1") != null || session.getAttribute("privilege2") != null) {%>
 					<a href="AddAtmSectionServlet">
 						<img src="atm.png" style="height:300px; width:300px">
 					</a>

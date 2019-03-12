@@ -33,81 +33,81 @@
 				<li><a href="#">Welcome, User</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-		      <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
-		      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span></a></li>
-		    </ul>
+		      <li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
+		      <form action="Logout" class="navbar-form navbar-right">
+      				<input type="submit" class="btn btn-info" value="Logout" onclick = "myFunction2()">
+      				<script>
+						function myFunction2() {
+    					alert("Successfully Logged Out.");
+						}
+					</script>
+      		 </form>
+     		 </ul>
 		  </div>
 		</nav>
 	</div>
 	
 	<div class = "container">
-	<div class="panel panel-default">
-	<div class="panel panel-default">
-		
-	<div class="panel-heading">  
-		<h4 class = "text left"> Edit Entry</h4>
- 		<h4 class = "text-center"><font color="black">83-PNB-SS23
-</font></h4>
- 	</div>
- 	
- <font color="gray">	
- 	
- 	<div class="panel-body bg-default">
-	<div class="form-group">
-				      <div class="col-sm-4">
-				      	<div class="dropdown">
-				      	 <label for="drop">Section: </label>
-						  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						   	Section
-						  </button>
-						 
-						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id = "drop">
-						    <a class="dropdown-item" href="#">A</a>
-						    <a class="dropdown-item" href="#">B</a>
-						  </div>
-						</div>
-						
-				      	<div class="input-group date" style = "padding-top: 1em" data-provide="datepicker">
-						   <label for="uses">Date Shipped: </label>
-						    <input type="date" class="form-control" id="Uses">
-						   		
-				
-						</div>
-						
-						
-						<div class="dropdown" style = "padding-top: 1em">
-						 <label for="dropdownMenuButton">Status: </label>
-						  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						   	Status
-						  </button>
-						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						    <a class="dropdown-item" href="#">Complete</a>
-						    <a class="dropdown-item" href="#">Incomplete</a>
-						</div>
-						</div>
-						
-						<div class="Row" style = "padding-top: 1em">
-							<div class="form-group">
-							  <label for="usr">Received by: </label>
-							  <input type="text" class="form-control" id="usr">
+		<div class="panel panel-default">
+			<div class="panel panel-default">
+				<div class="panel-heading">  
+					<h4 class = "text left"> Edit Entry</h4>
+ 					<h4 class = "text-center">
+ 						<font color="black">83-PNB-SS23</font>
+ 					</h4>
+ 				</div>
+ 				<font color="gray">	
+ 				<div class="panel-body bg-default">
+					<div class="form-group">
+						<div class="col-sm-4">
+				      		<div class="dropdown">
+				      	 		<label for="drop">Section: </label>
+							  	<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							   		Section
+							  	</button>
+							 
+							  	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id = "drop">
+								    <a class="dropdown-item" href="#">A</a>
+								    <a class="dropdown-item" href="#">B</a>
+							  	</div>
 							</div>
-						</div> 
-					
-					
-						<button type="button" class="btn btn-primary">Submit</button>						
-				      </div>
-				      
-				      <div class ="col-sm-8">
-				      		<div class="form-group">
-							  <label for="comment">Activity: </label>
-							  <textarea class="form-control" rows="7" id="comment"></textarea>
+							
+					      	<div class="input-group date" style = "padding-top: 1em" data-provide="datepicker">
+							   	<label for="uses">Date Shipped: </label>
+							    <input type="date" class="form-control" id="Uses">
 							</div>
-				      </div>
-				      
-			  </div>
-			  </div>
-		      </div>
-		  </div>
+							
+							<div class="dropdown" style = "padding-top: 1em">
+							 	<label for="dropdownMenuButton">Status: </label>
+							  	<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							   		Status
+							  	</button>
+							  	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								    <a class="dropdown-item" href="#">Complete</a>
+								    <a class="dropdown-item" href="#">Incomplete</a>
+								</div>
+							</div>
+							
+							<div class="Row" style = "padding-top: 1em">
+								<div class="form-group">
+							  		<label for="usr">Received by: </label>
+								  	<input type="text" class="form-control" id="usr">
+								</div>
+							</div> 
+							<button type="button" class="btn">Cancel</button>
+							<button type="button" class="btn btn-primary">Submit</button>						
+						</div>
+					      
+				      	<div class ="col-sm-8">
+			      			<div class="form-group">
+						  		<label for="comment">Activity: </label>
+							  		<textarea class="form-control" rows="7" id="comment"></textarea>
+								</div>
+				      	</div>
+					</div>
+				</div>
+	      	</div>
+		</div>
 	</div>
 </body>
 </html>
