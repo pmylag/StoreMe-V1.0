@@ -57,7 +57,9 @@
 												<label for="sel1">Status:</label>
 												<select class="form-control" id="sel1" name = "status" value = "${atm.status}" required>
 													<option value="Completed">Completed</option>
-													<option value="Returned">Returned</option>
+													<option value="On Hold">On Hold</option>
+													<option value="Waiting">Waiting</option>
+													<option value="Scheduled">Schedule</option>
 												</select>
 											</div>
 											<div class="form-group">
