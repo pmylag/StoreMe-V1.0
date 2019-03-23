@@ -70,7 +70,7 @@
 											  <label for="usr">ID: </label>
 											  <input type="text" class="form-control" id="usr" name = "id" value = ${id } readonly>
 											</div>
-											<button type="button" class="btn">Cancel</button>							
+											<a href = "GetAllAtmInfoServlet" role="button" class="btn btn-info">Cancel</a>							
 											<input type="submit" class="btn btn-lg btn-info" value="Submit" onclick = "myFunction3()">
 											<script>
 											function myFunction3() {

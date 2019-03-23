@@ -68,17 +68,34 @@
 	</nav>
 	
 	<div class = "container">
-		<div class = "row">
-		<div class = "col-sm-2">
-			SEARCH BY : 
-		</div>
-		<div class = "col-sm-2">
-			<input type="text" placeholder="Search">
-		</div>
-		<div class = "col-sm-1">
-			<button type="button" class="btn btn-light">Search</button>
-		</div>
-		</div>
+		<form action = "GetSearchedUsersServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);"> 				
+			<div class = "row">
+				<div class = "col-md-1">
+					SEARCH BY : 
+				</div>
+				
+				<div class = "col-md-1">
+						<div class="form-group">
+								<label for="sel1">Type:</label>
+								<select class="form-control" id="sel1" name = "type" required>
+									<option value="firstname">First Name</option>
+									<option value="lastname">Last Name</option>
+									<option value="address">Address</option>
+									<option value="emailaddress">Email Address</option>
+									<option value="mobilenumber">Mobile Number</option>
+									<option value="privilege">Privilege</option>
+									<option value="username">Username</option>
+								</select>
+						</div>
+				</div>
+				<div class = "col-sm-2">
+					<input type="text" placeholder="Search" name = "like">
+				</div>
+				<div class = "col-sm-1">
+				<input type="submit" class="btn btn-light" value = "Search">
+				</div>
+			</div>
+		</form>
 		<div class = "row">
 		<div class="container-fluid">
 			<table class="table table-bordered">

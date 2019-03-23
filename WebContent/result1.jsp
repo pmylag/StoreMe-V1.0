@@ -126,7 +126,7 @@
     		</div>
   			<div class="panel-footer">
   				<button type="button" class="btn submit" data-dismiss="modal" data-toggle="modal" data-target="#printModal">Print</button>
-	        	<button onClick="No20()" type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+	        	<a href = "GetAllAtmInfoServlet" type="button" class="btn btn-primary" data-dismiss="modal">Done</a>
   			</div>
   		</div>
 	</div>

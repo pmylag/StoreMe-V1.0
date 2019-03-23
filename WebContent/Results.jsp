@@ -87,6 +87,7 @@
 				<input type="submit" class="btn btn-light" value = "Search">
 			</div>
 			</div>
+		</form>
 		<div class = "row">
 		<div class="container-fluid">
 			<table class="table table-bordered">

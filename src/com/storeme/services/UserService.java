@@ -86,6 +86,42 @@ public class UserService {
 		}
 	}
 	
+	public ArrayList getSearchedUsers(String type, String search) {
+		ArrayList<UserBean> SearchedUsers = new ArrayList<>();
+		String sql = "SELECT * FROM storeme.user WHERE " + type + " LIKE ?";
+		String Like;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,passwords);
+			Like = "%" + search + "%";
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, Like);
+			System.out.print("Eto na po!!  " + st);
+			ResultSet rs = st.executeQuery();
+			while (rs.next()) {
+				UserBean ub = new UserBean();
+				
+				ub.setIduser(rs.getInt("iduser"));
+				ub.setAddress(rs.getString("address"));
+				ub.setEmailaddress(rs.getString("emailaddress"));
+				ub.setFirstname(rs.getString("firstname"));
+				ub.setLastname(rs.getString("lastname"));
+				ub.setMobilenumber(rs.getString("mobilenumber"));
+				ub.setPassword(rs.getString("password"));
+				ub.setPrivilege(rs.getString("privilege"));
+				ub.setUsername(rs.getString("username"));
+				
+				SearchedUsers.add(ub);
+			}
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return SearchedUsers;
+	}
+	
 	public ArrayList viewallUsers() {
 		ArrayList<UserBean> alluserlists = new ArrayList();
 		
