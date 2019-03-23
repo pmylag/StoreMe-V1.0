@@ -118,8 +118,13 @@
 					      </a>
 					  </td>
 					  <td><a href="DeleteUsersServlet?id=${u.iduser }" class="btn btn-danger a-btn-slide-text">
-					        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>	                 
+					        <span class="glyphicon glyphicon-trash" aria-hidden="true" onclick = "myFunction3()"></span>	                 
 					      </a>
+					      <script>
+							function myFunction3() {
+	    					alert("Successfully deleted");
+							}
+						  </script>
 					  </td>
 				  	</tr>
 				  </c:forEach>

@@ -34,6 +34,22 @@ public class UserService {
 		return pass;
 	}
 	
+	public void deleteUser(int id) {
+		String sql = "DELETE FROM storeme.user where iduser = " + id;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,passwords);
+			PreparedStatement st = con.prepareStatement(sql);
+			st.executeUpdate();	
+			con.close();
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
 	public void editPassword(int id, String passs) {
 		String sql = "storeme.user SET password = ? WHERE iduser = " + id;
 		try {
