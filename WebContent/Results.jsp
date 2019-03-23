@@ -63,9 +63,11 @@
 				</div>
 			<div class = "col-md-1">
 				<div class="form-group">
+						<% String type = (String)request.getAttribute("type"); %>
 						<label for="sel1">Type:</label>
 						<select class="form-control" id="sel1" name = "type" required>
-							<option value="sku">SKU</option>
+							<%if (type.equals("sku")) {%>
+							<option selected value="sku">SKU</option>
 							<option value="atmplacement">Section</option>
 							<option value="consignee">Consignee</option>
 							<option value="site">Site & Location</option>
@@ -77,11 +79,156 @@
 							<option value="status">Status</option>
 							<option value="received_by">Received By</option>
 							<option value="activity">Activity</option>
+							<%} else if (type.equals("atmplacement")) {%>
+							<option value="sku">SKU</option>
+							<option selected value="atmplacement">Section</option>
+							<option value="consignee">Consignee</option>
+							<option value="site">Site & Location</option>
+							<option value="date">Date Received</option>
+							<option value="time_received">Time Received</option>
+							<option value="date_shipped">Date Shipped</option>
+							<option value="time_shipped">Time Shipped</option>
+							<option value="waybill_no">Waybill Number</option>
+							<option value="status">Status</option>
+							<option value="received_by">Received By</option>
+							<option value="activity">Activity</option>
+							<%} else if (type.equals("consignee")) {%>
+							<option value="sku">SKU</option>
+							<option value="atmplacement">Section</option>
+							<option selected value="consignee">Consignee</option>
+							<option value="site">Site & Location</option>
+							<option value="date">Date Received</option>
+							<option value="time_received">Time Received</option>
+							<option value="date_shipped">Date Shipped</option>
+							<option value="time_shipped">Time Shipped</option>
+							<option value="waybill_no">Waybill Number</option>
+							<option value="status">Status</option>
+							<option value="received_by">Received By</option>
+							<option value="activity">Activity</option>							
+							<%} else if (type.equals("site")) {%>
+							<option value="sku">SKU</option>
+							<option value="atmplacement">Section</option>
+							<option value="consignee">Consignee</option>
+							<option selected value="site">Site & Location</option>
+							<option value="date">Date Received</option>
+							<option value="time_received">Time Received</option>
+							<option value="date_shipped">Date Shipped</option>
+							<option value="time_shipped">Time Shipped</option>
+							<option value="waybill_no">Waybill Number</option>
+							<option value="status">Status</option>
+							<option value="received_by">Received By</option>
+							<option value="activity">Activity</option>	
+							<%} else if (type.equals("date")) {%>
+							<option value="sku">SKU</option>
+							<option value="atmplacement">Section</option>
+							<option value="consignee">Consignee</option>
+							<option value="site">Site & Location</option>
+							<option selected value="date">Date Received</option>
+							<option value="time_received">Time Received</option>
+							<option value="date_shipped">Date Shipped</option>
+							<option value="time_shipped">Time Shipped</option>
+							<option value="waybill_no">Waybill Number</option>
+							<option value="status">Status</option>
+							<option value="received_by">Received By</option>
+							<option value="activity">Activity</option>
+							<%} else if (type.equals("time_received")) {%>							
+							<option value="sku">SKU</option>
+							<option value="atmplacement">Section</option>
+							<option value="consignee">Consignee</option>
+							<option value="site">Site & Location</option>
+							<option value="date">Date Received</option>
+							<option selected value="time_received">Time Received</option>
+							<option value="date_shipped">Date Shipped</option>
+							<option value="time_shipped">Time Shipped</option>
+							<option value="waybill_no">Waybill Number</option>
+							<option value="status">Status</option>
+							<option value="received_by">Received By</option>
+							<option value="activity">Activity</option>
+							<%} else if (type.equals("date_shipped")) {%>
+							<option value="sku">SKU</option>
+							<option value="atmplacement">Section</option>
+							<option value="consignee">Consignee</option>
+							<option value="site">Site & Location</option>
+							<option value="date">Date Received</option>
+							<option value="time_received">Time Received</option>
+							<option selected value="date_shipped">Date Shipped</option>
+							<option value="time_shipped">Time Shipped</option>
+							<option value="waybill_no">Waybill Number</option>
+							<option value="status">Status</option>
+							<option value="received_by">Received By</option>
+							<option value="activity">Activity</option>
+							<%} else if (type.equals("time_shipped")) {%>
+							<option value="sku">SKU</option>
+							<option value="atmplacement">Section</option>
+							<option value="consignee">Consignee</option>
+							<option value="site">Site & Location</option>
+							<option value="date">Date Received</option>
+							<option value="time_received">Time Received</option>
+							<option value="date_shipped">Date Shipped</option>
+							<option selected value="time_shipped">Time Shipped</option>
+							<option value="waybill_no">Waybill Number</option>
+							<option value="status">Status</option>
+							<option value="received_by">Received By</option>
+							<option value="activity">Activity</option>
+							<option selected value="time_shipped">Time Shipped</option>
+							<%} else if (type.equals("waybill_no")) {%>
+							<option value="sku">SKU</option>
+							<option value="atmplacement">Section</option>
+							<option value="consignee">Consignee</option>
+							<option value="site">Site & Location</option>
+							<option value="date">Date Received</option>
+							<option value="time_received">Time Received</option>
+							<option value="date_shipped">Date Shipped</option>
+							<option value="time_shipped">Time Shipped</option>
+							<option selected value="waybill_no">Waybill Number</option>
+							<option value="status">Status</option>
+							<option value="received_by">Received By</option>
+							<option value="activity">Activity</option>
+							<%} else if (type.equals("status")) {%>
+							<option value="sku">SKU</option>
+							<option value="atmplacement">Section</option>
+							<option value="consignee">Consignee</option>
+							<option value="site">Site & Location</option>
+							<option value="date">Date Received</option>
+							<option value="time_received">Time Received</option>
+							<option value="date_shipped">Date Shipped</option>
+							<option value="time_shipped">Time Shipped</option>
+							<option value="waybill_no">Waybill Number</option>
+							<option selected value="status">Status</option>
+							<option value="received_by">Received By</option>
+							<option value="activity">Activity</option>
+							<%} else if (type.equals("received_by")) {%>
+							<option value="sku">SKU</option>
+							<option value="atmplacement">Section</option>
+							<option value="consignee">Consignee</option>
+							<option value="site">Site & Location</option>
+							<option value="date">Date Received</option>
+							<option value="time_received">Time Received</option>
+							<option value="date_shipped">Date Shipped</option>
+							<option value="time_shipped">Time Shipped</option>
+							<option value="waybill_no">Waybill Number</option>
+							<option value="status">Status</option>
+							<option selected value="received_by">Received By</option>
+							<option value="activity">Activity</option>
+							<%} else if (type.equals("activity")) {%>
+							<option value="sku">SKU</option>
+							<option value="atmplacement">Section</option>
+							<option value="consignee">Consignee</option>
+							<option value="site">Site & Location</option>
+							<option value="date">Date Received</option>
+							<option value="time_received">Time Received</option>
+							<option value="date_shipped">Date Shipped</option>
+							<option value="time_shipped">Time Shipped</option>
+							<option value="waybill_no">Waybill Number</option>
+							<option value="status">Status</option>
+							<option value="received_by">Received By</option>
+							<option selected value="activity">Activity</option>
+							<%} %>
 						</select>
 				</div>
 			</div>
 			<div class = "col-md-2">
-				<input type="text" placeholder="Search." name = "like">
+				<input type="text" placeholder="Search." name = "like" value = "${like }">
 			</div>
 			<div class = "col-md-1">
 				<input type="submit" class="btn btn-light" value = "Search">

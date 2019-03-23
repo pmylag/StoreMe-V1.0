@@ -36,7 +36,7 @@ public class GetAllAtmInfoServlet extends HttpServlet {
 		ArrayList<AtmInfoBean> AtmInfo = AtmInfosService.getAllAtmInfo();
 		int trys = AtmInfosService.getMaxIdAtmInfo();
 		System.out.println("Eto po max idssssss = " + trys);
-		
+		request.setAttribute("type", "sku");
 		request.setAttribute("atminfolists", AtmInfo);
 		System.out.print("wwaaaw gumana");
 		request.getRequestDispatcher("Results.jsp").forward(request, response);
