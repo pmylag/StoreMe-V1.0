@@ -24,7 +24,7 @@ public class UserService {
 			PreparedStatement st = con.prepareStatement(sql);
 			ResultSet rs = st.executeQuery();
 			while(rs.next()) {
-				pass = rs.getString("consignee");
+				pass = rs.getString("password");
 			} 
 			
 		}catch (ClassNotFoundException | SQLException e) {
@@ -51,12 +51,13 @@ public class UserService {
 	
 	
 	public void editPassword(int id, String passs) {
-		String sql = "storeme.user SET password = ? WHERE iduser = " + id;
+		String sql = "UPDATE storeme.user SET password = ? WHERE iduser = " + id;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url,username,passwords);
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, passs);
+			System.out.println("Eto poooo   " + st);
 			st.executeUpdate();
 		}catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block

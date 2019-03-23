@@ -27,7 +27,7 @@
 	
 	<div class="container">
 		<h1>Change Password</h1>
-		<form action = "EditUsersServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);">
+		<form action = "ChangePasswordServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);">
 			<div class="form-group">
 				<div class="col-sm-4">
 					<div>
@@ -41,6 +41,9 @@
 					<div>
 						<label for="repPword">Repeat Password:</label>
 	  					<input type="passsword" class="form-control" id="repPword" placeholder="*******" name = "checkpass">
+  					</div>
+					<div>
+	  					<input type="textfield" class="form-control" name = "id" value = "${id }">
   					</div>
 					<div>
 						<div class="col-sm-3">

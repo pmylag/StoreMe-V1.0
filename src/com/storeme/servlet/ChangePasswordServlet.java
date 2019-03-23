@@ -50,12 +50,17 @@ public class ChangePasswordServlet extends HttpServlet {
 		String newpass = request.getParameter("newpass");
 		String news = US.getPassword(ids);
 		
-		if(news != ogpass)
-			System.out.println("This is wrong");
+	
 		
-		if (check == newpass) {
+		if (check.equals(newpass) && news.equals(ogpass)) {
 			System.out.println("This shiz correct");
 			US.editPassword(ids, newpass);
+			request.getRequestDispatcher("ViewAllUsersServlet").forward(request, response);
+		}
+		
+		else {
+			System.out.println("This is wrong");
+			request.getRequestDispatcher("error.jsp").forward(request, response);
 		}
 		
 		
