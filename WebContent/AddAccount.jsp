@@ -30,6 +30,41 @@
 		
 	<div class="container">
 		<h1>Create New Account</h1>
+		
+		<script type="text/javascript">
+		function checkForm(form)
+		{
+			re = /^[a-zA-Z ]*$/;
+			if (!re.test(form.firstname.value)){
+				alert("No Numbers or Special Characters allowed for First Name");
+				form.firstname.focus();
+				return false;
+			}
+			
+			re = /^[a-zA-Z ]*$/;
+			if (!re.test(form.lastname.value)){
+				alert("No Numbers or Special Characters allowed for Last Name");
+				form.lastname.focus();
+				return false;
+			}
+			
+			re = /^[0-9 ]{11}$/;
+			if (!re.test(form.mobilenumber.value)){
+				alert("No letters, must exactly be 11 digits for the Mobile number");
+				form.mobilenumber.focus();
+				return false;
+			}
+			if(form.password.value.equals(form.password2.value)){
+				alert("Passwords must be equal");
+				form.password.focus();
+				return false;
+			}
+			
+			return true;
+		}
+		
+		</script>
+		
 		<form action = "AddUserServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);">
 			<div class="form-group">
 				<div class="col-sm-4">
@@ -77,7 +112,7 @@
 					</div>
 					<div>
 						<label for="mobile">Mobile Number:</label>
-	  					<input type="number" class="form-control" id="addr" placeholder="Ex. 09177777777" min="1" name = "mobilenumber" required>
+	  					<input type="number" class="form-control" id="addr" placeholder="Ex. 09177777777" min="1" name = "mobilenumber" maxlength = "11" required>
 					</div>
 					<div>
 						<label for="confPassword">Confirm Password:</label>
