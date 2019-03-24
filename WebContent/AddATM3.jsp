@@ -29,6 +29,37 @@
 </head>
 <body>
 	<%@include file="navbar.jsp" %>
+		<script type="text/javascript">
+		function checkForm(form)
+		{
+			re = /^[a-zA-Z ]*$/;
+			if (!re.test(form.checker.value)){
+				alert("No Numbers or Special Characters allowed for Checker");
+				form.checker.focus();
+				return false;
+			}
+			
+			re = /^[a-zA-Z ]*$/;
+			if (!re.test(form.warehouse_asst.value)){
+				alert("No Numbers or Special Characters allowed for Warehouse Assistant");
+				form.warehouse_asst.focus();
+				return false;
+			}
+			
+			re = /^[a-zA-Z ]*$/;
+			if (!re.test(form.driver.value)){
+				alert("No Numbers or Special Characters allowed for Driver");
+				form.driver.focus();
+				return false;
+			}
+			return true;
+			
+		}
+		
+		
+		</script>
+		
+		
 		<form action = "AddAtmServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);"> 
 			<div class="container">
 				<div class="col-md-6">
