@@ -54,11 +54,12 @@
 				form.mobilenumber.focus();
 				return false;
 			}
-			if(form.password.value.equals(form.password2.value)){
+			if(form.password.value != form.password2.value){
 				alert("Passwords must be equal");
 				form.password.focus();
 				return false;
 			}
+			
 			
 			return true;
 		}
