@@ -48,6 +48,38 @@ public class UserService {
 		}
 	}
 	
+	public ArrayList getUser(int id) {
+		String sql = "Select * from storeme.user WHERE iduser = " + id;
+		ArrayList<UserBean> GetUser = new ArrayList<>();
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,passwords);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while (rs.next()) {
+				UserBean ub = new UserBean();
+				
+				ub.setIduser(rs.getInt("iduser"));
+				ub.setAddress(rs.getString("address"));
+				ub.setEmailaddress(rs.getString("emailaddress"));
+				ub.setFirstname(rs.getString("firstname"));
+				ub.setLastname(rs.getString("lastname"));
+				ub.setMobilenumber(rs.getString("mobilenumber"));
+				ub.setPassword(rs.getString("password"));
+				ub.setPrivilege(rs.getString("privilege"));
+				ub.setUsername(rs.getString("username"));
+				
+				GetUser.add(ub);
+			
+			}
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return GetUser;
+	}
 	
 	
 	public void editPassword(int id, String passs) {

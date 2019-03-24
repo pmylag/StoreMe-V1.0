@@ -1,6 +1,8 @@
 package com.storeme.servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -33,8 +35,15 @@ public class EditUsersServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-	
+		UserService US = new UserService();
 		int ids = Integer.parseInt(request.getParameter("id"));
+		ArrayList<UserBean> UserList = US.getUser(ids);
+		request.setAttribute("first", UserList.get(0).getFirstname());
+		request.setAttribute("last", UserList.get(0).getLastname());
+		request.setAttribute("add", UserList.get(0).getAddress());
+		request.setAttribute("eadd", UserList.get(0).getEmailaddress());
+		request.setAttribute("mob.", UserList.get(0).getMobilenumber());
+
 		request.setAttribute("id", ids);
 		request.getRequestDispatcher("AccountInfo.jsp").forward(request, response);
 		

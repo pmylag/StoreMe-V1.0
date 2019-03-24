@@ -29,20 +29,52 @@
 		
 	<div class="container">
 		<h1>Account Information</h1>
+		
+		<script type="text/javascript">
+				function checkForm(form)
+				{
+					re = /^[a-zA-Z ]*$/;
+					if (!re.test(form.firstname.value)){
+						alert("No Numbers or Special Characters allowed for First Name");
+						form.firstname.focus();
+						return false;
+					}
+					
+					re = /^[a-zA-Z ]*$/;
+					if (!re.test(form.lastname.value)){
+						alert("No Numbers or Special Characters allowed for Last Name");
+						form.lastname.focus();
+						return false;
+					}
+					
+					re = /^[0-9 ]{11}$/;
+					if (!re.test(form.mobile.value)){
+						alert("No letters, must exactly be 11 digits for the Mobile number");
+						form.mobile.focus();
+						return false;
+					}
+		
+					
+					
+					return true;
+				}
+		</script>
 		<form action = "EditUsersServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);">
+			
+			
 			<div class="form-group">
 				<div class="col-sm-4">
 					<div>
 						<label for="usr">First Name:</label>
-	  					<input type="text" class="form-control" id="usr" placeholder="Ex. Juan" name = "firstname">
+	  					<input type="text" class="form-control" id="usr" placeholder="Ex. Juan" name = "firstname" value = "${first }">
   					</div>
   					<div>
 						<label for="addr">Address:</label>
-	  					<input type="text" class="form-control" id="addr" placeholder="Ex. Espana, Manila" name = "address">
+	  					<input type="text" class="form-control" id="addr" placeholder="Ex. Espana, Manila" name = "address" value = "${add }">
 					</div>
 					<div>
 						<label for="mobile">Mobile Number:</label>
-	  					<input type="number" class="form-control" id="addr" placeholder="Ex. 09177777777" min="1" name = "mobile">
+	  					<input type="text" class="form-control" id="addr" placeholder="Ex. 09177777777" min="1" name = "mobile" value = "${first }">
 					</div>
 					<div>
 						<div class="col-sm-3">
@@ -64,11 +96,11 @@
 				<div class="col-sm-4">
 					<div>
 						<label for="usr1">Last Name:</label>
-  						<input type="text" class="form-control" id="usr1" placeholder="Ex. De la Cruz" name = "lastname">
+  						<input type="text" class="form-control" id="usr1" placeholder="Ex. De la Cruz" name = "lastname" value = "${last }">
 					</div>
 					<div>
 						<label for="email">Email Address:</label>
-  						<input type="email" class="form-control" id="email" placeholder="Ex. juandelacruz@domain.com" name = "emailaddress">
+  						<input type="email" class="form-control" id="email" placeholder="Ex. juandelacruz@domain.com" name = "emailaddress" value = "${eadd }">
 					</div>
 					<div>
 						
