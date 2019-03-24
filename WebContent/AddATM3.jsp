@@ -314,11 +314,11 @@
 						<input class="form-check-input" type="checkbox" value="1" id="c4" name = "cassete4">Cassette 4 - 100</input>
 					</div>
 				
-						<img src="checklist.png">
 						<div class="form-group">
   							<label for="comment">Note:</label>
   							<textarea class="form-control" rows="5" id="comment"></textarea>
 						</div>
+						<img src="checklist.png">	
 					</div>
 					
 					<!-- Modal -->

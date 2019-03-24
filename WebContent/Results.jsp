@@ -228,10 +228,15 @@
 				</div>
 			</div>
 			<div class = "col-md-2">
-				<input type="text" placeholder="Search." name = "like" value = "${like }">
+				<input type="text" placeholder="Search" name = "like" value = "${like }">
 			</div>
 			<div class = "col-md-1">
 				<input type="submit" class="btn btn-light" value = "Search">
+			</div>
+			<div class = "col-md-1">
+				<button class="btn">
+					<a href="GetAllAtmInfoServlet">Cancel</a>
+				</button>
 			</div>
 			</div>
 		</form>
