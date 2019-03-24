@@ -300,7 +300,7 @@ public class AtmInfoService {
 	
 	public ArrayList getSearchedAtmInfo(String type, String search) {
 		ArrayList<AtmInfoBean> atmInfoBeanlists = new ArrayList<>();
-		String sql = "SELECT * FROM  storeme.atmninfo WHERE " + type + " LIKE ?";
+		String sql = "SELECT * FROM  storeme.atmninfo WHERE " + type + " LIKE ? ORDER BY date, time";
 		String Like;
 		
 		try {

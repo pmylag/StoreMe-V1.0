@@ -222,7 +222,7 @@
 							<option value="waybill_no">Waybill Number</option>
 							<option value="status">Status</option>
 							<option value="received_by">Received By</option>
-							<option selected value="activity">Activity</option>
+ 							<option selected value="activity">Activity</option>
 							<%} %>
 						</select>
 				</div>

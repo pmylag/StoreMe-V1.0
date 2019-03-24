@@ -65,6 +65,21 @@
 	</div>
 	
 	<div class="container">
+		<script type="text/javascript">
+		function checkForm(form)
+		{
+			re = /^[a-zA-Z ]*$/;
+			if (!re.test(form.consignee.value)){
+				alert("No Numbers or Special Characters allowed for Consignee");
+				form.consignee.focus();
+				return false;
+			}
+		
+			return true;
+		}
+		
+		</script>
+		
 		<form action = "AddAtmInfoServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);"> 
 			<div class="col-sm-6">
 				<div class ="col-sm-6">
