@@ -90,11 +90,11 @@
 					</div>
 					<div class="form-group">
 						<label for="tm">*Time Received:</label>
-						<input type="time" class="form-control" id="tm" name = "time" min="08:00:00" max="18:00:00" required>
+						<input type="time" class="form-control" id="tm" name = "time" min="08:00:00" max="19:00:00" required>
 					</div>
 					<div class="form-group">
 						<label for="wn">*Waybill Number:</label>
-						<input type="Number" class="form-control" min="1" id="wn" name = "waybill_no" required>
+						<input type="Number" class="form-control" min="0" id="wn" name = "waybill_no" required>
 					</div>
 					
 				
@@ -112,7 +112,6 @@
 					<div class="form-group">
 						<label for="sel1">*Status:</label>
 						<select class="form-control" id="sel1" name = "status" required>
-							<option value="InOrder">In Order</option>
 							<option value="Scheduled">Scheduled</option>
 							<option value="Waiting">Waiting</option>
 							<option value="On Hold">On Hold</option>

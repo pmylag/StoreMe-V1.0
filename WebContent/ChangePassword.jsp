@@ -45,7 +45,7 @@
 					<div>
 						<div class="col-sm-3">
 							<div style = "padding-top: 1em; padding-right:5em">
-								<button class="btn">
+								<button class="btn btn-lg">
 									<a href="HomePage.jsp">Back</a>
 								</button>
 							</div>

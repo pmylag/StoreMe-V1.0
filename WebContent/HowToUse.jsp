@@ -44,7 +44,7 @@
 		
 		<div class="col-sm-4">
 			<div class="panel panel-default">
-				<div class="panel-heading">TRACKER CENTER</div>
+				<div class="panel-heading">FindMe</div>
 				<div class="panel-body">
 					<ul>
 							<li>In here, you may be able to trace previous units.</li>

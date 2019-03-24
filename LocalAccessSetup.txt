@@ -1,0 +1,41 @@
+How to enable local users to access website locally
+
+Note: Make sure the server is running in Eclipse before doing these steps
+
+1. Navigate to C:\Windows\System32\drivers\etc
+2. Open a text editor (e.g. Notepad, Sublime Text)
+3. Open the hosts file in the text editor and the file will look like this
+4. Append <IPv4 Address>  storeme.local at the end of the file where in <IPv4 Address> is the address seen in the Command Prompt
+
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1       localhost
+#	::1             localhost
+	<IPv4 Address>  storeme.local
+
+
+How to check the IP address of the device
+1. Press Windows Key + R
+2. Type "cmd" then press Enter to open Command Prompt
+3. In Command Prompt Type "ipconfig"
+4. Take note of the IPv4 Address
+
+Access website through the link below:
+http://storeme.local:8080/StoreMe_V1.0/WelcomePage.jsp
