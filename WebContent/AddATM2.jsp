@@ -86,7 +86,7 @@
 					</div>
 					<div class="form-group">
 						<label for="dt">*Date Received:</label>
-						<input type="date" class="form-control" id="dt" name = "date" min="2019-01-01" required>
+						<input type="date" class="form-control" id="dt" name = "date" min="2019-01-01" max="9999-12-12" required>
 					</div>
 					<div class="form-group">
 						<label for="tm">*Time Received:</label>

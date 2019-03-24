@@ -315,6 +315,10 @@
 					</div>
 				
 						<img src="checklist.png">
+						<div class="form-group">
+  							<label for="comment">Note:</label>
+  							<textarea class="form-control" rows="5" id="comment"></textarea>
+						</div>
 					</div>
 					
 					<!-- Modal -->
