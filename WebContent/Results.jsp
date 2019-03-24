@@ -267,9 +267,11 @@
 			    </tr>
 			  </thead>
 			  <tbody>
+			  	<%!int z= 1; %>
 			  	<c:forEach items="${atminfolists}"  var= "a">
 				  	<tr>
-				  	  <th scope="row"> ${a.idatminfo }</th>
+				  	  <th scope="row"><%= z %></th>
+				  	  <% z = z + 1; %>
 				  	  <td><a href="GetSelectedServlet?id=${a.idatminfo}">${a.sku }</a> </td>
 				  	  <td> ${a.atmplacement }</td>
 				  	  <td> ${a.consignee } </td>
