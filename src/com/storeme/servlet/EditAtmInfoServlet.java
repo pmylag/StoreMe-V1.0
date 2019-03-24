@@ -67,6 +67,10 @@ public class EditAtmInfoServlet extends HttpServlet {
 		ai.setActivity(request.getParameter("activity"));
 		ai.setDate_shipped(request.getParameter("date_shipped"));
 		ai.setStatus(request.getParameter("status"));
+		System.out.println(ai.getStatus().equals("Completed") + " eto po yung status hayupss");
+		String status = ai.getStatus();
+		
+		
 		ai.setIdatminfo(Integer.parseInt(request.getParameter("id")));
 		ai.setAtmplacement(request.getParameter("atmplacement"));
 		ai.setReceived_by(request.getParameter("received_by"));
@@ -2236,6 +2240,10 @@ public class EditAtmInfoServlet extends HttpServlet {
 		}
 		System.out.print("This is the id  " + ai.getIdatm() );
 		atmInfosService.editAtmInfo(ai);
+		if (status.equals("Completed")) {
+			System.out.println(ai.getStatus() + " eto po yung status hayup");
+			atmInfosService.removeSection(Integer.parseInt(request.getParameter("id")));
+		}
 		response.getWriter().println("alert('Edit successful');");
 		request.getRequestDispatcher("GetAllAtmInfoServlet").forward(request, response);
 

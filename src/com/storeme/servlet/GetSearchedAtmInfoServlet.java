@@ -38,6 +38,8 @@ public class GetSearchedAtmInfoServlet extends HttpServlet {
 		AtmInfoService atminfosService = new AtmInfoService();
 		request.getParameter("type");
 		ArrayList <AtmInfoBean> AtmInfos = atminfosService.getSearchedAtmInfo(request.getParameter("type"), request.getParameter("like"));
+		request.setAttribute("type", request.getParameter("type"));
+		request.setAttribute("like", request.getParameter("like"));
 		request.setAttribute("atminfolists", AtmInfos);
 		
 		request.getRequestDispatcher("Results.jsp").forward(request, response);

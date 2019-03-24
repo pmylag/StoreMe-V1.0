@@ -281,6 +281,23 @@ public class AtmInfoService {
 		
 		return Like;
 	}
+	
+	
+	public void removeSection(int id) {
+		String sql = "UPDATE storeme.atmninfo SET atmplacement = null WHERE idatminfo = ?";
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setInt(1, id);
+			st.executeUpdate();
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
 	public ArrayList getSearchedAtmInfo(String type, String search) {
 		ArrayList<AtmInfoBean> atmInfoBeanlists = new ArrayList<>();
 		String sql = "SELECT * FROM  storeme.atmninfo WHERE " + type + " LIKE ?";
@@ -458,7 +475,7 @@ public class AtmInfoService {
 	public ArrayList getAllAtmInfo() {
 		ArrayList<AtmInfoBean> atminfoLists = new ArrayList();
 		
-		String sql1 = "select * from atmninfo";
+		String sql1 = "select * from atmninfo ORDER BY date, time";
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
