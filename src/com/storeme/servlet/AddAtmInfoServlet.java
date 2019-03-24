@@ -55,6 +55,11 @@ public class AddAtmInfoServlet extends HttpServlet {
 		AtmInfoBean ai = new AtmInfoBean();
 		ai.setActivity(request.getParameter("activity"));
 		ai.setConsignee(request.getParameter("consignee"));
+		for (int i = 0; i < ai.getConsignee().length(); i++) {
+			if (Character.isAlphabetic(ai.getConsignee().charAt(i))) {
+				request.setAttribute("ConsigneeIsFalse", "false");
+			}
+		}
 		ai.setDate(request.getParameter("date"));
 		ai.setTime(request.getParameter("time"));
 		switch(request.getParameter("time")) {
