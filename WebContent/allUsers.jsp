@@ -94,6 +94,11 @@
 				<div class = "col-sm-1">
 				<input type="submit" class="btn btn-light" value = "Search">
 				</div>
+				<div class = "col-md-1">
+				<button class="btn">
+					<a href="ViewAllUsersServlet">Cancel</a>
+				</button>
+			</div>
 			</div>
 		</form>
 		<div class = "row">
