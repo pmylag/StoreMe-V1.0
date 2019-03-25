@@ -2,6 +2,7 @@ package com.storeme.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -42,10 +43,14 @@ public class EditAtmInfoServlet extends HttpServlet {
 		int idatm = Integer.parseInt(request.getParameter("id"));
 		String action = atmInfosService.getSKUint(Integer.parseInt(request.getParameter("id")));
 		String time = ATMINFOLIST.get(0).getTime();
+		String datere = ATMINFOLIST.get(0).getDate();
 		String received = ATMINFOLIST.get(0).getReceived_by();
 		String activity = ATMINFOLIST.get(0).getActivity();
 		String date = ATMINFOLIST.get(0).getDate_shipped();
 		request.setAttribute("date", date);
+		request.setAttribute("datere", datere);
+		request.setAttribute("status", ATMINFOLIST.get(0).getStatus());		
+		request.setAttribute("atmplacement", ATMINFOLIST.get(0).getAtmplacement());
 		request.setAttribute("activity", activity);
 		request.setAttribute("sku", action);
 		request.setAttribute("id", idatm);

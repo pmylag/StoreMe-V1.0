@@ -261,9 +261,9 @@
 			      <th scope="col"> <font color="white"> Status </font> </th>
 			      <th scope="col"> <font color="white"> Received By </font> </th>
 			      <th scope="col"> <font color="white"> Activity </font> </th>
-				  <th scope="col"> <font color="white"> Edit </font> </th>
 				  <%! int priv = 1; %>
 				  <%if (session.getAttribute("privilege1") != null || priv == 2 || priv == 3) {%>
+				    <th scope="col"> <font color="white"> Edit </font> </th>
 				  	<th scope="col"> <font color="white"> Delete </font> </th>
 				  <%} %>
 				  

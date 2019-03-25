@@ -21,6 +21,31 @@
   		<div class="panel panel-default">
     		<div class="panel-heading">${sku }</div>
    			<div class="panel-body">
+   			<script>
+				document.getElementById("Usersss").value = request.getAttribute("date");
+			</script>
+			<script type="text/javascript">
+			function checkForm(form)
+			{
+				re = /^[a-zA-Z ]*$/;
+				if (!re.test(form.received_by.value)){
+					alert("No Numbers or Special Characters allowed for Receiver");
+					form.received_by.focus();
+					return false;
+				}
+				
+				if(form.datere.value > form.date_shipped.value){
+					alert("Date must later or equal");
+					form.date_shipped.focus();
+					return false;
+				}
+				
+				
+				
+				return true;
+			}
+			
+			</script>
    				<form action = "EditAtmInfoServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);">
 					<div class="panel-body bg-default">
 						<div class="form-group">
@@ -28,8 +53,11 @@
 			  					<div>
 							    	<div class="form-group">
 							      		<label for="sel1">Choose Section: </label>
+										<% String place = (String)request.getAttribute("atmplacement"); %>
+						
 						     	 		<select class="form-control" id="sel1" name = "atmplacement" required>
-							     	 		<option value="A" name = "atmplacement">A</option>
+						     	 			<%if (place.equals("A")) {%>
+							     	 		<option selected value="A" name = "atmplacement">A</option>
 								     		<option value="B" name = "atmplacement">B</option>
 									     	<option value="C" name = "atmplacement">C</option>
 									     	<option value="D" name = "atmplacement">D</option>
@@ -39,24 +67,138 @@
 									     	<option value="H" name = "atmplacement">H</option>
 									     	<option value="I" name = "atmplacement">I</option>
 									     	<option value="J" name = "atmplacement">J</option>
-							     		</select>
+									     	<%} else if (place.equals("B")) {%>
+									     	<option value="A" name = "atmplacement">A</option>
+								     		<option selected value="B" name = "atmplacement">B</option>
+									     	<option value="C" name = "atmplacement">C</option>
+									     	<option value="D" name = "atmplacement">D</option>
+									     	<option value="E" name = "atmplacement">E</option>
+									     	<option value="F" name = "atmplacement">F</option>
+									     	<option value="G" name = "atmplacement">G</option>
+									     	<option value="H" name = "atmplacement">H</option>
+									     	<option value="I" name = "atmplacement">I</option>
+									     	<option value="J" name = "atmplacement">J</option>
+									     	<%} else if (place.equals("C")) {%>
+									     	<option value="A" name = "atmplacement">A</option>
+								     		<option value="B" name = "atmplacement">B</option>
+									     	<option selected value="C" name = "atmplacement">C</option>
+									     	<option value="D" name = "atmplacement">D</option>
+									     	<option value="E" name = "atmplacement">E</option>
+									     	<option value="F" name = "atmplacement">F</option>
+									     	<option value="G" name = "atmplacement">G</option>
+									     	<option value="H" name = "atmplacement">H</option>
+									     	<option value="I" name = "atmplacement">I</option>
+									     	<option value="J" name = "atmplacement">J</option>
+									     	<%} else if (place.equals("D")) {%>
+									     	<option value="A" name = "atmplacement">A</option>
+								     		<option value="B" name = "atmplacement">B</option>
+									     	<option value="C" name = "atmplacement">C</option>
+									     	<option selected value="D" name = "atmplacement">D</option>
+									     	<option value="E" name = "atmplacement">E</option>
+									     	<option value="F" name = "atmplacement">F</option>
+									     	<option value="G" name = "atmplacement">G</option>
+									     	<option value="H" name = "atmplacement">H</option>
+									     	<option value="I" name = "atmplacement">I</option>
+									     	<option value="J" name = "atmplacement">J</option>
+									     	<%} else if (place.equals("E")) {%>
+									     	<option value="A" name = "atmplacement">A</option>
+								     		<option value="B" name = "atmplacement">B</option>
+									     	<option value="C" name = "atmplacement">C</option>
+									     	<option value="D" name = "atmplacement">D</option>
+									     	<option selected value="E" name = "atmplacement">E</option>
+									     	<option value="F" name = "atmplacement">F</option>
+									     	<option value="G" name = "atmplacement">G</option>
+									     	<option value="H" name = "atmplacement">H</option>
+									     	<option value="I" name = "atmplacement">I</option>
+									     	<option value="J" name = "atmplacement">J</option>
+									     	<%} else if (place.equals("F")) {%>
+									     	<option value="A" name = "atmplacement">A</option>
+								     		<option value="B" name = "atmplacement">B</option>
+									     	<option value="C" name = "atmplacement">C</option>
+									     	<option value="D" name = "atmplacement">D</option>
+									     	<option value="E" name = "atmplacement">E</option>
+									     	<option selected value="F" name = "atmplacement">F</option>
+									     	<option value="G" name = "atmplacement">G</option>
+									     	<option value="H" name = "atmplacement">H</option>
+									     	<option value="I" name = "atmplacement">I</option>
+									     	<option value="J" name = "atmplacement">J</option>
+									     	<%} else if (place.equals("H")) {%>
+									     	<option value="A" name = "atmplacement">A</option>
+								     		<option value="B" name = "atmplacement">B</option>
+									     	<option value="C" name = "atmplacement">C</option>
+									     	<option value="D" name = "atmplacement">D</option>
+									     	<option value="E" name = "atmplacement">E</option>
+									     	<option value="F" name = "atmplacement">F</option>
+									     	<option value="G" name = "atmplacement">G</option>
+									     	<option selected value="H" name = "atmplacement">H</option>
+									     	<option value="I" name = "atmplacement">I</option>
+									     	<option value="J" name = "atmplacement">J</option>
+									     	<%} else if (place.equals("I")) {%>
+									     	<option value="A" name = "atmplacement">A</option>
+								     		<option value="B" name = "atmplacement">B</option>
+									     	<option value="C" name = "atmplacement">C</option>
+									     	<option value="D" name = "atmplacement">D</option>
+									     	<option value="E" name = "atmplacement">E</option>
+									     	<option value="F" name = "atmplacement">F</option>
+									     	<option value="G" name = "atmplacement">G</option>
+									     	<option value="H" name = "atmplacement">H</option>
+									     	<option selected value="I" name = "atmplacement">I</option>
+									     	<option value="J" name = "atmplacement">J</option>
+									     	<%} else if (place.equals("J")) {%>
+									     	<option value="A" name = "atmplacement">A</option>
+								     		<option value="B" name = "atmplacement">B</option>
+									     	<option value="C" name = "atmplacement">C</option>
+									     	<option value="D" name = "atmplacement">D</option>
+									     	<option value="E" name = "atmplacement">E</option>
+									     	<option value="F" name = "atmplacement">F</option>
+									     	<option value="G" name = "atmplacement">G</option>
+									     	<option value="H" name = "atmplacement">H</option>
+									     	<option value="I" name = "atmplacement">I</option>
+									     	<option selected value="J" name = "atmplacement">J</option>
+									     	<%}%>
+									     </select>
 									</div>
 								</div>
 								<div class="input-group date" style = "padding-top: 1em" data-provide="datepicker">
 						   			<label for="uses">Date Shipped: </label>
-						    		<input type="date" class="form-control" id="Uses" name = "date_shipped" value = "${date } " >
+						    		<input type="date" class="form-control" id="Usersss" name = "date_shipped" min="2019-01-01" max="9999-12-12" value = "${date } " >
 						    	</div>
 						    		<div class="input-group time" style = "padding-top: 1em">
 							   			<label for="uses1">Time Shipped: </label>
-							    		<input type="time" class="form-control" id="Uses1" name = "time" value = "${time }">
+							    		<input type="time" class="form-control" id="Uses1" name = "time" min="08:00:00" max="19:00:00" value = "${time }">
 							    	</div>
+							    		
 									<div class="form-group">
+									<% String status = (String)request.getAttribute("status"); %>
+									
 										<label for="sel1">Status:</label>
 											<select class="form-control" id="sel1" name = "status" value = "${atm.status}" required>
+											<%if (status.equals("Completed")) {%>
+												<option selected value="Completed">Completed</option>
+												<option value="On Hold">On Hold</option>
+												<option value="Waiting">Waiting</option>
+												<option value="Scheduled">Schedule</option>
+											<%} else if (status.equals("On Hold")) {%>
+												<option value="Completed">Completed</option>
+												<option selected value="On Hold">On Hold</option>
+												<option value="Waiting">Waiting</option>
+												<option value="Scheduled">Schedule</option>
+											<%} else if (status.equals("Waiting")) {%>
+												<option  value="Completed">Completed</option>
+												<option value="On Hold">On Hold</option>
+												<option selected value="Waiting">Waiting</option>
+												<option value="Scheduled">Schedule</option>
+											<%} else if (status.equals("E")) {%>
+												<option value="Completed">Completed</option>
+												<option value="On Hold">On Hold</option>
+												<option value="Waiting">Waiting</option>
+												<option selected value="Scheduled">Schedule</option>
+											<% } else { %>
 												<option value="Completed">Completed</option>
 												<option value="On Hold">On Hold</option>
 												<option value="Waiting">Waiting</option>
 												<option value="Scheduled">Schedule</option>
+											<% } %>
 											</select>
 									</div>
 									<div class="form-group">
@@ -79,6 +221,9 @@
 					    		<div class="form-group">
 									<label for="comment">Activity: </label>
 										<textarea class="form-control" rows="7" id="comment" name = "activity"></textarea>
+									<input type="text" class="form-control" name = "datere" value = "${datere } " style="visibility: hidden" >
+									<input type="text" class="form-control" name = "timere" value = "${datere } " style="visibility: hidden" >
+									
 								</div>
 							</div>
 				  		</div>
