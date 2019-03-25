@@ -32,12 +32,11 @@
 			<ul class="nav navbar-nav">
 				<li><a href="HomePage.jsp">Home</a></li>
 			</ul>
-			<ul class="nav navbar-nav navbar-right">
-	      		<li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
-	      		<li><a href="WelcomePage.jsp"><span class="glyphicon glyphicon-log-in" style="padding-right:5em"></span></a></li>
-	    	</ul>
 	    	<ul class="nav navbar-nav navbar-right">
-	      		<li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
+	      		 <% int id = (Integer)session.getAttribute("iduser"); %>
+			 	 <%if(session.getAttribute("privilege1") != null || session.getAttribute("privilege3") != null) {%>
+		         <li><a href="EditUsersServlet?id=<%= id %>"><span class="glyphicon glyphicon-user"></span></a></li>
+		         <%} %>
 	      		<li><form action="Logout" class="navbar-form navbar-right">
       				<input type="submit" class="btn btn-info" value="Logout" onclick = "myFunction2()">
       				<script>

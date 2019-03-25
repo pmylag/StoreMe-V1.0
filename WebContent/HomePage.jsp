@@ -39,8 +39,9 @@
 				<% }%>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
+			  <% int id = (Integer)session.getAttribute("iduser"); %>
 			  <%if(session.getAttribute("privilege1") != null || session.getAttribute("privilege3") != null) {%>
-		      <li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
+		      <li><a href="EditUsersServlet?id=<%= id %>"><span class="glyphicon glyphicon-user"></span></a></li>
 		      <%} %>
 		      <form action="Logout" class="navbar-form navbar-right">
       				<input type="submit" class="btn btn-info" value="Logout" onclick = "myFunction2()">
@@ -57,6 +58,7 @@
 	<div class="container">
 		<div class="jumbotron" style="background-color:white;">
 			<div class="col-sm-4">
+			
 				<%if(session.getAttribute("privilege1") != null || session.getAttribute("privilege2") != null) {%>
 					<a href="AddAtmSectionServlet">
 						<img src="atm.png" style="height:300px; width:300px">

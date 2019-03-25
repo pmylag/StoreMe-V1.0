@@ -39,7 +39,8 @@
 				<li><a>Welcome, User</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-		      <li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
+			<% int id = (Integer)session.getAttribute("iduser"); %>
+		      <li><a href="EditUsersServlet?id=<%= id %>"><span class="glyphicon glyphicon-user"></span></a></li>
 		      <form action="Logout" class="navbar-form navbar-right">
       				<input type="submit" class="btn btn-info" value="Logout" onclick = "myFunction2()">
       				<script>
@@ -55,13 +56,14 @@
 		<div class="container-fluid">
 			
 		<ul class="nav navbar-header navbar-nav">
-	      <li><a href="AccountInfo.jsp">Account Information</span></a></li>
-	      <li><a href="ChangePassword.jsp">Change Password</span></a></li>
+		  
+	      <li><a href="EditUsersServlet?id=<%= id %>">Account Information</span></a></li>
+	      <li><a href="ChangePasswordServlet?id=<%= id %>">Change Password</span></a></li>
 	      <%!int priv = 1; %> <%-- Checks the privilege of user --%>
-	      <%if (priv == 1){ %> <%-- Only admin which has privilege of 1 can add an account --%>
+	      <%if (session.getAttribute("privilege1") != null){ %> <%-- Only admin which has privilege of 1 can add an account --%>
 	      	<li><a href="AddAccount.jsp">Add Account</span></a></li>
+	        <li><a href = "ViewAllUsersServlet">View Users</a>
 	      <%} %>
-	      <li><a href = "ViewAllUsersServlet">View Users</a>
 	      
 	    </ul>
 	  </div>

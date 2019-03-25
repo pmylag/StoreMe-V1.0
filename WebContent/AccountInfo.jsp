@@ -15,13 +15,14 @@
 		<div class="container-fluid">
 			
 		<ul class="nav navbar-header navbar-nav">
-	      <li><a href="AccountInfo.jsp">Account Information</span></a></li>
-	      <li><a href="ChangePassword.jsp">Change Password</span></a></li>
+	      <li><a href="EditUsersServlet?id=<%= id %>">Account Information</span></a></li>
+	      <li><a href="ChangePasswordServlet?id=<%= id %>">Change Password</span></a></li>
 	      <%!int priv = 1; %> <%-- Checks the privilege of user --%>
-	      <%if (priv == 1){ %> <%-- Only admin which has privilege of 1 can add an account --%>
+	      <%if (session.getAttribute("privilege1") != null){ %> <%-- Only admin which has privilege of 1 can add an account --%>
 	      	<li><a href="AddAccount.jsp">Add Account</span></a></li>
+	        <li><a href = "ViewAllUsersServlet">View Users</a>
 	      <%} %>
-	      <li><a href = "ViewAllUsersServlet">View Users</a>
+	      
 	    </ul>
 	  </div>
 	</nav>

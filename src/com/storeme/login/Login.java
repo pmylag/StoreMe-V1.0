@@ -50,6 +50,8 @@ public class Login extends HttpServlet {
 		PrintWriter outb = response.getWriter();
 		PrintWriter outc = response.getWriter();
 		PrintWriter outd = response.getWriter();
+		
+		
 		try {
 			if(dao.check(uname, pass)) {
 				if(dao.checklock(dao.getiduser(uname)) == 1) {
