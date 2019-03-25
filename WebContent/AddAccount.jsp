@@ -123,7 +123,7 @@
 						<label for="privilege">Privilege: </label>
 				     	<select class="form-control" id="privilege" name = "privilege" required>
 			     	 		<option value="1" name = "privilege">Administrator</option>
-			     	 		<option value="2" name = "privilege">Inventory Supervisor</option>
+			     	 		<option value="2" name = "privilege">Team Lead</option>
 			     	 		<option value="3" name = "privilege">Warehouse Assistant</option>
 				     	 </select>
 					</div>

@@ -27,23 +27,37 @@
 	
 	<div class="container">
 		<h1>Change Password</h1>
+		<script type="text/javascript">
+		function checkForm(form)
+		{
+			
+			if(form.newpass.value != form.checkpass.value){
+				alert("Passwords must be equal");
+				form.password.focus();
+				return false;
+			}
+			
+			
+			return true;
+		}
+		</script>
 		<form action = "ChangePasswordServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);">
 			<div class="form-group">
 				<div class="col-sm-4">
 					<div>
 						<label for="currPword">Current Password:</label>
-	  					<input type="passsword" class="form-control" id="currPword" placeholder="*******" name = "ogpass">
+	  					<input type="password" class="form-control" id="currPword" placeholder="*******" name = "ogpass" required>
   					</div>
   					<div>
 						<label for="newPword">New Password:</label>
-	  					<input type="passsword" class="form-control" id="newPword" placeholder="*******" name = "newpass">
+	  					<input type="password" class="form-control" id="newPword" placeholder="*******" name = "newpass" required>
   					</div>
 					<div>
 						<label for="repPword">Repeat Password:</label>
-	  					<input type="passsword" class="form-control" id="repPword" placeholder="*******" name = "checkpass">
+	  					<input type="password" class="form-control" id="repPword" placeholder="*******" name = "checkpass" required>
   					</div>
 					<div>
-	  					<input type="textfield" class="form-control" name = "id" value = "${id }">
+	  					<input type="textfield" class="form-control" name = "id" value = "${id }" style="visibility: hidden">
   					</div>
 					<div>
 						<div class="col-sm-3">

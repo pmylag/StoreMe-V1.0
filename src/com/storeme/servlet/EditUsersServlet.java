@@ -42,7 +42,7 @@ public class EditUsersServlet extends HttpServlet {
 		request.setAttribute("last", UserList.get(0).getLastname());
 		request.setAttribute("add", UserList.get(0).getAddress());
 		request.setAttribute("eadd", UserList.get(0).getEmailaddress());
-		request.setAttribute("mob.", UserList.get(0).getMobilenumber());
+		request.setAttribute("mob", UserList.get(0).getMobilenumber());
 
 		request.setAttribute("id", ids);
 		request.getRequestDispatcher("AccountInfo.jsp").forward(request, response);

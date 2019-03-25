@@ -61,7 +61,7 @@
 				<div class = "col-md-1">
 					SEARCH BY
 				</div>
-			<div class = "col-md-1">
+			<div class = "col-xs-2">
 				<div class="form-group">
 						<% String type = (String)request.getAttribute("type"); %>
 						<label for="sel1">Type:</label>
@@ -227,8 +227,8 @@
 						</select>
 				</div>
 			</div>
-			<div class = "col-md-2">
-				<input type="text" placeholder="Search" name = "like" value = "${like }">
+			<div class = "col-xs-2">
+				<input class="form-control" type="text" placeholder="Search" name = "like" size="12" value = "${like }">
 			</div>
 			<div class = "col-md-1">
 				<input type="submit" class="btn btn-light" value = "Search">

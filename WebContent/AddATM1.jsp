@@ -195,8 +195,15 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 		      <li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
-		      <li><a href="WelcomePage.jsp"><span class="glyphicon glyphicon-log-in" style="padding-right:5em"></span></a></li>
-		    </ul>
+		      <form action="Logout" class="navbar-form navbar-right">
+      				<input type="submit" class="btn btn-info" value="Logout" onclick = "myFunction2()">
+      				<script>
+						function myFunction2() {
+    					alert("Successfully Logged Out.");
+						}
+					</script>
+      		 </form>  
+			</ul>
 		  </div>
 		</nav>
 	
@@ -370,9 +377,9 @@
 						  <div class="panel-heading">Legend</div>
 						  <div class="panel-body">
 						  	<div class="list-group">
-							  <a href="#" class="list-group-item" style="background-color: #00FF7F">0 	- 90</a>
-							  <a href="#" class="list-group-item" style="background-color: #FFA500">91  - 99</a>
-							  <a href="#" class="list-group-item" style="background-color: #FF0000">100</a>
+							  <a href="#" class="list-group-item" style="background-color: #00FF7F">AVAILABLE</a>
+							  <a href="#" class="list-group-item" style="background-color: #FFA500">ALMOST FULL</a>
+							  <a href="#" class="list-group-item" style="background-color: #FF0000">FULL</a>
 							</div>
 						  </div>
 						</div>

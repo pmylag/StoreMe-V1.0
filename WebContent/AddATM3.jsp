@@ -131,7 +131,7 @@
 						        <td>*ATM:</td>
 						        <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="atm-qty" name = "quantity" required>
+										<input type="number" class="form-control" min="0" id="atm-qty" name = "quantity" value = "1" readonly>
 									</div>
 						        </td>
 						        <td>
@@ -324,7 +324,7 @@
 					      	</tr>
 					    </tbody>
 					</table>
-					<button type="button" class="btn btn-lg" data-target="#myModal">Back</button>
+					<a href = "AddATM2.jsp" type="button" class="btn btn-lg">Back</a>
 					<input type="submit" class="btn btn-lg btn-info" value="Save Changes">
 				</div>
 				<div class="col-md-4">
@@ -368,7 +368,7 @@
 						        </div>
 					       	</div>
 						        <div class="modal-footer">
-						        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						        	<a href = "AddATM2.jsp"type="button" class="btn btn-default" data-dismiss="modal">Close</a>
 						        	<input type="submit" class="btn btn-lg btn-info" value="Save">
 						        </div>
 						   	</div>

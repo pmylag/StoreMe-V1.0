@@ -31,7 +31,7 @@
 				<%if (session.getAttribute("privilege1") != null) {%>
 					<li><a>Welcome, Administrator</a></li>
 				<%}else if (session.getAttribute("privilege2") != null) { %>
-					<li><a>Welcome, Inventory Supervisor</a></li>
+					<li><a>Welcome, Team Lead</a></li>
 				<% } else if (session.getAttribute("privilege3") != null) {%>
 					<li><a>Welcome, Warehouse Assistant</a></li>
 				<% }else if (session.getAttribute("privilege4") != null) {%>
@@ -39,7 +39,9 @@
 				<% }%>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
+			  <%if(session.getAttribute("privilege1") != null || session.getAttribute("privilege3") != null) {%>
 		      <li><a href="AccountInfo.jsp"><span class="glyphicon glyphicon-user"></span></a></li>
+		      <%} %>
 		      <form action="Logout" class="navbar-form navbar-right">
       				<input type="submit" class="btn btn-info" value="Logout" onclick = "myFunction2()">
       				<script>

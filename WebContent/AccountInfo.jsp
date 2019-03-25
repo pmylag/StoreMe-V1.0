@@ -74,7 +74,7 @@
 					</div>
 					<div>
 						<label for="mobile">Mobile Number:</label>
-	  					<input type="text" class="form-control" id="addr" placeholder="Ex. 09177777777" min="1" name = "mobile" value = "${first }">
+	  					<input type="text" class="form-control" id="addr" placeholder="Ex. 09177777777" min="1" name = "mobile" value = "${mob }">
 					</div>
 					<div>
 						<div class="col-sm-3">
