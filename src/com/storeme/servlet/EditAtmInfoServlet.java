@@ -52,6 +52,8 @@ public class EditAtmInfoServlet extends HttpServlet {
 		request.setAttribute("status", ATMINFOLIST.get(0).getStatus());	
 		if (ATMINFOLIST.get(0).getAtmplacement() != null)
 			request.setAttribute("atmplacement", ATMINFOLIST.get(0).getAtmplacement());
+		else
+			request.setAttribute("atmplacement", "  ");
 		request.setAttribute("activity", activity);
 		request.setAttribute("sku", action);
 		request.setAttribute("id", idatm);
