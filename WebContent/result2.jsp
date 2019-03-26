@@ -54,10 +54,13 @@
 			  					<div>
 							    	<div class="form-group">
 							      		<label for="sel1">Choose Section: </label>
+									<% if ((String)request.getAttribute("atmplacement") != null){ %>
 										<% String place = (String)request.getAttribute("atmplacement"); %>
-						
+									<%} else {%>
+										<% String place = " "; %>
+									<% } %>
 						     	 		<select class="form-control" id="sel1" name = "atmplacement" required>
-						     	 			<%if (place.equals("A")) {%>
+						     	 			<%if (place.equals("A") && ) {%>
 							     	 		<option selected value="A" name = "atmplacement">A</option>
 								     		<option value="B" name = "atmplacement">B</option>
 									     	<option value="C" name = "atmplacement">C</option>
