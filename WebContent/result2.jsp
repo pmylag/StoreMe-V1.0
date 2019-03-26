@@ -60,7 +60,7 @@
 										<% String place = " "; %>
 									<% } %>
 						     	 		<select class="form-control" id="sel1" name = "atmplacement" required>
-						     	 			<%if (place.equals("A") && ) {%>
+						     	 			<%if (place.equals("A")) {%>
 							     	 		<option selected value="A" name = "atmplacement">A</option>
 								     		<option value="B" name = "atmplacement">B</option>
 									     	<option value="C" name = "atmplacement">C</option>
