@@ -27,6 +27,8 @@ public class AtmInfoBean {
 	private String date_shipped;
 	private String received_by;
 	
+	private String note;
+	
 	public int getIdatminfo() {
 		return idatminfo;
 	}

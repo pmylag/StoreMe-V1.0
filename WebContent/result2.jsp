@@ -40,7 +40,8 @@
 					return false;
 				}
 				
-				
+				else
+					alert("Form is successfully edited");
 				
 				return true;
 			}
@@ -221,12 +222,7 @@
 									  	<input type="text" class="form-control" id="usr" name = "id" value = ${id } readonly>
 									</div>
 									<a href = "GetAllAtmInfoServlet" role="button" class="btn btn-info">Cancel</a>							
-									<input type="submit" class="btn btn-lg btn-info" value="Submit" onclick = "myFunction3()">
-									<script>
-										function myFunction3() {
-				    						alert("Successfully edited");
-										}
-									</script>							
+									<input type="submit" class="btn btn-lg btn-info" value="Submit" onclick = "myFunction3()">					
 							</div>
 							<div class ="col-sm-8">
 					    		<div class="form-group">
