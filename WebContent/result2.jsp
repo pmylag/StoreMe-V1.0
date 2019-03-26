@@ -35,7 +35,7 @@
 				}
 				
 				if(form.datere.value > form.date_shipped.value){
-					alert("Date must later or equal");
+					alert("Date must be later or equal");
 					form.date_shipped.focus();
 					return false;
 				}
@@ -155,7 +155,18 @@
 									     	<option value="H" name = "atmplacement">H</option>
 									     	<option value="I" name = "atmplacement">I</option>
 									     	<option selected value="J" name = "atmplacement">J</option>
-									     	<%}%>
+									     	<%} else{ %>
+									     	<option value="A" name = "atmplacement">A</option>
+								     		<option value="B" name = "atmplacement">B</option>
+									     	<option value="C" name = "atmplacement">C</option>
+									     	<option value="D" name = "atmplacement">D</option>
+									     	<option value="E" name = "atmplacement">E</option>
+									     	<option value="F" name = "atmplacement">F</option>
+									     	<option value="G" name = "atmplacement">G</option>
+									     	<option value="H" name = "atmplacement">H</option>
+									     	<option value="I" name = "atmplacement">I</option>
+									     	<option value="J" name = "atmplacement">J</option>
+									     	<%} %>
 									     </select>
 									</div>
 								</div>

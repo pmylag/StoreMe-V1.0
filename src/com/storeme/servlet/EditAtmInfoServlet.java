@@ -49,12 +49,14 @@ public class EditAtmInfoServlet extends HttpServlet {
 		String date = ATMINFOLIST.get(0).getDate_shipped();
 		request.setAttribute("date", date);
 		request.setAttribute("datere", datere);
-		request.setAttribute("status", ATMINFOLIST.get(0).getStatus());		
-		request.setAttribute("atmplacement", ATMINFOLIST.get(0).getAtmplacement());
+		request.setAttribute("status", ATMINFOLIST.get(0).getStatus());	
+		if (ATMINFOLIST.get(0).getAtmplacement() != null)
+			request.setAttribute("atmplacement", ATMINFOLIST.get(0).getAtmplacement());
 		request.setAttribute("activity", activity);
 		request.setAttribute("sku", action);
 		request.setAttribute("id", idatm);
 		request.setAttribute("time", time);
+		request.setAttribute("timere", ATMINFOLIST.get(0).getTime_received());
 		request.setAttribute("received", received);
 		request.setAttribute("atminfo", ATMINFOLIST);
 		request.getRequestDispatcher("result2.jsp").forward(request, response);
