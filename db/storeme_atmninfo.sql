@@ -16,38 +16,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `atmninfo`
---
-
-DROP TABLE IF EXISTS `atmninfo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `atmninfo` (
-  `idatminfo` int(11) NOT NULL AUTO_INCREMENT,
-  `atmplacement` char(10) DEFAULT NULL,
-  `site` varchar(45) DEFAULT NULL,
-  `sku` varchar(45) DEFAULT NULL,
-  `consignee` varchar(45) DEFAULT NULL,
-  `date` varchar(45) DEFAULT NULL,
-  `date_shipped` varchar(45) DEFAULT NULL,
-  `time` varchar(45) DEFAULT NULL,
-  `waybill_no` varchar(45) DEFAULT NULL,
-  `activity` varchar(45) DEFAULT NULL,
-  `status` varchar(45) DEFAULT NULL,
-  `received_by` varchar(45) DEFAULT NULL,
-  `time_received` varchar(45) DEFAULT NULL,
-  `idatm` int(11) DEFAULT NULL,
-  PRIMARY KEY (`idatminfo`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `atmninfo`
 --
 
 LOCK TABLES `atmninfo` WRITE;
 /*!40000 ALTER TABLE `atmninfo` DISABLE KEYS */;
-INSERT INTO `atmninfo` VALUES (1,'1','Metri Manila','12-BPI-AA12','Bruce','01/01/2018','01/02/2018','12:00:00','12345','Stored','Clear',NULL,NULL,1),(2,'2','Metro Manila','34-BDO-BB34','Bruce','01/01/2018','01/02/2018','12:00:00','12562','Stored','Clear',NULL,NULL,2),(3,'3','Metro Manila','09-BPI-CC45','Bruce','01/01/2018','01/02/2018','12:00:00','52342','Pending','Clear',NULL,NULL,3),(4,'4',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(5,'1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(6,'1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(15,'2',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(16,'5',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(17,'10',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(18,'7',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(19,'7',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(20,'5','adsa','afsdfa','dasfa','2019-12-30','2019-12-30','12:59','1212','asdfas','Returned',NULL,NULL,20),(21,'A','qc','35-BPI-12AB','Bruce','2017-07-07',NULL,'00:12','12345','ASDASD','Completed',NULL,NULL,21);
+INSERT INTO `atmninfo` VALUES (1,'1','Metri Manila','12-BPI-AA12','Bruce','01/01/2018','01/02/2018','12:00:00','12345','Stored','Clear',NULL,NULL,1,0,0,0,NULL,NULL),(2,'2','Metro Manila','34-BDO-BB34','Bruce','01/01/2018','01/02/2018','12:00:00','12562','Stored','Clear',NULL,NULL,2,0,0,0,NULL,NULL),(3,'3','Metro Manila','09-BPI-CC45','Bruce','01/01/2018','01/02/2018','12:00:00','52342','Pending','Clear',NULL,NULL,3,0,0,0,NULL,NULL),(20,'5','adsa','afsdfa','dasfa','2019-12-30','2019-12-30','12:59','1212','asdfas','Returned',NULL,NULL,20,0,0,0,NULL,NULL),(21,'A','qc','35-BPI-12AB','Bruce','2017-07-07',NULL,'00:12','12345','ASDASD','Completed',NULL,NULL,21,0,0,0,NULL,NULL),(24,'A','qc','35-BPI-12AB','Paolo Ylag','2019-12-12',NULL,'08:12 AM','0','asd','Scheduled',NULL,NULL,24,0,0,0,NULL,NULL),(25,'A','qc','35-BPI-12AB','Paolo Ylag','2019-12-12',NULL,'08:12 AM','12','asd','Scheduled',NULL,NULL,25,0,0,0,NULL,NULL),(26,'A','qc','35-BPI-12AB','Paolo Ylag','2019-12-12',NULL,'12:12 PM','12','asd','Scheduled',NULL,NULL,26,0,0,0,NULL,NULL),(27,'A','qc','35-BPI-12AB','Paolo Ylag','2019-12-12',NULL,'12:12 PM','23','sdf','Scheduled',NULL,NULL,27,0,0,0,NULL,NULL),(28,'A','qc','35-BPI-12AB','Paolo Ylag','2019-12-12',NULL,'12:12 PM','12','sad','Scheduled',NULL,NULL,28,0,0,0,NULL,NULL);
 /*!40000 ALTER TABLE `atmninfo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -60,4 +34,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-07 21:29:52
+-- Dump completed on 2019-03-31 23:01:19

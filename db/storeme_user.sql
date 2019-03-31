@@ -16,28 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `user`
---
-
-DROP TABLE IF EXISTS `user`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `user` (
-  `iduser` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(45) DEFAULT NULL,
-  `password` varchar(45) DEFAULT NULL,
-  `privilege` varchar(1) DEFAULT NULL,
-  `locked` varchar(45) DEFAULT NULL,
-  `firstname` varchar(45) DEFAULT NULL,
-  `lastname` varchar(45) DEFAULT NULL,
-  `address` varchar(45) DEFAULT NULL,
-  `emailaddress` varchar(45) DEFAULT NULL,
-  `mobilenumber` varchar(11) DEFAULT NULL,
-  PRIMARY KEY (`iduser`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `user`
 --
 
@@ -56,4 +34,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-07 21:29:52
+-- Dump completed on 2019-03-31 23:01:18

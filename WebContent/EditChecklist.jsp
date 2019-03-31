@@ -62,27 +62,8 @@
 		
 		<form action = "AddAtmServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);"> 
 			<div class="container-fluid">
-				<div class="col-md-6">
-					<h2>ATM Checklist</h2>
-				</div>
-				
-				<div class="col-md-6" style="padding-top:1em">
-					<div class="col-sm-2">
-						<div class="circle">
-							<h5 class="text-center" style="padding-top:0.25em">1</h5>
-						</div>
-					</div>	
-					<div class="col-sm-2">
-						<div class="circle">
-							<h5 class="text-center" style="padding-top:0.25em">2</h5>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="circle-active">
-							<h5 class="text-center" style="padding-top:0.25em">3</h5>
-						</div>
-					</div>
-				</div>
+	
+				<h2>Checklist Edit</h2>
 				
 				<div class="col-sm-6">
 					<div class="col-sm-4">
