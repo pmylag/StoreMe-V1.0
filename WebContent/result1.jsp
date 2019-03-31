@@ -47,8 +47,7 @@
 						                	<button type="button" class="btn btn-primary btn-block">Verify</button>
 						                	<button type="button" class="btn btn-success btn-block">Edit</button>
 						                <%} %>
-						                
-						                       
+						                </ul>
 	           						</div>
 	            					<div class ="col-sm-8">
 	              						<table class="table">
@@ -176,7 +175,8 @@
 						                <%} else if(verified == 0) { %>
 						                	<button type="button" class="btn btn-primary btn-block">Verify</button>
 						                	<button type="button" class="btn btn-success btn-block">Edit</button>
-						                <%} %>         
+						                <%} %>
+						                </ul>
 	           						</div>
 	            					<div class ="col-sm-8">
 	              						<table class="table">
@@ -304,7 +304,8 @@
 						                <%} else if(verified == 0) { %>
 						                	<button type="button" class="btn btn-primary btn-block">Verify</button>
 						                	<button type="button" class="btn btn-success btn-block">Edit</button>
-						                <%} %>         
+						                <%} %>
+						                </ul>
 	           						</div>
 	            					<div class ="col-sm-8">
 	              						<table class="table">
