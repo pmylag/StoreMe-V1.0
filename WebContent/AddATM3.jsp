@@ -61,7 +61,7 @@
 		
 		
 		<form action = "AddAtmServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);"> 
-			<div class="container">
+			<div class="container-fluid">
 				<div class="col-md-6">
 					<h2>ATM Checklist</h2>
 				</div>
@@ -84,7 +84,7 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-8">
+				<div class="col-sm-6">
 					<div class="col-sm-4">
 						<div class="form-group">
 							<label for="chck">*Checker:</label>
@@ -231,7 +231,40 @@
 									</div>
 						        </td>
 					      	</tr>
-					      	<tr>
+					      	
+					    </tbody>
+					</table>
+					<a href = "AddATM2.jsp" type="button" class="btn btn-lg">Back</a>
+					<input type="submit" class="btn btn-lg btn-info" value="Save Changes">
+				</div>
+				<div class="col-md-4">
+					<div class="checkbox">
+						<label for="c1"></label>
+						<input class="form-check-input" type="checkbox" value="1" id="c1" name = "cassete1">Cassette 1 - 1000</input>
+					</div>
+					<div class="checkbox">
+						<label for="c2"></label>
+						<input class="form-check-input" type="checkbox" value="1" id="c2" name = "cassete2">Cassette 2 - 500</input>
+					</div>
+					<div class="checkbox">
+						<label for="c3"></label>
+						<input class="form-check-input" type="checkbox" value="1" id="c3" name = "cassete3">Cassette 3 - 500</input>
+					</div>
+					<div class="checkbox">
+						<label for="c4"></label>
+						<input class="form-check-input" type="checkbox" value="1" id="c4" name = "cassete4">Cassette 4 - 100</input>
+					</div>
+					
+					<table class="table table-bordered table-hover">
+			    		<thead>
+					    	<tr>
+						        <th>Description</th>
+						        <th>Quantity</th>
+						        <th>Remarks</th>
+					      	</tr>
+					    </thead>
+					    <tbody>
+					    	<tr>
 						        <td>*Panel Door Key:</td>
 						         <td>
 						        	<div class="form-group">
@@ -323,33 +356,13 @@
 						        </td>
 					      	</tr>
 					    </tbody>
-					</table>
-					<a href = "AddATM2.jsp" type="button" class="btn btn-lg">Back</a>
-					<input type="submit" class="btn btn-lg btn-info" value="Save Changes">
-				</div>
-				<div class="col-md-4">
-					<div class="checkbox">
-						<label for="c1"></label>
-						<input class="form-check-input" type="checkbox" value="1" id="c1" name = "cassete1">Cassette 1 - 1000</input>
+				    </table>
+				    
+					<div class="form-group">
+ 							<label for="comment">Note:</label>
+ 							<textarea class="form-control" rows="5" id="comment"></textarea>
 					</div>
-					<div class="checkbox">
-						<label for="c2"></label>
-						<input class="form-check-input" type="checkbox" value="1" id="c2" name = "cassete2">Cassette 2 - 500</input>
-					</div>
-					<div class="checkbox">
-						<label for="c3"></label>
-						<input class="form-check-input" type="checkbox" value="1" id="c3" name = "cassete3">Cassette 3 - 500</input>
-					</div>
-					<div class="checkbox">
-						<label for="c4"></label>
-						<input class="form-check-input" type="checkbox" value="1" id="c4" name = "cassete4">Cassette 4 - 100</input>
-					</div>
-				
-						<div class="form-group">
-  							<label for="comment">Note:</label>
-  							<textarea class="form-control" rows="5" id="comment"></textarea>
-						</div>
-						<img src="checklist.png">	
+					
 					</div>
 					
 					<!-- Modal -->
