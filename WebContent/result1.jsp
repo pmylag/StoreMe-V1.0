@@ -37,7 +37,9 @@
 						                  	<li class="list-group-item borderless"><b>Cassette: </b><u>${cassette}</u> </li>
 						                  	<li class="list-group-item borderless"><b>Last Edited By: </b><u></u> </li>
 						                  	<%!int verified = 1; %>
-						                  	<li class="list-group-item borderless"><b>Verified By: </b><u></u> </li>
+						                  	<%if(verified == 1){ %>
+						                  		<li class="list-group-item borderless"><b>Verified By: </b><u></u> </li>
+						                  	<%} %>
 						                </ul>  
 						                
 						                <%if(verified == 1){ %>
@@ -47,7 +49,8 @@
 						                	<button type="button" class="btn btn-primary btn-block">Verify</button>
 						                	<button type="button" class="btn btn-success btn-block">Edit</button>
 						                <%} %>
-						                </ul>
+						                
+						                       
 	           						</div>
 	            					<div class ="col-sm-8">
 	              						<table class="table">
@@ -167,7 +170,9 @@
 						                  	<li class="list-group-item borderless"><b>Plate No: </b><u>${a.plateno }</u> </li>
 						                  	<li class="list-group-item borderless"><b>Cassette: </b><u>${cassette}</u> </li>
 						                  	<li class="list-group-item borderless"><b>Last Edited By: </b><u></u> </li>
-						                  	<li class="list-group-item borderless"><b>Verified By: </b><u></u> </li>
+						                  	<%if(verified == 1){ %>
+						                  		<li class="list-group-item borderless"><b>Verified By: </b><u></u> </li>
+						                  	<%} %>
 						                </ul>
 						                <%if(verified == 1){ %>
 						                	<button type="button" class="btn btn-primary btn-block disabled">Verified</button>
@@ -175,8 +180,7 @@
 						                <%} else if(verified == 0) { %>
 						                	<button type="button" class="btn btn-primary btn-block">Verify</button>
 						                	<button type="button" class="btn btn-success btn-block">Edit</button>
-						                <%} %>
-						                </ul>
+						                <%} %>         
 	           						</div>
 	            					<div class ="col-sm-8">
 	              						<table class="table">
@@ -296,7 +300,9 @@
 						                  	<li class="list-group-item borderless"><b>Plate No: </b><u>${a.plateno }</u> </li>
 						                  	<li class="list-group-item borderless"><b>Cassette: </b><u>${cassette}</u> </li>
 						                  	<li class="list-group-item borderless"><b>Last Edited By: </b><u></u> </li>
-						                  	<li class="list-group-item borderless"><b>Verified By: </b><u></u> </li>
+						                  	<%if(verified == 1){ %>
+						                  		<li class="list-group-item borderless"><b>Verified By: </b><u></u> </li>
+						                  	<%} %>
 						                </ul>
 						               	<%if(verified == 1){ %>
 						                	<button type="button" class="btn btn-primary btn-block disabled">Verified</button>
@@ -304,8 +310,7 @@
 						                <%} else if(verified == 0) { %>
 						                	<button type="button" class="btn btn-primary btn-block">Verify</button>
 						                	<button type="button" class="btn btn-success btn-block">Edit</button>
-						                <%} %>
-						                </ul>
+						                <%} %>         
 	           						</div>
 	            					<div class ="col-sm-8">
 	              						<table class="table">
