@@ -65,6 +65,7 @@ public class GetSelectedServlet extends HttpServlet {
 		String action = atmInfosService.getSKUint(Integer.parseInt(request.getParameter("id")));
 		request.setAttribute("cassette", cassette);
 		request.setAttribute("sku", action);
+
 		request.setAttribute("atm", atm);
 		request.getRequestDispatcher("result1.jsp").forward(request, response);
 	

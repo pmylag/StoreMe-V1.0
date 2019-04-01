@@ -81,6 +81,7 @@ public class AtmService {
 				a.setUps_rmk(rs.getString("ups_rmk"));
 				a.setVault_door_key_qty(rs.getInt("vault_door_key_qty"));
 				a.setVault_door_key(rs.getString("vault_door_key"));
+				a.setNote(rs.getString("note"));
 				atmLists.add(a);
 			}
 		}catch (ClassNotFoundException | SQLException e) {
@@ -96,8 +97,8 @@ public class AtmService {
 				+ "collar_qty, collar_rmk, decale_qty, decale_rmk, fsc_wndw_frame_qty, fsc_wndw_frame_remk, bank, driver, warehouse_asst, consignee, plateno, "
 				+ "cassete2, cassete3, cassete4, quantity, remarks,"
 				+ "modem_qty, modem_rmk, pnl_door_key_qty, pnl_door_key_rmk, pedestal_qty, pedestaL_rmk, "
-				+ "power_crd_qty, power_cord_rmk, router_qtry, router_rmk, topper_qty, topper_rmk, ups_qty, ups_rmk, vault_door_key_qty, vault_door_key)"
-				+ "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)" ;
+				+ "power_crd_qty, power_cord_rmk, router_qtry, router_rmk, topper_qty, topper_rmk, ups_qty, ups_rmk, vault_door_key_qty, vault_door_key, note)"
+				+ "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)" ;
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url,username,password);
@@ -143,6 +144,7 @@ public class AtmService {
 			st.setString(39, ab.getUps_rmk());
 			st.setInt(40, ab.getVault_door_key_qty());
 			st.setString(41, ab.getVault_door_key());
+			st.setString(42, ab.getNote());
 			System.out.println("wkwkwkw  " + st);
 			st.executeUpdate();
 			con.close();

@@ -72,6 +72,7 @@ public class AddAtmServlet extends HttpServlet {
 		ab.setPlateno(request.getParameter("plateno"));
 		ab.setQuantity(Integer.parseInt(request.getParameter("quantity")));
 		ab.setRemarks(request.getParameter("remarks"));
+		ab.setNote(request.getParameter("note"));
 		
 		if (request.getParameter("cassete1") == null) {
 			System.out.println("null to boi ");

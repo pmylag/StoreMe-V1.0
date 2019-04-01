@@ -310,6 +310,13 @@ public class AtmBean {
 	private String ups_rmk;
 	private int vault_door_key_qty;
 	private String vault_door_key;
+	public String getNote() {
+		return note;
+	}
+	public void setNote(String note) {
+		this.note = note;
+	}
+	private String note;
 	
 	
 	

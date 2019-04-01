@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <body>
 <%@include file="navbar.jsp" %>
@@ -36,7 +40,7 @@
 						                  	<li class="list-group-item borderless"><b>Plate No: </b><u>${a.plateno }</u> </li>
 						                  	<li class="list-group-item borderless"><b>Cassette: </b><u>${cassette}</u> </li>
 						                  	<li class="list-group-item borderless"><b>Last Edited By: </b><u></u> </li>
-						                  	<%!int verified = 1; %>
+						                  	<%!int verified = 0; %>
 						                  	<%if(verified == 1){ %>
 						                  		<li class="list-group-item borderless"><b>Verified By: </b><u></u> </li>
 						                  	<%} %>
@@ -44,10 +48,10 @@
 						                
 						                <%if(verified == 1){ %>
 						                	<button type="button" class="btn btn-primary btn-block disabled">Verified</button>
-						                	<button type="button" class="btn btn-success btn-block disabled">Edit</button>
+						                	<a type="button" class="btn btn-success btn-block disabled" href = "EditChecklist.jsp">Edit</a>
 						                <%} else if(verified == 0) { %>
 						                	<button type="button" class="btn btn-primary btn-block">Verify</button>
-						                	<button type="button" class="btn btn-success btn-block">Edit</button>
+						                	<a type="button" class="btn btn-success btn-block" href = "EditChecklist.jsp">Edit</a>
 						                <%} %>
 						                
 						                       
@@ -141,8 +145,9 @@
 	             						</table>
 	            						<div class="panel panel-default">
 							            	<div class="panel-heading">Note</div>
-							             	<div class="panel-body"></div>
-								        </div>
+											<div class="panel-body">
+							             		 ${a.note }
+							             	</div>								        </div>
 	           						</div>
 	         					</c:forEach>
 	       					</div>
@@ -271,7 +276,9 @@
 	             						</table>
 	            						<div class="panel panel-default">
 							            	<div class="panel-heading">Note</div>
-							             	<div class="panel-body"></div>
+							             	<div class="panel-body">
+							             		 ${a.note }
+							             	</div>
 								        </div>
 	           						</div>
 	         					</c:forEach>
@@ -401,8 +408,9 @@
 	             						</table>
 	            						<div class="panel panel-default">
 							            	<div class="panel-heading">Note</div>
-							             	<div class="panel-body"></div>
-								        </div>
+											<div class="panel-body">
+							             		 ${a.note }
+							             	</div>								        </div>
 	           						</div>
 	         					</c:forEach>
 	       					</div>
