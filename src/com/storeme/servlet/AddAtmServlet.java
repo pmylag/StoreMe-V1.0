@@ -121,7 +121,7 @@ public class AddAtmServlet extends HttpServlet {
 		ab.setVault_door_key_qty(Integer.parseInt(request.getParameter("vault_door_key_qty")));
 		ab.setVault_door_key(request.getParameter("vault_door_key"));
 		AS.addAtm(ab);
-		request.getRequestDispatcher("GetSelectedServlet?id="+request.getParameter("id")).forward(request, response);
+		request.getRequestDispatcher("HomePage.jsp").forward(request, response);
 
 	}
 
