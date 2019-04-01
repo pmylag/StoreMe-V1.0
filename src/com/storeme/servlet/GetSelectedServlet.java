@@ -37,6 +37,7 @@ public class GetSelectedServlet extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("id"));
 		System.out.print("pumasok here");
 		AtmService AtmsService = new AtmService();
+		AtmInfoService AIS = new AtmInfoService();
 		ArrayList<AtmBean> atm = AtmsService.getSelectAtm(id);
 		
 		String cassette = null; 
@@ -63,9 +64,11 @@ public class GetSelectedServlet extends HttpServlet {
 		AtmInfoService atmInfosService = new AtmInfoService();
 		
 		String action = atmInfosService.getSKUint(Integer.parseInt(request.getParameter("id")));
+		request.setAttribute("vendor", AIS.getverifyVendorChecklist(Integer.parseInt(request.getParameter("id"))));
+		request.setAttribute("warehouse", AIS.getverifyWarehouseChecklist(Integer.parseInt(request.getParameter("id"))));
+		request.setAttribute("delivery", AIS.getverifyDeliverChecklist(Integer.parseInt(request.getParameter("id"))));		
 		request.setAttribute("cassette", cassette);
 		request.setAttribute("sku", action);
-
 		request.setAttribute("atm", atm);
 		request.getRequestDispatcher("result1.jsp").forward(request, response);
 	

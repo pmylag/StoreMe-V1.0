@@ -123,4 +123,41 @@ public class AtmInfoBean {
 	}
 
 	private String time_received;	
+	
+	private int vendorCheckVerified;
+	public int getVendorCheckVerified() {
+		return vendorCheckVerified;
+	}
+
+	public void setVendorCheckVerified(int vendorCheckVerified) {
+		this.vendorCheckVerified = vendorCheckVerified;
+	}
+
+	public int getDeliveryCheckVerified() {
+		return deliveryCheckVerified;
+	}
+
+	public void setDeliveryCheckVerified(int deliveryCheckVerified) {
+		this.deliveryCheckVerified = deliveryCheckVerified;
+	}
+
+	public int getWarehouseCheckVerified() {
+		return warehouseCheckVerified;
+	}
+
+	public void setWarehouseCheckVerified(int warehouseCheckVerified) {
+		this.warehouseCheckVerified = warehouseCheckVerified;
+	}
+
+	public String getLastEdited() {
+		return lastEdited;
+	}
+
+	public void setLastEdited(String lastEdited) {
+		this.lastEdited = lastEdited;
+	}
+
+	private int deliveryCheckVerified;
+	private int warehouseCheckVerified;
+	private String lastEdited;	
 }

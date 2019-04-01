@@ -40,17 +40,18 @@
 						                  	<li class="list-group-item borderless"><b>Plate No: </b><u>${a.plateno }</u> </li>
 						                  	<li class="list-group-item borderless"><b>Cassette: </b><u>${cassette}</u> </li>
 						                  	<li class="list-group-item borderless"><b>Last Edited By: </b><u></u> </li>
-						                  	<%!int verified = 0; %>
-						                  	<%if(verified == 1){ %>
+						                  	<%!int Vverified = 0; %>
+						                  	<% Vverified = (int)request.getAttribute("vendor"); %>
+						                  	<%if(Vverified == 1){ %>
 						                  		<li class="list-group-item borderless"><b>Verified By: </b><u></u> </li>
 						                  	<%} %>
 						                </ul>  
 						                
-						                <%if(verified == 1){ %>
+						                <%if(Vverified == 1){ %>
 						                	<button type="button" class="btn btn-primary btn-block disabled">Verified</button>
 						                	<a type="button" class="btn btn-success btn-block disabled" href = "EditChecklist.jsp">Edit</a>
-						                <%} else if(verified == 0) { %>
-						                	<button type="button" class="btn btn-primary btn-block">Verify</button>
+						                <%} else if(Vverified == 0) { %>
+						                	<a type="button" class="btn btn-primary btn-block" href = "VerifyVendorChecklistServlet?id=${a.idatm } ">Verify</a>
 						                	<a type="button" class="btn btn-success btn-block" href = "EditChecklist.jsp">Edit</a>
 						                <%} %>
 						                
@@ -175,16 +176,18 @@
 						                  	<li class="list-group-item borderless"><b>Plate No: </b><u>${a.plateno }</u> </li>
 						                  	<li class="list-group-item borderless"><b>Cassette: </b><u>${cassette}</u> </li>
 						                  	<li class="list-group-item borderless"><b>Last Edited By: </b><u></u> </li>
-						                  	<%if(verified == 1){ %>
+						                  	<%!int Wverified = 0; %>
+						                  	<% Wverified = (int)request.getAttribute("warehouse"); %>
+						                  	<%if(Wverified == 1){ %>
 						                  		<li class="list-group-item borderless"><b>Verified By: </b><u></u> </li>
 						                  	<%} %>
 						                </ul>
-						                <%if(verified == 1){ %>
+						                <%if(Wverified == 1){ %>
 						                	<button type="button" class="btn btn-primary btn-block disabled">Verified</button>
 						                	<button type="button" class="btn btn-success btn-block disabled">Edit</button>
-						                <%} else if(verified == 0) { %>
-						                	<button type="button" class="btn btn-primary btn-block">Verify</button>
-						                	<button type="button" class="btn btn-success btn-block">Edit</button>
+						                <%} else if(Wverified == 0) { %>
+						                	<a type="button" class="btn btn-primary btn-block" href = "VerifyWarehouseChecklistServlet?id=${a.idatm } ">Verify</a>
+						                	<a type="button" class="btn btn-success btn-block" href = "EditChecklist.jsp">Edit</a>
 						                <%} %>         
 	           						</div>
 	            					<div class ="col-sm-8">
@@ -307,16 +310,18 @@
 						                  	<li class="list-group-item borderless"><b>Plate No: </b><u>${a.plateno }</u> </li>
 						                  	<li class="list-group-item borderless"><b>Cassette: </b><u>${cassette}</u> </li>
 						                  	<li class="list-group-item borderless"><b>Last Edited By: </b><u></u> </li>
-						                  	<%if(verified == 1){ %>
+						                  	<%!int Dverified = 0; %>
+						                  	<% Dverified = (int)request.getAttribute("delivery"); %>					                  	
+						                  	<%if(Dverified == 1){ %>
 						                  		<li class="list-group-item borderless"><b>Verified By: </b><u></u> </li>
 						                  	<%} %>
 						                </ul>
-						               	<%if(verified == 1){ %>
+						               	<%if(Dverified == 1){ %>
 						                	<button type="button" class="btn btn-primary btn-block disabled">Verified</button>
 						                	<button type="button" class="btn btn-success btn-block disabled">Edit</button>
-						                <%} else if(verified == 0) { %>
-						                	<button type="button" class="btn btn-primary btn-block">Verify</button>
-						                	<button type="button" class="btn btn-success btn-block">Edit</button>
+						                <%} else if(Dverified == 0) { %>
+											<a type="button" class="btn btn-primary btn-block" href = "VerifyDeliveryChecklistServlet?id=${a.idatm } ">Verify</a>
+						                	<a type="button" class="btn btn-success btn-block" href = "EditChecklist.jsp">Edit</a>
 						                <%} %>         
 	           						</div>
 	            					<div class ="col-sm-8">

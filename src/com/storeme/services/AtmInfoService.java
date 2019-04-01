@@ -260,6 +260,60 @@ public class AtmInfoService {
 		return atmInfoBeanlists;
 	}
 	
+	public int getverifyDeliverChecklist(int id) {
+		int result = 0;
+		String sql = "SELECT deliveryCheckVerified FROM storeme.atmninfo where idatminfo = " + id;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while (rs.next())
+				result = rs.getInt("deliveryCheckVerified");
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				
+		return result;		
+	}
+	
+	public int getverifyVendorChecklist(int id) {
+		int result = 0;
+		String sql = "SELECT vendorCheckVerified FROM storeme.atmninfo where idatminfo = " + id;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while (rs.next())
+				result = rs.getInt("vendorCheckVerified");
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				
+		return result;		
+	}
+	
+	public int getverifyWarehouseChecklist(int id) {
+		int result = 0;
+		String sql = "SELECT warehouseCheckVerified FROM storeme.atmninfo where idatminfo = " + id;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs = st.executeQuery();
+			while (rs.next())
+				result = rs.getInt("warehouseCheckVerified");
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				
+		return result;		
+	}
+	
 	public String getSelectedAtmInfoConsignee(int id) {
 		ArrayList<AtmInfoBean> atmInfoBeanlists = new ArrayList<>();
 		String sql = "SELECT consignee FROM  atmninfo WHERE idatminfo = " + id;
@@ -297,6 +351,47 @@ public class AtmInfoService {
 		}
 		
 	}
+	
+	public void verifyVendorChecklist(int id) {
+		String sql = "UPDATE storeme.atmninfo set vendorCheckVerified = 1 WHERE idatminfo = " + id; 
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			st.executeUpdate();
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void verifyDeliveryChecklist(int id) {
+		String sql = "UPDATE storeme.atmninfo set deliveryCheckVerified = 1 WHERE idatminfo = " + id; 
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			st.executeUpdate();
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void verifyWarehouseChecklist(int id) {
+		String sql = "UPDATE storeme.atmninfo set warehouseCheckVerified = 1 WHERE idatminfo = " + id; 
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			st.executeUpdate();
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
 	
 	public ArrayList getSearchedAtmInfo(String type, String search) {
 		ArrayList<AtmInfoBean> atmInfoBeanlists = new ArrayList<>();

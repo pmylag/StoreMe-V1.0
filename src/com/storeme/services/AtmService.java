@@ -28,6 +28,7 @@ public class AtmService {
 		}
 	}
 	
+	
 	public ArrayList getSelectAtm(int id) {
 		ArrayList<AtmBean> atmLists = new ArrayList<>();
 		String sql = "SELECT * FROM atm where idatm = " + id;
