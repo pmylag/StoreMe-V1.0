@@ -1,6 +1,8 @@
 package com.storeme.servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -13,17 +15,17 @@ import com.storeme.services.AtmInfoService;
 import com.storeme.services.AtmService;
 
 /**
- * Servlet implementation class AddAtmServlet
+ * Servlet implementation class UpdateAtmServlet
  */
-@WebServlet("/AddAtmServlet")
+@WebServlet("/UpdateAtmServlet")
 @MultipartConfig
-public class AddAtmServlet extends HttpServlet {
+public class UpdateAtmServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddAtmServlet() {
+    public UpdateAtmServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,13 +35,44 @@ public class AddAtmServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		AtmInfoService atminfosServices = new AtmInfoService();
-		String Consignee = atminfosServices.getSelectedAtmInfoConsignee(atminfosServices.getMaxIdAtmInfo());
-		System.out.print("eto yun  " + Consignee);
-		request.setAttribute("consignee", Consignee);
-		request.getRequestDispatcher("AddATM3.jsp").forward(request, response);
-
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+		int id = Integer.parseInt(request.getParameter("id"));
+		System.out.print("pumasok here");
+		AtmService AtmsService = new AtmService();
+		AtmInfoService AIS = new AtmInfoService();
+		ArrayList<AtmBean> atm = AtmsService.getSelectAtm(id);
 		
+		String cassette = null; 
+		if (atm.get(0).getCassete1() == 1)
+			cassette = "" + atm.get(0).getCassete1();
+		
+		else
+			cassette = "  ";
+		
+		
+		if (atm.get(0).getCassete2() == 1)
+			cassette = cassette + ",  2";
+		
+		if (atm.get(0).getCassete3() == 1)
+			cassette = cassette + ", 3 ";
+		
+		if (atm.get(0).getCassete4() == 1)
+			cassette = cassette + ", 4" ;
+		
+		
+		System.out.print(cassette);
+		
+		
+		AtmInfoService atmInfosService = new AtmInfoService();
+		
+		String action = atmInfosService.getSKUint(Integer.parseInt(request.getParameter("id")));
+		request.setAttribute("vendor", AIS.getverifyVendorChecklist(Integer.parseInt(request.getParameter("id"))));
+		request.setAttribute("warehouse", AIS.getverifyWarehouseChecklist(Integer.parseInt(request.getParameter("id"))));
+		request.setAttribute("delivery", AIS.getverifyDeliverChecklist(Integer.parseInt(request.getParameter("id"))));		
+		request.setAttribute("cassette", cassette);
+		request.setAttribute("sku", action);
+		request.setAttribute("atm", atm);
+		request.getRequestDispatcher("EditChecklist.jsp").forward(request, response);
 	}
 
 	/**
@@ -51,7 +84,6 @@ public class AddAtmServlet extends HttpServlet {
 		AtmInfoService AI = new AtmInfoService();
 		int ids;
 		AtmBean	ab = new AtmBean();
-		ab.setIdatm(AI.getMaxIdAtmInfo());
 		ab.setBolt_screw_set_qty(Integer.parseInt(request.getParameter("bolt_screw_set_qty")));
 		ab.setBolt_screw_set_rmk(request.getParameter("bolt_screw_set_rmk"));
 		ab.setCash_casst_key_qty(Integer.parseInt(request.getParameter("cash_casst_key_qty")));
@@ -73,7 +105,8 @@ public class AddAtmServlet extends HttpServlet {
 		ab.setQuantity(Integer.parseInt(request.getParameter("quantity")));
 		ab.setRemarks(request.getParameter("remarks"));
 		ab.setNote(request.getParameter("note"));
-		
+		ab.setIdatm(Integer.parseInt(request.getParameter("idatm")));
+
 		if (request.getParameter("cassete1") == null) {
 			System.out.println("null to boi ");
 			ab.setCassete1(0);
@@ -120,8 +153,8 @@ public class AddAtmServlet extends HttpServlet {
 		ab.setUps_rmk(request.getParameter("ups_rmk"));
 		ab.setVault_door_key_qty(Integer.parseInt(request.getParameter("vault_door_key_qty")));
 		ab.setVault_door_key(request.getParameter("vault_door_key"));
-		AS.addAtm(ab);
-		request.getRequestDispatcher("GetSelectedServlet?id="+request.getParameter("id")).forward(request, response);
+		AS.UpdateAtm(ab);
+		request.getRequestDispatcher("HomePage.jsp").forward(request, response);
 
 	}
 

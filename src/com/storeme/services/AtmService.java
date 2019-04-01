@@ -93,6 +93,73 @@ public class AtmService {
 		
 		return atmLists;
 	}
+	
+	public void UpdateAtm(AtmBean ab) {
+		String sql = "UPDATE storeme.atm SET cassete1 = ?, checker = ?, bolt_screw_set_qty = ?, bolt_screw_set_rmk = ?, cash_casst_key_qty = ?, cash_casst_key_rmk = ?, "
+				+ "clad_qty = ?, clad_rmk = ?, collar_qty = ?, collar_rmk = ?, decale_qty = ?, decale_rmk = ?, fsc_wndw_frame_qty = ?, fsc_wndw_frame_remk = ?, bank = ?, driver = ?, "
+				+ "warehouse_asst = ?, consignee = ?, plateno = ?, cassete2 = ?, cassete3 = ?, cassete4 = ?, quantity = ?, remarks = ?, "
+				+ "modem_qty = ?, modem_rmk = ?, pnl_door_key_qty = ?, pnl_door_key_rmk = ?, pedestal_qty = ?, pedestaL_rmk = ?, power_crd_qty = ?, power_cord_rmk = ?, power_cord_rmk = ?,  router_qtry = ?, "
+				+ "router_rmk = ?, topper_qty = ?, topper_rmk = ?, ups_qty = ?, ups_rmk = ?	,  vault_door_key_qty = ?, vault_door_key = ?, note = ? "
+				+ "WHERE idatm = ?";
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setInt(43, ab.getIdatm());
+			st.setInt(1, ab.getCassete1());
+			st.setString(2, ab.getChecker());
+			st.setInt(3, ab.getBolt_screw_set_qty());
+			st.setString(4, ab.getBolt_screw_set_rmk());
+			st.setInt(5, ab.getCash_casst_key_qty());
+			st.setString(6, ab.getCash_casst_key_rmk());
+			st.setInt(7, ab.getClad_qty());
+			st.setString(8, ab.getClad_rmk());
+			st.setInt(9, ab.getCollar_qty());
+			st.setString(10, ab.getCollar_rmk());
+			st.setInt(11, ab.getDecale_qty());
+			st.setString(12, ab.getDecale_rmk());
+			st.setInt(13, ab.getFsc_wndw_frame_qty());
+			st.setString(14, ab.getFsc_wndw_frame_remk());
+			st.setString(15, ab.getBank());
+			st.setString(16, ab.getDriver());
+			st.setString(17, ab.getWarehouse_asst());
+			st.setString(18, ab.getConsignee());
+			st.setString(19, ab.getPlateno());
+			st.setInt(20, ab.getCassete2());
+			st.setInt(21, ab.getCassete3());
+			st.setInt(22, ab.getCassete4());
+			st.setInt(23, ab.getQuantity());
+			st.setString(24, ab.getRemarks());
+			st.setInt(25, ab.getModem_qty());
+			st.setString(26, ab.getModem_rmk());
+			st.setInt(27, ab.getPnl_door_key_qty());
+			st.setString(28, ab.getPnl_door_key_rmk());
+			st.setInt(29, ab.getPedestal_qty());
+			st.setString(30, ab.getPedestaL_rmk());
+			st.setInt(31, ab.getPower_crd_qty());
+			st.setString(32, ab.getPower_cord_rmk());
+			st.setInt(33, ab.getRouter_qtry());
+			st.setString(34, ab.getRouter_rmk());
+			st.setInt(35, ab.getTopper_qty());
+			st.setString(36, ab.getTopper_rmk());
+			st.setInt(37, ab.getUps_qty());
+			st.setString(38, ab.getUps_rmk());
+			st.setInt(39, ab.getVault_door_key_qty());
+			st.setString(40, ab.getVault_door_key());
+			st.setString(41, ab.getNote());
+			st.setString(42, ab.getNote());
+			System.out.println("wkwkwkw  " + st);
+			st.executeUpdate();
+			
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				
+				
+		
+	}
+	
 	public void addAtm(AtmBean ab) {
 		String sql = "INSERT INTO atm (idatm, cassete1, checker, bolt_screw_set_qty, bolt_screw_set_rmk, cash_casst_key_qty, cash_casst_key_rmk, clad_qty, clad_rmk, "
 				+ "collar_qty, collar_rmk, decale_qty, decale_rmk, fsc_wndw_frame_qty, fsc_wndw_frame_remk, bank, driver, warehouse_asst, consignee, plateno, "

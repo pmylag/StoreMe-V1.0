@@ -52,7 +52,7 @@
 						                	<a type="button" class="btn btn-success btn-block disabled" href = "EditChecklist.jsp">Edit</a>
 						                <%} else if(Vverified == 0) { %>
 						                	<a type="button" class="btn btn-primary btn-block" href = "VerifyVendorChecklistServlet?id=${a.idatm } ">Verify</a>
-						                	<a type="button" class="btn btn-success btn-block" href = "EditChecklist.jsp">Edit</a>
+						                	<a type="button" class="btn btn-success btn-block" href = "UpdateAtmServlet?id=${a.idatm }">Edit</a>
 						                <%} %>
 						                
 						                       
@@ -187,7 +187,7 @@
 						                	<button type="button" class="btn btn-success btn-block disabled">Edit</button>
 						                <%} else if(Wverified == 0) { %>
 						                	<a type="button" class="btn btn-primary btn-block" href = "VerifyWarehouseChecklistServlet?id=${a.idatm } ">Verify</a>
-						                	<a type="button" class="btn btn-success btn-block" href = "EditChecklist.jsp">Edit</a>
+						                	<a type="button" class="btn btn-success btn-block" href = "UpdateAtmServlet?id=${a.idatm }">Edit</a>
 						                <%} %>         
 	           						</div>
 	            					<div class ="col-sm-8">
@@ -321,7 +321,7 @@
 						                	<button type="button" class="btn btn-success btn-block disabled">Edit</button>
 						                <%} else if(Dverified == 0) { %>
 											<a type="button" class="btn btn-primary btn-block" href = "VerifyDeliveryChecklistServlet?id=${a.idatm } ">Verify</a>
-						                	<a type="button" class="btn btn-success btn-block" href = "EditChecklist.jsp">Edit</a>
+						                	<a type="button" class="btn btn-success btn-block" href = "UpdateAtmServlet?id=${a.idatm }">Edit</a>
 						                <%} %>         
 	           						</div>
 	            					<div class ="col-sm-8">

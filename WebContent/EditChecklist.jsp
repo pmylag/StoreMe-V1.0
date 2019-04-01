@@ -60,7 +60,8 @@
 		</script>
 		
 		
-		<form action = "AddAtmServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);"> 
+		<form action = "UpdateAtmServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);"> 
+			<c:forEach items="${atm}" var = "a">
 			<div class="container-fluid">
 	
 				<h2>Checklist Edit</h2>
@@ -69,33 +70,33 @@
 					<div class="col-sm-4">
 						<div class="form-group">
 							<label for="chck">*Checker:</label>
-							<input type="text" class="form-control" name = "checker"id="chck" required>
+							<input type="text" class="form-control" name = "checker"id="chck" value = "${a.checker }" required>
 						</div>
 						<div class="form-group">
 							<label for="wh">*Warehouse Assistant:</label>
-							<input type="text" class="form-control" id="wh" name = "warehouse_asst" required>
+							<input type="text" class="form-control" id="wh" name = "warehouse_asst" value = "${a.warehouse_asst }" required>
 						</div>
 					</div>
 					
 					<div class="col-sm-4">
 						<div class="form-group">
 							<label for="bk">*Bank:</label>
-							<input type="text" class="form-control" id="bk" name = "bank"required>
+							<input type="text" class="form-control" id="bk" name = "bank" value = "${a.bank }"required>
 						</div>
 						<div class="form-group">
 							<label for="csn">Consignee:</label>
-							<input type="text" class="form-control" id="csn" name = "consignee" value="${consignee }" readonly>
+							<input type="text" class="form-control" id="csn" name = "consignee" value="${a.consignee }" readonly>
 						</div>
 					</div>
 					
 					<div class="col-sm-4">
 						<div class="form-group">
 							<label for="dv">*Driver:</label>
-							<input type="text" class="form-control" id="dv" name = "driver" required>
+							<input type="text" class="form-control" id="dv" name = "driver" value = "${a.driver}" required>
 						</div>
 						<div class="form-group">
 							<label for="pn">*Plate Number:</label>
-							<input type="text" class="form-control" id="pn" name = "plateno" required>
+							<input type="text" class="form-control" id="pn" name = "plateno" value = "${a.plateno }" required>
 						</div>
 					</div>
 					
@@ -117,7 +118,7 @@
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="atm-rmk" name = "remarks">
+										<input type="text" class="form-control" id="atm-rmk" name = "remarks" value = "${a.remarks }">
 									</div>
 						        </td>
 					     	</tr>
@@ -125,12 +126,12 @@
 						        <td>*Bolting Screw Set:</td>
 						        <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="bss-qty" name = "bolt_screw_set_qty" required>
+										<input type="number" class="form-control" min="0" id="bss-qty" name = "bolt_screw_set_qty" value = "${a.bolt_screw_set_qty }" required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="bss-rmk" name = "bolt_screw_set_rmk">
+										<input type="text" class="form-control" id="bss-rmk" name = "bolt_screw_set_rmk" value = "${a.bolt_screw_set_rmk }">
 									</div>
 						        </td>
 					      	</tr>
@@ -138,12 +139,12 @@
 						        <td>*Cash Cassette Keys:</td>
 						        <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="css-qty" name ="cash_casst_key_qty" required>
+										<input type="number" class="form-control" min="0" id="css-qty" name ="cash_casst_key_qty" value = "${a.cash_casst_key_qty }"required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="css-rmk" name ="cash_casst_key_rmk">
+										<input type="text" class="form-control" id="css-rmk" name ="cash_casst_key_rmk" value = "${a.cash_casst_key_rmk }">
 									</div>
 						        </td>
 					      	</tr>
@@ -151,12 +152,12 @@
 						        <td>*Cladding:</td>
 						        <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="clad-qty" name ="clad_qty" required>
+										<input type="number" class="form-control" min="0" id="clad-qty" name ="clad_qty" value = "${a.clad_qty }" required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="clad-rmk" name = "clad_rmk">
+										<input type="text" class="form-control" id="clad-rmk" name = "clad_rmk" value = "${a.clad_rmk }">
 									</div>
 						        </td>
 					      	</tr>
@@ -164,12 +165,12 @@
 						        <td>*Collar:</td>
 						        <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="clr-qty" name = "collar_qty" required>
+										<input type="number" class="form-control" min="0" id="clr-qty" name = "collar_qty" value = "${a.collar_qty }" required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="clr-rmk" name = "collar_rmk">
+										<input type="text" class="form-control" id="clr-rmk" name = "collar_rmk" value = "${a.collar_rmk }">
 									</div>
 						        </td>
 					      	</tr>
@@ -177,12 +178,12 @@
 						        <td>*Decals:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="dcl-qty" name = "decale_qty" required>
+										<input type="number" class="form-control" min="0" id="dcl-qty" name = "decale_qty" value = "${a.decale_qty }"required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="dcl-rmk" name = "decale_qty">
+										<input type="text" class="form-control" id="dcl-rmk" name = "decale_qty" value = "${a.decale_rmk }">
 									</div>
 						        </td>
 					      	</tr>
@@ -190,12 +191,12 @@
 						        <td>*Fascia/Window Frames:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="fwf-qty" name = "fsc_wndw_frame_qty" required>
+										<input type="number" class="form-control" min="0" id="fwf-qty" name = "fsc_wndw_frame_qty" value = "${a.fsc_wndw_frame_qty }"required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="fwf-rmk" name = "fsc_wndw_frame_remk">
+										<input type="text" class="form-control" id="fwf-rmk" name = "fsc_wndw_frame_remk" value = "${a.fsc_wndw_frame_remk }">
 									</div>
 						        </td>
 					      	</tr>
@@ -203,12 +204,17 @@
 						        <td>*Modem:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="mdm-qty" name  = "modem_qty" required>
+										<input type="number" class="form-control" min="0" id="mdm-qty" name  = "modem_qty" value = "${a.modem_qty }"required>										
 									</div>
+									
+									<div class="form-group" hidden>
+										<input type="text" class="form-control" id="vdk-rmk" name = "idatm" value = "${a.idatm }" readonly>
+									</div>
+									
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="mdm-rmk" name = "modem_rmk">
+										<input type="text" class="form-control" id="mdm-rmk" name = "modem_rmk" value = "${a.modem_rmk }">
 									</div>
 						        </td>
 					      	</tr>
@@ -249,12 +255,12 @@
 						        <td>*Panel Door Key:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="pdk-qty" name = "pnl_door_key_qty" required>
+										<input type="number" class="form-control" min="0" id="pdk-qty" name = "pnl_door_key_qty" value = "${a.pnl_door_key_qty }"required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="pdk-rmk" name = "pnl_door_key_rmk">
+										<input type="text" class="form-control" id="pdk-rmk" name = "pnl_door_key_rmk" value = "${a.pnl_door_key_rmk }">
 									</div>
 						        </td>
 					      	</tr>
@@ -262,12 +268,12 @@
 						        <td>*Pedestal:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="pdl-qty" name = "pedestal_qty" required>
+										<input type="number" class="form-control" min="0" id="pdl-qty" name = "pedestal_qty" value = "${a.pedestal_qty }"required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="pdl-rmk" name = "pedestaL_rmk">
+										<input type="text" class="form-control" id="pdl-rmk" name = "pedestaL_rmk" value = "${a.pedestaL_rmk }">
 									</div>
 						        </td>
 					      	</tr>
@@ -275,12 +281,12 @@
 						        <td>*Power Cord:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="pc-qty" name  = "power_crd_qty" required>
+										<input type="number" class="form-control" min="0" id="pc-qty" name  = "power_crd_qty" value = "${a.power_crd_qty }" required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="pc-rmk" name = "power_cord_rmk">
+										<input type="text" class="form-control" id="pc-rmk" name = "power_cord_rmk" value = "${a.power_cord_rmk }">
 									</div>
 						        </td>
 					      	</tr>
@@ -288,12 +294,12 @@
 						        <td>*Router:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="rtr-qty" name = "router_qtry"required>
+										<input type="number" class="form-control" min="0" id="rtr-qty" name = "router_qtry" value = "${a.router_qtry }"required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="rtr-rmk" name = "router_rmk">
+										<input type="text" class="form-control" id="rtr-rmk" name = "router_rmk" value = "${a.router_rmk }">
 									</div>
 						        </td>
 					      	</tr>
@@ -301,12 +307,12 @@
 						        <td>*Topper:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="tpr-qty"  name = "topper_qty"required>
+										<input type="number" class="form-control" min="0" id="tpr-qty"  name = "topper_qty" value ="${a.topper_qty }"required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="tpr-rmk" name = "topper_rmk">
+										<input type="text" class="form-control" id="tpr-rmk" name = "topper_rmk" value ="${a.topper_rmk }">
 									</div>
 						        </td>
 					      	</tr>
@@ -314,12 +320,12 @@
 						        <td>*UPS:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="ups-qty" name = "ups_qty"required>
+										<input type="number" class="form-control" min="0" id="ups-qty" name = "ups_qty" value ="${a.ups_qty }"required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="ups-rmk" name = "ups_rmk">
+										<input type="text" class="form-control" id="ups-rmk" name = "ups_rmk" value ="${a.ups_rmk }">
 									</div>
 						        </td>
 					      	</tr>
@@ -327,12 +333,12 @@
 						        <td>*Vault Door Key:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="vdk-qty" name = "vault_door_key_qty" required>
+										<input type="number" class="form-control" min="0" id="vdk-qty" name = "vault_door_key_qty" value ="${a.vault_door_key_qty }"required>
 									</div>
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="vdk-rmk" name = "vault_door_key">
+										<input type="text" class="form-control" id="vdk-rmk" name = "vault_door_key" value = "${a.vault_door_key }">
 									</div>
 						        </td>
 					      	</tr>
@@ -342,6 +348,7 @@
 					<div class="form-group">
  							<label for="comment">Note:</label>
  							<textarea class="form-control" rows="5" id="comment"></textarea>
+ 							
 					</div>
 					
 					</div>
@@ -368,6 +375,8 @@
 						   	</div>
 						</div>
 					</div>
+			</div>
+			</c:forEach>
 			</form>
 	</div>
 	

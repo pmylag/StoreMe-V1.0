@@ -66,7 +66,7 @@ CREATE TABLE `atm` (
   `vault_door_key` varchar(45) DEFAULT NULL,
   `note` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idatm`)
-) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -75,7 +75,7 @@ CREATE TABLE `atm` (
 
 LOCK TABLES `atm` WRITE;
 /*!40000 ALTER TABLE `atm` DISABLE KEYS */;
-INSERT INTO `atm` VALUES (3,1,'Kevin',4,'-',2,'-',5,'-',11,'-',5,'-',1,'-','BPI','Steve','Natasha','Bruce','ABC123',1,0,1,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(24,0,'Wewew',5,'5',5,'5',5,'5',5,'5',55,NULL,5,'5','Micci','Ed',NULL,'Justin','55555',0,0,0,5,'5',5,'55',5,'5',55,'5',55,'5',5,'5',5,'5',55,'5',5,'5',NULL),(25,0,'assd',1,'5',1,'1',5,'5',5,'5',5,NULL,5,'5','aaaa','ad',NULL,'Edward Rainier Curugan','ad',0,0,0,1,'5',5,'5',55,'',55,'5',55,'5',64,'5',5,'5',5,'5',5,'5',NULL),(34,0,'adsf',1,'1',1,'1',1,'1',1,'1',1,NULL,1,'','qwe','asd','fhg','rqr','asdf',1,0,0,1,'1',1,'1',1,'1',1,'11',1,'1',11,'1',1,'1',1,'1',1,'',NULL),(38,0,'wq',2,'2',22,'22',2,'2',22,'2',2,NULL,22,'2','wqe','qwe','qwe','Edward Rainier Curugan','weq',0,0,0,1,'1',2,'22',2,'22',2,'2',2,'2',22,'2',2,'22',2,'2',3,'',NULL),(47,0,'afs',5,'5',5,'5',55,'5',5,'55',5,NULL,5,'55','asdf','afs','saf','sad','sdf',0,1,0,1,'5',5,'5',55,'5',5,'5',6,'5',5,'5',6,'6',6,'6',6,'6',NULL),(49,0,'bshjw',4,'4',4,'4',44,'4',4,'4',4,NULL,4,'4','de','edw','sq','Edward Rainier Curugan','dew',0,1,0,1,'2',4,'4',44,'4',4,'4',4,'4',4,'44',4,'44',4,'4',4,'4',NULL);
+INSERT INTO `atm` VALUES (3,1,'Kevin',4,'-',2,'-',5,'-',11,'-',5,'-',1,'-','BPI','Steve','Natasha','Bruce','ABC123',1,0,1,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(24,0,'Wewew',5,'5',5,'5',5,'5',5,'5',55,NULL,5,'5','Micci','Ed',NULL,'Justin','55555',0,0,0,5,'5',5,'55',5,'5',55,'5',55,'5',5,'5',5,'5',55,'5',5,'5',NULL),(25,0,'assd',1,'5',1,'1',5,'5',5,'5',5,NULL,5,'5','aaaa','ad',NULL,'Edward Rainier Curugan','ad',0,0,0,1,'5',5,'5',55,'',55,'5',55,'5',64,'5',5,'5',5,'5',5,'5',NULL),(34,0,'adsf',1,'1',1,'1',1,'1',1,'1',1,NULL,1,'','qwe','asd','fhg','rqr','asdf',1,0,0,1,'1',1,'1',1,'1',1,'11',1,'1',11,'1',1,'1',1,'1',1,'',NULL),(38,0,'wq',2,'2',22,'22',2,'2',22,'2',2,NULL,22,'2','wqe','qwe','qwe','Edward Rainier Curugan','weq',0,0,0,1,'1',2,'22',2,'22',2,'2',2,'2',22,'2',2,'22',2,'2',3,'',NULL),(47,0,'afs',5,'5',5,'5',55,'5',5,'55',5,NULL,5,'55','asdf','afs','saf','sad','sdf',0,1,0,1,'5',5,'5',55,'5',5,'5',6,'5',5,'5',6,'6',6,'6',6,'6',NULL),(49,0,'bshjw',4,'4',4,'4',44,'4',4,'4',4,NULL,4,'4','de','edw','sq','Edward Rainier Curugan','dew',0,1,0,1,'2',4,'4',44,'4',4,'4',4,'4',4,'44',4,'44',4,'4',4,'4',NULL),(53,0,'asd',1,'sa',5,'5',5,'5',55,'5',5,NULL,5,'5','affa','adfs','adsa','Edward Rainier Curugan','adas',0,1,1,1,'asd',5,'5',445,'5',5,'5',5,'5',5,'5',5,'5',5,'5',55,'5','55555'),(54,0,'asd',5,'5',55,'55',5,'5',55,'5',5,NULL,5,'55','asd','asd','ad','wedw','asd',1,0,1,1,'5',5,'5',45,'5',5,'5',5,'55',5,'5',55,'5',5,'5',5,'5','das');
 /*!40000 ALTER TABLE `atm` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -88,4 +88,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-01  6:44:49
+-- Dump completed on 2019-04-01 10:32:47
