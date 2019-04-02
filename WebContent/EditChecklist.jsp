@@ -221,7 +221,7 @@
 					      	
 					    </tbody>
 					</table>
-					<a href = "AddATM2.jsp" type="button" class="btn btn-lg">Back</a>
+					<a href = "GetSelectedServlet?id=${a.idatm }" type="button" class="btn btn-lg">Back</a>
 					<input type="submit" class="btn btn-lg btn-info" value="Save Changes">
 				</div>
 				<div class="col-md-4">
