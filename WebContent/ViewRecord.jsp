@@ -15,10 +15,9 @@
 	
 </style>
 <head>
-	<link rel="stylesheet" href="Style/bootstrap-4.0.0-dist/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="Style/styles.css">
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<script src="bootstrap-3.3.7-dist/jquery/jquery.min.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<meta charset="ISO-8859-1">
 	<title>View Record</title>
 </head>
@@ -26,7 +25,7 @@
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">StoreMe</a>
+				<a class="navbar-brand">StoreMe</a>
 			</div>
 				
 			<ul class="nav navbar-nav">
