@@ -12,7 +12,9 @@
 					border-bottom: 0 none;
 					border-left:0 none;
 					border-right: 0 none; }
-	
+	.navbar-custom {
+		    background-color: #3498DB;
+	}
 </style>
 <head>
 	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
@@ -22,22 +24,22 @@
 	<title>View Record</title>
 </head>
 <body>
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-custom">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand">StoreMe</a>
+				<a class="navbar-brand" style="color: white">StoreMe</a>
 			</div>
 				
 			<ul class="nav navbar-nav">
-				<li><a href="HomePage.jsp">Home</a></li>
+				<li><a href="HomePage.jsp" style="color: white">Home</a></li>
 			</ul>
 	    	<ul class="nav navbar-nav navbar-right">
 	      		 <% int id = (Integer)session.getAttribute("iduser"); %>
 			 	 <%if(session.getAttribute("privilege1") != null || session.getAttribute("privilege3") != null) {%>
-		         <li><a href="EditUsersServlet?id=<%= id %>"><span class="glyphicon glyphicon-user"></span></a></li>
+		         <li><a href="EditUsersServlet?id=<%= id %>"><span style="color: white" class="glyphicon glyphicon-user"></span></a></li>
 		         <%} %>
 	      		<li><form action="Logout" class="navbar-form navbar-right">
-      				<input type="submit" class="btn btn-info" value="Logout" onclick = "myFunction2()">
+      				<input type="submit" class="btn btn-primary" value="Logout" onclick = "myFunction2()">
       				<script>
 						function myFunction2() {
     					alert("Successfully Logged Out.");

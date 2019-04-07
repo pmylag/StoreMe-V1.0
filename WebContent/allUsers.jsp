@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>   
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
   	<script src="bootstrap-3.3.7-dist/jquery/jquery.min.js"></script>
@@ -13,7 +12,13 @@
 	li.borderless { border-top: 0 none;
 					border-bottom: 0 none;
 					border-left:0 none;
-					border-right: 0 none; }
+					border-right: 0 none; 
+	}
+	
+	.navbar-custom {
+	    background-color: #3498DB;
+	}
+</style>
 	
 </style>
 <html>
@@ -23,21 +28,34 @@
 	
 </head>
 <body>
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-custom">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#">StoreMe</a>
+					<a class="navbar-brand" style="color: white">StoreMe</a>
 				</div>
 				
 			<ul class="nav navbar-nav">
-				<li><a href="HomePage.jsp">Home</a></li>
-				<li><a>Welcome, User</a></li>
+				<li><a href="HomePage.jsp" style="color: white">Home</a></li>
+				<% int id = (Integer)session.getAttribute("iduser"); %>
+				<%if(session.getAttribute("privilege1") != null || session.getAttribute("privilege3") != null) {%>
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" style="color: white">Options <span class="caret"></span></a>
+		        	<ul class="dropdown-menu">
+		          		<li><a href="EditUsersServlet?id=<%= id %>">Account Information</span></a></li>
+			          	<li><a href="ChangePasswordServlet?id=<%= id %>">Change Password</span></a></li>
+			          	<li>
+						    <%if (session.getAttribute("privilege1") != null){ %> <%-- Only admin which has privilege of 1 can add an account --%>
+					      		<a href="AddAccount.jsp">Add Account</span></a>
+						     	<a href = "ViewAllUsersServlet">View Users</a>
+					      	<%} %>
+			          	</li>
+			        </ul>
+		      	</li>
+		      	<%} %>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-			<% int id = (Integer)session.getAttribute("iduser"); %>
-		      <li><a href="EditUsersServlet?id=<%= id %>"><span class="glyphicon glyphicon-user"></span></a></li>
+		      <li><a href="EditUsersServlet?id=<%= id %>"><span style="color: white" class="glyphicon glyphicon-user"></span></a></li>
 		      <form action="Logout" class="navbar-form navbar-right">
-      				<input type="submit" class="btn btn-info" value="Logout" onclick = "myFunction2()">
+      				<input type="submit" class="btn btn-primary" value="Logout" onclick = "myFunction2()">
       				<script>
 						function myFunction2() {
     					alert("Successfully Logged Out.");
@@ -47,57 +65,8 @@
      		 </ul>
 		  </div>
 	</nav>
-	<nav class="navbar navbar-default navbar-custom">
-		<div class="container-fluid">
-			
-		<ul class="nav navbar-header navbar-nav">
-		  
-	      <li><a href="EditUsersServlet?id=<%= id %>">Account Information</span></a></li>
-	      <li><a href="ChangePasswordServlet?id=<%= id %>">Change Password</span></a></li>
-	      <%!int priv = 1; %> <%-- Checks the privilege of user --%>
-	      <%if (session.getAttribute("privilege1") != null){ %> <%-- Only admin which has privilege of 1 can add an account --%>
-	      	<li><a href="AddAccount.jsp">Add Account</span></a></li>
-	        <li><a href = "ViewAllUsersServlet">View Users</a>
-	      <%} %>
-	      
-	    </ul>
-	  </div>
-	</nav>
 	
 	<div class = "container">
-		<form action = "GetSearchedUsersServlet" method = "POST" enctype="multipart/form-data" onsubmit="return checkForm(this);"> 				
-			<div class = "row">
-				<div class = "col-md-1">
-					SEARCH BY : 
-				</div>
-				
-				<div class = "col-md-1">
-						<div class="form-group">
-								<label for="sel1">Type:</label>
-								<select class="form-control" id="sel1" name = "type" required>
-									<option value="firstname">First Name</option>
-									<option value="lastname">Last Name</option>
-									<option value="address">Address</option>
-									<option value="emailaddress">Email Address</option>
-									<option value="mobilenumber">Mobile Number</option>
-									<option value="privilege">Privilege</option>
-									<option value="username">Username</option>
-								</select>
-						</div>
-				</div>
-				<div class = "col-sm-2">
-					<input type="text" placeholder="Search" name = "like">
-				</div>
-				<div class = "col-sm-1">
-				<input type="submit" class="btn btn-light" value = "Search">
-				</div>
-				<div class = "col-md-1">
-				<button class="btn">
-					<a href="ViewAllUsersServlet">Cancel</a>
-				</button>
-			</div>
-			</div>
-		</form>
 		<div class = "row">
 			<div class="container-fluid">
 				<table class="table table-bordered">

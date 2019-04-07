@@ -9,21 +9,6 @@
 </head>
 <body>
 	<%@include file="navbar.jsp" %>
-	<nav class="navbar navbar-default navbar-custom">
-		<div class="container-fluid">
-			
-		<ul class="nav navbar-header navbar-nav">
-	      <li><a href="EditUsersServlet?id=<%= id %>">Account Information</span></a></li>
-	      <li><a href="ChangePasswordServlet?id=<%= id %>">Change Password</span></a></li>
-	      <%!int priv = 1; %> <%-- Checks the privilege of user --%>
-	      <%if (session.getAttribute("privilege1") != null){ %> <%-- Only admin which has privilege of 1 can add an account --%>
-	      	<li><a href="AddAccount.jsp">Add Account</span></a></li>
-	        <li><a href = "ViewAllUsersServlet">View Users</a>
-	      <%} %>
-	      
-	    </ul>
-	  </div>
-	</nav>
 	
 	<div class="container">
 		<h1>Change Password</h1>

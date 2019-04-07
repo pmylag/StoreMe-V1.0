@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<style>
-	
-</style>
 <html>
 <head>
 	<meta charset="ISO-8859-1">
@@ -11,23 +8,6 @@
 </head>
 <body>
 	<%@include file="navbar.jsp" %>
-	<nav class="navbar navbar-default navbar-custom">
-		<div class="container-fluid">
-			
-		<ul class="nav navbar-header navbar-nav">
-	      <li><a href="EditUsersServlet?id=<%= id %>">Account Information</span></a></li>
-	      <li><a href="ChangePasswordServlet?id=<%= id %>">Change Password</span></a></li>
-	      <%!int priv = 1; %> <%-- Checks the privilege of user --%>
-	      <%if (session.getAttribute("privilege1") != null){ %> <%-- Only admin which has privilege of 1 can add an account --%>
-	      	<li><a href="AddAccount.jsp">Add Account</span></a></li>
-	        <li><a href = "ViewAllUsersServlet">View Users</a>
-	      <%} %>
-	      
-	    </ul>
-	  </div>
-	</nav>
-		
-		
 	<div class="container">
 		<h1>Account Information</h1>
 		
@@ -80,9 +60,7 @@
 					<div>
 						<div class="col-sm-3">
 							<div style = "padding-top: 1em; padding-right:5em">
-								<button class="btn">
-									<a href="HomePage.jsp">Back</a>
-								</button>
+								<button href="HomePage.jsp" class="btn btn-lg btn-default">Back</button>
 							</div>
 						</div>
 						<div class="col-sm-3">
