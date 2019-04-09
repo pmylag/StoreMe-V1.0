@@ -18,12 +18,13 @@
 <body>
 <%	
 
-  if(session.getAttribute("username")==null){
-	  	response.sendRedirect("error.jsp");
-	}
+				  if(session.getAttribute("username")==null){
+					  	response.sendRedirect("error.jsp");
+					}
+				
+				  
+				%>
 
-  
-%>
 	<nav class="navbar navbar-custom">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -32,6 +33,7 @@
 				
 			<ul class="nav navbar-nav">
 				<li><a href="HomePage.jsp" style="color: white">Home</a></li>
+				
 				<%! int priv = 3; %>
 				<%if (session.getAttribute("privilege1") != null) {%>
 					<li><a style="color: white">Welcome, Administrator</a></li>

@@ -153,9 +153,9 @@ public class UpdateAtmServlet extends HttpServlet {
 		ab.setUps_rmk(request.getParameter("ups_rmk"));
 		ab.setVault_door_key_qty(Integer.parseInt(request.getParameter("vault_door_key_qty")));
 		ab.setVault_door_key(request.getParameter("vault_door_key"));
+		int idsss = Integer.parseInt(request.getParameter("idatm"));
 		AS.UpdateAtm(ab);
-		request.getRequestDispatcher("GetSelectedServlet?id="+request.getParameter("id")).forward(request, response);
-
+		request.getRequestDispatcher("GetSelectedServlet?id="+ idsss).forward(request, response);
 	}
 
 }
