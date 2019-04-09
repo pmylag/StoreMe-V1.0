@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.storeme.javabean.AtmBean;
 import com.storeme.services.AtmInfoService;
@@ -82,6 +83,8 @@ public class UpdateAtmServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		AtmService AS = new AtmService();
 		AtmInfoService AI = new AtmInfoService();
+		HttpSession session = request.getSession();
+
 		int ids;
 		AtmBean	ab = new AtmBean();
 		ab.setBolt_screw_set_qty(Integer.parseInt(request.getParameter("bolt_screw_set_qty")));
@@ -154,6 +157,7 @@ public class UpdateAtmServlet extends HttpServlet {
 		ab.setVault_door_key_qty(Integer.parseInt(request.getParameter("vault_door_key_qty")));
 		ab.setVault_door_key(request.getParameter("vault_door_key"));
 		int idsss = Integer.parseInt(request.getParameter("idatm"));
+		AI.lastEdit(idsss, session.getAttribute("username").toString());
 		AS.UpdateAtm(ab);
 		request.getRequestDispatcher("GetSelectedServlet?id="+ idsss).forward(request, response);
 	}

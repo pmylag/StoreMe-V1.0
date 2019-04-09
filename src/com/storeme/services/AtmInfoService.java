@@ -296,6 +296,26 @@ public class AtmInfoService {
 		return result;		
 	}
 	
+	public String getEdit(int id) {
+		String sql = "select lastEdited FROM storeme.atmninfo where idatminfo = " + id ;
+		String input = null;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			System.out.println(st);
+			ResultSet rs = st.executeQuery();
+			
+			while(rs.next())
+				input = rs.getString("lastEdited");
+		}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			
+		return input;
+	}
+	
 	public int getverifyWarehouseChecklist(int id) {
 		int result = 0;
 		String sql = "SELECT warehouseCheckVerified FROM storeme.atmninfo where idatminfo = " + id;
@@ -345,6 +365,23 @@ public class AtmInfoService {
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setInt(1, id);
 			st.executeUpdate();
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	 
+	public void lastEdit(int id, String user) {
+		String sql = "Update storeme.atmninfo set lastEdited = ? WHERE idatminfo = " + id;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, user);
+			System.out.println(st);
+			st.executeUpdate();
+			
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

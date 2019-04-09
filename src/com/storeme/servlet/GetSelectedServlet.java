@@ -68,6 +68,7 @@ public class GetSelectedServlet extends HttpServlet {
 		request.setAttribute("warehouse", AIS.getverifyWarehouseChecklist(Integer.parseInt(request.getParameter("id"))));
 		request.setAttribute("delivery", AIS.getverifyDeliverChecklist(Integer.parseInt(request.getParameter("id"))));		
 		request.setAttribute("cassette", cassette);
+		request.setAttribute("editor", AIS.getEdit(id));
 		request.setAttribute("sku", action);
 		request.setAttribute("atm", atm);
 		request.getRequestDispatcher("result1.jsp").forward(request, response);

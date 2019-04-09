@@ -38,7 +38,7 @@
 						                  	<li class="list-group-item borderless"><b>Driver: </b><u>${a.driver}</u> </li>
 						                  	<li class="list-group-item borderless"><b>Plate No: </b><u>${a.plateno }</u> </li>
 						                  	<li class="list-group-item borderless"><b>Cassette: </b><u>${cassette}</u> </li>
-						                  	<li class="list-group-item borderless"><b>Last Edited By: </b><u></u> </li>
+						                  	<li class="list-group-item borderless"><b>Last Edited By: </b><u>${editor}</u> </li>
 						                  	<%!int Vverified = 0; %>
 						                  	<% Vverified = (int)request.getAttribute("vendor"); %>
 						                  	<%if(Vverified == 1){ %>
@@ -174,7 +174,7 @@
 						                  	<li class="list-group-item borderless"><b>Driver: </b><u>${a.driver}</u> </li>
 						                  	<li class="list-group-item borderless"><b>Plate No: </b><u>${a.plateno }</u> </li>
 						                  	<li class="list-group-item borderless"><b>Cassette: </b><u>${cassette}</u> </li>
-						                  	<li class="list-group-item borderless"><b>Last Edited By: </b><u></u> </li>
+						                  	<li class="list-group-item borderless"><b>Last Edited By: </b><u>${editor}</u> </li>
 						                  	<%!int Wverified = 0; %>
 						                  	<% Wverified = (int)request.getAttribute("warehouse"); %>
 						                  	<%if(Wverified == 1){ %>
@@ -308,7 +308,7 @@
 						                  	<li class="list-group-item borderless"><b>Driver: </b><u>${a.driver}</u> </li>
 						                  	<li class="list-group-item borderless"><b>Plate No: </b><u>${a.plateno }</u> </li>
 						                  	<li class="list-group-item borderless"><b>Cassette: </b><u>${cassette}</u> </li>
-						                  	<li class="list-group-item borderless"><b>Last Edited By: </b><u></u> </li>
+						                  	<li class="list-group-item borderless"><b>Last Edited By: </b><u>${editor}</u> </li>
 						                  	<%!int Dverified = 0; %>
 						                  	<% Dverified = (int)request.getAttribute("delivery"); %>					                  	
 						                  	<%if(Dverified == 1){ %>
