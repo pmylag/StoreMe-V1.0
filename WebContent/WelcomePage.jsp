@@ -90,8 +90,8 @@
 					<img src="STOREME.png" style="height:200px; width:200px">
 					<h4 class="text-center">Warehouse Inventory Monitoring System</h4>
 				</center>
-   				<input type="text" placeholder="Username" required/>
-   				<input type="password" placeholder="Password" required/>
+   				<input type="text" placeholder="Username" name = "username" required/>
+   				<input type="password" placeholder="Password" name = "password" required/>
    				<button type="submit" class="btn btn-primary" style="color: white; background-color: #3498DB" >Login</button>
 			</form>
 		</div>
