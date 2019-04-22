@@ -201,7 +201,7 @@
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="dcl-rmk" name = "decale_qty">
+										<input type="text" class="form-control" id="dcl-rmk" name = "decale_rmk">
 									</div>
 						        </td>
 					      	</tr>
