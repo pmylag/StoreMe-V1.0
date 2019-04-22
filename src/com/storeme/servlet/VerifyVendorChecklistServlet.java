@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.storeme.services.AtmInfoService;
 
@@ -29,9 +30,11 @@ public class VerifyVendorChecklistServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		HttpSession session = request.getSession();
+
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		AtmInfoService atmInfosService = new AtmInfoService();
-		atmInfosService.verifyVendorChecklist(Integer.parseInt(request.getParameter("id")));
+		atmInfosService.verifyVendorChecklist(Integer.parseInt(request.getParameter("id")), session.getAttribute("username").toString());
 		request.getRequestDispatcher("GetSelectedServlet?id="+request.getParameter("id")).forward(request, response);
 		
 	}

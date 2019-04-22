@@ -389,12 +389,71 @@ public class AtmInfoService {
 		
 	}
 	
-	public void verifyVendorChecklist(int id) {
-		String sql = "UPDATE storeme.atmninfo set vendorCheckVerified = 1 WHERE idatminfo = " + id; 
+	public String getVendorVerify(int id) {
+		String Verify = null;
+		String sql = "SELECT vendorVerified  FROM storeme.atmninfo where idatminfo = " + id;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url,username,password);
 			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs= st.executeQuery();
+			while(rs.next()) {
+				Verify = rs.getString("vendorVerified");
+			}
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return Verify;
+	}
+	
+	public String getDeliveryVerify(int id) {
+		String Delivery = null;
+		String sql = "SELECT deliveryVerified  FROM storeme.atmninfo where idatminfo = " + id;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs= st.executeQuery();
+			while(rs.next()) {
+				Delivery = rs.getString("vendorVerified");
+			}
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return Delivery;
+	}
+	
+	public String getWarehouseVerify(int id) {
+		String Warehouse = null;
+		String sql = "SELECT warehouseVerified  FROM storeme.atmninfo where idatminfo = " + id;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			ResultSet rs= st.executeQuery();
+			while(rs.next()) {
+				Warehouse = rs.getString("vendorVerified");
+			}
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return Warehouse;
+	}
+	
+	public void verifyVendorChecklist(int id, String name) {
+		String sql = "UPDATE storeme.atmninfo set vendorCheckVerified = 1, vendorVerified = ? WHERE idatminfo = " + id; 
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,username,password);
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, name);
 			st.executeUpdate();
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
@@ -402,12 +461,13 @@ public class AtmInfoService {
 		}
 	}
 	
-	public void verifyDeliveryChecklist(int id) {
-		String sql = "UPDATE storeme.atmninfo set deliveryCheckVerified = 1 WHERE idatminfo = " + id; 
+	public void verifyDeliveryChecklist(int id, String name) {
+		String sql = "UPDATE storeme.atmninfo set deliveryCheckVerified = 1, deliveryVerified = ? WHERE idatminfo = " + id; 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url,username,password);
 			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, name);
 			st.executeUpdate();
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
@@ -415,12 +475,13 @@ public class AtmInfoService {
 		}
 	}
 	
-	public void verifyWarehouseChecklist(int id) {
-		String sql = "UPDATE storeme.atmninfo set warehouseCheckVerified = 1 WHERE idatminfo = " + id; 
+	public void verifyWarehouseChecklist(int id, String name) {
+		String sql = "UPDATE storeme.atmninfo set warehouseCheckVerified = 1, warehouseVerified = ? WHERE idatminfo = " + id; 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url,username,password);
 			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, name);
 			st.executeUpdate();
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block

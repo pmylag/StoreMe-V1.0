@@ -42,7 +42,7 @@
 						                  	<%!int Vverified = 0; %>
 						                  	<% Vverified = (int)request.getAttribute("vendor"); %>
 						                  	<%if(Vverified == 1){ %>
-						                  		<li class="list-group-item borderless"><b>Verified By: </b><u></u> </li>
+						                  		<li class="list-group-item borderless"><b>Verified By: ${vendorV} </b><u></u> </li>
 						                  	<%} %>
 						                </ul>  
 						                
@@ -178,7 +178,7 @@
 						                  	<%!int Wverified = 0; %>
 						                  	<% Wverified = (int)request.getAttribute("warehouse"); %>
 						                  	<%if(Wverified == 1){ %>
-						                  		<li class="list-group-item borderless"><b>Verified By: </b><u></u> </li>
+						                  		<li class="list-group-item borderless"><b>Verified By: ${warehouseV} </b><u></u> </li>
 						                  	<%} %>
 						                </ul>
 						                <%if(Wverified == 1){ %>
@@ -312,7 +312,7 @@
 						                  	<%!int Dverified = 0; %>
 						                  	<% Dverified = (int)request.getAttribute("delivery"); %>					                  	
 						                  	<%if(Dverified == 1){ %>
-						                  		<li class="list-group-item borderless"><b>Verified By: </b><u></u> </li>
+						                  		<li class="list-group-item borderless"><b>Verified By: ${deliveryV} </b><u></u> </li>
 						                  	<%} %>
 						                </ul>
 						               	<%if(Dverified == 1){ %>

@@ -183,7 +183,7 @@
 						        </td>
 						        <td>
 						        	<div class="form-group">
-										<input type="text" class="form-control" id="dcl-rmk" name = "decale_qty" value = "${a.decale_rmk }">
+										<input type="text" class="form-control" id="dcl-rmk" name = "decale_rmk" value = "${a.decale_rmk }">
 									</div>
 						        </td>
 					      	</tr>
