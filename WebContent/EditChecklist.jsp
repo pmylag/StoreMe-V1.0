@@ -113,7 +113,7 @@
 						        <td>*ATM:</td>
 						        <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="atm-qty" name = "quantity" value = "1" readonly>
+										<input type="number" class="form-control" min="0" max="20" id="atm-qty" name = "quantity" value = "1" readonly>
 									</div>
 						        </td>
 						        <td>
@@ -126,7 +126,7 @@
 						        <td>*Bolting Screw Set:</td>
 						        <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="bss-qty" name = "bolt_screw_set_qty" value = "${a.bolt_screw_set_qty }" required>
+										<input type="number" class="form-control" min="0" max="20" id="bss-qty" name = "bolt_screw_set_qty" value = "${a.bolt_screw_set_qty }" required>
 									</div>
 						        </td>
 						        <td>
@@ -139,7 +139,7 @@
 						        <td>*Cash Cassette Keys:</td>
 						        <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="css-qty" name ="cash_casst_key_qty" value = "${a.cash_casst_key_qty }"required>
+										<input type="number" class="form-control" min="0" max="20" id="css-qty" name ="cash_casst_key_qty" value = "${a.cash_casst_key_qty }"required>
 									</div>
 						        </td>
 						        <td>
@@ -152,7 +152,7 @@
 						        <td>*Cladding:</td>
 						        <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="clad-qty" name ="clad_qty" value = "${a.clad_qty }" required>
+										<input type="number" class="form-control" min="0" max="20" id="clad-qty" name ="clad_qty" value = "${a.clad_qty }" required>
 									</div>
 						        </td>
 						        <td>
@@ -165,7 +165,7 @@
 						        <td>*Collar:</td>
 						        <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="clr-qty" name = "collar_qty" value = "${a.collar_qty }" required>
+										<input type="number" class="form-control" min="0" max="20" id="clr-qty" name = "collar_qty" value = "${a.collar_qty }" required>
 									</div>
 						        </td>
 						        <td>
@@ -178,7 +178,7 @@
 						        <td>*Decals:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="dcl-qty" name = "decale_qty" value = "${a.decale_qty }"required>
+										<input type="number" class="form-control" min="0" max="20" id="dcl-qty" name = "decale_qty" value = "${a.decale_qty }"required>
 									</div>
 						        </td>
 						        <td>
@@ -191,7 +191,7 @@
 						        <td>*Fascia/Window Frames:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="fwf-qty" name = "fsc_wndw_frame_qty" value = "${a.fsc_wndw_frame_qty }"required>
+										<input type="number" class="form-control" min="0" max="20" id="fwf-qty" name = "fsc_wndw_frame_qty" value = "${a.fsc_wndw_frame_qty }"required>
 									</div>
 						        </td>
 						        <td>
@@ -204,7 +204,7 @@
 						        <td>*Modem:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="mdm-qty" name  = "modem_qty" value = "${a.modem_qty }"required>										
+										<input type="number" class="form-control" min="0" max="20" id="mdm-qty" name  = "modem_qty" value = "${a.modem_qty }"required>										
 									</div>
 									
 									<div class="form-group" hidden>
@@ -255,7 +255,7 @@
 						        <td>*Panel Door Key:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="pdk-qty" name = "pnl_door_key_qty" value = "${a.pnl_door_key_qty }"required>
+										<input type="number" class="form-control" min="0" max="20" id="pdk-qty" name = "pnl_door_key_qty" value = "${a.pnl_door_key_qty }"required>
 									</div>
 						        </td>
 						        <td>
@@ -268,7 +268,7 @@
 						        <td>*Pedestal:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="pdl-qty" name = "pedestal_qty" value = "${a.pedestal_qty }"required>
+										<input type="number" class="form-control" min="0"  max="20"id="pdl-qty" name = "pedestal_qty" value = "${a.pedestal_qty }"required>
 									</div>
 						        </td>
 						        <td>
@@ -281,7 +281,7 @@
 						        <td>*Power Cord:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="pc-qty" name  = "power_crd_qty" value = "${a.power_crd_qty }" required>
+										<input type="number" class="form-control" min="0" max="20" id="pc-qty" name  = "power_crd_qty" value = "${a.power_crd_qty }" required>
 									</div>
 						        </td>
 						        <td>
@@ -294,7 +294,7 @@
 						        <td>*Router:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="rtr-qty" name = "router_qtry" value = "${a.router_qtry }"required>
+										<input type="number" class="form-control" min="0" max="20" id="rtr-qty" name = "router_qtry" value = "${a.router_qtry }"required>
 									</div>
 						        </td>
 						        <td>
@@ -307,7 +307,7 @@
 						        <td>*Topper:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="tpr-qty"  name = "topper_qty" value ="${a.topper_qty }"required>
+										<input type="number" class="form-control" min="0" max="20" id="tpr-qty"  name = "topper_qty" value ="${a.topper_qty }"required>
 									</div>
 						        </td>
 						        <td>
@@ -320,7 +320,7 @@
 						        <td>*UPS:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="ups-qty" name = "ups_qty" value ="${a.ups_qty }"required>
+										<input type="number" class="form-control" min="0" max="20" id="ups-qty" name = "ups_qty" value ="${a.ups_qty }"required>
 									</div>
 						        </td>
 						        <td>
@@ -333,7 +333,7 @@
 						        <td>*Vault Door Key:</td>
 						         <td>
 						        	<div class="form-group">
-										<input type="number" class="form-control" min="0" id="vdk-qty" name = "vault_door_key_qty" value ="${a.vault_door_key_qty }"required>
+										<input type="number" class="form-control" min="0" id="vdk-qty" max="20"name = "vault_door_key_qty" value ="${a.vault_door_key_qty }"required>
 									</div>
 						        </td>
 						        <td>
