@@ -268,7 +268,7 @@
 			    </tr>
 			  </thead>
 			  <tbody>
-			  	<%!int z= 1; %>
+			  	<%!int z= 1; int yes = 1; %>
 			  	<c:forEach items="${atminfolists}"  var= "a">
 				  	<tr>
 				  	  <th scope="row"><%= z %></th>
@@ -297,13 +297,27 @@
 					  </td>
 					  <%} if (session.getAttribute("privilege1") != null) {%>
 					  <td>
-					  	<a href="DeleteAtmServlet?id=${a.idatminfo }" class="btn btn-danger a-btn-slide-text">
-			        		<span class="glyphicon glyphicon-trash" aria-hidden="true" onclick = "myFunction3()"></span>	                 
+					  
+						  	
+						  	<a href="DeleteAtmServlet?id=${a.idatminfo }" class="btn btn-danger a-btn-slide-text" onclick = "return confirm('Are you sure?')">
+				        	<span class="glyphicon glyphicon-trash" aria-hidden="true" >
+				        	</span>	
+				        	</a>
+				         
+			                            
 				      	
-				      	</a>
+				      	
 				      	<script>
 						function myFunction3() {
-    					alert("Successfully deleted");
+							var b = confirm("Are you sure");	
+							if (b == true){
+    						alert("Successfully deleted");
+    						yes = 0;
+							}else{
+							alert("cancelled");
+							yes = 1;
+							}
+							
 						}
 						</script>
 					  </td>

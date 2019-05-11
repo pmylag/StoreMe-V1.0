@@ -107,8 +107,8 @@
 						      	</a>
 						  	</td>
 						  	<td>
-						  		<a href="DeleteUsersServlet?id=${u.iduser }" class="btn btn-danger a-btn-slide-text">
-						        	<span class="glyphicon glyphicon-trash" aria-hidden="true" onclick = "myFunction3()"></span>	                 
+						  		<a href="DeleteUsersServlet?id=${u.iduser }" class="btn btn-danger a-btn-slide-text" onclick = "return confirm('Are you sure?')">
+						        	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>	                 
 						      	</a>
 						      	<script>
 									function myFunction3() {

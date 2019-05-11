@@ -42,7 +42,7 @@
 						                  	<%!int Vverified = 0; %>
 						                  	<% Vverified = (int)request.getAttribute("vendor"); %>
 						                  	<%if(Vverified == 1){ %>
-						                  		<li class="list-group-item borderless"><b>Verified By: ${vendorV} </b><u></u> </li>
+						                  		<li class="list-group-item borderless"><b>Verified By:</b><u> ${vendorV} </u> </li>
 						                  	<%} %>
 						                </ul>  
 						                
